@@ -447,6 +447,97 @@ try {
     (await request("me", undefined, customer)).data.user.role,
     "customer",
   );
+  await request("admin/role", { identity: customer, role: "vendor" }, owner);
+  await request("admin/role", { identity: support, role: "vendor" }, owner);
+  const vendorData = {
+    name: "Fixture supplier",
+    website: "https://example.com",
+    contact_email: "vendor@example.com",
+    feed_format: "csv",
+    feed_url: "https://example.com/catalog.csv",
+    status: "submitted",
+    notes: "Fixture",
+  };
+  assert.equal(
+    (await request("admin/vendor", vendorData, customer)).status,
+    200,
+  );
+  assert.equal(
+    (await request("admin/vendor", vendorData, support)).status,
+    200,
+  );
+  let vendorView = (await request("admin", undefined, customer)).data;
+  assert.deepEqual(
+    vendorView.vendors.map((v) => v.identity),
+    [customer],
+  );
+  assert.equal(vendorView.items.length, 0);
+  assert.equal(vendorView.offers.length, 0);
+  assert.equal(vendorView.quotes.length, 0);
+  assert.equal(vendorView.roles.length, 0);
+  for (const route of [
+    "admin/item",
+    "admin/image",
+    "admin/offer",
+    "admin/quote",
+    "admin/role",
+    "admin/grant",
+  ])
+    assert.equal((await request(route, {}, customer)).status, 403);
+  assert.equal(
+    (
+      await request(
+        "admin/vendor",
+        { ...vendorData, identity: support },
+        customer,
+      )
+    ).status,
+    403,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/vendor",
+        { ...vendorData, status: "approved" },
+        customer,
+      )
+    ).status,
+    403,
+  );
+  await request(
+    "admin/role",
+    { identity: dealer, role: "vendor_manager" },
+    owner,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/vendor",
+        { ...vendorData, identity: customer, status: "approved" },
+        dealer,
+      )
+    ).status,
+    200,
+  );
+  assert.equal((await request("admin/item", product, dealer)).status, 403);
+  assert.equal(
+    (
+      await request(
+        "admin/role",
+        { identity: customer, role: "catalog_manager" },
+        owner,
+      )
+    ).status,
+    200,
+  );
+  assert.equal((await request("admin/item", product, customer)).status, 200);
+  assert.equal((await request("admin/offer", {}, customer)).status, 403);
+  assert.equal(
+    (await request("admin/vendor", vendorData, customer)).status,
+    403,
+  );
+  await request("admin/role", { identity: customer, role: "customer" }, owner);
+  assert.equal((await request("admin", undefined, customer)).status, 403);
   globalThis.fetch = originalFetch;
   console.log(
     "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.",
@@ -461,6 +552,7 @@ try {
   if (offerId) await sql`DELETE FROM marcada.offers WHERE id=${offerId}`;
   if (quoteId) await sql`DELETE FROM marcada.quotes WHERE id=${quoteId}`;
   for (const i of [...identities, wallet].filter(Boolean)) {
+    await sql`DELETE FROM marcada.vendor_integrations WHERE identity=${i}`;
     await sql`DELETE FROM marcada.sessions WHERE identity=${i}`;
     await sql`DELETE FROM marcada.email_challenges WHERE identity=${i}`;
     await sql`DELETE FROM marcada.roles WHERE identity=${i}`;

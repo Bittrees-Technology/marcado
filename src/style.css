@@ -1413,3 +1413,8 @@ select:focus {
     min-height: 400px;
   }
 }
+
+.admin-page > nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 36px; }
+.admin-page > nav a[aria-current="page"] { background: #e8ff80; color: #172018; }
+.admin-page .admin-form { margin-top: 24px; }
+.admin-page .record { overflow-wrap: anywhere; }

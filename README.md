@@ -15,6 +15,23 @@ Marketplace infrastructure for product discovery, dealer offers, referral attrib
 
 Direct checkout and payouts are not enabled. Supplier reference prices and availability do not represent marketplace inventory or guaranteed fulfillment.
 
+## Administration and vendor access
+
+`/admin` provides separate Products, Dealer offers, Quotes, Vendors and Team access pages. Owners delegate local roles through Team access. Server-side checks apply independently of page visibility.
+
+| Role | Access |
+|---|---|
+| Owner | All pages and local role delegation |
+| Administrator | Products, offers, quotes and vendor integrations |
+| Catalog manager | Products, images and CSV imports |
+| Offer manager | Dealer offers and private recipients |
+| Dealer manager | Products and offers |
+| Support | Customer quotes |
+| Vendor manager | All vendor integration submissions and review statuses |
+| Vendor | Own integration submission only |
+
+Vendors register contact details and public CSV/JSON feed URLs for review. Vendor edits return submissions to draft or submitted status. Approval does not enable synchronization or publish products. Product managers review CSV data through the existing importer; automated feed fetching and credential storage are not enabled. Roles can be revoked without deleting vendor records.
+
 ## CSV import
 
 In **Manage store → Products, pricing & photos → Import products from CSV**, download the template and upload up to 200 rows (1 MB). Review rows, complete missing fields, and follow supplier or search links to verify details. Enter the actual price-check date; it is never inferred.

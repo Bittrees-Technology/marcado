@@ -34,3 +34,7 @@ ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS supplier_region text NOT NULL
 ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS tax_note text NOT NULL DEFAULT 'Taxes and delivery confirmed by quote';
 ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS configuration_note text NOT NULL DEFAULT '';
 CREATE TABLE IF NOT EXISTS marcada.identity_links(email text PRIMARY KEY,wallet text NOT NULL UNIQUE CHECK(wallet ~ '^0x[a-f0-9]{40}$'),created_at timestamptz NOT NULL DEFAULT now());
+
+ALTER TABLE marcada.roles DROP CONSTRAINT IF EXISTS roles_role_check;
+ALTER TABLE marcada.roles ADD CONSTRAINT roles_role_check CHECK(role IN ('admin','dealer_manager','support','catalog_manager','offer_manager','vendor_manager','vendor'));
+CREATE TABLE IF NOT EXISTS marcada.vendor_integrations(identity text PRIMARY KEY,name text NOT NULL,website text NOT NULL,contact_email text NOT NULL,feed_url text NOT NULL DEFAULT '',feed_format text NOT NULL DEFAULT 'csv' CHECK(feed_format IN ('csv','json','manual')),notes text NOT NULL DEFAULT '',status text NOT NULL DEFAULT 'draft' CHECK(status IN ('draft','submitted','approved','paused')),updated_at timestamptz NOT NULL DEFAULT now());

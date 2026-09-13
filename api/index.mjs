@@ -1,3 +1,4 @@
+import { localRoles, permissions } from "../lib/permissions.mjs";
 import { resolveGovernance } from "../lib/governance.mjs";
 import { itemInput, imageUpload } from "../lib/catalog.mjs";
 import { neon } from "@neondatabase/serverless";
@@ -57,7 +58,7 @@ async function user(req) {
     ? "owner"
     : governance.role === "admin"
       ? "admin"
-      : ["dealer_manager", "support"].includes(r?.role)
+      : localRoles.includes(r?.role)
         ? r.role
         : "customer";
   return {
@@ -76,8 +77,7 @@ async function user(req) {
     owner,
     admin: owner || role === "admin",
     staff: role !== "customer",
-    canDeals: ["owner", "admin", "dealer_manager"].includes(role),
-    canQuotes: ["owner", "admin", "support"].includes(role),
+    ...permissions(role),
   };
 }
 async function session(res, identity) {
@@ -449,7 +449,7 @@ export default async function handler(req, res) {
       return json(res, 403, { error: "Dealer manager access required" });
     if (route === "admin/quote" && !u.canQuotes)
       return json(res, 403, { error: "Quote manager access required" });
-    if ((route === "admin/item" || route === "admin/image") && !u.canDeals)
+    if ((route === "admin/item" || route === "admin/image") && !u.canProducts)
       return json(res, 403, { error: "Product manager access required" });
     if (route === "admin/image" && req.method === "POST") {
       await limited(req, "image-upload", 20);
@@ -481,7 +481,7 @@ export default async function handler(req, res) {
       const identity = normalizeIdentity(body.identity);
       if (isAdmin(identity))
         return json(res, 400, { error: "Owner access is protected" });
-      if (!["dealer_manager", "support", "customer"].includes(body.role))
+      if (![...localRoles, "customer"].includes(body.role))
         return json(res, 400, { error: "Invalid role" });
       if (body.role === "customer")
         await sql()`DELETE FROM marcada.roles WHERE identity=${identity}`;
@@ -490,11 +490,58 @@ export default async function handler(req, res) {
       await audit(u.identity, "set_role", identity + ":" + body.role);
       return json(res, 200, { ok: true });
     }
+    if (route === "admin/vendor" && req.method === "POST") {
+      if (!u.canVendors && !u.vendor)
+        return json(res, 403, { error: "Vendor access required" });
+      const identity = u.canVendors
+        ? normalizeIdentity(body.identity)
+        : u.identity;
+      if (
+        u.vendor &&
+        body.identity &&
+        normalizeIdentity(body.identity) !== u.identity
+      )
+        return json(res, 403, {
+          error: "You can only manage your own integration",
+        });
+      const name = textField(body.name, 160),
+        website = dealerUrl(body.website),
+        contact = normalizeIdentity(body.contact_email);
+      if (!contact.includes("@"))
+        return json(res, 400, { error: "Use a contact email address" });
+      const feed = body.feed_url ? dealerUrl(body.feed_url) : "",
+        format = String(body.feed_format || "manual"),
+        status = String(body.status || "draft");
+      if (
+        !["csv", "json", "manual"].includes(format) ||
+        !["draft", "submitted", "approved", "paused"].includes(status)
+      )
+        return json(res, 400, {
+          error: "Invalid integration format or status",
+        });
+      if (u.vendor && !["draft", "submitted"].includes(status))
+        return json(res, 403, {
+          error: "Only a vendor manager can approve or pause integrations",
+        });
+      if (format !== "manual" && !feed)
+        return json(res, 400, {
+          error: "Enter a feed URL or select manual integration",
+        });
+      const notes = String(body.notes || "").slice(0, 2000);
+      await sql()`INSERT INTO marcada.vendor_integrations(identity,name,website,contact_email,feed_url,feed_format,notes,status) VALUES(${identity},${name},${website},${contact},${feed},${format},${notes},${status}) ON CONFLICT(identity) DO UPDATE SET name=EXCLUDED.name,website=EXCLUDED.website,contact_email=EXCLUDED.contact_email,feed_url=EXCLUDED.feed_url,feed_format=EXCLUDED.feed_format,notes=EXCLUDED.notes,status=EXCLUDED.status,updated_at=now()`;
+      await audit(u.identity, "save_vendor_integration", identity);
+      return json(res, 200, { ok: true });
+    }
     if (route === "admin" && req.method === "GET") {
       return json(res, 200, {
-        items: u.canDeals
+        items: u.canProducts
           ? await sql()`SELECT * FROM marcada.items ORDER BY product_id,name`
           : [],
+        vendors: u.canVendors
+          ? await sql()`SELECT * FROM marcada.vendor_integrations ORDER BY name`
+          : u.vendor
+            ? await sql()`SELECT * FROM marcada.vendor_integrations WHERE identity=${u.identity}`
+            : [],
         governance: {
           source: "https://gov.bittrees.org",
           mapping:

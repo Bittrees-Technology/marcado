@@ -1,3 +1,4 @@
+import { AdminPages } from "./AdminPages.jsx";
 import { EquipmentPage, ProductManager, equipmentLink } from "./Equipment.jsx";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -205,11 +206,14 @@ function App() {
       setBusy(false);
     }
   }
+  useEffect(() => {
+    if (location.pathname.startsWith("/admin") && user?.staff)
+      api("admin")
+        .then(setAdmin)
+        .catch((e) => setError(e.message));
+  }, [user?.identity, user?.role]);
   async function openAdmin() {
-    await run(async () => {
-      setAdmin(await api("admin"));
-      setModal("admin");
-    });
+    location.href = "/admin";
   }
   function close() {
     setModal(null);
@@ -372,7 +376,26 @@ function App() {
         </button>
       </header>
       <main>
-        {!isEquipment ? (
+        {location.pathname.startsWith("/admin") ? (
+          <AdminPages
+            {...{
+              error,
+              notice,
+              user,
+              admin,
+              products,
+              api,
+              run,
+              setAdmin,
+              setNotice,
+              refresh,
+              busy,
+              editOffer,
+              setEditOffer,
+              open,
+            }}
+          />
+        ) : !isEquipment ? (
           <>
             <section className="hero">
               <div className="hero-copy">
@@ -1135,393 +1158,6 @@ function App() {
                   Mining carries equipment and operating costs. Rewards are
                   variable and are never guaranteed.
                 </p>
-              </>
-            )}
-            {modal === "admin" && admin && (
-              <>
-                <div className="eyebrow">STORE OPERATIONS</div>
-                <p className="access-source">
-                  Owner and administrator roles are read from{" "}
-                  <a
-                    href="https://gov.bittrees.org"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Bittrees Governance ↗
-                  </a>
-                  . Local assignments below are limited to dealer managers and
-                  support.
-                </p>
-                <h2>Dealer desk</h2>
-                <p>
-                  Enter verified dealer offers. Private offers are visible only
-                  to you and identities you explicitly grant access.
-                </p>
-                <>
-                  {user.owner && (
-                    <section className="roles">
-                      <h3>Team access</h3>
-                      <p>
-                        Owner access is protected. Administrators manage offers
-                        and quotes. Dealer managers manage offers and private
-                        access. Support manages quote requests.
-                      </p>
-                      <form
-                        className="inline-form"
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          const f = Object.fromEntries(new FormData(e.target));
-                          run(async () => {
-                            await api("admin/role", f);
-                            e.target.reset();
-                            setAdmin(await api("admin"));
-                            setNotice("Role updated. No invitation was sent.");
-                          });
-                        }}
-                      >
-                        <input
-                          name="identity"
-                          placeholder="Email or 0x wallet address"
-                          aria-label="Team member identity"
-                          required
-                        />
-                        <select name="role" aria-label="Team member role">
-                          <option value="support">Support</option>
-                          <option value="dealer_manager">Dealer manager</option>
-                        </select>
-                        <button className="secondary">Assign role</button>
-                      </form>
-                      {admin.roles.map((r) => (
-                        <div className="grant" key={r.identity}>
-                          <span>
-                            {r.identity} · {r.role}
-                          </span>
-                          <button
-                            onClick={() =>
-                              run(async () => {
-                                await api("admin/role", {
-                                  identity: r.identity,
-                                  role: "customer",
-                                });
-                                setAdmin(await api("admin"));
-                              })
-                            }
-                          >
-                            Remove role
-                          </button>
-                        </div>
-                      ))}
-                    </section>
-                  )}
-                  {user.canDeals && (
-                    <>
-                      <ProductManager
-                        items={admin.items || []}
-                        collections={products}
-                        api={api}
-                        run={run}
-                        refresh={async () => {
-                          setAdmin(await api("admin"));
-                          await refresh();
-                        }}
-                        notify={setNotice}
-                        busy={busy}
-                      />
-                      <h3>
-                        {editOffer ? "Edit dealer offer" : "Add dealer offer"}
-                      </h3>
-                      <form
-                        key={editOffer?.id || "new"}
-                        className="admin-form"
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          const f = Object.fromEntries(new FormData(e.target));
-                          run(async () => {
-                            await api("admin/offer", {
-                              ...f,
-                              id: editOffer?.id,
-                              private: f.visibility === "private",
-                            });
-                            e.target.reset();
-                            setAdmin(await api("admin"));
-                            await refresh();
-                            setEditOffer(null);
-                            setNotice("Dealer offer saved.");
-                          });
-                        }}
-                      >
-                        <label>
-                          Collection
-                          <select
-                            name="product"
-                            defaultValue={editOffer?.product_id}
-                          >
-                            {products.map((p) => (
-                              <option key={p.id} value={p.id}>
-                                {p.name}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-                        <label>
-                          Specific product (optional)
-                          <select
-                            name="item_id"
-                            defaultValue={editOffer?.item_id || ""}
-                          >
-                            <option value="">Entire collection</option>
-                            {items.map((i) => (
-                              <option key={i.id} value={i.id}>
-                                {i.name}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-                        <label>
-                          Dealer name
-                          <input
-                            name="dealer"
-                            defaultValue={editOffer?.dealer}
-                            required
-                            maxLength={100}
-                          />
-                        </label>
-                        <label className="span2">
-                          Dealer checkout / referral URL
-                          <input
-                            name="url"
-                            defaultValue={editOffer?.url}
-                            type="url"
-                            placeholder="https://dealer.example/product?ref=…"
-                            required
-                          />
-                        </label>
-                        <label>
-                          Price (optional)
-                          <input
-                            name="price"
-                            defaultValue={editOffer?.price ?? ""}
-                            type="number"
-                            min="0"
-                            step="0.01"
-                          />
-                        </label>
-                        <label>
-                          Currency
-                          <select
-                            name="currency"
-                            defaultValue={editOffer?.currency || "USD"}
-                          >
-                            {["USD", "EUR", "GBP", "CAD", "AUD"].map((c) => (
-                              <option key={c}>{c}</option>
-                            ))}
-                          </select>
-                        </label>
-                        <label>
-                          Visibility
-                          <select
-                            name="visibility"
-                            defaultValue={
-                              editOffer?.private === false
-                                ? "public"
-                                : "private"
-                            }
-                          >
-                            <option value="private">
-                              Private — invited accounts only
-                            </option>
-                            <option value="public">Public — everyone</option>
-                          </select>
-                        </label>
-                        <label>
-                          Expiry (optional)
-                          <input
-                            name="expires"
-                            type="datetime-local"
-                            defaultValue={
-                              editOffer?.expires_at
-                                ? new Date(
-                                    new Date(editOffer.expires_at).getTime() -
-                                      new Date().getTimezoneOffset() * 60000,
-                                  )
-                                    .toISOString()
-                                    .slice(0, 16)
-                                : ""
-                            }
-                          />
-                        </label>
-                        <label className="span2">
-                          Internal deal terms / notes
-                          <textarea
-                            name="notes"
-                            defaultValue={editOffer?.notes}
-                            maxLength={3000}
-                            placeholder="Commission, dealer contact and negotiated terms. Administrator only."
-                          />
-                        </label>
-                        <button disabled={busy} className="primary">
-                          Save offer <Plus size={18} />
-                        </button>
-                        {editOffer && (
-                          <button
-                            type="button"
-                            className="secondary"
-                            onClick={() => setEditOffer(null)}
-                          >
-                            Cancel edit
-                          </button>
-                        )}
-                      </form>
-                      <h3>Dealer offers</h3>
-                      {admin.offers.length === 0 && (
-                        <p>No dealer offers entered yet.</p>
-                      )}
-                      {admin.offers.map((o) => (
-                        <div className="record" key={o.id}>
-                          <strong>{o.dealer}</strong>
-                          <span className="pill">
-                            {o.private ? "Private" : "Public"} ·{" "}
-                            {o.active ? "Active" : "Inactive"}
-                          </span>
-                          <p>
-                            {o.product_id} ·{" "}
-                            {o.price
-                              ? `${o.currency} ${o.price}`
-                              : "Price on request"}
-                          </p>
-                          <a href={o.url} target="_blank" rel="noreferrer">
-                            Review dealer link <ExternalLink size={13} />
-                          </a>
-                          <p>{o.notes}</p>
-                          <button
-                            className="secondary"
-                            onClick={() => {
-                              setEditOffer(o);
-                              document
-                                .querySelector(".modal")
-                                .scrollIntoView({ behavior: "smooth" });
-                            }}
-                          >
-                            Edit offer
-                          </button>
-                          <button
-                            className="secondary"
-                            onClick={() =>
-                              run(async () => {
-                                await api("admin/offer-state", {
-                                  id: o.id,
-                                  active: !o.active,
-                                });
-                                setAdmin(await api("admin"));
-                                await refresh();
-                              })
-                            }
-                          >
-                            {o.active ? "Deactivate" : "Activate"}
-                          </button>
-                          {o.private && (
-                            <>
-                              <h4>Private access</h4>
-                              {o.recipients.map((i) => (
-                                <div className="grant" key={i}>
-                                  <span>{i}</span>
-                                  <button
-                                    onClick={() =>
-                                      run(async () => {
-                                        await api("admin/grant", {
-                                          id: o.id,
-                                          identity: i,
-                                          remove: true,
-                                        });
-                                        setAdmin(await api("admin"));
-                                        await refresh();
-                                      })
-                                    }
-                                  >
-                                    Remove
-                                  </button>
-                                </div>
-                              ))}
-                              <form
-                                className="inline-form"
-                                onSubmit={(e) => {
-                                  e.preventDefault();
-                                  const identity = new FormData(e.target).get(
-                                    "identity",
-                                  );
-                                  run(async () => {
-                                    await api("admin/grant", {
-                                      id: o.id,
-                                      identity,
-                                      remove: false,
-                                    });
-                                    e.target.reset();
-                                    setAdmin(await api("admin"));
-                                    setNotice(
-                                      "Access granted. No invitation email was sent.",
-                                    );
-                                  });
-                                }}
-                              >
-                                <input
-                                  name="identity"
-                                  aria-label="Recipient email or wallet"
-                                  placeholder="Recipient email or 0x wallet"
-                                  required
-                                />
-                                <button className="secondary">
-                                  Grant access
-                                </button>
-                              </form>
-                            </>
-                          )}
-                        </div>
-                      ))}
-                    </>
-                  )}
-                  {user.canQuotes && (
-                    <>
-                      <h3>Quote requests</h3>
-                      {admin.quotes.length === 0 && (
-                        <p>No quote requests yet.</p>
-                      )}
-                      {admin.quotes.map((q) => (
-                        <div className="record" key={q.id}>
-                          <strong>
-                            {q.item_name || q.name} × {q.quantity}
-                          </strong>
-                          <p className="identity">{q.identity}</p>
-                          <p>{q.details}</p>
-                          <small>
-                            Referral: {q.referral || "Direct"} ·{" "}
-                            {new Date(q.created_at).toLocaleString()}
-                          </small>
-                          <label>
-                            Status
-                            <select
-                              value={q.status}
-                              onChange={(e) =>
-                                run(async () => {
-                                  await api("admin/quote", {
-                                    id: q.id,
-                                    status: e.target.value,
-                                  });
-                                  setAdmin(await api("admin"));
-                                })
-                              }
-                            >
-                              {["new", "reviewing", "quoted", "closed"].map(
-                                (s) => (
-                                  <option key={s}>{s}</option>
-                                ),
-                              )}
-                            </select>
-                          </label>
-                        </div>
-                      ))}
-                    </>
-                  )}
-                </>
               </>
             )}
           </section>
