@@ -123,7 +123,23 @@ function App() {
     [email, setEmail] = useState(""),
     [challenge, setChallenge] = useState("");
   const initial = new URL(location.href);
-  const [referral] = useState(initial.searchParams.get("ref") || "");
+  const [referral, setReferral] = useState(() => {
+    if (initial.searchParams.has("ref"))
+      return initial.searchParams.get("ref") || "";
+    try {
+      return sessionStorage.getItem("marcado-referral") || "";
+    } catch {
+      return "";
+    }
+  });
+  useEffect(() => {
+    try {
+      if (referral) sessionStorage.setItem("marcado-referral", referral);
+      else sessionStorage.removeItem("marcado-referral");
+    } catch {
+      /* Storage may be disabled. The current page still works. */
+    }
+  }, [referral]);
   const [selected, setSelected] = useState(
     initial.searchParams.get("product") || "",
   );
@@ -847,6 +863,29 @@ function App() {
                 {user ? (
                   <>
                     <label>
+                      Your member referral code
+                      <input
+                        readOnly
+                        value={user.referral}
+                        aria-label="Your member referral code"
+                      />
+                    </label>
+                    <button
+                      className="secondary"
+                      onClick={() =>
+                        run(async () => {
+                          await navigator.clipboard.writeText(user.referral);
+                          setNotice("Referral code copied.");
+                        })
+                      }
+                    >
+                      Copy referral code <Copy size={16} />
+                    </button>
+                    <p>
+                      Share this code with customers. They can enter it when
+                      requesting a quote, or use your referral link.
+                    </p>
+                    <label>
                       Your store referral link
                       <input
                         readOnly
@@ -1020,6 +1059,24 @@ function App() {
                         ))}
                     </select>
                   </label>
+                  <label>
+                    Member referral code (optional)
+                    <input
+                      name="referral"
+                      value={referral}
+                      onChange={(e) => setReferral(e.target.value)}
+                      autoComplete="off"
+                      autoCapitalize="none"
+                      spellCheck={false}
+                      placeholder="Enter the code a member shared"
+                      aria-describedby="referral-help"
+                    />
+                  </label>
+                  <small id="referral-help">
+                    A referral link fills this in automatically. You can change
+                    or clear it before submitting. This attributes your quote;
+                    it does not apply a discount.
+                  </small>
                   <label>
                     Quantity
                     <input

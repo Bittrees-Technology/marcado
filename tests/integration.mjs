@@ -141,7 +141,7 @@ try {
       product: "bitaxe",
       quantity: 2,
       details: "Integration test",
-      referral: ref.referral,
+      referral: "  " + ref.referral.toUpperCase() + "  ",
     },
     customer,
   );
@@ -150,6 +150,38 @@ try {
   const [saved] =
     await sql`SELECT referral FROM marcada.quotes WHERE id=${quoteId}`;
   assert.equal(saved.referral, ref.referral);
+  for (const code of ["typo", ref.referral + "extra", "0000000000000000"]) {
+    const rejected = await request(
+      "quotes",
+      {
+        product: "bitaxe",
+        quantity: 1,
+        details: "Referral negative test",
+        referral: code,
+      },
+      customer,
+    );
+    assert.equal(rejected.status, 400);
+    assert.ok(rejected.data.error.toLowerCase().includes("referral"));
+  }
+  const [self] =
+    await sql`SELECT referral FROM marcada.users WHERE identity=${customer}`;
+  assert.equal(
+    (
+      await request(
+        "quotes",
+        {
+          product: "bitaxe",
+          quantity: 1,
+          details: "Self referral",
+          referral: self.referral,
+        },
+        customer,
+      )
+    ).status,
+    400,
+  );
+
   assert.equal(
     (await request("admin", undefined, dealer)).data.quotes.length,
     0,

@@ -330,8 +330,25 @@ export default async function handler(req, res) {
         return json(res, 400, {
           error: "Choose an available product in this collection",
         });
-      const [ref] =
-        await sql()`SELECT referral FROM marcada.users WHERE referral=${String(body.referral || "").slice(0, 16)} AND identity<>${u.identity}`;
+      const referral = String(body.referral || "")
+        .trim()
+        .toLowerCase();
+      if (referral && !/^[a-f0-9]{16}$/.test(referral))
+        return json(res, 400, {
+          error:
+            "Enter a valid 16-character member referral code, or clear the field.",
+        });
+      if (referral && referral === u.referral)
+        return json(res, 400, {
+          error: "You cannot use your own referral code.",
+        });
+      const [ref] = referral
+        ? await sql()`SELECT referral FROM marcada.users WHERE referral=${referral} AND identity<>${u.identity}`
+        : [];
+      if (referral && !ref)
+        return json(res, 400, {
+          error: "Referral code not found. Check the code or clear the field.",
+        });
       const id = randomUUID();
       await sql()`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`;
       return json(res, 201, { id });
