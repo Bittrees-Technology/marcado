@@ -1,0 +1,2563 @@
+[
+  {
+    "source": "solo",
+    "supplier_product_id": 57827,
+    "name": "SeedSigner+ Node Package",
+    "url": "https://www.solosatoshi.com/product/seedsigner-plus-node-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 57605,
+    "name": "Bitcoin Seed Phrase Dice Set (5 x 6-Sided Casino Grade Dice)",
+    "url": "https://www.solosatoshi.com/product/bitcoin-seed-phrase-dice-set-d6-casino-grade/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 57598,
+    "name": "Bitcoin Seed Phrase Dice Set (2 x 16-Sided Dice + 1 x 8-Sided Die)",
+    "url": "https://www.solosatoshi.com/product/bitcoin-seed-phrase-dice-set-d16-d8/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 57233,
+    "name": "Entropia v2 Seed Phrase Entropy Tablets",
+    "url": "https://www.solosatoshi.com/product/entropia-v2-seed-phrase-entropy-tablets/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 56219,
+    "name": "Bitaxe Naja Duo Bitcoin Solo Miner (Model 1201)",
+    "url": "https://www.solosatoshi.com/product/bitaxe-naja-duo/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55551,
+    "name": "Multi-Signature Package",
+    "url": "https://www.solosatoshi.com/product/bitcoin-multi-signature-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55548,
+    "name": "Single-Signature Package",
+    "url": "https://www.solosatoshi.com/product/bitcoin-single-signature-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55547,
+    "name": "Multi-Signature Upgrade",
+    "url": "https://www.solosatoshi.com/product/bitcoin-multi-signature-upgrade/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55546,
+    "name": "Passport Prime HODL Package",
+    "url": "https://www.solosatoshi.com/product/passport-prime-hodl-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55544,
+    "name": "SeedSigner+ HODL Package",
+    "url": "https://www.solosatoshi.com/product/seedsigner-plus-hodl-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55505,
+    "name": "Jade Plus HODL Package",
+    "url": "https://www.solosatoshi.com/product/jade-plus-hodl-package/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55535,
+    "name": "Bitcoin Seed Phrase Backup Kit",
+    "url": "https://www.solosatoshi.com/product/bitcoin-seed-phrase-backup-kit/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55527,
+    "name": "Blockstream JadeLink Air-Gapped USB Drive",
+    "url": "https://www.solosatoshi.com/product/blockstream-jadelink-air-gapped-usb-drive/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 55491,
+    "name": "Foundation Passport Prime Bitcoin Hardware Wallet",
+    "url": "https://www.solosatoshi.com/product/foundation-passport-prime/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 54849,
+    "name": "Heatbit Bitair Air Purifier Bitcoin Miner",
+    "url": "https://www.solosatoshi.com/product/heatbit-bitair-air-purifier-bitcoin-miner/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 54819,
+    "name": "SeedSigner+ Fully Assembled Kit & Accessories",
+    "url": "https://www.solosatoshi.com/product/seedsigner/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 54150,
+    "name": "Bitaxe Gamma Hex Bitcoin Solo Miner (1300 Model)",
+    "url": "https://www.solosatoshi.com/product/bitaxe-gamma-hex/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 51904,
+    "name": "Avalon Q Riser Stand",
+    "url": "https://www.solosatoshi.com/product/avalon-q-riser-stand/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 51751,
+    "name": "Bitaxe 40W 5V 8A Power Supply",
+    "url": "https://www.solosatoshi.com/product/bitaxe-40w-5v-8a-power-supply/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 11327,
+    "name": "NerdQaxe++ Bitcoin Solo Miner (Revision 7)",
+    "url": "https://www.solosatoshi.com/product/nerdqaxe-plus-plus/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50993,
+    "name": "PWM Fan Hub 1-to-5 Splitter Cable 16 Inch",
+    "url": "https://www.solosatoshi.com/product/pwm-fan-hub-1-to-5-splitter-cable/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50983,
+    "name": "Thermalright TF7 Thermal Paste 2g",
+    "url": "https://www.solosatoshi.com/product/thermalright-tf7-thermal-paste-2g/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50950,
+    "name": "4-Pin PWM Fan Splitter Cable 10.5 Inch 1-to-2 Converter",
+    "url": "https://www.solosatoshi.com/product/4-pin-pwm-fan-splitter-cable/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50925,
+    "name": "Thermalright AXP90-X47 Full Copper Heatsink + 92mm PWM Fan",
+    "url": "https://www.solosatoshi.com/product/thermalright-axp90-x47-full-copper-heatsink-fan/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50192,
+    "name": "BitForge Nano Bitcoin Solo Miner (Ghost Edition)",
+    "url": "https://www.solosatoshi.com/product/bitforge-nano-ghost-edition/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 14841,
+    "name": "Blockstream Jade Bitcoin Hardware Wallet",
+    "url": "https://www.solosatoshi.com/product/blockstream-jade-bitcoin-hardware-wallet/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 4695,
+    "name": "Bitaxe Touch Bitcoin Solo Miner (Turbo Touch Edition)",
+    "url": "https://www.solosatoshi.com/product/bitaxe-touch/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 1651,
+    "name": "Bitaxe Gamma Bitcoin Solo Miner",
+    "url": "https://www.solosatoshi.com/product/bitaxe-gamma/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44838,
+    "name": "Bitaxe Gamma Duo Bitcoin Solo Miner (650 Model)",
+    "url": "https://www.solosatoshi.com/product/bitaxe-duo-bitcoin-solo-miner-650-model/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 25241,
+    "name": "Nerdaxe Gamma Bitcoin Solo Miner (Revision 2.3 Model)",
+    "url": "https://www.solosatoshi.com/product/nerdaxe-gamma-bitcoin-solo-miner/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 11318,
+    "name": "Bitaxe GT Gamma Turbo Bitcoin Solo Miner (801 Model)",
+    "url": "https://www.solosatoshi.com/product/bitaxe-gt-gamma-turbo/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 41516,
+    "name": "Start9 Server One Home Server with StartOS (2026 Model)",
+    "url": "https://www.solosatoshi.com/product/start9-server-one-2026-home-server-with-startos/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 32745,
+    "name": "Avalon Nano 3S Bitcoin Solo Miner",
+    "url": "https://www.solosatoshi.com/product/avalon-nano-3s-bitcoin-solo-miner/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 40178,
+    "name": "Canaan Avalon Mini 3 37.5TH Bitcoin Home Miner",
+    "url": "https://www.solosatoshi.com/product/canaan-avalon-mini-3-37-5th-bitcoin-home-mining-space-heater/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 36612,
+    "name": "Canaan Avalon Q Bitcoin Home Miner",
+    "url": "https://www.solosatoshi.com/product/canaan-avalon-q-90th-bitcoin-home-miner/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50888,
+    "name": "Thermal Grizzly Kryonaut Extreme Thermal Paste 2g",
+    "url": "https://www.solosatoshi.com/product/thermal-grizzly-kryonaut-extreme-thermal-paste-2g/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 43997,
+    "name": "Solo Satoshi Block Hoodie (American Flag Sleeve) Black Pullover",
+    "url": "https://www.solosatoshi.com/product/solo-satoshi-block-hoodie-with-american-flag/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50702,
+    "name": "El Mirage Heatsink for Bitaxe and Nerdaxe",
+    "url": "https://www.solosatoshi.com/product/el-mirage-heatsink-for-bitaxe-and-nerdaxe/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 50662,
+    "name": "LilyGo T-Display S3 (H577) Bitcoin Solo Miner Replacement Screen",
+    "url": "https://www.solosatoshi.com/product/lilygo-t-display-s3-h577-replacement-screen/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 41243,
+    "name": "Thermalright TL-9015B 92mm Slim PWM Fan",
+    "url": "https://www.solosatoshi.com/product/thermalright-tl-9015b-92mm-slim-pwm-fan/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 41766,
+    "name": "12V 10A 120W Switching Power Supply With 5.5×2.1 Jack",
+    "url": "https://www.solosatoshi.com/product/12v-10a-120w-switching-power-supply-with-5-5x2-1-jack/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 43979,
+    "name": "Bitxae Anarchy Snapback Hat",
+    "url": "https://www.solosatoshi.com/product/bitxae-anarchy-snapback-hat/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 41684,
+    "name": "Black 3D Printed Bitaxe Display Stand",
+    "url": "https://www.solosatoshi.com/product/black-3d-printed-bitaxe-display-stand/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44185,
+    "name": "Unisex 256 Foundation Hoodie Pullover",
+    "url": "https://www.solosatoshi.com/product/unisex-256-foundation-hoodie-pullover/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44135,
+    "name": "Unisex OSMU Hoodie Pullover",
+    "url": "https://www.solosatoshi.com/product/unisex-osmu-hoodie-pullover/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 25081,
+    "name": "52Pi Copper MOSFET Heatsink Kit for Bitaxe and Nerdaxe",
+    "url": "https://www.solosatoshi.com/product/52pi-copper-mosfet-heatsink-kit-for-bitaxe-and-nerdaxe/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44088,
+    "name": "Solo Satoshi Snapback Hat",
+    "url": "https://www.solosatoshi.com/product/solo-satoshi-snapback-hat/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44070,
+    "name": "Solo Satoshi T-Shirt with American Flag",
+    "url": "https://www.solosatoshi.com/product/solo-satoshi-t-shirt-with-american-flag/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44044,
+    "name": "Solo Satoshi Block T Shirt with American Flag",
+    "url": "https://www.solosatoshi.com/product/short-sleeve-t-shirt/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 44022,
+    "name": "Solo Satoshi Hoodie (American Flag Sleeve) Black Pullover",
+    "url": "https://www.solosatoshi.com/product/solo-satoshi-hoodie-american-flag-sleeve-black-pullover/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 47632,
+    "name": "Black 3D Printed NerdQaxe++ Display Stand",
+    "url": "https://www.solosatoshi.com/product/black-3d-printed-nerdqaxe-display-stand/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 48519,
+    "name": "Mean Well LRS-350-12 348W 12V 29A Switching Power Supply",
+    "url": "https://www.solosatoshi.com/product/mean-well-lrs-350-12-348w-12v-29a-switching-power-supply/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 24528,
+    "name": "Mean Well LRS-50-5 50W 5V 10A Switching Power Supply",
+    "url": "https://www.solosatoshi.com/product/mean-well-lrs-50-5/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 28311,
+    "name": "5.5 x 2.1mm 90 Degree Barrel Jack Male Pigtail 1 Meter 16 AWG",
+    "url": "https://www.solosatoshi.com/product/5-5-x-2-1mm-90-degree-barrel-jack-male-pigtail-1-meter-16-awg/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 28317,
+    "name": "US 3 Prong AC Plug Pigtail 1 Meter 14 AWG",
+    "url": "https://www.solosatoshi.com/product/us-3-prong-ac-plug-pigtail-1-meter-14-awg/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 28245,
+    "name": "XT30 Female Pigtail 1 Meter 16 AWG",
+    "url": "https://www.solosatoshi.com/product/xt30-female-pigtail-1-meter-16-awg/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 28218,
+    "name": "Mean Well LRS-600-12 600W 12V 50A Switching Power Supply",
+    "url": "https://www.solosatoshi.com/product/mean-well-lrs-600-12-600w-12v-50a-switching-power-supply/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 28189,
+    "name": "Noctua NF-A8 PWM, Premium Quiet Fan, 4-Pin (80mm, Brown)",
+    "url": "https://www.solosatoshi.com/product/noctua-nf-a8-pwm-premium-quiet-fan-4-pin-80mm-brown/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 36578,
+    "name": "12.4V 10A 124W Switching Power Supply with XT30 Connector",
+    "url": "https://www.solosatoshi.com/product/12-4v-10a-124w-switching-power-supply-with-xt30-connector/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 4504,
+    "name": "Satoshi Stacker – Stackable Bitaxe Stand",
+    "url": "https://www.solosatoshi.com/product/stackable-bitaxe-stand/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 13743,
+    "name": "Bitaxe Fan adapter",
+    "url": "https://www.solosatoshi.com/product/bitaxe-fan-adapter/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 3978,
+    "name": "Bitaxe 30W 5V 6A Power Supply",
+    "url": "https://www.solosatoshi.com/product/bitaxe-power-supply-5v-6a-30w/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 36549,
+    "name": "Mean Well LRS-350-5 300W 5V 60A Switching Power Supply",
+    "url": "https://www.solosatoshi.com/product/mean-well-lrs-350-5-300w-5v-60a-switching-power-supply/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 83,
+    "name": "Bitaxe Hat – Snapback",
+    "url": "https://www.solosatoshi.com/product/bitaxe-hat/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 1683,
+    "name": "AxeStand – Upright Bitaxe Stand",
+    "url": "https://www.solosatoshi.com/product/axestand/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 81,
+    "name": "Bitaxe Anarchy Shirt",
+    "url": "https://www.solosatoshi.com/product/solosatoshi-shirts/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 24799,
+    "name": "Bitaxe Replacement OLED Screen",
+    "url": "https://www.solosatoshi.com/product/bitaxe-replacement-oled-screen/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 24789,
+    "name": "OEM Bitaxe 40mm Replacement Fan",
+    "url": "https://www.solosatoshi.com/product/bitaxe-replacement-fan/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 41743,
+    "name": "Bitcoin Grenade 3D Printed Stash Container",
+    "url": "https://www.solosatoshi.com/product/bitcoin-grenade-3d-printed-stash-container/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 2955,
+    "name": "NerdQaxe+ Bitcoin Solo Miner",
+    "url": "https://www.solosatoshi.com/product/nerdqaxe-plus/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 42037,
+    "name": "Bitaxe Gamma Stand Free .STL Download",
+    "url": "https://www.solosatoshi.com/product/bitaxe-gamma-stand-free-stl-download/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 42028,
+    "name": "Bitaxe GT Stand Free .STL Download",
+    "url": "https://www.solosatoshi.com/product/bitaxe-gt-stand-free-stl-download/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 26987,
+    "name": "NerdQaxe++ Stand Free .STL Download",
+    "url": "https://www.solosatoshi.com/product/nerdqaxe-stand-free-stl-download/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 19879,
+    "name": "NerdQaxe+ Hydro Bitcoin Solo Miner",
+    "url": "https://www.solosatoshi.com/product/nerdqaxe-hydro/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 27109,
+    "name": "Bitaxe Stand Free .STL Download",
+    "url": "https://www.solosatoshi.com/product/bitaxe-stand-free-stl-download/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 1691,
+    "name": "ImmergeAxe",
+    "url": "https://www.solosatoshi.com/product/immergeaxe/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 23160,
+    "name": "Bitaxe Supra Bitcoin Solo Miner",
+    "url": "https://www.solosatoshi.com/product/bitaxe-supra/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 11329,
+    "name": "Bitaxe Touch Blockstream Edition + Jade Plus Hardware Wallet – 1.5 TH/s",
+    "url": "https://www.solosatoshi.com/product/bitaxe-touch-blockstream-edition-jade-plus-bundle/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 24030,
+    "name": "Bitaxe Heatsink Upgrade",
+    "url": "https://www.solosatoshi.com/product/bitaxe-heatsink-upgrade/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 25226,
+    "name": "Bitmain BM1370BC ASIC Chip",
+    "url": "https://www.solosatoshi.com/product/bitmain-bm1370pa-asic-chip/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "solo",
+    "supplier_product_id": 13755,
+    "name": "Ember One",
+    "url": "https://www.solosatoshi.com/product/ember-one/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 27631,
+    "name": "GekkoScience Compac A2 – 1 TH/s BM1370 Bitcoin USB-Stick Miner",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/compac-a2/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25982,
+    "name": "BitForgeNano – Ghost Edition – Bitcoin Miner 2,6 TH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/bitforgenano-ghost-edition/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25745,
+    "name": "Apollo III Standard — Flexibler Standalone Bitcoin Miner mit 10–18 TH/s",
+    "url": "https://www.bitshopper.de/shop/futurebit/apollo-3-standard/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25714,
+    "name": "Apollo III Full Node – Der ultimative All-in-One Bitcoin Full Node & Solo Miner (10–18 TH/s)",
+    "url": "https://www.bitshopper.de/shop/futurebit/apollo-3-full-node/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25587,
+    "name": "Bitaxe Gamma v601  – SuperSink Overclocker Edition mit 1,9 TH/s",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-v601-supersink/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25547,
+    "name": "Umrüstkit SuperSink Kupfer-Kühlkörper mit Doppellüfter",
+    "url": "https://www.bitshopper.de/shop/bitaxe/umruestkit-supersink/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25436,
+    "name": "Bitcoin Miner GekkoScience Terminus Smart A2",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/gekkoscience-terminus-smart-a2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25363,
+    "name": "TheSoloMining.co Bitaxe LonelyFan 4-poliger PCB-Lüfterverteiler",
+    "url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-co-bitaxe-lonelyfan/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25345,
+    "name": "TheSoloMining.co V-Reg Kühlkörper für den Bitaxe Gamma Spannungswandler",
+    "url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-vreg-kuehlkoerper/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25180,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – ICE Tower Turbo 1,7 TH/s",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-ice-tower-overclocker-turbo/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25001,
+    "name": "Big Display Umrüstkit für Bitaxe Miner",
+    "url": "https://www.bitshopper.de/shop/bitaxe/big-display-umruestkit/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 25120,
+    "name": "Thermal Grizzly Kryonaut Wärmeleitpaste 1g",
+    "url": "https://www.bitshopper.de/shop/bitaxe/thermal-grizzly-kryonaut/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24941,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – Big Display Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-v601-big-display-edition/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24810,
+    "name": "TheSoloMining.co Magic Fan und SuperSilent Lüfter für BitAxe Bundle",
+    "url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-co-magic-fan-und-supersilent-luefter-fuer-bitaxe-bundle/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24704,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – Bithalo Angel’s Share Turbo Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-angel-share-edition/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24597,
+    "name": "Umrüstkit ICE Tower Overclocker Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/umruestkit-ice-tower/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24506,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – ICE Tower Overclocker Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-v601-edition-ice-tower/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24380,
+    "name": "TheSoloMining.co Custom SuperSilent Lüfter für BitAxe",
+    "url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-co-custom-supersilent-luefter/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24113,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – GekkoScience Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitshopper-bitaxe-gamma-v601/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24064,
+    "name": "30 Watt Netzteil für Bitaxe Open Source Miner",
+    "url": "https://www.bitshopper.de/shop/bitaxe/netzteil-30w/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 24059,
+    "name": "TheSoloMining.co Custom Kühlkörper für BitAxe",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitchin-kuehlkoerper/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 23868,
+    "name": "Bitaxe Gamma v601 Open Source Bitcoin Miner – Bithalo Black Edition",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-bithalo-black-edition/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 23685,
+    "name": "GekkoScience MeinCoffee 700 GH/s Kaffeewärmer",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/gekkoscience-meincoffee/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 23465,
+    "name": "Bitaxe Supra v401 Open Source Bitcoin Miner",
+    "url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-supra-v401/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 23340,
+    "name": "150 Watt Netzteil mit 6-Pin PCIe Anschluss",
+    "url": "https://www.bitshopper.de/shop/zubehoer/netzteil-150w/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 23270,
+    "name": "GekkoScience Compac A1 – Dual-ASIC Bitcoin USB-Stick Miner mit 350–500 GH/s",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/compac-a1/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 22793,
+    "name": "Futurebit BTC Miner Apollo II",
+    "url": "https://www.bitshopper.de/shop/futurebit/futurebit-apollo2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 22766,
+    "name": "11-Port Mining Smart Hub mit Raspberry PI Zero Mining Controller",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/smart-hub/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 22758,
+    "name": "24-Pin ATX Netzteil-Schalter",
+    "url": "https://www.bitshopper.de/shop/zubehoer/atx-netzteil-schalter/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 22119,
+    "name": "Bitcoin Pod Miner bitshopper GekkoScience Terminus R909",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/r909/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 21114,
+    "name": "Bitcoin USB-Stick Miner bitshopper GekkoScience Compac F 200 bis 350 GH/s",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/compac-f/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 20498,
+    "name": "Bitcoin Pod Miner bitshopper GekkoScience Terminus R808",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/terminus-r808/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 20096,
+    "name": "Futurebit Apollo BTC Miner Serie 4.1",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/futurebit-apollo-btc-miner/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 19229,
+    "name": "200W Netzteil mit 6-Pin PCIe Anschluss",
+    "url": "https://www.bitshopper.de/shop/zubehoer/netzteil-200w/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 12034,
+    "name": "Scrypt Pod Miner bitshopper Futurebit Apollo (100-140 MH/s) – Batch 2 (mit Netzteil)",
+    "url": "https://www.bitshopper.de/shop/scrypt-miner/standalone-miner-scrypt/apollo-2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 8455,
+    "name": "Bitcoin Pod Miner bitshopper GekkoScience Terminus R606",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/terminus-r606/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 6297,
+    "name": "7-Port USB Hub mit 6-Pin PCIe Anschluss",
+    "url": "https://www.bitshopper.de/shop/gekkoscience/7-port-usb-hub/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 5535,
+    "name": "Ledger Nano S – Crypto Currency Hardware Wallet",
+    "url": "https://www.bitshopper.de/shop/zubehoer/ledger-nano-s/",
+    "reported_in_stock": true,
+    "decision": "not added",
+    "reason": "Existing listing, alternative configuration, or outside selected hardware scope"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 5460,
+    "name": "Bitcoin USB-Stick Miner bitshopper GekkoScience NewPac 22 bis 45 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/newpac/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 5416,
+    "name": "Scrypt Pod Miner bitshopper Futurebit Apollo (100-140 MH/s) – Batch 2",
+    "url": "https://www.bitshopper.de/shop/scrypt-miner/standalone-miner-scrypt/futurebit-apollo/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 1321,
+    "name": "Scrypt USB-Stick Miner bitshopper Futurebit Moonlander 2 (3-5 MH/s)",
+    "url": "https://www.bitshopper.de/shop/futurebit/moonlander2/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 1106,
+    "name": "Bitcoin USB-Stick Miner bitshopper GekkoScience 2Pac 5,5 bis 25 GH/s (33 GH/s max.)",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/gekkoscience-2pac/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 1091,
+    "name": "GekkoScience 12-fach PCI-E 6pin Breakout Board für HP DPS-800 und HP DPS-1200 Netzteile",
+    "url": "https://www.bitshopper.de/shop/zubehoer/breakout_board/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 939,
+    "name": "Heavy Duty PCI-E 6-pin Anschlusskabel, lastfähig, 60 cm",
+    "url": "https://www.bitshopper.de/shop/zubehoer/pcie-6pin-anschlusskabel/",
+    "reported_in_stock": true,
+    "decision": "selected",
+    "reason": "Relevant distinct hardware with positive price and supplier stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 902,
+    "name": "Bitcoin Miner Netzteil Bundle (HP DPS 1200 W mit Breakout Board und PCIe-Kabel)",
+    "url": "https://www.bitshopper.de/shop/zubehoer/hp-dps-1200fb-psu/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 822,
+    "name": "Bitcoin-Miner Bitmain AntMiner S7 ASIC Miner 4,73 TH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/antminer-s7/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 788,
+    "name": "USB Stick SCRYPT Miner FutureBit Moonlander bis 1 MH/s",
+    "url": "https://www.bitshopper.de/shop/scrypt-miner/usb-miner-scrypt/futurebit-moonlander/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 336,
+    "name": "Bitcoin-Miner Bitmain AntMiner S4 ASIC Miner 2000 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/bitcoin-miner-bitmain-antminer-s4-asic-miner-2000-ghs/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 346,
+    "name": "Bitcoin-Miner Bitmain AntMiner U3 USB ASIC Miner 63 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/antminer-u3-usb/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 235,
+    "name": "Be Quiet System Power 7 ATX Netzteil 700W",
+    "url": "https://www.bitshopper.de/shop/zubehoer/bequiet-700w/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 220,
+    "name": "Bitcoin-Miner Bitmain AntMiner S3+ ASIC Miner 453 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/bitcoin-miner-bitmain-antminer-s3-asic-miner-453-ghs/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 149,
+    "name": "Bitcoin-Miner Bitmain AntMiner S3 ASIC Miner 441 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/standalone-miner-bitcoin/antminer-s3/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 142,
+    "name": "GAW Miners Fury Zeus Miner Blizzard 1.4 MH/s Scrypt Miner",
+    "url": "https://www.bitshopper.de/shop/scrypt-miner/usb-miner-scrypt/gaw-miners-fury/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 133,
+    "name": "bitshopper NanoFury NF2 Gen. 2 – bis zu 6,6 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/bitshopper-nanofury-nf2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 129,
+    "name": "bitshopper NanoFury NF6 Gen. 2 – 15,5 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/bitshopper-nanofury-nf6/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 73,
+    "name": "Scrypt-Miner Gridseed DualMiner 2 USB ASIC Miner 70 KH/s",
+    "url": "https://www.bitshopper.de/shop/scrypt-miner/usb-miner-scrypt/gridseed-dualminer-2-usb/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 64,
+    "name": "ORICO P10-U2 externer 10-fach USB 2.0 Mining HUB",
+    "url": "https://www.bitshopper.de/shop/zubehoer/orico-p10-u2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "bitshopper",
+    "supplier_product_id": 21,
+    "name": "AntMiner U2+ USB ASIC Miner bis 2,4 GH/s",
+    "url": "https://www.bitshopper.de/shop/sha-256-miner/usb-miner-bitcoin/antminer-u2/",
+    "reported_in_stock": false,
+    "decision": "not added",
+    "reason": "Supplier reports out of stock"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-24-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-24-poe",
+    "name": "Switch Pro 24 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-xg-24-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-24-poe",
+    "name": "Switch Pro XG 24 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-hd-24-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24-poe",
+    "name": "Switch Pro HD 24 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-max-24-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24-poe",
+    "name": "Switch Pro Max 24 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-aggregation",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-aggregation",
+    "name": "Switch Aggregation / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-24-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-24-poe",
+    "name": "Switch 24 PoE",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-16-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-16-poe",
+    "name": "Switch 16 PoE",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-wan",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-wan",
+    "name": "UniFi WAN Switch",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-xg-10-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-10-poe",
+    "name": "Switch Pro XG 10 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-lite-8-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-lite-8-poe",
+    "name": "Switch Lite 8 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-lite-16-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-lite-16-poe",
+    "name": "Switch Lite 16 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-wan-rj45",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-wan-rj45",
+    "name": "UniFi WAN Switch RJ45",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-max-16-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16-poe",
+    "name": "Switch Pro Max 16 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-enterprise-8-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-enterprise-8-poe",
+    "name": "Switch Enterprise 8 PoE (Vintage)",
+    "decision": "not added",
+    "reason": "Unavailable, vintage, or no structured product offer"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-xg-8-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-8-poe",
+    "name": "Switch Pro XG 8 PoE / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-8-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-8-poe",
+    "name": "Switch Pro 8 PoE",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-flex-2-5g-8-poe",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8-poe",
+    "name": "Switch Flex 2.5G PoE",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-flex-2-5g-5",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-5",
+    "name": "Switch Flex Mini 2.5G / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-flex-2-5g-8",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8",
+    "name": "Switch Flex 2.5G",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-flex",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flex",
+    "name": "Switch Flex / Single Unit",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-max-16",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16",
+    "name": "Switch Pro Max 16",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-max-24",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24",
+    "name": "Switch Pro Max 24 / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-flex-xg",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flex-xg",
+    "name": "Switch Flex XG / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-hd-24",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24",
+    "name": "Switch Pro HD 24 / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-aggregation",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-aggregation",
+    "name": "Switch Hi-Capacity Aggregation",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-24",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-24",
+    "name": "Switch 24",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "usw-pro-24",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-24",
+    "name": "Switch Pro 24 / EU Version",
+    "decision": "not added",
+    "reason": "Unavailable, vintage, or no structured product offer"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "ucg-fiber",
+    "url": "https://eu.store.ui.com/eu/en/products/ucg-fiber",
+    "name": "Cloud Gateway Fiber",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "uxg-lite",
+    "url": "https://eu.store.ui.com/eu/en/products/uxg-lite",
+    "name": "Gateway Lite / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "udm-se",
+    "url": "https://eu.store.ui.com/eu/en/products/udm-se",
+    "name": "Dream Machine Special Edition / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "udm-pro",
+    "url": "https://eu.store.ui.com/eu/en/products/udm-pro",
+    "name": "Dream Machine Pro / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "ucg-max",
+    "url": "https://eu.store.ui.com/eu/en/products/ucg-max",
+    "name": "Cloud Gateway Max / EU Version",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "unifi-unas-pro",
+    "url": "https://eu.store.ui.com/eu/en/products/unifi-unas-pro",
+    "name": "unifi-unas-pro",
+    "decision": "not added",
+    "reason": "Unavailable, vintage, or no structured product offer"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "unas-2",
+    "url": "https://eu.store.ui.com/eu/en/products/unas-2",
+    "name": "UNAS 2 / Black",
+    "decision": "not added",
+    "reason": "Unavailable, vintage, or no structured product offer"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "unas-pro-4",
+    "url": "https://eu.store.ui.com/eu/en/products/unas-pro-4",
+    "name": "UNAS Pro 4",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ui",
+    "supplier_product_id": "uxg-max",
+    "url": "https://eu.store.ui.com/eu/en/products/uxg-max",
+    "name": "Gateway Max",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5817,
+    "url": "https://www.adafruit.com/product/5817",
+    "name": "Raspberry Pi 5 RTC Battery",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5815,
+    "url": "https://www.adafruit.com/product/5815",
+    "name": "Official Raspberry Pi 5 Active Cooler",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5814,
+    "url": "https://www.adafruit.com/product/5814",
+    "name": "Official Raspberry Pi 27W PD Power Supply 5.1V 5A with USB C",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5813,
+    "url": "https://www.adafruit.com/product/5813",
+    "name": "Raspberry Pi 5 - 8 GB RAM",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5816,
+    "url": "https://www.adafruit.com/product/5816",
+    "name": "Official Raspberry Pi Foundation Raspberry Pi 5 Case + Fan",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5818,
+    "url": "https://www.adafruit.com/product/5818",
+    "name": "Raspberry Pi 5 FPC Camera Cable - 22-pin 0.5mm to 15-pin 1mm",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6277,
+    "url": "https://www.adafruit.com/product/6277",
+    "name": "Aluminum Metal Heatsink Raspberry Pi 5 Case with Fan",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 4552,
+    "url": "https://www.adafruit.com/product/4552",
+    "name": "PoE Splitter with USB Type C - 5V 2A - 100 MB Ethernet",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5847,
+    "url": "https://www.adafruit.com/product/5847",
+    "name": "Flirc Aluminum Case for Raspberry Pi 5",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6009,
+    "url": "https://www.adafruit.com/product/6009",
+    "name": "Raspberry Pi AI Camera with Sony IMX500",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6320,
+    "url": "https://www.adafruit.com/product/6320",
+    "name": "Official Raspberry Pi 45W USB-C Power Supply",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6125,
+    "url": "https://www.adafruit.com/product/6125",
+    "name": "Raspberry Pi 5 - 16 GB RAM",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5845,
+    "url": "https://www.adafruit.com/product/5845",
+    "name": "Pimoroni NVMe Base for Raspberry Pi 5",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6014,
+    "url": "https://www.adafruit.com/product/6014",
+    "name": "Adafruit FPC Breakout for Raspberry Pi 5 DSI or RP2350 HSTX",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5902,
+    "url": "https://www.adafruit.com/product/5902",
+    "name": "Raspberry Pi M.2 HAT+",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6307,
+    "url": "https://www.adafruit.com/product/6307",
+    "name": "Aluminum Metal Heatsink Raspberry Pi 5 Case",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5931,
+    "url": "https://www.adafruit.com/product/5931",
+    "name": "PCIe Flex Cable for NVMe Base and Raspberry Pi 5 – PCIe Pipe",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5969,
+    "url": "https://www.adafruit.com/product/5969",
+    "name": "Pimoroni NVMe Base Duo for Raspberry Pi 5",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 4793,
+    "url": "https://www.adafruit.com/product/4793",
+    "name": "Raspberry Pi Compute Module 4 Antenna Kit",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 4787,
+    "url": "https://www.adafruit.com/product/4787",
+    "name": "Raspberry Pi Compute Module 4 IO Board",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 6427,
+    "url": "https://www.adafruit.com/product/6427",
+    "name": "Raspberry Pi M.2 HAT+ Compact",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 2909,
+    "url": "https://www.adafruit.com/product/2909",
+    "name": "USB 2.0 and Ethernet Hub - 3 USB Ports and 1 Ethernet",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 5058,
+    "url": "https://www.adafruit.com/product/5058",
+    "name": "Raspberry Pi PoE+ HAT",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "ada",
+    "supplier_product_id": 4374,
+    "url": "https://www.adafruit.com/product/4374",
+    "name": "Adafruit BrainCraft HAT - Machine Learning for Raspberry Pi 4",
+    "decision": "selected",
+    "reason": "Distinct in-stock hardware with supplier price"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 91205,
+    "name": "Bitcoin Steel Plate: Blockmit Compatible Crypto Seed Backup",
+    "url": "https://d-central.tech/product/bitcoin-steel-plate-blockmit-compatible-crypto-seed-backup/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 91189,
+    "name": "3D Printed Blockmit Jig for Bitcoin Steel Seed Phrase Plate",
+    "url": "https://d-central.tech/product/stamping-bitcoin-seed-phrase-steel-plate/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 90829,
+    "name": "Custom GPU Inference Rig",
+    "url": "https://d-central.tech/product/custom-gpu-inference-rig/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 90828,
+    "name": "AMD Strix Halo 128GB Local AI Desktop",
+    "url": "https://d-central.tech/product/amd-strix-halo-128gb/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 90522,
+    "name": "Mini Coverplate Enclosure for SeedSigner – Compact & Minimalist Protection",
+    "url": "https://d-central.tech/product/mini-coverplate-enclosure-for-seedsigner-compact-minimalist-protection/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89731,
+    "name": "Antminer S19 / S21 Dual 120 mm Intake Filter Ring",
+    "url": "https://d-central.tech/product/dc-shroud-filter-ring-d120/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89730,
+    "name": "8-Inch Long-Radius 90° Airflow Duct Elbow",
+    "url": "https://d-central.tech/product/dc-shroud-elbow-90-8-v2/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89729,
+    "name": "8-Inch Flex Duct Window Vent Port",
+    "url": "https://d-central.tech/product/dc-shroud-window-port-8-flex/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89728,
+    "name": "6-Inch Flex Duct Window Vent Port",
+    "url": "https://d-central.tech/product/dc-shroud-window-port-6-flex/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89727,
+    "name": "8-Inch Flex Duct Adapter — Rigid Socket to Flex Collar",
+    "url": "https://d-central.tech/product/dc-shroud-flex-adapter-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89726,
+    "name": "6-Inch Flex Duct Adapter — Rigid Socket to Flex Collar",
+    "url": "https://d-central.tech/product/dc-shroud-flex-adapter-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89725,
+    "name": "Threaded Duct Receiver 6-Inch — Screw-On Duct Adapter",
+    "url": "https://d-central.tech/product/dc-shroud-receiver-thr-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89724,
+    "name": "Bayonet Duct Receiver 6-Inch — Twist-Lock Duct Adapter",
+    "url": "https://d-central.tech/product/dc-shroud-receiver-bay-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89723,
+    "name": "Antminer S19 / S21 Dual 120 mm to 8-Inch Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89721,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Threaded Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6-thr/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89720,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Bayonet Quick-Release Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6-bay/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89719,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Clamp-Groove Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6-clp/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89718,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Offset Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6-off/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89717,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Venturi Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6-ven/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89716,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6-Inch Shroud — Wide Base",
+    "url": "https://d-central.tech/product/dc-shroud-alt-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89715,
+    "name": "Whatsminer 140 mm Fan to 200 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-wm-140-200/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89714,
+    "name": "Whatsminer 140 mm Fan to 160 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-wm-140-160/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89713,
+    "name": "Whatsminer 140 mm Fan to 150 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-wm-140-150/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89712,
+    "name": "Antminer S21 Pro Dual 140 mm to 200 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s21pro-d140-200/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89711,
+    "name": "Dual 140 mm Fan to 200 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d140-200/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89710,
+    "name": "Dual 140 mm Fan to 160 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d140-160/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89709,
+    "name": "Dual 140 mm Fan to 150 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d140-150/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89708,
+    "name": "Antminer S19 / S21 Dual 120 mm to 200 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d120-200/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89707,
+    "name": "Antminer S19 / S21 Dual 120 mm to 160 mm Metric Duct Shroud (Wide Base)",
+    "url": "https://d-central.tech/product/dc-shroud-d120-160-wide/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89706,
+    "name": "Antminer S19 / S21 Dual 120 mm to 160 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d120-160/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89705,
+    "name": "Antminer S19 / S21 Dual 120 mm to 150 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d120-150/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89704,
+    "name": "Avalon A15 Vertical Dual 120 mm to 200 mm Metric Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-ava15-200/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89703,
+    "name": "Avalon A15 Vertical Dual 120 mm to 8-Inch Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-ava15-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89702,
+    "name": "Avalon A15 Vertical Dual 120 mm to 6-Inch Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-ava15-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89638,
+    "name": "Antminer S17 Full-Wrap Dual 120 mm to 8″ Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s17-wrap-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89637,
+    "name": "Antminer S17 Full-Wrap Dual 120 mm to 6″ Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s17-wrap-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89636,
+    "name": "Antminer S19 Full-Wrap Dual 120 mm to 8″ Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s19-wrap-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89635,
+    "name": "Antminer S19 Full-Wrap Dual 120 mm to 6″ Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s19-wrap-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89634,
+    "name": "Universal Dual 140 mm to 8″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d140-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89633,
+    "name": "Universal Dual 140 mm to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d140-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89632,
+    "name": "Antminer S21 Pro Dual 140 mm to 8″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s21pro-d140-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89631,
+    "name": "Antminer S21 Pro Dual 140 mm to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s21pro-d140-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89630,
+    "name": "Threaded Collar Cap for Dual 120 mm to 6″ Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-threaded-cap-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89629,
+    "name": "140 mm Intake Filter Ring",
+    "url": "https://d-central.tech/product/dc-shroud-filter-ring-140/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89628,
+    "name": "120 mm Intake Filter Ring",
+    "url": "https://d-central.tech/product/dc-shroud-filter-ring-120/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89627,
+    "name": "140 mm to 120 mm Fan Adapter",
+    "url": "https://d-central.tech/product/dc-shroud-fan-adapter-140-120/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89626,
+    "name": "120 mm to 140 mm Fan Adapter",
+    "url": "https://d-central.tech/product/dc-shroud-fan-adapter-120-140/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89625,
+    "name": "8″ to Dual 6″ Y-Splitter",
+    "url": "https://d-central.tech/product/dc-shroud-y-split-8-2x6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89624,
+    "name": "6″ to Dual 4″ Y-Splitter",
+    "url": "https://d-central.tech/product/dc-shroud-y-split-6-2x4/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89623,
+    "name": "8″ Window Exhaust Port",
+    "url": "https://d-central.tech/product/dc-shroud-window-port-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89622,
+    "name": "6″ Window Exhaust Port",
+    "url": "https://d-central.tech/product/dc-shroud-window-port-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89620,
+    "name": "8″ 90° Duct Elbow (Compact)",
+    "url": "https://d-central.tech/product/dc-shroud-elbow-90-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89619,
+    "name": "6″ 90° Duct Elbow (Compact)",
+    "url": "https://d-central.tech/product/dc-shroud-elbow-90-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89618,
+    "name": "8″ 45° Duct Elbow",
+    "url": "https://d-central.tech/product/dc-shroud-elbow-45-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89617,
+    "name": "6″ 45° Duct Elbow",
+    "url": "https://d-central.tech/product/dc-shroud-elbow-45-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89616,
+    "name": "8″ Duct Coupler",
+    "url": "https://d-central.tech/product/dc-shroud-coupler-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89615,
+    "name": "6″ Duct Coupler",
+    "url": "https://d-central.tech/product/dc-shroud-coupler-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89614,
+    "name": "6″ to 4″ Duct Reducer",
+    "url": "https://d-central.tech/product/dc-shroud-reducer-6-4/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89613,
+    "name": "8″ to 6″ Duct Reducer",
+    "url": "https://d-central.tech/product/dc-shroud-reducer-8-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89612,
+    "name": "Antminer S19 / S21 Dual 120 mm to 8″ Shroud Silencer v2 — λ/4 Side-Branch",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-d120-8-v2/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89611,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6″ Shroud Silencer v2 — λ/4 Side-Branch",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-d120-6-v2/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89610,
+    "name": "Antminer S19 / S21 Dual 120 mm to 8″ Expansion-Chamber Shroud Silencer",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-d120-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89609,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6″ Expansion-Chamber Shroud Silencer",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89608,
+    "name": "Whatsminer 140 mm to 8″ Expansion-Chamber Shroud Silencer",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-140-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89607,
+    "name": "Single 120 mm to 6″ Expansion-Chamber Shroud Silencer",
+    "url": "https://d-central.tech/product/dc-shroud-silencer-120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89606,
+    "name": "Antminer S19 / S21 Threaded-Collar Shroud — Dual 120 mm to 6″",
+    "url": "https://d-central.tech/product/dc-shroud-threaded-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89605,
+    "name": "Antminer S19 / S21 Bayonet-Lock Shroud — Dual 120 mm to 6″",
+    "url": "https://d-central.tech/product/dc-shroud-bayonet-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89604,
+    "name": "Antminer S19 / S21 Clamp-Groove Shroud — Dual 120 mm to 6″",
+    "url": "https://d-central.tech/product/dc-shroud-clamp-groove-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89603,
+    "name": "Antminer S19 / S21 Offset Shroud — Dual 120 mm to 6″",
+    "url": "https://d-central.tech/product/dc-shroud-offset-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89602,
+    "name": "Antminer S19 / S21 Venturi Shroud — Dual 120 mm to 6″",
+    "url": "https://d-central.tech/product/dc-shroud-venturi-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89601,
+    "name": "Antminer S19 / S21 Dual 120 mm to 8″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d120-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89600,
+    "name": "Antminer S19 / S21 Dual 120 mm to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-d120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89599,
+    "name": "Whatsminer 140 mm Fan to 8″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-wm-140-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89598,
+    "name": "Whatsminer 140 mm Fan to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-wm-140-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89596,
+    "name": "Antminer S9 Single 120 mm to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-s9-120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89595,
+    "name": "Universal Single 120 mm Fan to 8″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-120-8/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 89594,
+    "name": "Universal Single 120 mm Fan to 6″ Duct Shroud",
+    "url": "https://d-central.tech/product/dc-shroud-120-6/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88128,
+    "name": "Mesh D-Central — Construit à l’interne (En développement)",
+    "url": "https://d-central.tech/fr/product/mesh-d-central-interne/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88126,
+    "name": "Nœud IA Hashcenter 80+",
+    "url": "https://d-central.tech/fr/product/noeud-ia-hashcenter-80/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88125,
+    "name": "Station de travail IA souveraine 48 / Apple-128",
+    "url": "https://d-central.tech/fr/product/station-travail-ia-souveraine-48-apple-128/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88124,
+    "name": "Station de travail IA souveraine 24",
+    "url": "https://d-central.tech/fr/product/station-travail-ia-souveraine-24/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88123,
+    "name": "Pleb AI Box — Votre première IA souveraine",
+    "url": "https://d-central.tech/fr/product/pleb-ai-box-ia-souveraine/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88122,
+    "name": "NVIDIA DGX Spark — Ordinateur IA personnel (128 Go)",
+    "url": "https://d-central.tech/fr/product/nvidia-dgx-spark-ordinateur-ia/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 84732,
+    "name": "D-Central Mesh Build — In-House (In Development)",
+    "url": "https://d-central.tech/product/dcentral-mesh-build/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 88127,
+    "name": "Nœud mesh LoRa Meshtastic (En développement)",
+    "url": "https://d-central.tech/fr/product/noeud-mesh-lora-meshtastic/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 84731,
+    "name": "Meshtastic LoRa Mesh Node (In Development)",
+    "url": "https://d-central.tech/product/meshtastic-lora-node/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 84726,
+    "name": "NVIDIA DGX Spark — Personal AI Computer (128 GB)",
+    "url": "https://d-central.tech/product/nvidia-dgx-spark/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 84520,
+    "name": "Bitaxe Starter Build — Bitaxe + Case + PSU + Heatsink",
+    "url": "https://d-central.tech/product/bitaxe-starter-build/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77970,
+    "name": "Gelid Gale‑01 – 120 mm High-Performance PWM Fan for ASIC Mining",
+    "url": "https://d-central.tech/product/gelid-gale-01-120-mm-high-performance-pwm-fan-for-asic-mining/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77932,
+    "name": "XT30 Female to DC Power Cable 12V – 5.5×2.1mm / 5.5×2.5mm Female – Compatible with NerdQaxe++ Revision 6.1, Bitaxe GT Gamma Turbo,",
+    "url": "https://d-central.tech/product/xt30-to-dc-power-cable-12v/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77917,
+    "name": "6-Pin Female PCIe to DC Power Cable 12V – Right Angle 5.5×2.1mm / 5.5×2.5mm Male",
+    "url": "https://d-central.tech/product/6-pin-female-pcie-to-dc-power-cable-12v-right-angle-5-5x2-1mm-5-5x2-5mm-male/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77906,
+    "name": "High-Efficiency Quiet Silent Fan DC 12V 60×60×25mm 3000RPM for APW3 APW7 APW12",
+    "url": "https://d-central.tech/product/high-efficiency-quiet-fan-dc-12v-60x60x25mm-3000rpm-for-apw3-apw7-apw12/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77817,
+    "name": "The Bitaxe GT",
+    "url": "https://d-central.tech/product/the-bitaxe-gt/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77735,
+    "name": "Bitaxe Mini Miner DIY Kit – Enclosure & Cooling Upgrade for Bitaxe",
+    "url": "https://d-central.tech/product/bitaxe-mini-miner-diy-kit-enclosure-cooling-upgrade-for-bitaxe/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77724,
+    "name": "Bitmain Antminer S19j Pro+",
+    "url": "https://d-central.tech/product/bitmain-antminer-s19j-pro-2/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77668,
+    "name": "Premium Bitaxe Heatsink — High-Performance Aluminum Cooler for Bitaxe & Nerdaxe Gamma / Supra / Ultra — Silent Operation & Stable Overclocking",
+    "url": "https://d-central.tech/product/premium-bitaxe-heatsink-aluminum/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77526,
+    "name": "Lightning Network Bitcoin Honeybadger Figurine",
+    "url": "https://d-central.tech/product/lightning-network-bitcoin-honeybadger-figurine/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77522,
+    "name": "Guy Fawkes Bitcoin Honeybadger Figurine",
+    "url": "https://d-central.tech/product/guy-fawkes-bitcoin-honeybadger-figurine/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77500,
+    "name": "Miner Bitcoin Honeybadger Figurine",
+    "url": "https://d-central.tech/product/miner-bitcoin-honeybadger-figurine/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "D-Central",
+    "supplier_product_id": 77492,
+    "name": "Astronaut Bitcoin Honeybadger Figurine",
+    "url": "https://d-central.tech/product/astronaut-bitcoin-honeybadger-figurine/",
+    "decision": "not added",
+    "reason": "Secondary Canadian source; expansion prioritizes US/EU supply and avoids unconfirmed builds and repetitive duct configurations"
+  },
+  {
+    "source": "Seeed Studio",
+    "url": "https://www.seeedstudio.com/reComputer-J3011-p-5590.html",
+    "decision": "selected",
+    "reason": "Current priced system and supplier stock; dispatch market unverified"
+  },
+  {
+    "source": "Seeed Studio",
+    "url": "https://www.seeedstudio.com/reComputer-Industrial-J3011-p-5682.html",
+    "decision": "selected",
+    "reason": "Current priced system and supplier stock; dispatch market unverified"
+  },
+  {
+    "source": "NVIDIA",
+    "url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/dgx-spark/",
+    "decision": "watchlist",
+    "reason": "Direct marketplace inaccessible; price/stock not independently reconciled"
+  },
+  {
+    "source": "SparkFun",
+    "url": "https://www.sparkfun.com/nvidia-jetson-orin-nano-developer-kit.html",
+    "decision": "watchlist",
+    "reason": "Page contains both in-stock and backorder language; confirm availability before listing"
+  },
+  {
+    "source": "SparkFun",
+    "url": "https://www.sparkfun.com/nvidia-jetson-agx-orin-64gb-developer-kit.html",
+    "decision": "watchlist",
+    "reason": "Page contains both in-stock and backorder language; confirm availability before listing"
+  }
+]

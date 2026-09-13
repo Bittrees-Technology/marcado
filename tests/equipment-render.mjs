@@ -14,6 +14,7 @@ try {
   const items = [
     ...JSON.parse(await readFile("data/catalog-seed.json", "utf8")),
     ...JSON.parse(await readFile("data/regional-sources.json", "utf8")),
+    ...JSON.parse(await readFile("data/sourcing-expansion.json", "utf8")),
   ];
   const collections = [...new Set(items.map((i) => i.product_id))].map(
     (id) => ({ id, name: id, description: "Collection" }),
@@ -69,7 +70,7 @@ try {
   assert.ok(admin.includes("Upload a replacement photo"));
   assert.ok(admin.includes('name="price"'));
   console.log(
-    "PASS: six collection pages, 20 product pages, referral URLs, product photos/prices and bottom quote requests render correctly.",
+    "PASS: six collection pages, 128 product pages, referral URLs, product photos/prices and bottom quote requests render correctly.",
   );
 } finally {
   await server.close();

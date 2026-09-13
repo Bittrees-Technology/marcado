@@ -1,0 +1,653 @@
+{
+  "checked_at": "2026-09-13T12:42:59.942Z",
+  "checks": [
+    {
+      "id": "solo-54150",
+      "url": "https://www.solosatoshi.com/product/bitaxe-gamma-hex/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-gamma-hex/"
+    },
+    {
+      "id": "solo-11327",
+      "url": "https://www.solosatoshi.com/product/nerdqaxe-plus-plus/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/nerdqaxe-plus-plus/"
+    },
+    {
+      "id": "solo-50983",
+      "url": "https://www.solosatoshi.com/product/thermalright-tf7-thermal-paste-2g/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/thermalright-tf7-thermal-paste-2g/"
+    },
+    {
+      "id": "solo-56219",
+      "url": "https://www.solosatoshi.com/product/bitaxe-naja-duo/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-naja-duo/"
+    },
+    {
+      "id": "solo-51904",
+      "url": "https://www.solosatoshi.com/product/avalon-q-riser-stand/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/avalon-q-riser-stand/"
+    },
+    {
+      "id": "solo-50993",
+      "url": "https://www.solosatoshi.com/product/pwm-fan-hub-1-to-5-splitter-cable/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/pwm-fan-hub-1-to-5-splitter-cable/"
+    },
+    {
+      "id": "solo-50925",
+      "url": "https://www.solosatoshi.com/product/thermalright-axp90-x47-full-copper-heatsink-fan/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/thermalright-axp90-x47-full-copper-heatsink-fan/"
+    },
+    {
+      "id": "solo-44838",
+      "url": "https://www.solosatoshi.com/product/bitaxe-duo-bitcoin-solo-miner-650-model/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-duo-bitcoin-solo-miner-650-model/"
+    },
+    {
+      "id": "solo-25241",
+      "url": "https://www.solosatoshi.com/product/nerdaxe-gamma-bitcoin-solo-miner/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/nerdaxe-gamma-bitcoin-solo-miner/"
+    },
+    {
+      "id": "solo-50950",
+      "url": "https://www.solosatoshi.com/product/4-pin-pwm-fan-splitter-cable/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/4-pin-pwm-fan-splitter-cable/"
+    },
+    {
+      "id": "solo-50192",
+      "url": "https://www.solosatoshi.com/product/bitforge-nano-ghost-edition/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitforge-nano-ghost-edition/"
+    },
+    {
+      "id": "solo-4695",
+      "url": "https://www.solosatoshi.com/product/bitaxe-touch/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-touch/"
+    },
+    {
+      "id": "solo-41516",
+      "url": "https://www.solosatoshi.com/product/start9-server-one-2026-home-server-with-startos/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/start9-server-one-2026-home-server-with-startos/"
+    },
+    {
+      "id": "solo-50888",
+      "url": "https://www.solosatoshi.com/product/thermal-grizzly-kryonaut-extreme-thermal-paste-2g/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/thermal-grizzly-kryonaut-extreme-thermal-paste-2g/"
+    },
+    {
+      "id": "solo-11318",
+      "url": "https://www.solosatoshi.com/product/bitaxe-gt-gamma-turbo/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-gt-gamma-turbo/"
+    },
+    {
+      "id": "solo-50662",
+      "url": "https://www.solosatoshi.com/product/lilygo-t-display-s3-h577-replacement-screen/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/lilygo-t-display-s3-h577-replacement-screen/"
+    },
+    {
+      "id": "solo-36612",
+      "url": "https://www.solosatoshi.com/product/canaan-avalon-q-90th-bitcoin-home-miner/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/canaan-avalon-q-90th-bitcoin-home-miner/"
+    },
+    {
+      "id": "solo-50702",
+      "url": "https://www.solosatoshi.com/product/el-mirage-heatsink-for-bitaxe-and-nerdaxe/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/el-mirage-heatsink-for-bitaxe-and-nerdaxe/"
+    },
+    {
+      "id": "solo-25081",
+      "url": "https://www.solosatoshi.com/product/52pi-copper-mosfet-heatsink-kit-for-bitaxe-and-nerdaxe/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/52pi-copper-mosfet-heatsink-kit-for-bitaxe-and-nerdaxe/"
+    },
+    {
+      "id": "solo-24528",
+      "url": "https://www.solosatoshi.com/product/mean-well-lrs-50-5/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/mean-well-lrs-50-5/"
+    },
+    {
+      "id": "solo-47632",
+      "url": "https://www.solosatoshi.com/product/black-3d-printed-nerdqaxe-display-stand/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/black-3d-printed-nerdqaxe-display-stand/"
+    },
+    {
+      "id": "solo-48519",
+      "url": "https://www.solosatoshi.com/product/mean-well-lrs-350-12-348w-12v-29a-switching-power-supply/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/mean-well-lrs-350-12-348w-12v-29a-switching-power-supply/"
+    },
+    {
+      "id": "solo-41243",
+      "url": "https://www.solosatoshi.com/product/thermalright-tl-9015b-92mm-slim-pwm-fan/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/thermalright-tl-9015b-92mm-slim-pwm-fan/"
+    },
+    {
+      "id": "solo-41766",
+      "url": "https://www.solosatoshi.com/product/12v-10a-120w-switching-power-supply-with-5-5x2-1-jack/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/12v-10a-120w-switching-power-supply-with-5-5x2-1-jack/"
+    },
+    {
+      "id": "solo-28189",
+      "url": "https://www.solosatoshi.com/product/noctua-nf-a8-pwm-premium-quiet-fan-4-pin-80mm-brown/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/noctua-nf-a8-pwm-premium-quiet-fan-4-pin-80mm-brown/"
+    },
+    {
+      "id": "solo-28218",
+      "url": "https://www.solosatoshi.com/product/mean-well-lrs-600-12-600w-12v-50a-switching-power-supply/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/mean-well-lrs-600-12-600w-12v-50a-switching-power-supply/"
+    },
+    {
+      "id": "solo-28245",
+      "url": "https://www.solosatoshi.com/product/xt30-female-pigtail-1-meter-16-awg/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/xt30-female-pigtail-1-meter-16-awg/"
+    },
+    {
+      "id": "solo-28317",
+      "url": "https://www.solosatoshi.com/product/us-3-prong-ac-plug-pigtail-1-meter-14-awg/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/us-3-prong-ac-plug-pigtail-1-meter-14-awg/"
+    },
+    {
+      "id": "solo-28311",
+      "url": "https://www.solosatoshi.com/product/5-5-x-2-1mm-90-degree-barrel-jack-male-pigtail-1-meter-16-awg/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/5-5-x-2-1mm-90-degree-barrel-jack-male-pigtail-1-meter-16-awg/"
+    },
+    {
+      "id": "solo-36578",
+      "url": "https://www.solosatoshi.com/product/12-4v-10a-124w-switching-power-supply-with-xt30-connector/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/12-4v-10a-124w-switching-power-supply-with-xt30-connector/"
+    },
+    {
+      "id": "solo-24799",
+      "url": "https://www.solosatoshi.com/product/bitaxe-replacement-oled-screen/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-replacement-oled-screen/"
+    },
+    {
+      "id": "solo-36549",
+      "url": "https://www.solosatoshi.com/product/mean-well-lrs-350-5-300w-5v-60a-switching-power-supply/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/mean-well-lrs-350-5-300w-5v-60a-switching-power-supply/"
+    },
+    {
+      "id": "solo-13743",
+      "url": "https://www.solosatoshi.com/product/bitaxe-fan-adapter/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-fan-adapter/"
+    },
+    {
+      "id": "solo-4504",
+      "url": "https://www.solosatoshi.com/product/stackable-bitaxe-stand/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/stackable-bitaxe-stand/"
+    },
+    {
+      "id": "solo-3978",
+      "url": "https://www.solosatoshi.com/product/bitaxe-power-supply-5v-6a-30w/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-power-supply-5v-6a-30w/"
+    },
+    {
+      "id": "solo-24789",
+      "url": "https://www.solosatoshi.com/product/bitaxe-replacement-fan/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-replacement-fan/"
+    },
+    {
+      "id": "solo-23160",
+      "url": "https://www.solosatoshi.com/product/bitaxe-supra/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-supra/"
+    },
+    {
+      "id": "solo-24030",
+      "url": "https://www.solosatoshi.com/product/bitaxe-heatsink-upgrade/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitaxe-heatsink-upgrade/"
+    },
+    {
+      "id": "solo-25226",
+      "url": "https://www.solosatoshi.com/product/bitmain-bm1370pa-asic-chip/",
+      "status": 200,
+      "final_url": "https://www.solosatoshi.com/product/bitmain-bm1370pa-asic-chip/"
+    },
+    {
+      "id": "bitshopper-27631",
+      "url": "https://www.bitshopper.de/shop/gekkoscience/compac-a2/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/gekkoscience/compac-a2/"
+    },
+    {
+      "id": "bitshopper-25363",
+      "url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-co-bitaxe-lonelyfan/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/bitaxe/thesolomining-co-bitaxe-lonelyfan/"
+    },
+    {
+      "id": "bitshopper-25547",
+      "url": "https://www.bitshopper.de/shop/bitaxe/umruestkit-supersink/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/bitaxe/umruestkit-supersink/"
+    },
+    {
+      "id": "bitshopper-25001",
+      "url": "https://www.bitshopper.de/shop/bitaxe/big-display-umruestkit/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/bitaxe/big-display-umruestkit/"
+    },
+    {
+      "id": "bitshopper-25120",
+      "url": "https://www.bitshopper.de/shop/bitaxe/thermal-grizzly-kryonaut/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/bitaxe/thermal-grizzly-kryonaut/"
+    },
+    {
+      "id": "bitshopper-23685",
+      "url": "https://www.bitshopper.de/shop/gekkoscience/gekkoscience-meincoffee/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/gekkoscience/gekkoscience-meincoffee/"
+    },
+    {
+      "id": "bitshopper-22119",
+      "url": "https://www.bitshopper.de/shop/gekkoscience/r909/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/gekkoscience/r909/"
+    },
+    {
+      "id": "bitshopper-23340",
+      "url": "https://www.bitshopper.de/shop/zubehoer/netzteil-150w/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/zubehoer/netzteil-150w/"
+    },
+    {
+      "id": "bitshopper-22758",
+      "url": "https://www.bitshopper.de/shop/zubehoer/atx-netzteil-schalter/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/zubehoer/atx-netzteil-schalter/"
+    },
+    {
+      "id": "bitshopper-1321",
+      "url": "https://www.bitshopper.de/shop/futurebit/moonlander2/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/futurebit/moonlander2/"
+    },
+    {
+      "id": "bitshopper-939",
+      "url": "https://www.bitshopper.de/shop/zubehoer/pcie-6pin-anschlusskabel/",
+      "status": 200,
+      "final_url": "https://www.bitshopper.de/shop/zubehoer/pcie-6pin-anschlusskabel/"
+    },
+    {
+      "id": "ui-usw-pro-max-24-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24-poe?variant=usw-pro-max-24-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24-poe?variant=usw-pro-max-24-poe-eu"
+    },
+    {
+      "id": "ui-usw-pro-hd-24-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24-poe?variant=usw-pro-hd-24-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24-poe?variant=usw-pro-hd-24-poe-eu"
+    },
+    {
+      "id": "ui-usw-pro-24-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-24-poe?variant=usw-pro-24-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-24-poe?variant=usw-pro-24-poe-eu"
+    },
+    {
+      "id": "ui-usw-pro-xg-24-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-24-poe?variant=usw-pro-xg-24-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-24-poe?variant=usw-pro-xg-24-poe-eu"
+    },
+    {
+      "id": "ui-usw-lite-8-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-lite-8-poe?variant=usw-lite-8-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-lite-8-poe?variant=usw-lite-8-poe-eu"
+    },
+    {
+      "id": "ui-usw-24-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-24-poe",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-24-poe"
+    },
+    {
+      "id": "ui-usw-aggregation",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-aggregation?variant=usw-aggregation-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-aggregation?variant=usw-aggregation-eu"
+    },
+    {
+      "id": "ui-usw-16-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-16-poe",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-16-poe"
+    },
+    {
+      "id": "ui-usw-wan",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-wan",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-wan"
+    },
+    {
+      "id": "ui-usw-pro-xg-10-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-10-poe?variant=usw-pro-xg-10-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-10-poe?variant=usw-pro-xg-10-poe-eu"
+    },
+    {
+      "id": "ui-usw-pro-8-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-8-poe",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-8-poe"
+    },
+    {
+      "id": "ui-usw-pro-max-16-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16-poe?variant=usw-pro-max-16-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16-poe?variant=usw-pro-max-16-poe-eu"
+    },
+    {
+      "id": "ui-usw-flex-2-5g-8-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8-poe",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8-poe"
+    },
+    {
+      "id": "ui-usw-pro-xg-8-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-8-poe?variant=usw-pro-xg-8-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-8-poe?variant=usw-pro-xg-8-poe-eu"
+    },
+    {
+      "id": "ui-usw-wan-rj45",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-wan-rj45",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-wan-rj45"
+    },
+    {
+      "id": "ui-usw-lite-16-poe",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-lite-16-poe?variant=usw-lite-16-poe-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-lite-16-poe?variant=usw-lite-16-poe-eu"
+    },
+    {
+      "id": "ui-usw-flex-2-5g-5",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-5?variant=usw-flex-2dot5g-5-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-5?variant=usw-flex-2dot5g-5-eu"
+    },
+    {
+      "id": "ui-usw-pro-max-24",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24?variant=usw-pro-max-24-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-24?variant=usw-pro-max-24-eu"
+    },
+    {
+      "id": "ui-usw-flex",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-flex?variant=usw-flex",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-flex?variant=usw-flex"
+    },
+    {
+      "id": "ui-usw-flex-xg",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-flex-xg?variant=usw-flex-xg-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-flex-xg?variant=usw-flex-xg-eu"
+    },
+    {
+      "id": "ui-usw-pro-max-16",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-16"
+    },
+    {
+      "id": "ui-usw-flex-2-5g-8",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-flex-2-5g-8"
+    },
+    {
+      "id": "ui-udm-se",
+      "url": "https://eu.store.ui.com/eu/en/products/udm-se?variant=udm-se-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/udm-se?variant=udm-se-eu"
+    },
+    {
+      "id": "ui-usw-24",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-24",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-24"
+    },
+    {
+      "id": "ui-usw-pro-hd-24",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24?variant=usw-pro-hd-24-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-hd-24?variant=usw-pro-hd-24-eu"
+    },
+    {
+      "id": "ui-usw-pro-aggregation",
+      "url": "https://eu.store.ui.com/eu/en/products/usw-pro-aggregation",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-aggregation"
+    },
+    {
+      "id": "ui-ucg-fiber",
+      "url": "https://eu.store.ui.com/eu/en/products/ucg-fiber",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/category/cloud-gateways-compact/collections/cloud-gateway-fiber/products/ucg-fiber"
+    },
+    {
+      "id": "ui-uxg-lite",
+      "url": "https://eu.store.ui.com/eu/en/products/uxg-lite?variant=uxg-lite-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/uxg-lite?variant=uxg-lite-eu"
+    },
+    {
+      "id": "ada-5815",
+      "url": "https://www.adafruit.com/product/5815",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5815"
+    },
+    {
+      "id": "ada-5817",
+      "url": "https://www.adafruit.com/product/5817",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5817"
+    },
+    {
+      "id": "ui-unas-pro-4",
+      "url": "https://eu.store.ui.com/eu/en/products/unas-pro-4",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/unas-pro-4"
+    },
+    {
+      "id": "ui-uxg-max",
+      "url": "https://eu.store.ui.com/eu/en/products/uxg-max",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/uxg-max"
+    },
+    {
+      "id": "ui-udm-pro",
+      "url": "https://eu.store.ui.com/eu/en/products/udm-pro?variant=udm-pro-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/products/udm-pro?variant=udm-pro-eu"
+    },
+    {
+      "id": "ui-ucg-max",
+      "url": "https://eu.store.ui.com/eu/en/products/ucg-max?variant=ucg-max-eu",
+      "status": 200,
+      "final_url": "https://eu.store.ui.com/eu/en/category/cloud-gateways-compact/collections/cloud-gateway-max/products/ucg-max?variant=ucg-max-eu"
+    },
+    {
+      "id": "ada-5813",
+      "url": "https://www.adafruit.com/product/5813",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5813"
+    },
+    {
+      "id": "ada-5814",
+      "url": "https://www.adafruit.com/product/5814",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5814"
+    },
+    {
+      "id": "ada-5816",
+      "url": "https://www.adafruit.com/product/5816",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5816"
+    },
+    {
+      "id": "ada-4552",
+      "url": "https://www.adafruit.com/product/4552",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/4552"
+    },
+    {
+      "id": "ada-5818",
+      "url": "https://www.adafruit.com/product/5818",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5818"
+    },
+    {
+      "id": "ada-6277",
+      "url": "https://www.adafruit.com/product/6277",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6277"
+    },
+    {
+      "id": "ada-6009",
+      "url": "https://www.adafruit.com/product/6009",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6009"
+    },
+    {
+      "id": "ada-6320",
+      "url": "https://www.adafruit.com/product/6320",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6320"
+    },
+    {
+      "id": "ada-5847",
+      "url": "https://www.adafruit.com/product/5847",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5847"
+    },
+    {
+      "id": "ada-5845",
+      "url": "https://www.adafruit.com/product/5845",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5845"
+    },
+    {
+      "id": "ada-6014",
+      "url": "https://www.adafruit.com/product/6014",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6014"
+    },
+    {
+      "id": "ada-6125",
+      "url": "https://www.adafruit.com/product/6125",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6125"
+    },
+    {
+      "id": "ada-5931",
+      "url": "https://www.adafruit.com/product/5931",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5931"
+    },
+    {
+      "id": "ada-5902",
+      "url": "https://www.adafruit.com/product/5902",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5902"
+    },
+    {
+      "id": "ada-4793",
+      "url": "https://www.adafruit.com/product/4793",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/4793"
+    },
+    {
+      "id": "ada-5969",
+      "url": "https://www.adafruit.com/product/5969",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5969"
+    },
+    {
+      "id": "ada-6307",
+      "url": "https://www.adafruit.com/product/6307",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6307"
+    },
+    {
+      "id": "ada-4787",
+      "url": "https://www.adafruit.com/product/4787",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/4787"
+    },
+    {
+      "id": "ada-6427",
+      "url": "https://www.adafruit.com/product/6427",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/6427"
+    },
+    {
+      "id": "ada-5058",
+      "url": "https://www.adafruit.com/product/5058",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/5058"
+    },
+    {
+      "id": "ada-4374",
+      "url": "https://www.adafruit.com/product/4374",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/4374"
+    },
+    {
+      "id": "ada-2909",
+      "url": "https://www.adafruit.com/product/2909",
+      "status": 200,
+      "final_url": "https://www.adafruit.com/product/2909"
+    },
+    {
+      "id": "seeed-5682",
+      "url": "https://www.seeedstudio.com/reComputer-Industrial-J3011-p-5682.html",
+      "status": 200,
+      "final_url": "https://www.seeedstudio.com/reComputer-Industrial-J3011-p-5682.html"
+    },
+    {
+      "id": "seeed-5590",
+      "url": "https://www.seeedstudio.com/reComputer-J3011-p-5590.html",
+      "status": 200,
+      "final_url": "https://www.seeedstudio.com/reComputer-J3011-p-5590.html"
+    }
+  ]
+}
