@@ -1,3 +1,4 @@
+import { resolveGovernance } from "../lib/governance.mjs";
 import { itemInput, imageUpload } from "../lib/catalog.mjs";
 import { neon } from "@neondatabase/serverless";
 import { randomUUID, randomInt } from "node:crypto";
@@ -44,10 +45,33 @@ async function user(req) {
   if (!s) return null;
   const [r] =
     await sql()`SELECT role FROM marcada.roles WHERE identity=${s.identity}`;
-  const owner = isAdmin(s.identity),
-    role = owner ? "owner" : r?.role || "customer";
+  const [link] =
+    await sql()`SELECT email,wallet FROM marcada.identity_links WHERE email=${s.identity} OR wallet=${s.identity}`;
+  const wallet = /^0x[a-f0-9]{40}$/.test(s.identity)
+    ? s.identity
+    : link?.wallet;
+  const governance = await resolveGovernance(wallet);
+  const recoveryOwner = isAdmin(s.identity),
+    owner = recoveryOwner || governance.role === "owner";
+  const role = owner
+    ? "owner"
+    : governance.role === "admin"
+      ? "admin"
+      : ["dealer_manager", "support"].includes(r?.role)
+        ? r.role
+        : "customer";
   return {
     ...s,
+    linkedWallet: link?.wallet || null,
+    linkedEmail: link?.email || null,
+    governanceStatus: governance.status,
+    roleSource: recoveryOwner
+      ? "protected_owner"
+      : governance.role
+        ? "governance"
+        : role === "customer"
+          ? "customer"
+          : "local",
     role,
     owner,
     admin: owner || role === "admin",
@@ -312,7 +336,93 @@ export default async function handler(req, res) {
       await sql()`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`;
       return json(res, 201, { id });
     }
-    if (!u.staff) return json(res, 403, { error: "Staff access required" });
+    if (route === "auth/link-nonce" && req.method === "POST") {
+      if (!u.identity.includes("@"))
+        return json(res, 400, {
+          error: "Sign in by email before linking a wallet",
+        });
+      await limited(req, "link-wallet", 10);
+      const nonce = token();
+      await sql()`INSERT INTO marcada.auth_tokens(hash,identity,kind,expires_at) VALUES(${hash(nonce)},${u.identity},'link',now()+interval '5 minutes')`;
+      setCookie(res, "__Host-marcado-link", nonce, 300);
+      return json(res, 200, {
+        nonce,
+        domain: new URL(origin()).host,
+        uri: origin(),
+        statement: `Link this Ethereum wallet to Marcado email account ${u.identity}.`,
+      });
+    }
+    if (route === "auth/link-wallet" && req.method === "POST") {
+      if (!u.identity.includes("@"))
+        return json(res, 400, { error: "Use your verified email account" });
+      await limited(req, "link-verify", 15);
+      const nonce = cookie(req, "__Host-marcado-link"),
+        message = String(body.message || "");
+      if (!nonce || message.length > 3000)
+        return json(res, 401, { error: "Request a new linking challenge" });
+      const parsed = parseSiweMessage(message);
+      if (
+        parsed.nonce !== nonce ||
+        parsed.domain !== new URL(origin()).host ||
+        parsed.uri !== origin() ||
+        parsed.chainId !== 1 ||
+        parsed.statement !==
+          `Link this Ethereum wallet to Marcado email account ${u.identity}.` ||
+        !parsed.issuedAt ||
+        Math.abs(Date.now() - parsed.issuedAt.getTime()) > 300000
+      )
+        return json(res, 401, { error: "Invalid linking challenge" });
+      const [challenge] =
+        await sql()`SELECT 1 FROM marcada.auth_tokens WHERE hash=${hash(nonce)} AND identity=${u.identity} AND kind='link' AND expires_at>now()`;
+      if (!challenge)
+        return json(res, 401, { error: "Linking challenge expired" });
+      const client = createPublicClient({
+        chain: mainnet,
+        transport: http(
+          process.env.ETH_RPC_URL || "https://ethereum-rpc.publicnode.com",
+        ),
+      });
+      if (
+        !(await client.verifySiweMessage({
+          message,
+          signature: body.signature,
+          domain: new URL(origin()).host,
+          nonce,
+        }))
+      )
+        return json(res, 401, { error: "Wallet signature rejected" });
+      const wallet = normalizeIdentity(parsed.address);
+      const consumed =
+        await sql()`DELETE FROM marcada.auth_tokens WHERE hash=${hash(nonce)} AND identity=${u.identity} AND kind='link' AND expires_at>now() RETURNING hash`;
+      if (!consumed.length)
+        return json(res, 401, { error: "Challenge already used" });
+      const inserted =
+        await sql()`INSERT INTO marcada.identity_links(email,wallet) VALUES(${u.identity},${wallet}) ON CONFLICT DO NOTHING RETURNING email`;
+      if (!inserted.length)
+        return json(res, 409, {
+          error:
+            "This email or wallet is already linked. Unlink the existing connection first.",
+        });
+      await audit(u.identity, "link_wallet", wallet);
+      return json(res, 200, { ok: true });
+    }
+    if (route === "auth/unlink-wallet" && req.method === "POST") {
+      if (!u.identity.includes("@"))
+        return json(res, 400, {
+          error: "Use your verified email account to unlink",
+        });
+      await sql()`DELETE FROM marcada.identity_links WHERE email=${u.identity}`;
+      await sql()`DELETE FROM marcada.auth_tokens WHERE identity=${u.identity} AND kind='link'`;
+      await audit(u.identity, "unlink_wallet", "self");
+      return json(res, 200, { ok: true });
+    }
+    if (!u.staff)
+      return json(res, u.governanceStatus === "unavailable" ? 503 : 403, {
+        error:
+          u.governanceStatus === "unavailable"
+            ? "Governance access is temporarily unavailable. Try again shortly."
+            : "Staff access required",
+      });
     if (route.startsWith("admin/role") && !u.owner)
       return json(res, 403, { error: "Owner access required" });
     if (
@@ -340,7 +450,7 @@ export default async function handler(req, res) {
         ).length
       )
         return json(res, 400, { error: "Unknown collection" });
-      await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,specifications,active) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.specifications},${p.active}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,specifications=EXCLUDED.specifications,active=EXCLUDED.active,updated_at=now()`;
+      await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,specifications,active,supplier_region,tax_note,configuration_note,supplier_status) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.specifications},${p.active},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.supplier_status}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,specifications=EXCLUDED.specifications,active=EXCLUDED.active,supplier_region=EXCLUDED.supplier_region,tax_note=EXCLUDED.tax_note,configuration_note=EXCLUDED.configuration_note,supplier_status=EXCLUDED.supplier_status,updated_at=now()`;
       await audit(u.identity, "save_product", p.id);
       return json(res, 200, { id: p.id });
     }
@@ -348,9 +458,7 @@ export default async function handler(req, res) {
       const identity = normalizeIdentity(body.identity);
       if (isAdmin(identity))
         return json(res, 400, { error: "Owner access is protected" });
-      if (
-        !["admin", "dealer_manager", "support", "customer"].includes(body.role)
-      )
+      if (!["dealer_manager", "support", "customer"].includes(body.role))
         return json(res, 400, { error: "Invalid role" });
       if (body.role === "customer")
         await sql()`DELETE FROM marcada.roles WHERE identity=${identity}`;
@@ -364,6 +472,11 @@ export default async function handler(req, res) {
         items: u.canDeals
           ? await sql()`SELECT * FROM marcada.items ORDER BY product_id,name`
           : [],
+        governance: {
+          source: "https://gov.bittrees.org",
+          mapping:
+            "Partner → Owner; Admin / Snapshot space admin → Administrator",
+        },
         roles: u.owner
           ? await sql()`SELECT identity,role FROM marcada.roles ORDER BY identity`
           : [],

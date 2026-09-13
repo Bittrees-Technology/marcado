@@ -6,6 +6,7 @@ import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
 import { createSiweMessage } from "viem/siwe";
 import handler from "../api/index.mjs";
 import { hash, token } from "../lib/security.mjs";
+const originalFetch = globalThis.fetch;
 const sql = neon(process.env.DATABASE_URL),
   origin = process.env.APP_ORIGIN,
   tag = randomUUID(),
@@ -322,10 +323,91 @@ try {
   );
   assert.equal(catalog.data.commerce.checkout, false);
   assert.equal((await request("checkout", {}, customer)).status, 403);
+  const linkNonce = await request("auth/link-nonce", {}, customer);
+  assert.equal(linkNonce.status, 200);
+  const linkCookie = linkNonce.headers["set-cookie"].split(";")[0];
+  const linkMessage = createSiweMessage({
+    address: account.address,
+    chainId: 1,
+    domain: new URL(origin).host,
+    uri: origin,
+    nonce: linkNonce.data.nonce,
+    statement: linkNonce.data.statement,
+    version: "1",
+    issuedAt: new Date(),
+  });
+  const linkArgs = {
+    message: linkMessage,
+    signature: await account.signMessage({ message: linkMessage }),
+  };
+  assert.equal(
+    (
+      await request("auth/link-wallet", linkArgs, support, {
+        cookie: cookies[support] + "; " + linkCookie,
+      })
+    ).status,
+    401,
+  );
+  assert.equal(
+    (
+      await request("auth/link-wallet", linkArgs, customer, {
+        cookie: cookies[customer] + "; " + linkCookie,
+      })
+    ).status,
+    200,
+  );
+  assert.equal(
+    (
+      await request("auth/link-wallet", linkArgs, customer, {
+        cookie: cookies[customer] + "; " + linkCookie,
+      })
+    ).status,
+    401,
+  );
+  let labels = [{ label: "Partner" }],
+    admins = [];
+  globalThis.fetch = async (url, options) =>
+    String(url) === "https://gov.bittrees.org/api/community"
+      ? new Response(JSON.stringify({ roles: { [wallet]: labels } }))
+      : String(url) === "https://hub.snapshot.org/graphql"
+        ? new Response(
+            JSON.stringify({
+              data: { space: { id: "gov.bittrees.eth", admins } },
+            }),
+          )
+        : originalFetch(url, options);
+  assert.equal(
+    (await request("me", undefined, customer)).data.user.role,
+    "owner",
+  );
+  labels = [];
+  assert.equal(
+    (await request("me", undefined, customer)).data.user.role,
+    "customer",
+  );
+  assert.equal((await request("admin", undefined, customer)).status, 403);
+  admins = [wallet];
+  assert.equal(
+    (await request("me", undefined, customer)).data.user.role,
+    "admin",
+  );
+  assert.equal(
+    (await request("admin/role", { identity: dealer, role: "admin" }, owner))
+      .status,
+    400,
+  );
+  await request("auth/unlink-wallet", {}, customer);
+  assert.equal(
+    (await request("me", undefined, customer)).data.user.role,
+    "customer",
+  );
+  globalThis.fetch = originalFetch;
   console.log(
     "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.",
   );
 } finally {
+  globalThis.fetch = originalFetch;
+  await sql`DELETE FROM marcada.identity_links WHERE email=${customer} OR email=${support}`;
   if (itemQuoteId)
     await sql`DELETE FROM marcada.quotes WHERE id=${itemQuoteId}`;
   await sql`DELETE FROM marcada.items WHERE id=${testItem}`;

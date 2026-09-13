@@ -1,3 +1,4 @@
+import { filterCatalog } from "../lib/filter-catalog.mjs";
 import React, { useState } from "react";
 import {
   ArrowLeft,
@@ -31,6 +32,7 @@ export function Price({ item }) {
   return (
     <div className="item-price">
       <strong>
+        {item.configuration_note?.startsWith("From-price") ? "From " : ""}
         {new Intl.NumberFormat("en", {
           style: "currency",
           currency: item.currency,
@@ -54,6 +56,15 @@ function Source({ item }) {
         </a>
       )}
       <span>Checked {String(item.price_checked).slice(0, 10)}</span>
+      <span>
+        {item.supplier_region === "US"
+          ? "US supplier market"
+          : item.supplier_region === "EU"
+            ? "EU supplier market"
+            : item.supplier_region === "CA"
+              ? "Canada supplier"
+              : "Supplier market unverified"}
+      </span>
       {item.supplier_status === "OutOfStock" && (
         <span>Source reported out of stock</span>
       )}
@@ -70,6 +81,24 @@ export function EquipmentPage({
   offers,
   renderOffer,
 }) {
+  const defaults = {
+    query: "",
+    market: "All",
+    supplier: "All",
+    currency: "All",
+    availability: "All",
+    maxPrice: "",
+    sort: "name",
+  };
+  const [filters, setFilters] = useState(defaults);
+  const setFilter = (key, value) =>
+    setFilters((f) => ({
+      ...f,
+      [key]: value,
+      ...(key === "currency" && value === "All"
+        ? { maxPrice: "", sort: "name" }
+        : {}),
+    }));
   const parts = location.pathname.split("/").filter(Boolean);
   const domain = collections.find((p) => p.id === parts[1]),
     selected = parts[2]
@@ -95,7 +124,8 @@ export function EquipmentPage({
         </a>
       </section>
     );
-  const list = items.filter((i) => i.product_id === domain.id);
+  const collectionItems = items.filter((i) => i.product_id === domain.id);
+  const list = filterCatalog(collectionItems, filters);
   return (
     <section className="equipment-page">
       <div className="breadcrumbs">
@@ -136,9 +166,111 @@ export function EquipmentPage({
           ))}
         </nav>
       )}
+      {!selected && (
+        <section className="catalog-filters" aria-label="Filter products">
+          <label>
+            Find a product
+            <input
+              type="search"
+              placeholder="Model, feature or supplier"
+              value={filters.query}
+              onChange={(e) => setFilter("query", e.target.value)}
+            />
+          </label>
+          <label>
+            Supplier market
+            <select
+              value={filters.market}
+              onChange={(e) => setFilter("market", e.target.value)}
+            >
+              <option>All</option>
+              <option value="US">United States</option>
+              <option value="EU">European Union</option>
+              <option value="CA">Canada</option>
+              <option value="Unverified">Unverified</option>
+            </select>
+          </label>
+          <label>
+            Supplier
+            <select
+              value={filters.supplier}
+              onChange={(e) => setFilter("supplier", e.target.value)}
+            >
+              <option>All</option>
+              {[...new Set(collectionItems.map((i) => i.source_name))]
+                .sort()
+                .map((v) => (
+                  <option key={v}>{v}</option>
+                ))}
+            </select>
+          </label>
+          <label>
+            Currency
+            <select
+              value={filters.currency}
+              onChange={(e) => setFilter("currency", e.target.value)}
+            >
+              <option>All</option>
+              {[...new Set(collectionItems.map((i) => i.currency))]
+                .sort()
+                .map((v) => (
+                  <option key={v}>{v}</option>
+                ))}
+            </select>
+          </label>
+          <label>
+            Supplier availability
+            <select
+              value={filters.availability}
+              onChange={(e) => setFilter("availability", e.target.value)}
+            >
+              <option>All</option>
+              <option value="InStock">Reported in stock</option>
+              <option value="OutOfStock">Reported out of stock</option>
+              <option value="Unknown">Not confirmed</option>
+            </select>
+          </label>
+          <label>
+            Maximum price
+            {filters.currency !== "All" ? " (" + filters.currency + ")" : ""}
+            <input
+              type="number"
+              min="0"
+              disabled={filters.currency === "All"}
+              value={filters.maxPrice}
+              placeholder={
+                filters.currency === "All" ? "Choose a currency" : "No maximum"
+              }
+              onChange={(e) => setFilter("maxPrice", e.target.value)}
+            />
+          </label>
+          <label>
+            Sort
+            <select
+              value={filters.sort}
+              onChange={(e) => setFilter("sort", e.target.value)}
+            >
+              <option value="name">Name</option>
+              <option value="price-asc" disabled={filters.currency === "All"}>
+                Price: low to high
+              </option>
+              <option value="price-desc" disabled={filters.currency === "All"}>
+                Price: high to low
+              </option>
+            </select>
+          </label>
+          <div className="filter-summary">
+            <span>
+              {list.length} of {collectionItems.length} products
+            </span>
+            <button onClick={() => setFilters(defaults)}>Reset filters</button>
+          </div>
+        </section>
+      )}
       <p className="price-note">
-        Prices are a starting point for your quote. Final availability, shipping
-        and taxes are confirmed before ordering. No payment is taken here.
+        Supplier prices are dated references, not confirmed hub stock. Nevada
+        coordinates US sourcing; Portugal coordinates EU sourcing. Final
+        configuration, taxes and delivery are confirmed in your quote.
       </p>
       {selected ? (
         <div className="item-detail">
@@ -149,6 +281,12 @@ export function EquipmentPage({
           <div>
             <Price item={selected} />
             <Source item={selected} />
+            <p className="tax-note">
+              {selected.tax_note || "Tax and shipping confirmed by quote"}
+            </p>
+            {selected.configuration_note && selected.configuration_note!==selected.specifications && (
+              <p>{selected.configuration_note}</p>
+            )}
             <h3>About this configuration</h3>
             <p>{selected.specifications}</p>
             <button
@@ -459,6 +597,45 @@ export function ProductManager({
             name="specifications"
             defaultValue={p.specifications}
             maxLength={2000}
+          />
+        </label>
+        <label>
+          Supplier market
+          <select
+            name="supplier_region"
+            defaultValue={p.supplier_region || "Unverified"}
+          >
+            <option value="Unverified">Unverified</option>
+            <option value="US">United States</option>
+            <option value="EU">European Union</option>
+            <option value="CA">Canada</option>
+          </select>
+        </label>
+        <label>
+          Source-reported availability
+          <select
+            name="supplier_status"
+            defaultValue={p.supplier_status || "Unknown"}
+          >
+            <option value="Unknown">Not confirmed</option>
+            <option value="InStock">Reported in stock</option>
+            <option value="OutOfStock">Reported out of stock</option>
+          </select>
+        </label>
+        <label className="span2">
+          Tax and delivery note
+          <input
+            name="tax_note"
+            defaultValue={p.tax_note || "Taxes and delivery confirmed by quote"}
+            maxLength={200}
+          />
+        </label>
+        <label className="span2">
+          Configuration / from-price note
+          <input
+            name="configuration_note"
+            defaultValue={p.configuration_note || ""}
+            maxLength={300}
           />
         </label>
         <label>

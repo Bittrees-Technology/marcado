@@ -30,7 +30,7 @@ Before direct on-site payment: agree actual inventory, dealer fulfillment, shipp
 
 ## Owner and delegated roles
 
-Owner: raging.eth, resolved on Ethereum mainnet to 0xE5350D96FC3161BF5c385843ec5ee24E8B465B2f on 2026-09-13. Owner email: raging@bittrees.org (confirmed). Owner access is protected in server configuration. Owner can assign/revoke administrator, dealer manager or support roles by verified email/wallet identity. Roles are checked on each server request. Administrators manage quotes and offers but cannot appoint other admins. Dealer managers cannot read quote customer details. Support cannot read negotiated offers or private notes. Roles do not send invitations automatically. Referral URLs and deal terms can be edited at any time; old offers can also be deactivated.
+Owner: raging.eth, resolved on Ethereum mainnet to 0xE5350D96FC3161BF5c385843ec5ee24E8B465B2f on 2026-09-13. Owner email: raging@bittrees.org (confirmed). Owner access is protected in server configuration. Owner can assign/revoke local dealer manager or support roles by verified email/wallet identity. Roles are checked on each server request. Administrators manage quotes and offers but cannot appoint other admins. Dealer managers cannot read quote customer details. Support cannot read negotiated offers or private notes. Roles do not send invitations automatically. Referral URLs and deal terms can be edited at any time; old offers can also be deactivated.
 
 ## Launch status — 2026-09-13
 
@@ -38,6 +38,12 @@ Published on Vercel at the canonical domain and connected to Bittrees-Technology
 
 ## Category catalog expansion
 
-Renamed public site, GitHub repository and Vercel project to Marcado. Existing database schema and Insights product ID remain stable to preserve records. Old domain forwards to the new domain. Six equipment category routes under `/equipment/:category` contain 13 sourced catalog items. Each item has an individual detail page, dated price, currency, source link and real supplier photo. Landing illustrations remain. Product and category referral links retain quote attribution.
+Renamed public site, GitHub repository and Vercel project to Marcado. Existing database schema and Insights product ID remain stable to preserve records. Old domain forwards to the new domain. Six equipment category routes under `/equipment/:category` contain 20 sourced catalog items. Each item has an individual detail page, dated price, currency, source link and real supplier photo. Landing illustrations remain. Product and category referral links retain quote attribution.
 
 Authorized dealer managers and admins can create/edit/hide products, set listed or supplier-reference prices, replace image URLs, or upload PNG/JPEG/WebP images up to 1 MB. Uploaded images are public immutable assets; private dealer terms never enter product fields. Seeding never overwrites operator edits. Optional item references tie quotes and offers to a specific product.
+
+## US/EU sourcing and shared governance
+
+Nevada and Portugal are the user-confirmed distribution/coordination hubs. Add verified US/EU supplier listings without asserting that supplier inventory is hub inventory. Keep USD/EUR prices unconverted, retain VAT/configuration caveats, and verify final landed costs and delivery by quote. No bank details or payment promises are published. Payment-provider entities, accounts and settlement currencies belong to the later payment phase.
+
+Governance Partner → Marcado Owner; governance Admin / Snapshot space admin → Marcado Administrator. Read current registry state on each authenticated request. Existing explicit recovery owners remain. Local assignments are limited to dealer manager and support. Email access inherits governance privilege only after an authenticated email session and fresh wallet signature establish a unique link. No roles are written to governance.

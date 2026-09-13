@@ -255,6 +255,41 @@ function App() {
       close();
     });
   }
+  async function linkWallet() {
+    await run(async () => {
+      if (!window.ethereum)
+        throw Error("Open an Ethereum wallet to link your account.");
+      const [address] = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      const n = await api("auth/link-nonce", {});
+      const message = createSiweMessage({
+        address,
+        chainId: 1,
+        domain: n.domain,
+        uri: n.uri,
+        version: "1",
+        nonce: n.nonce,
+        statement: n.statement,
+        issuedAt: new Date(),
+      });
+      const signature = await window.ethereum.request({
+        method: "personal_sign",
+        params: [
+          "0x" +
+            Array.from(new TextEncoder().encode(message), (b) =>
+              b.toString(16).padStart(2, "0"),
+            ).join(""),
+          address,
+        ],
+      });
+      await api("auth/link-wallet", { message, signature });
+      await refresh();
+      setNotice(
+        "Wallet linked. Governance access is checked on every request.",
+      );
+    });
+  }
   const isEquipment = location.pathname !== "/";
   function requestQuote(domain, item) {
     const quote = { type: "quote", product: domain, item: item || null };
@@ -298,13 +333,12 @@ function App() {
       <div className="topline">
         <span>A BITTREES TECHNOLOGY MARKETPLACE</span>
         <a href={isEquipment ? "/#catalog" : "#catalog"}>
-          Start small. Build something bigger. <ArrowUpRight size={13} />
+          US & EU equipment sourcing <ArrowUpRight size={13} />
         </a>
       </div>
       <header>
         <a className="brand" href="/" aria-label="Marcado home">
           <span className="brandmark">m</span>marcado
-          <span className="branddot">®</span>
         </a>
         <nav>
           <a href={isEquipment ? "/#catalog" : "#catalog"}>Equipment</a>
@@ -327,18 +361,16 @@ function App() {
             <section className="hero">
               <div className="hero-copy">
                 <div className="eyebrow">
-                  <i /> HARDWARE FOR THE INDEPENDENT
+                  <i /> MINING · AI · NETWORKING
                 </div>
                 <h1>
-                  Your next
+                  Hardware for
                   <br />
-                  big thing.
-                  <br />
-                  <em>Starts here.</em>
+                  <em>mining & compute.</em>
                 </h1>
                 <p>
-                  From your first Bitaxe to your next compute stack. Find the
-                  equipment to mine, build and run it yourself.
+                  Compare real products and supplier prices. Request a quote
+                  coordinated through our Nevada and Portugal hubs.
                 </p>
                 <a
                   className="primary"
@@ -354,9 +386,9 @@ function App() {
               <div className="hero-art">
                 <div className="art-top">
                   <span>
-                    SMALL MACHINE.
+                    BITAXE HARDWARE.
                     <br />
-                    BIG POSSIBILITIES.
+                    OPEN-SOURCE DESIGN.
                   </span>
                   <span className="pill">BITAXE COLLECTION</span>
                 </div>
@@ -399,14 +431,14 @@ function App() {
             <section id="catalog" className="catalog">
               <div className="section-top">
                 <div>
-                  <div className="eyebrow">THE EQUIPMENT EDIT</div>
-                  <h2>Build your setup.</h2>
+                  <div className="eyebrow">EQUIPMENT COLLECTIONS</div>
+                  <h2>Explore equipment.</h2>
                 </div>
                 <label className="search">
                   <Search size={18} />
                   <input
                     aria-label="Search equipment"
-                    placeholder="Find your next upgrade"
+                    placeholder="Find a collection"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
@@ -520,11 +552,11 @@ function App() {
             <section className="referral-banner">
               <div className="referral-art">↗</div>
               <div>
-                <div className="eyebrow">GOOD FINDS TRAVEL</div>
+                <div className="eyebrow">REFERRALS</div>
                 <h2>
-                  Found your next upgrade?
+                  Share a product.
                   <br />
-                  Pass it on.
+                  Keep your referral.
                 </h2>
                 <p>
                   Share a product or the whole store with your own referral
@@ -578,9 +610,9 @@ function App() {
       </main>
       <footer>
         <a className="brand" href="/">
-          marcado<span className="branddot">®</span>
+          marcado
         </a>
-        <span>Equipment for what comes next.</span>
+        <span>Mining, compute and networking equipment.</span>
         <div>
           <a href="https://bittrees.org">Bittrees ↗</a>
           <button onClick={() => open("privacy")}>Privacy & terms</button>
@@ -628,7 +660,7 @@ function App() {
             {modal === "login" && (
               <>
                 <div className="eyebrow">WELCOME TO MARCADA</div>
-                <h2>Your next build starts here.</h2>
+                <h2>Sign in to Marcado.</h2>
                 <p>
                   Sign in to request quotes, create referral links and access
                   deals shared with you.
@@ -705,6 +737,65 @@ function App() {
               <>
                 <h2>Your account</h2>
                 <p className="identity">{user?.identity}</p>
+                <div className="account-access">
+                  <strong>
+                    {user?.role === "owner"
+                      ? "Owner"
+                      : user?.role === "admin"
+                        ? "Administrator"
+                        : user?.role.replace("_", " ")}
+                  </strong>
+                  <p>
+                    {user?.roleSource === "governance"
+                      ? "Access synced from gov.bittrees.org."
+                      : user?.roleSource === "protected_owner"
+                        ? "Protected owner access."
+                        : "Governance partners and admins can use their verified wallet for shared access."}
+                  </p>
+                  {user?.governanceStatus === "unavailable" && (
+                    <p role="status">
+                      Governance is temporarily unavailable. Shared privileges
+                      remain disabled until verification succeeds.
+                    </p>
+                  )}
+                  {user?.identity.includes("@") &&
+                    (user.linkedWallet ? (
+                      <>
+                        <p className="identity">
+                          Linked wallet: {user.linkedWallet}
+                        </p>
+                        <button
+                          className="secondary"
+                          onClick={() =>
+                            run(async () => {
+                              await api("auth/unlink-wallet", {});
+                              await refresh();
+                              setNotice(
+                                "Wallet unlinked. Email access no longer inherits its governance role.",
+                              );
+                            })
+                          }
+                        >
+                          Unlink wallet
+                        </button>
+                      </>
+                    ) : (
+                      <button
+                        className="secondary"
+                        onClick={linkWallet}
+                        disabled={busy}
+                      >
+                        Link Ethereum wallet
+                      </button>
+                    ))}
+                  {!user?.identity.includes("@") && (
+                    <p>
+                      To use the same governance access with email, sign in by
+                      email and link this wallet. Linking requires your wallet
+                      signature.
+                    </p>
+                  )}
+                </div>
                 <button className="secondary" onClick={() => open("referrals")}>
                   Your referral links <ArrowUpRight size={16} />
                 </button>
@@ -747,8 +838,8 @@ function App() {
             )}
             {modal === "referrals" && (
               <>
-                <div className="eyebrow">PASS IT ON</div>
-                <h2>Your finds. Your link.</h2>
+                <div className="eyebrow">REFERRALS</div>
+                <h2>Share a product or collection.</h2>
                 <p>
                   Share Marcado or a specific collection. Quote requests
                   submitted from your link are attributed to your referral code.
@@ -992,6 +1083,18 @@ function App() {
             {modal === "admin" && admin && (
               <>
                 <div className="eyebrow">STORE OPERATIONS</div>
+                <p className="access-source">
+                  Owner and administrator roles are read from{" "}
+                  <a
+                    href="https://gov.bittrees.org"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Bittrees Governance ↗
+                  </a>
+                  . Local assignments below are limited to dealer managers and
+                  support.
+                </p>
                 <h2>Dealer desk</h2>
                 <p>
                   Enter verified dealer offers. Private offers are visible only
@@ -1000,7 +1103,7 @@ function App() {
                 <>
                   {user.owner && (
                     <section className="roles">
-                      <h3>Team roles</h3>
+                      <h3>Team access</h3>
                       <p>
                         Owner access is protected. Administrators manage offers
                         and quotes. Dealer managers manage offers and private
@@ -1028,7 +1131,6 @@ function App() {
                         <select name="role" aria-label="Team member role">
                           <option value="support">Support</option>
                           <option value="dealer_manager">Dealer manager</option>
-                          <option value="admin">Administrator</option>
                         </select>
                         <button className="secondary">Assign role</button>
                       </form>
