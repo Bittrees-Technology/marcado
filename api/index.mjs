@@ -1,3 +1,8 @@
+import {
+  referralMessage,
+  deliverNotification,
+  retryNotifications,
+} from "../lib/notifications.mjs";
 import { localRoles, permissions } from "../lib/permissions.mjs";
 import { resolveGovernance } from "../lib/governance.mjs";
 import { itemInput, imageUpload } from "../lib/catalog.mjs";
@@ -160,6 +165,7 @@ export default async function handler(req, res) {
         "rate_limits",
       ])
         await sql().query(`DELETE FROM marcada.${t} WHERE expires_at<now()`);
+      await retryNotifications(sql());
       return json(res, 200, { ok: true });
     }
     if (route === "catalog" && req.method === "GET") {
@@ -343,14 +349,50 @@ export default async function handler(req, res) {
           error: "You cannot use your own referral code.",
         });
       const [ref] = referral
-        ? await sql()`SELECT referral FROM marcada.users WHERE referral=${referral} AND identity<>${u.identity}`
+        ? await sql()`SELECT referral,identity FROM marcada.users WHERE referral=${referral} AND identity<>${u.identity}`
         : [];
       if (referral && !ref)
         return json(res, 400, {
           error: "Referral code not found. Check the code or clear the field.",
         });
       const id = randomUUID();
-      await sql()`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`;
+      const [label] = ref
+        ? await sql()`SELECT p.name AS collection_name,i.name AS item_name FROM marcada.products p LEFT JOIN marcada.items i ON i.id=${itemId} WHERE p.id=${product}`
+        : [];
+      const message = ref
+        ? referralMessage(
+            {
+              id,
+              identity: u.identity,
+              product: label.collection_name,
+              item: label.item_name,
+              quantity,
+              details,
+              referral: ref.referral,
+              referrer: ref.identity,
+              submitted: new Date().toISOString(),
+            },
+            process.env.REFERRAL_NOTIFY_EMAIL,
+            process.env.MAIL_FROM,
+            origin(),
+          )
+        : null;
+      const db = sql();
+      const writes = [
+        db`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`,
+      ];
+      if (message)
+        writes.push(
+          db`INSERT INTO marcada.referral_notifications(quote_id,payload) VALUES(${id},${JSON.stringify(message)}::jsonb)`,
+        );
+      await db.transaction(writes);
+      if (message) {
+        try {
+          await deliverNotification(db, id);
+        } catch {
+          /* Persisted quote and outbox remain recoverable. */
+        }
+      }
       return json(res, 201, { id });
     }
     if (route === "auth/link-nonce" && req.method === "POST") {
@@ -447,7 +489,10 @@ export default async function handler(req, res) {
       !u.canDeals
     )
       return json(res, 403, { error: "Dealer manager access required" });
-    if (route === "admin/quote" && !u.canQuotes)
+    if (
+      ["admin/quote", "admin/notification-retry"].includes(route) &&
+      !u.canQuotes
+    )
       return json(res, 403, { error: "Quote manager access required" });
     if ((route === "admin/item" || route === "admin/image") && !u.canProducts)
       return json(res, 403, { error: "Product manager access required" });
@@ -554,7 +599,7 @@ export default async function handler(req, res) {
           ? await sql()`SELECT o.*,COALESCE((SELECT json_agg(g.identity) FROM marcada.offer_grants g WHERE g.offer_id=o.id),'[]') AS recipients FROM marcada.offers o ORDER BY o.created_at DESC`
           : [],
         quotes: u.canQuotes
-          ? await sql()`SELECT q.*,p.name,i.name AS item_name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id ORDER BY q.created_at DESC LIMIT 500`
+          ? await sql()`SELECT q.*,p.name,i.name AS item_name,n.status AS notification_status FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id LEFT JOIN marcada.referral_notifications n ON n.quote_id=q.id ORDER BY q.created_at DESC LIMIT 500`
           : [],
       });
     }
@@ -620,6 +665,13 @@ export default async function handler(req, res) {
         body.id,
       );
       return json(res, 200, { ok: true });
+    }
+    if (route === "admin/notification-retry" && req.method === "POST") {
+      if (!uuid(body.id)) return json(res, 400, { error: "Invalid quote" });
+      await limited(req, "notification-retry", 10);
+      const result = await deliverNotification(sql(), body.id);
+      await audit(u.identity, "retry_referral_notification", body.id);
+      return json(res, 200, result);
     }
     if (route === "admin/quote" && req.method === "POST") {
       if (

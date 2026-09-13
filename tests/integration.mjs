@@ -7,6 +7,11 @@ import { createSiweMessage } from "viem/siwe";
 import handler from "../api/index.mjs";
 import { hash, token } from "../lib/security.mjs";
 const originalFetch = globalThis.fetch;
+process.env.REFERRAL_NOTIFY_EMAIL = "ops@example.com";
+process.env.RESEND_API_KEY = "test-not-a-real-key";
+process.env.MAIL_FROM = "Mercado <test@example.com>";
+let notificationCalls = [];
+let emailFailure = true;
 const sql = neon(process.env.DATABASE_URL),
   origin = process.env.APP_ORIGIN,
   tag = randomUUID(),
@@ -135,6 +140,17 @@ try {
   );
   const [ref] =
     await sql`SELECT referral FROM marcada.users WHERE identity=${support}`;
+  globalThis.fetch = async (url, options) => {
+    if (String(url) !== "https://api.resend.com/emails")
+      return originalFetch(url, options);
+    notificationCalls.push(options);
+    return new Response(
+      JSON.stringify(
+        emailFailure ? { error: "simulated" } : { id: "test-email-id" },
+      ),
+      { status: emailFailure ? 503 : 200 },
+    );
+  };
   const q = await request(
     "quotes",
     {
@@ -151,6 +167,37 @@ try {
     await sql`SELECT referral, quantity FROM marcada.quotes WHERE id=${quoteId}`;
   assert.equal(saved.referral, ref.referral);
   assert.equal(saved.quantity, 2);
+  let [notice] =
+    await sql`SELECT * FROM marcada.referral_notifications WHERE quote_id=${quoteId}`;
+  assert.equal(notice.status, "pending");
+  assert.equal(notice.payload.to[0], "ops@example.com");
+  assert.ok(notice.payload.text.includes(customer));
+  assert.ok(notice.payload.text.includes(ref.referral));
+  assert.ok(notice.payload.text.includes("Quantity: 2"));
+  assert.equal(
+    (await request("admin/notification-retry", { id: quoteId }, dealer)).status,
+    403,
+  );
+  emailFailure = false;
+  assert.equal(
+    (await request("admin/notification-retry", { id: quoteId }, support)).data
+      .status,
+    "accepted",
+  );
+  await request("admin/notification-retry", { id: quoteId }, support);
+  assert.equal(notificationCalls.length, 2);
+  assert.equal(
+    notificationCalls[0].headers["Idempotency-Key"],
+    notificationCalls[1].headers["Idempotency-Key"],
+  );
+  assert.equal(notificationCalls[0].body, notificationCalls[1].body);
+  await sql`UPDATE marcada.referral_notifications SET status='pending',first_attempt_at=now()-interval '25 hours' WHERE quote_id=${quoteId}`;
+  await request("admin/notification-retry", { id: quoteId }, support);
+  [notice] =
+    await sql`SELECT * FROM marcada.referral_notifications WHERE quote_id=${quoteId}`;
+  assert.equal(notice.status, "needs_review");
+  assert.equal(notificationCalls.length, 2);
+  globalThis.fetch = originalFetch;
   for (const code of ["typo", ref.referral + "extra", "0000000000000000"]) {
     const rejected = await request(
       "quotes",
@@ -541,7 +588,7 @@ try {
   assert.equal((await request("admin", undefined, customer)).status, 403);
   globalThis.fetch = originalFetch;
   console.log(
-    "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.",
+    "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence and notification failure/retry/expiry, email code replay, secure cookies, SIWE signature/replay/domain checks.",
   );
 } finally {
   globalThis.fetch = originalFetch;

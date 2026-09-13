@@ -435,6 +435,36 @@ export function AdminPages({
                       </strong>
                       <p className="identity">{q.identity}</p>
                       <p>{q.details}</p>
+                      {q.notification_status && (
+                        <p>
+                          Referral email:{" "}
+                          {q.notification_status === "accepted"
+                            ? "Accepted by email provider"
+                            : q.notification_status.replaceAll("_", " ")}
+                        </p>
+                      )}
+                      {q.notification_status === "pending" && (
+                        <button
+                          className="secondary"
+                          onClick={() =>
+                            run(async () => {
+                              await api("admin/notification-retry", {
+                                id: q.id,
+                              });
+                              setAdmin(await api("admin"));
+                            })
+                          }
+                        >
+                          Retry referral email
+                        </button>
+                      )}
+                      {q.notification_status === "needs_review" && (
+                        <small>
+                          Check the email provider delivery log before any
+                          manual resend.
+                        </small>
+                      )}
+
                       <small>
                         Referral: {q.referral || "Direct"} ·{" "}
                         {new Date(q.created_at).toLocaleString()}

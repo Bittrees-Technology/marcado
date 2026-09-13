@@ -9,6 +9,7 @@ Marketplace infrastructure for product discovery, dealer offers, referral attrib
 - Product collections, pricing, source metadata, editable images and catalog filters.
 - Public dealer offers and private deals with explicit access controls.
 - Member referral codes and shareable links, attributed to customer quote requests.
+- Optional operations email for referred quotes, with tracked delivery attempts and restricted retries.
 - Email verification and Sign-In with Ethereum, with verified email–wallet linking.
 - Role-based administration and optional Bittrees governance role resolution.
 - Consent-controlled analytics and foundations for future payments and delivery.
@@ -37,6 +38,8 @@ Vendors register contact details and public CSV/JSON feed URLs for review. Vendo
 In **Manage store → Products, pricing & photos → Import products from CSV**, download the template and upload up to 200 rows (1 MB). Review rows, complete missing fields, and follow supplier or search links to verify details. Enter the actual price-check date; it is never inferred.
 
 Import saves only ready rows and reports each result. New rows default to hidden. Existing IDs are protected unless updates are explicitly enabled; updates replace all product fields. Unfinished rows remain in the current page only, so keep the source CSV until the import is complete. Product management permissions apply to every imported row.
+
+See [notifications and private deals](NOTIFICATIONS.md) for recipient configuration, delivery behavior and the proposed Chirpy wallet integration.
 
 ## Stack
 

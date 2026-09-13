@@ -1033,7 +1033,9 @@ function App() {
                 <p>
                   Request a purchase quote from Mercado. We will confirm the
                   quantity, supplier availability, delivery and final price in
-                  your account. No payment is taken now.
+                  your account. No payment is taken now. Your submitted details
+                  and referral code may be emailed to the Mercado operations
+                  team to process your request.
                 </p>
                 <form
                   onSubmit={(e) => {
