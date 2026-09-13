@@ -311,8 +311,13 @@ function App() {
     });
   }
   const isEquipment = location.pathname !== "/";
-  function requestQuote(domain, item) {
-    const quote = { type: "quote", product: domain, item: item || null };
+  function requestQuote(domain, item, quantity = 1) {
+    const quote = {
+      type: "quote",
+      product: domain,
+      item: item || null,
+      quantity,
+    };
     if (!user) {
       setPendingQuote(quote);
       open("login");
@@ -1026,8 +1031,9 @@ function App() {
               <>
                 <h2>Tell us what you need.</h2>
                 <p>
-                  Your request will be available in your account. No payment is
-                  taken.
+                  Request a purchase quote from Mercado. We will confirm the
+                  quantity, supplier availability, delivery and final price in
+                  your account. No payment is taken now.
                 </p>
                 <form
                   onSubmit={(e) => {
@@ -1107,7 +1113,8 @@ function App() {
                       type="number"
                       min="1"
                       max="10000"
-                      defaultValue="1"
+                      defaultValue={modal.quantity || 1}
+                      step="1"
                       required
                     />
                   </label>

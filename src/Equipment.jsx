@@ -92,7 +92,10 @@ export function EquipmentPage({
     sort: "name",
   };
   const [filters, setFilters] = useState(defaults);
-  const setFilter = (key, value) =>
+  const [quantity, setQuantity] = useState("1");
+  const [visible, setVisible] = useState(24);
+  const setFilter = (key, value) => {
+    setVisible(24);
     setFilters((f) => ({
       ...f,
       [key]: value,
@@ -100,6 +103,7 @@ export function EquipmentPage({
         ? { maxPrice: "", sort: "name" }
         : {}),
     }));
+  };
   const parts = location.pathname.split("/").filter(Boolean);
   const domain = collections.find((p) => p.id === parts[1]),
     selected = parts[2]
@@ -291,11 +295,33 @@ export function EquipmentPage({
               )}
             <h3>About this configuration</h3>
             <p>{selected.specifications}</p>
+            <label>
+              Quantity to request
+              <input
+                aria-label="Quantity to request"
+                type="number"
+                min="1"
+                max="10000"
+                step="1"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
+            </label>
+            <p>
+              Buy through Mercado: request a quote for your quantity and
+              delivery destination. Supplier reference prices are not a binding
+              offer.
+            </p>
             <button
               className="primary"
-              onClick={() => onQuote(domain, selected)}
+              disabled={
+                !/^\d+$/.test(quantity) ||
+                Number(quantity) < 1 ||
+                Number(quantity) > 10000
+              }
+              onClick={() => onQuote(domain, selected, Number(quantity))}
             >
-              Request this product <ArrowUpRight size={17} />
+              Request a purchase quote <ArrowUpRight size={17} />
             </button>
             <button
               className="secondary"
@@ -307,7 +333,7 @@ export function EquipmentPage({
         </div>
       ) : (
         <div className="product-grid real-products">
-          {list.map((item) => (
+          {list.slice(0, visible).map((item) => (
             <article key={item.id} className="real-product">
               <a
                 className="real-photo"
@@ -345,6 +371,11 @@ export function EquipmentPage({
             </article>
           ))}
         </div>
+      )}
+      {!selected && list.length > visible && (
+        <button className="secondary" onClick={() => setVisible((n) => n + 24)}>
+          Show more products ({visible} of {list.length})
+        </button>
       )}
       {!selected && !list.length && (
         <p className="empty">

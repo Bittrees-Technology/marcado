@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "r2-ada-1993-us",
+    "url": "https://www.adafruit.com/product/1993",
+    "checked_at": "2026-09-13T17:48:47.508Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/1993",
+    "bytes": 76486,
+    "html": true
+  },
+  {
+    "id": "r2-ada-1995-us",
+    "url": "https://www.adafruit.com/product/1995",
+    "checked_at": "2026-09-13T17:48:43.895Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/1995",
+    "bytes": 84368,
+    "html": true
+  },
+  {
+    "id": "r2-ada-2883-us",
+    "url": "https://www.adafruit.com/product/2883",
+    "checked_at": "2026-09-13T17:48:47.163Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/2883",
+    "bytes": 101209,
+    "html": true
+  },
+  {
+    "id": "r2-ada-2991-us",
+    "url": "https://www.adafruit.com/product/2991",
+    "checked_at": "2026-09-13T17:48:45.887Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/2991",
+    "bytes": 78972,
+    "html": true
+  },
+  {
+    "id": "r2-ada-2998-us",
+    "url": "https://www.adafruit.com/product/2998",
+    "checked_at": "2026-09-13T17:48:45.368Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/2998",
+    "bytes": 79307,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3055-us",
+    "url": "https://www.adafruit.com/product/3055",
+    "checked_at": "2026-09-13T17:48:43.723Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3055",
+    "bytes": 88190,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3082-us",
+    "url": "https://www.adafruit.com/product/3082",
+    "checked_at": "2026-09-13T17:48:44.467Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3082",
+    "bytes": 81876,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3083-us",
+    "url": "https://www.adafruit.com/product/3083",
+    "checked_at": "2026-09-13T17:48:44.375Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3083",
+    "bytes": 79190,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3084-us",
+    "url": "https://www.adafruit.com/product/3084",
+    "checked_at": "2026-09-13T17:48:44.325Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3084",
+    "bytes": 76405,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3100-us",
+    "url": "https://www.adafruit.com/product/3100",
+    "checked_at": "2026-09-13T17:48:47.797Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3100",
+    "bytes": 85229,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3252-us",
+    "url": "https://www.adafruit.com/product/3252",
+    "checked_at": "2026-09-13T17:48:45.926Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3252",
+    "bytes": 90475,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3289-us",
+    "url": "https://www.adafruit.com/product/3289",
+    "checked_at": "2026-09-13T17:48:47.312Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3289",
+    "bytes": 74866,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3298-us",
+    "url": "https://www.adafruit.com/product/3298",
+    "checked_at": "2026-09-13T17:48:46.154Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3298",
+    "bytes": 96454,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3368-us",
+    "url": "https://www.adafruit.com/product/3368",
+    "checked_at": "2026-09-13T17:48:44.695Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3368",
+    "bytes": 85805,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3386-us",
+    "url": "https://www.adafruit.com/product/3386",
+    "checked_at": "2026-09-13T17:48:45.168Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3386",
+    "bytes": 91086,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3527-us",
+    "url": "https://www.adafruit.com/product/3527",
+    "checked_at": "2026-09-13T17:48:45.739Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3527",
+    "bytes": 85165,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3531-us",
+    "url": "https://www.adafruit.com/product/3531",
+    "checked_at": "2026-09-13T17:48:46.540Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3531",
+    "bytes": 83606,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3589-us",
+    "url": "https://www.adafruit.com/product/3589",
+    "checked_at": "2026-09-13T17:48:46.625Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3589",
+    "bytes": 89398,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3671-us",
+    "url": "https://www.adafruit.com/product/3671",
+    "checked_at": "2026-09-13T17:48:44.517Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3671",
+    "bytes": 95492,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3775-us",
+    "url": "https://www.adafruit.com/product/3775",
+    "checked_at": "2026-09-13T17:48:45.656Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3775",
+    "bytes": 102086,
+    "html": true
+  },
+  {
+    "id": "r2-ada-3848-us",
+    "url": "https://www.adafruit.com/product/3848",
+    "checked_at": "2026-09-13T17:48:46.900Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/3848",
+    "bytes": 94497,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4027-us",
+    "url": "https://www.adafruit.com/product/4027",
+    "checked_at": "2026-09-13T17:48:44.711Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4027",
+    "bytes": 85116,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4096-us",
+    "url": "https://www.adafruit.com/product/4096",
+    "checked_at": "2026-09-13T17:48:46.629Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4096",
+    "bytes": 77844,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4114-us",
+    "url": "https://www.adafruit.com/product/4114",
+    "checked_at": "2026-09-13T17:48:48.149Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4114",
+    "bytes": 84613,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4115-us",
+    "url": "https://www.adafruit.com/product/4115",
+    "checked_at": "2026-09-13T17:48:44.254Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4115",
+    "bytes": 85734,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4282-us",
+    "url": "https://www.adafruit.com/product/4282",
+    "checked_at": "2026-09-13T17:48:44.908Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4282",
+    "bytes": 93439,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4296-us",
+    "url": "https://www.adafruit.com/product/4296",
+    "checked_at": "2026-09-13T17:48:45.055Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4296",
+    "bytes": 114361,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4301-us",
+    "url": "https://www.adafruit.com/product/4301",
+    "checked_at": "2026-09-13T17:48:45.743Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4301",
+    "bytes": 89991,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4302-us",
+    "url": "https://www.adafruit.com/product/4302",
+    "checked_at": "2026-09-13T17:48:46.153Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4302",
+    "bytes": 78402,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4340-us",
+    "url": "https://www.adafruit.com/product/4340",
+    "checked_at": "2026-09-13T17:48:46.886Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4340",
+    "bytes": 80439,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4341-us",
+    "url": "https://www.adafruit.com/product/4341",
+    "checked_at": "2026-09-13T17:48:47.557Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4341",
+    "bytes": 90003,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4354-us",
+    "url": "https://www.adafruit.com/product/4354",
+    "checked_at": "2026-09-13T17:48:47.293Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4354",
+    "bytes": 87914,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4468-us",
+    "url": "https://www.adafruit.com/product/4468",
+    "checked_at": "2026-09-13T17:48:45.547Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4468",
+    "bytes": 76951,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4561-us",
+    "url": "https://www.adafruit.com/product/4561",
+    "checked_at": "2026-09-13T17:48:45.515Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4561",
+    "bytes": 98525,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4562-us",
+    "url": "https://www.adafruit.com/product/4562",
+    "checked_at": "2026-09-13T17:48:47.554Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4562",
+    "bytes": 92886,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4563-us",
+    "url": "https://www.adafruit.com/product/4563",
+    "checked_at": "2026-09-13T17:48:46.924Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4563",
+    "bytes": 87948,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4564-us",
+    "url": "https://www.adafruit.com/product/4564",
+    "checked_at": "2026-09-13T17:48:47.108Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4564",
+    "bytes": 99355,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4567-us",
+    "url": "https://www.adafruit.com/product/4567",
+    "checked_at": "2026-09-13T17:48:47.440Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4567",
+    "bytes": 94932,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4728-us",
+    "url": "https://www.adafruit.com/product/4728",
+    "checked_at": "2026-09-13T17:48:46.704Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4728",
+    "bytes": 80550,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4794-us",
+    "url": "https://www.adafruit.com/product/4794",
+    "checked_at": "2026-09-13T17:48:46.226Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4794",
+    "bytes": 80482,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4795-us",
+    "url": "https://www.adafruit.com/product/4795",
+    "checked_at": "2026-09-13T17:48:46.368Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4795",
+    "bytes": 102220,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4796-us",
+    "url": "https://www.adafruit.com/product/4796",
+    "checked_at": "2026-09-13T17:48:45.958Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4796",
+    "bytes": 102604,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4822-us",
+    "url": "https://www.adafruit.com/product/4822",
+    "checked_at": "2026-09-13T17:48:48.422Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4822",
+    "bytes": 85632,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4823-us",
+    "url": "https://www.adafruit.com/product/4823",
+    "checked_at": "2026-09-13T17:48:45.113Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4823",
+    "bytes": 83245,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4862-us",
+    "url": "https://www.adafruit.com/product/4862",
+    "checked_at": "2026-09-13T17:48:47.886Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4862",
+    "bytes": 105091,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4863-us",
+    "url": "https://www.adafruit.com/product/4863",
+    "checked_at": "2026-09-13T17:48:46.486Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4863",
+    "bytes": 101386,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4884-us",
+    "url": "https://www.adafruit.com/product/4884",
+    "checked_at": "2026-09-13T17:48:44.824Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4884",
+    "bytes": 121214,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4888-us",
+    "url": "https://www.adafruit.com/product/4888",
+    "checked_at": "2026-09-13T17:48:47.346Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4888",
+    "bytes": 107823,
+    "html": true
+  },
+  {
+    "id": "r2-ada-4900-us",
+    "url": "https://www.adafruit.com/product/4900",
+    "checked_at": "2026-09-13T17:48:44.600Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/4900",
+    "bytes": 117507,
+    "html": true
+  },
+  {
+    "id": "r2-ada-501-us",
+    "url": "https://www.adafruit.com/product/501",
+    "checked_at": "2026-09-13T17:48:43.769Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/501",
+    "bytes": 84890,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5056-us",
+    "url": "https://www.adafruit.com/product/5056",
+    "checked_at": "2026-09-13T17:48:46.347Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5056",
+    "bytes": 112949,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5095-us",
+    "url": "https://www.adafruit.com/product/5095",
+    "checked_at": "2026-09-13T17:48:46.919Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5095",
+    "bytes": 83267,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5160-us",
+    "url": "https://www.adafruit.com/product/5160",
+    "checked_at": "2026-09-13T17:48:47.724Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5160",
+    "bytes": 86167,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5302-us",
+    "url": "https://www.adafruit.com/product/5302",
+    "checked_at": "2026-09-13T17:48:44.241Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5302",
+    "bytes": 105923,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5403-us",
+    "url": "https://www.adafruit.com/product/5403",
+    "checked_at": "2026-09-13T17:48:48.519Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5403",
+    "bytes": 83996,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5526-us",
+    "url": "https://www.adafruit.com/product/5526",
+    "checked_at": "2026-09-13T17:48:44.920Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5526",
+    "bytes": 108250,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5612-us",
+    "url": "https://www.adafruit.com/product/5612",
+    "checked_at": "2026-09-13T17:48:46.379Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5612",
+    "bytes": 82067,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5657-us",
+    "url": "https://www.adafruit.com/product/5657",
+    "checked_at": "2026-09-13T17:48:44.909Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5657",
+    "bytes": 95176,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5658-us",
+    "url": "https://www.adafruit.com/product/5658",
+    "checked_at": "2026-09-13T17:48:45.333Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5658",
+    "bytes": 97595,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5659-us",
+    "url": "https://www.adafruit.com/product/5659",
+    "checked_at": "2026-09-13T17:48:46.135Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5659",
+    "bytes": 95213,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5660-us",
+    "url": "https://www.adafruit.com/product/5660",
+    "checked_at": "2026-09-13T17:48:45.581Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5660",
+    "bytes": 90298,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5785-us",
+    "url": "https://www.adafruit.com/product/5785",
+    "checked_at": "2026-09-13T17:48:45.388Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5785",
+    "bytes": 92421,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5786-us",
+    "url": "https://www.adafruit.com/product/5786",
+    "checked_at": "2026-09-13T17:48:47.135Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5786",
+    "bytes": 103731,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5824-us",
+    "url": "https://www.adafruit.com/product/5824",
+    "checked_at": "2026-09-13T17:48:48.050Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5824",
+    "bytes": 70518,
+    "html": true
+  },
+  {
+    "id": "r2-ada-5930-us",
+    "url": "https://www.adafruit.com/product/5930",
+    "checked_at": "2026-09-13T17:48:48.434Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/5930",
+    "bytes": 71478,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6003-us",
+    "url": "https://www.adafruit.com/product/6003",
+    "checked_at": "2026-09-13T17:48:47.724Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6003",
+    "bytes": 99845,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6006-us",
+    "url": "https://www.adafruit.com/product/6006",
+    "checked_at": "2026-09-13T17:48:45.287Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6006",
+    "bytes": 89897,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6012-us",
+    "url": "https://www.adafruit.com/product/6012",
+    "checked_at": "2026-09-13T17:48:46.733Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6012",
+    "bytes": 81089,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6056-us",
+    "url": "https://www.adafruit.com/product/6056",
+    "checked_at": "2026-09-13T17:48:48.100Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6056",
+    "bytes": 83204,
+    "html": true
+  },
+  {
+    "id": "r2-ada-608-us",
+    "url": "https://www.adafruit.com/product/608",
+    "checked_at": "2026-09-13T17:48:44.155Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/608",
+    "bytes": 81698,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6111-us",
+    "url": "https://www.adafruit.com/product/6111",
+    "checked_at": "2026-09-13T17:48:48.625Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6111",
+    "bytes": 90615,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6123-us",
+    "url": "https://www.adafruit.com/product/6123",
+    "checked_at": "2026-09-13T17:48:48.310Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6123",
+    "bytes": 69471,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6200-us",
+    "url": "https://www.adafruit.com/product/6200",
+    "checked_at": "2026-09-13T17:48:45.122Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6200",
+    "bytes": 109778,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6243-us",
+    "url": "https://www.adafruit.com/product/6243",
+    "checked_at": "2026-09-13T17:48:45.935Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6243",
+    "bytes": 84106,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6252-us",
+    "url": "https://www.adafruit.com/product/6252",
+    "checked_at": "2026-09-13T17:48:44.699Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6252",
+    "bytes": 89124,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6281-us",
+    "url": "https://www.adafruit.com/product/6281",
+    "checked_at": "2026-09-13T17:48:48.435Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6281",
+    "bytes": 82115,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6315-us",
+    "url": "https://www.adafruit.com/product/6315",
+    "checked_at": "2026-09-13T17:48:44.470Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6315",
+    "bytes": 85893,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6452-us",
+    "url": "https://www.adafruit.com/product/6452",
+    "checked_at": "2026-09-13T17:48:48.239Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6452",
+    "bytes": 80626,
+    "html": true
+  },
+  {
+    "id": "r2-ada-6453-us",
+    "url": "https://www.adafruit.com/product/6453",
+    "checked_at": "2026-09-13T17:48:48.156Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/6453",
+    "bytes": 80612,
+    "html": true
+  },
+  {
+    "id": "r2-ada-954-us",
+    "url": "https://www.adafruit.com/product/954",
+    "checked_at": "2026-09-13T17:48:43.839Z",
+    "status": 200,
+    "final_url": "https://www.adafruit.com/product/954",
+    "bytes": 81598,
+    "html": true
+  },
+  {
+    "id": "r2-dc-14957-ca",
+    "url": "https://d-central.tech/product/bitmain-apw12-1417-psu-for-antminer-l7-d7/",
+    "checked_at": "2026-09-13T17:49:10.100Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-apw12-1417-psu-for-antminer-l7-d7/",
+    "bytes": 183368,
+    "html": true
+  },
+  {
+    "id": "r2-dc-17597-ca",
+    "url": "https://d-central.tech/product/t451/",
+    "checked_at": "2026-09-13T17:49:10.091Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/t451/",
+    "bytes": 195855,
+    "html": true
+  },
+  {
+    "id": "r2-dc-17799-ca",
+    "url": "https://d-central.tech/product/bm1366al/",
+    "checked_at": "2026-09-13T17:49:10.070Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bm1366al/",
+    "bytes": 200132,
+    "html": true
+  },
+  {
+    "id": "r2-dc-23105-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-s19j-pro/",
+    "checked_at": "2026-09-13T17:49:09.931Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-s19j-pro/",
+    "bytes": 203951,
+    "html": true
+  },
+  {
+    "id": "r2-dc-23125-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-l7/",
+    "checked_at": "2026-09-13T17:49:09.917Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-l7/",
+    "bytes": 191504,
+    "html": true
+  },
+  {
+    "id": "r2-dc-27554-ca",
+    "url": "https://d-central.tech/product/fan-speed-tester-for-asic-miner/",
+    "checked_at": "2026-09-13T17:49:09.880Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/fan-speed-tester-for-asic-miner/",
+    "bytes": 193340,
+    "html": true
+  },
+  {
+    "id": "r2-dc-27811-ca",
+    "url": "https://d-central.tech/product/usb-to-ttl-cable/",
+    "checked_at": "2026-09-13T17:49:09.729Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/usb-to-ttl-cable/",
+    "bytes": 186844,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28015-ca",
+    "url": "https://d-central.tech/product/antminer-s9-space-heater-edition/",
+    "checked_at": "2026-09-13T17:49:09.727Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-s9-space-heater-edition/",
+    "bytes": 311715,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28016-ca",
+    "url": "https://d-central.tech/product/antminer-l3-space-heater-edition/",
+    "checked_at": "2026-09-13T17:49:09.679Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-l3-space-heater-edition/",
+    "bytes": 273725,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28028-ca",
+    "url": "https://d-central.tech/product/bitaxe-diy-kit/",
+    "checked_at": "2026-09-13T17:49:09.671Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-diy-kit/",
+    "bytes": 251871,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28066-ca",
+    "url": "https://d-central.tech/product/c14-to-2x-nema-5-15r-power-splitter-cable/",
+    "checked_at": "2026-09-13T17:49:09.541Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/c14-to-2x-nema-5-15r-power-splitter-cable/",
+    "bytes": 178493,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28067-ca",
+    "url": "https://d-central.tech/product/c20-to-2x-c13-power-splitter-cable/",
+    "checked_at": "2026-09-13T17:49:09.507Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/c20-to-2x-c13-power-splitter-cable/",
+    "bytes": 177991,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28070-ca",
+    "url": "https://d-central.tech/product/c14-to-3x-c13-power-splitter-cable/",
+    "checked_at": "2026-09-13T17:49:09.495Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/c14-to-3x-c13-power-splitter-cable/",
+    "bytes": 177965,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28121-ca",
+    "url": "https://d-central.tech/product/noctua-nf-a14-ippc-3000-pwm/",
+    "checked_at": "2026-09-13T17:49:09.347Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/noctua-nf-a14-ippc-3000-pwm/",
+    "bytes": 184164,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28332-ca",
+    "url": "https://d-central.tech/product/6-15p-to-c19-power-cable/",
+    "checked_at": "2026-09-13T17:49:09.343Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/6-15p-to-c19-power-cable/",
+    "bytes": 181987,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28336-ca",
+    "url": "https://d-central.tech/product/6-20r-to-c14-14awg-sjt-power-cord/",
+    "checked_at": "2026-09-13T17:49:09.331Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/6-20r-to-c14-14awg-sjt-power-cord/",
+    "bytes": 181981,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28340-ca",
+    "url": "https://d-central.tech/product/6-20r-to-c13-power-cable-14awg-sjt/",
+    "checked_at": "2026-09-13T17:49:09.321Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/6-20r-to-c13-power-cable-14awg-sjt/",
+    "bytes": 181729,
+    "html": true
+  },
+  {
+    "id": "r2-dc-28344-ca",
+    "url": "https://d-central.tech/product/6ft-6-15p-to-c13-power-cable-14awg-sjt/",
+    "checked_at": "2026-09-13T17:49:09.124Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/6ft-6-15p-to-c13-power-cable-14awg-sjt/",
+    "bytes": 181002,
+    "html": true
+  },
+  {
+    "id": "r2-dc-34061-ca",
+    "url": "https://d-central.tech/product/epic-blockchain-umc-universal-mining-control-board/",
+    "checked_at": "2026-09-13T17:49:08.035Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/epic-blockchain-umc-universal-mining-control-board/",
+    "bytes": 185579,
+    "html": true
+  },
+  {
+    "id": "r2-dc-34062-ca",
+    "url": "https://d-central.tech/product/braiins-bcb-100-mining-control-board-for-19-series/",
+    "checked_at": "2026-09-13T17:49:07.851Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/braiins-bcb-100-mining-control-board-for-19-series/",
+    "bytes": 197743,
+    "html": true
+  },
+  {
+    "id": "r2-dc-37033-ca",
+    "url": "https://d-central.tech/product/ac-infinity-cloudline-s6-quiet-6-duct-fan/",
+    "checked_at": "2026-09-13T17:49:07.827Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/ac-infinity-cloudline-s6-quiet-6-duct-fan/",
+    "bytes": 182106,
+    "html": true
+  },
+  {
+    "id": "r2-dc-37035-ca",
+    "url": "https://d-central.tech/product/ac-infinity-cloudline-s8-quiet-8-duct-fan/",
+    "checked_at": "2026-09-13T17:49:07.816Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/ac-infinity-cloudline-s8-quiet-8-duct-fan/",
+    "bytes": 182290,
+    "html": true
+  },
+  {
+    "id": "r2-dc-37045-ca",
+    "url": "https://d-central.tech/product/njord-cloudline/",
+    "checked_at": "2026-09-13T17:49:07.814Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/njord-cloudline/",
+    "bytes": 188630,
+    "html": true
+  },
+  {
+    "id": "r2-dc-49416-ca",
+    "url": "https://d-central.tech/product/replacement-hashboard-for-antminer-t17-upgraded/",
+    "checked_at": "2026-09-13T17:49:07.662Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/replacement-hashboard-for-antminer-t17-upgraded/",
+    "bytes": 189815,
+    "html": true
+  },
+  {
+    "id": "r2-dc-49547-ca",
+    "url": "https://d-central.tech/product/esp32-programmer/",
+    "checked_at": "2026-09-13T17:49:07.659Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/esp32-programmer/",
+    "bytes": 183797,
+    "html": true
+  },
+  {
+    "id": "r2-dc-51597-ca",
+    "url": "https://d-central.tech/product/silentminer-asic-fan-speed-reducer-cable/",
+    "checked_at": "2026-09-13T17:49:07.625Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/silentminer-asic-fan-speed-reducer-cable/",
+    "bytes": 207162,
+    "html": true
+  },
+  {
+    "id": "r2-dc-51603-ca",
+    "url": "https://d-central.tech/product/noctua-nf-f12-ippc-3000-pwm/",
+    "checked_at": "2026-09-13T17:49:07.609Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/noctua-nf-f12-ippc-3000-pwm/",
+    "bytes": 190251,
+    "html": true
+  },
+  {
+    "id": "r2-dc-52963-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-s19k-pro/",
+    "checked_at": "2026-09-13T17:49:07.484Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-s19k-pro/",
+    "bytes": 193027,
+    "html": true
+  },
+  {
+    "id": "r2-dc-55577-ca",
+    "url": "https://d-central.tech/product/antminer-s19-space-heater-edition/",
+    "checked_at": "2026-09-13T17:49:07.473Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-s19-space-heater-edition/",
+    "bytes": 272014,
+    "html": true
+  },
+  {
+    "id": "r2-dc-58377-ca",
+    "url": "https://d-central.tech/product/the-bitchimney/",
+    "checked_at": "2026-09-13T17:49:07.453Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-bitchimney/",
+    "bytes": 268145,
+    "html": true
+  },
+  {
+    "id": "r2-dc-58429-ca",
+    "url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19k-pro/",
+    "checked_at": "2026-09-13T17:49:07.408Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19k-pro/",
+    "bytes": 217070,
+    "html": true
+  },
+  {
+    "id": "r2-dc-58676-ca",
+    "url": "https://d-central.tech/product/the-bitaxe/",
+    "checked_at": "2026-09-13T17:49:07.323Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-bitaxe/",
+    "bytes": 411154,
+    "html": true
+  },
+  {
+    "id": "r2-dc-58726-ca",
+    "url": "https://d-central.tech/product/antminer-slim-edition/",
+    "checked_at": "2026-09-13T17:49:07.299Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-slim-edition/",
+    "bytes": 283176,
+    "html": true
+  },
+  {
+    "id": "r2-dc-58770-ca",
+    "url": "https://d-central.tech/product/bm1366bs/",
+    "checked_at": "2026-09-13T17:49:07.282Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bm1366bs/",
+    "bytes": 203675,
+    "html": true
+  },
+  {
+    "id": "r2-dc-59650-ca",
+    "url": "https://d-central.tech/product/the-qaxe/",
+    "checked_at": "2026-09-13T17:49:07.263Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-qaxe/",
+    "bytes": 207229,
+    "html": true
+  },
+  {
+    "id": "r2-dc-59651-ca",
+    "url": "https://d-central.tech/product/the-bitaxe-hex/",
+    "checked_at": "2026-09-13T17:49:07.212Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-bitaxe-hex/",
+    "bytes": 387092,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61169-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-xilinx-7007-zync-control-board-ctrl_c87/",
+    "checked_at": "2026-09-13T17:49:07.008Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-xilinx-7007-zync-control-board-ctrl_c87/",
+    "bytes": 190570,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61181-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-amlogic-control-board-a113d-ctrl_c76/",
+    "checked_at": "2026-09-13T17:49:06.834Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-amlogic-control-board-a113d-ctrl_c76/",
+    "bytes": 203494,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61186-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-amlogic-control-board-a113d-ctrl_c81/",
+    "checked_at": "2026-09-13T17:49:06.622Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-amlogic-control-board-a113d-ctrl_c81/",
+    "bytes": 180492,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61190-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-cvitek-control-board-cv1835-ctrl_c97/",
+    "checked_at": "2026-09-13T17:49:06.430Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-cvitek-control-board-cv1835-ctrl_c97/",
+    "bytes": 179834,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61193-ca",
+    "url": "https://d-central.tech/product/martech-df1203812b2un-6000-pwm/",
+    "checked_at": "2026-09-13T17:49:06.246Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/martech-df1203812b2un-6000-pwm/",
+    "bytes": 178755,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61195-ca",
+    "url": "https://d-central.tech/product/sj-sg121238bs-6000-pwm/",
+    "checked_at": "2026-09-13T17:49:06.017Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/sj-sg121238bs-6000-pwm/",
+    "bytes": 181482,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61204-ca",
+    "url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s21/",
+    "checked_at": "2026-09-13T17:49:05.838Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s21/",
+    "bytes": 204608,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61205-ca",
+    "url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19j-pro/",
+    "checked_at": "2026-09-13T17:49:05.882Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19j-pro/",
+    "bytes": 225791,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61208-ca",
+    "url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19-xp/",
+    "checked_at": "2026-09-13T17:49:05.679Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/replacement-hashboard-for-antminer-s19-xp/",
+    "bytes": 204194,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61530-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-s21-pro/",
+    "checked_at": "2026-09-13T17:49:05.654Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-s21-pro/",
+    "bytes": 215853,
+    "html": true
+  },
+  {
+    "id": "r2-dc-61966-ca",
+    "url": "https://d-central.tech/product/the-nerdaxe/",
+    "checked_at": "2026-09-13T17:49:05.457Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-nerdaxe/",
+    "bytes": 323568,
+    "html": true
+  },
+  {
+    "id": "r2-dc-62919-ca",
+    "url": "https://d-central.tech/product/iec-c20-to-pa45-p13-power-cable/",
+    "checked_at": "2026-09-13T17:49:05.433Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/iec-c20-to-pa45-p13-power-cable/",
+    "bytes": 191474,
+    "html": true
+  },
+  {
+    "id": "r2-dc-66731-ca",
+    "url": "https://d-central.tech/product/antminer-dual-120mm-silencer/",
+    "checked_at": "2026-09-13T17:49:05.276Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-dual-120mm-silencer/",
+    "bytes": 182612,
+    "html": true
+  },
+  {
+    "id": "r2-dc-66732-ca",
+    "url": "https://d-central.tech/product/hashboard-airflow-deflector-for-antminer-19-21-series/",
+    "checked_at": "2026-09-13T17:49:05.247Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/hashboard-airflow-deflector-for-antminer-19-21-series/",
+    "bytes": 184643,
+    "html": true
+  },
+  {
+    "id": "r2-dc-67804-ca",
+    "url": "https://d-central.tech/product/antminer-loki-edition/",
+    "checked_at": "2026-09-13T17:49:05.069Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-loki-edition/",
+    "bytes": 237260,
+    "html": true
+  },
+  {
+    "id": "r2-dc-68072-ca",
+    "url": "https://d-central.tech/product/bitmain-antminer-s21-xp/",
+    "checked_at": "2026-09-13T17:49:05.056Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitmain-antminer-s21-xp/",
+    "bytes": 220682,
+    "html": true
+  },
+  {
+    "id": "r2-dc-68243-ca",
+    "url": "https://d-central.tech/product/the-stealthminer/",
+    "checked_at": "2026-09-13T17:49:04.883Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-stealthminer/",
+    "bytes": 221380,
+    "html": true
+  },
+  {
+    "id": "r2-dc-68809-ca",
+    "url": "https://d-central.tech/product/the-nerdqaxe-plus/",
+    "checked_at": "2026-09-13T17:49:04.880Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-nerdqaxe-plus/",
+    "bytes": 233517,
+    "html": true
+  },
+  {
+    "id": "r2-dc-70852-ca",
+    "url": "https://d-central.tech/product/the-nerdoctaxe-gamma/",
+    "checked_at": "2026-09-13T17:49:04.834Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/the-nerdoctaxe-gamma/",
+    "bytes": 233031,
+    "html": true
+  },
+  {
+    "id": "r2-dc-71350-ca",
+    "url": "https://d-central.tech/product/antminer-pivotal-edition/",
+    "checked_at": "2026-09-13T17:49:04.693Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-pivotal-edition/",
+    "bytes": 225021,
+    "html": true
+  },
+  {
+    "id": "r2-dc-71862-ca",
+    "url": "https://d-central.tech/product/canaan-avalon-mini-3/",
+    "checked_at": "2026-09-13T17:49:04.684Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/canaan-avalon-mini-3/",
+    "bytes": 214604,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73143-ca",
+    "url": "https://d-central.tech/product/ubiquiti-usw-lite-16-rack-mount/",
+    "checked_at": "2026-09-13T17:49:04.630Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/ubiquiti-usw-lite-16-rack-mount/",
+    "bytes": 176356,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73146-ca",
+    "url": "https://d-central.tech/product/orange-pi-5-fanless-case/",
+    "checked_at": "2026-09-13T17:49:04.436Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/orange-pi-5-fanless-case/",
+    "bytes": 181161,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73331-ca",
+    "url": "https://d-central.tech/product/antminer-slim-diy-case/",
+    "checked_at": "2026-09-13T17:49:04.419Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-slim-diy-case/",
+    "bytes": 192343,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73371-ca",
+    "url": "https://d-central.tech/product/antminer-s21-pro-xp-8-inch-shroud-adapter/",
+    "checked_at": "2026-09-13T17:49:04.262Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-s21-pro-xp-8-inch-shroud-adapter/",
+    "bytes": 195922,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73464-ca",
+    "url": "https://d-central.tech/product/nerdqaxe-stand-galaxy-purple/",
+    "checked_at": "2026-09-13T17:49:04.088Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/nerdqaxe-stand-galaxy-purple/",
+    "bytes": 193298,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73502-ca",
+    "url": "https://d-central.tech/product/antminer-s9-l3-space-heater-diy-box/",
+    "checked_at": "2026-09-13T17:49:03.910Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-s9-l3-space-heater-diy-box/",
+    "bytes": 210831,
+    "html": true
+  },
+  {
+    "id": "r2-dc-73749-ca",
+    "url": "https://d-central.tech/product/antminer-s17-t17-space-heater-case/",
+    "checked_at": "2026-09-13T17:49:03.732Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/antminer-s17-t17-space-heater-case/",
+    "bytes": 223432,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74263-ca",
+    "url": "https://d-central.tech/product/bitaxe-replacement-oled-display-pack-of-3/",
+    "checked_at": "2026-09-13T17:49:03.606Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-replacement-oled-display-pack-of-3/",
+    "bytes": 196363,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74355-ca",
+    "url": "https://d-central.tech/product/bitaxe-hex-case/",
+    "checked_at": "2026-09-13T17:49:03.551Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-hex-case/",
+    "bytes": 205204,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74376-ca",
+    "url": "https://d-central.tech/product/bitaxe-hex-heatsink/",
+    "checked_at": "2026-09-13T17:49:03.494Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-hex-heatsink/",
+    "bytes": 206887,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74388-ca",
+    "url": "https://d-central.tech/product/bitaxe-modern-heatsink/",
+    "checked_at": "2026-09-13T17:49:03.428Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-modern-heatsink/",
+    "bytes": 210062,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74391-ca",
+    "url": "https://d-central.tech/product/bitaxe-basic-heatsink/",
+    "checked_at": "2026-09-13T17:49:03.362Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-basic-heatsink/",
+    "bytes": 198964,
+    "html": true
+  },
+  {
+    "id": "r2-dc-74402-ca",
+    "url": "https://d-central.tech/product/nerdqaxe-24-pin-socket-extension/",
+    "checked_at": "2026-09-13T17:49:03.299Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/nerdqaxe-24-pin-socket-extension/",
+    "bytes": 189607,
+    "html": true
+  },
+  {
+    "id": "r2-dc-76266-ca",
+    "url": "https://d-central.tech/product/bitaxe-argon-thrml-noctua-socket/",
+    "checked_at": "2026-09-13T17:49:03.191Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/bitaxe-argon-thrml-noctua-socket/",
+    "bytes": 190881,
+    "html": true
+  },
+  {
+    "id": "r2-dc-76268-ca",
+    "url": "https://d-central.tech/product/ice-cooler-low-profile-tower-bitaxe-socket/",
+    "checked_at": "2026-09-13T17:49:03.094Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/ice-cooler-low-profile-tower-bitaxe-socket/",
+    "bytes": 196624,
+    "html": true
+  },
+  {
+    "id": "r2-dc-76578-ca",
+    "url": "https://d-central.tech/product/vonets-wifi-adapter-cable-antminer/",
+    "checked_at": "2026-09-13T17:49:03.048Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/vonets-wifi-adapter-cable-antminer/",
+    "bytes": 202254,
+    "html": true
+  },
+  {
+    "id": "r2-dc-76747-ca",
+    "url": "https://d-central.tech/product/l7-heater-pivotal-edition-3-5ghs-1300w/",
+    "checked_at": "2026-09-13T17:49:02.795Z",
+    "status": 200,
+    "final_url": "https://d-central.tech/product/l7-heater-pivotal-edition-3-5ghs-1300w/",
+    "bytes": 207182,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-acdc-85-255-12v0-4a-eu",
+    "url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-12V0.4A/",
+    "checked_at": "2026-09-13T17:48:59.947Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-12V0.4A/",
+    "bytes": 18149,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-acdc-85-255-12v1a-eu",
+    "url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-12V1A/",
+    "checked_at": "2026-09-13T17:48:57.470Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-12V1A/",
+    "bytes": 17501,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-acdc-85-255-5v0-7a-eu",
+    "url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-5V0.7A/",
+    "checked_at": "2026-09-13T17:48:58.434Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-5V0.7A/",
+    "bytes": 18118,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-acdc-85-255-5v2a-eu",
+    "url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-5V2A/",
+    "checked_at": "2026-09-13T17:48:57.168Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Power-Supply/Modules/ACDC-85-255-5V2A/",
+    "bytes": 17904,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-dcdc-50-5-12-eu",
+    "url": "https://www.olimex.com/Products/Power-Supply/Modules/DCDC-50-5-12/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:01.496Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Power-Supply/Modules/DCDC-50-5-12/open-source-hardware",
+    "bytes": 22741,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-c3-devkit-lipo-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C3/ESP32-C3-DevKit-Lipo/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:02.093Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C3/ESP32-C3-DevKit-Lipo/open-source-hardware",
+    "bytes": 28508,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-c5-devkit-lipo-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C5/ESP32-C5-DevKit-Lipo/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:02.096Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C5/ESP32-C5-DevKit-Lipo/open-source-hardware",
+    "bytes": 31800,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-c5-evb-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C5/ESP32-C5-EVB/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.171Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C5/ESP32-C5-EVB/open-source-hardware",
+    "bytes": 28444,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-c6-devkit-lipo-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C6/ESP32-C6-DevKit-Lipo/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:58.913Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C6/ESP32-C6-DevKit-Lipo/open-source-hardware",
+    "bytes": 31643,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-c6-evb-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C6/ESP32-C6-EVB/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.953Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C6/ESP32-C6-EVB/open-source-hardware",
+    "bytes": 27829,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-p4-pc-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-P4/ESP32-P4-PC/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:57.972Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-P4/ESP32-P4-PC/open-source-hardware",
+    "bytes": 29820,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-poe-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:00.202Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware",
+    "bytes": 37679,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-poe2-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32/ESP32-POE2/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:00.886Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32/ESP32-POE2/open-source-hardware",
+    "bytes": 37839,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-esp32-s3-devkit-lipo-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.568Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo/open-source-hardware",
+    "bytes": 29176,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-ethernet-cable-1m-eu",
+    "url": "https://www.olimex.com/Products/Components/Cables/Ethernet/Ethernet-CABLE-1M/",
+    "checked_at": "2026-09-13T17:49:00.552Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Components/Cables/Ethernet/Ethernet-CABLE-1M/",
+    "bytes": 17159,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-ethernet-cable-panel-eu",
+    "url": "https://www.olimex.com/Products/Components/Cables/Ethernet/ETHERNET-CABLE-PANEL/",
+    "checked_at": "2026-09-13T17:49:02.248Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Components/Cables/Ethernet/ETHERNET-CABLE-PANEL/",
+    "bytes": 17532,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-ethernet-extender-eu",
+    "url": "https://www.olimex.com/Products/Components/Cables/Ethernet/ETHERNET-EXTENDER/",
+    "checked_at": "2026-09-13T17:49:00.642Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/Components/Cables/Ethernet/ETHERNET-EXTENDER/",
+    "bytes": 16904,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-mipi-hdmi-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-P4/MIPI-HDMI/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:58.670Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-P4/MIPI-HDMI/open-source-hardware",
+    "bytes": 22101,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-mod-esp32-c5-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-C5/MOD-ESP32-C5/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.288Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-C5/MOD-ESP32-C5/open-source-hardware",
+    "bytes": 29191,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-poev3-eu",
+    "url": "https://www.olimex.com/Products/IoT/ESP32-P4/POEv3/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.821Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/IoT/ESP32-P4/POEv3/open-source-hardware",
+    "bytes": 21113,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-stmp157-olinuxino-lime2-eu",
+    "url": "https://www.olimex.com/Products/OLinuXino/STMP1/STMP157-OLinuXino-LIME2/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:57.772Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/OLinuXino/STMP1/STMP157-OLinuXino-LIME2/open-source-hardware",
+    "bytes": 29621,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-stmp15x-shield-eu",
+    "url": "https://www.olimex.com/Products/OLinuXino/STMP1/STMP15X-SHIELD/open-source-hardware",
+    "checked_at": "2026-09-13T17:48:59.142Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/OLinuXino/STMP1/STMP15X-SHIELD/open-source-hardware",
+    "bytes": 21482,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-4serial-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-4SERIAL/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:02.769Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-4SERIAL/open-source-hardware",
+    "bytes": 19504,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-c-card-reader-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-C-CARD-READER/",
+    "checked_at": "2026-09-13T17:48:57.354Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-C-CARD-READER/",
+    "bytes": 17436,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-c-hub-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Hub/USB-C-HUB/",
+    "checked_at": "2026-09-13T17:49:02.783Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Hub/USB-C-HUB/",
+    "bytes": 15687,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-card-reader-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-CARD-READER/",
+    "checked_at": "2026-09-13T17:48:58.100Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-CARD-READER/",
+    "bytes": 17518,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-hub-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Hub/USB-HUB/",
+    "checked_at": "2026-09-13T17:49:02.170Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Hub/USB-HUB/",
+    "bytes": 15663,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-iso-hs-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/USB-ISO-HS/",
+    "checked_at": "2026-09-13T17:49:01.639Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/USB-ISO-HS/",
+    "bytes": 24699,
+    "html": true
+  },
+  {
+    "id": "r2-olimex-usb-sata-eu",
+    "url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-SATA/open-source-hardware",
+    "checked_at": "2026-09-13T17:49:00.742Z",
+    "status": 200,
+    "final_url": "https://www.olimex.com/Products/USB-Modules/Interfaces/USB-SATA/open-source-hardware",
+    "bytes": 22116,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-5767-unverified",
+    "url": "https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html",
+    "checked_at": "2026-09-13T17:48:54.886Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html",
+    "bytes": 956756,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-5810-unverified",
+    "url": "https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html",
+    "checked_at": "2026-09-13T17:48:55.207Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html",
+    "bytes": 972257,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-5851-unverified",
+    "url": "https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html",
+    "checked_at": "2026-09-13T17:48:56.985Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html",
+    "bytes": 1216062,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6625-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-J401-Nano-Bundle-p-6625.html",
+    "checked_at": "2026-09-13T17:48:54.721Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-J401-Nano-Bundle-p-6625.html",
+    "bytes": 958942,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6653-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-Industrial-R2245-12-p-6653.html",
+    "checked_at": "2026-09-13T17:48:54.702Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-Industrial-R2245-12-p-6653.html",
+    "bytes": 982724,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6654-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html",
+    "checked_at": "2026-09-13T17:48:52.773Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html",
+    "bytes": 986497,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6655-unverified",
+    "url": "https://www.seeedstudio.com/Pi500-EU-desktop-computer-kit-p-6655.html",
+    "checked_at": "2026-09-13T17:48:52.770Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/Pi500-EU-desktop-computer-kit-p-6655.html",
+    "bytes": 925346,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6656-unverified",
+    "url": "https://www.seeedstudio.com/Pi500-US-desktop-computer-kit-p-6656.html",
+    "checked_at": "2026-09-13T17:48:50.755Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/Pi500-US-desktop-computer-kit-p-6656.html",
+    "bytes": 930829,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6686-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-Super-J401-NX-Bundle-p-6686.html",
+    "checked_at": "2026-09-13T17:48:50.755Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-Super-J401-NX-Bundle-p-6686.html",
+    "bytes": 975540,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6716-unverified",
+    "url": "https://www.seeedstudio.com/Raspberry-Pi-AI-HAT-13TOPS-p-6716.html",
+    "checked_at": "2026-09-13T17:48:52.738Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/Raspberry-Pi-AI-HAT-13TOPS-p-6716.html",
+    "bytes": 922079,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6920-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html",
+    "checked_at": "2026-09-13T17:48:52.668Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html",
+    "bytes": 942185,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6921-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-Rugged-J3011-p-6921.html",
+    "checked_at": "2026-09-13T17:48:48.813Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-Rugged-J3011-p-6921.html",
+    "bytes": 942108,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6949-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-RK3576-Module-0432-p-6949.html",
+    "checked_at": "2026-09-13T17:48:50.749Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-RK3576-Module-0432-p-6949.html",
+    "bytes": 947914,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6950-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-RK3576-Module-0864-p-6950.html",
+    "checked_at": "2026-09-13T17:48:48.739Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-RK3576-Module-0864-p-6950.html",
+    "bytes": 945246,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6951-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-RK3576-Module-lO-Board-p-6951.html",
+    "checked_at": "2026-09-13T17:48:50.752Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-RK3576-Module-lO-Board-p-6951.html",
+    "bytes": 937672,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6952-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-RK3576-Module-Dev-Kit-p-6952.html",
+    "checked_at": "2026-09-13T17:48:48.678Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-RK3576-Module-Dev-Kit-p-6952.html",
+    "bytes": 953485,
+    "html": true
+  },
+  {
+    "id": "r2-seeed-6953-unverified",
+    "url": "https://www.seeedstudio.com/reComputer-RK3576-Module-Dev-Kit-with-RK1820-AI-Accelerator-p-6953.html",
+    "checked_at": "2026-09-13T17:48:48.688Z",
+    "status": 200,
+    "final_url": "https://www.seeedstudio.com/reComputer-RK3576-Module-Dev-Kit-with-RK1820-AI-Accelerator-p-6953.html",
+    "bytes": 962840,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-enterprise-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-enterprise",
+    "checked_at": "2026-09-13T17:48:30.270Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-enterprise",
+    "bytes": 406642,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-enterprise-iw-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-enterprise-iw",
+    "checked_at": "2026-09-13T17:48:30.310Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-enterprise-iw",
+    "bytes": 387523,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-enterprise-iw-us",
+    "url": "https://store.ui.com/us/en/products/u6-enterprise-iw",
+    "checked_at": "2026-09-13T17:48:42.869Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-enterprise-iw",
+    "bytes": 387729,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-enterprise-us",
+    "url": "https://store.ui.com/us/en/products/u6-enterprise",
+    "checked_at": "2026-09-13T17:48:42.750Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-enterprise",
+    "bytes": 407202,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-iw-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-iw",
+    "checked_at": "2026-09-13T17:48:30.310Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-iw",
+    "bytes": 387779,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-iw-us",
+    "url": "https://store.ui.com/us/en/products/u6-iw",
+    "checked_at": "2026-09-13T17:48:43.004Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-iw",
+    "bytes": 387985,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-mesh-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-mesh?variant=u6-mesh-eu",
+    "checked_at": "2026-09-13T17:48:30.311Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-mesh?variant=u6-mesh-eu",
+    "bytes": 433970,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-mesh-pro-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-mesh-pro?variant=u6-mesh-pro-eu",
+    "checked_at": "2026-09-13T17:48:31.464Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-mesh-pro?variant=u6-mesh-pro-eu",
+    "bytes": 416681,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-mesh-pro-us",
+    "url": "https://store.ui.com/us/en/products/u6-mesh-pro",
+    "checked_at": "2026-09-13T17:48:43.123Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-mesh-pro",
+    "bytes": 410647,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-mesh-us",
+    "url": "https://store.ui.com/us/en/products/u6-mesh",
+    "checked_at": "2026-09-13T17:48:43.111Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-mesh",
+    "bytes": 429832,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-plus-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-plus",
+    "checked_at": "2026-09-13T17:48:31.484Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-plus",
+    "bytes": 423436,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-plus-us",
+    "url": "https://store.ui.com/us/en/products/u6-plus",
+    "checked_at": "2026-09-13T17:48:43.149Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-plus",
+    "bytes": 424000,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-pro-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u6-pro",
+    "checked_at": "2026-09-13T17:48:31.488Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u6-pro",
+    "bytes": 405383,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u6-pro-us",
+    "url": "https://store.ui.com/us/en/products/u6-pro",
+    "checked_at": "2026-09-13T17:48:43.374Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u6-pro",
+    "bytes": 405943,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-iw-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-iw",
+    "checked_at": "2026-09-13T17:48:31.775Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-iw",
+    "bytes": 386531,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-iw-us",
+    "url": "https://store.ui.com/us/en/products/u7-iw",
+    "checked_at": "2026-09-13T17:48:43.412Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u7-iw",
+    "bytes": 386230,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-lite-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-lite",
+    "checked_at": "2026-09-13T17:48:31.903Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-lite",
+    "bytes": 429313,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-lite-us",
+    "url": "https://store.ui.com/us/en/products/u7-lite",
+    "checked_at": "2026-09-13T17:48:43.434Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u7-lite",
+    "bytes": 430168,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-lr-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-lr",
+    "checked_at": "2026-09-13T17:48:31.911Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-lr",
+    "bytes": 433996,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-lr-us",
+    "url": "https://store.ui.com/us/en/products/u7-lr",
+    "checked_at": "2026-09-13T17:48:43.439Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u7-lr",
+    "bytes": 434854,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-mesh-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-mesh",
+    "checked_at": "2026-09-13T17:48:32.033Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-mesh",
+    "bytes": 414716,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-mesh-us",
+    "url": "https://store.ui.com/us/en/products/u7-mesh",
+    "checked_at": "2026-09-13T17:48:43.636Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/u7-mesh",
+    "bytes": 415275,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-outdoor-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-outdoor",
+    "checked_at": "2026-09-13T17:48:32.210Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-outdoor",
+    "bytes": 423391,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro?variant=u7-pro",
+    "checked_at": "2026-09-13T17:48:32.233Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro?variant=u7-pro",
+    "bytes": 433668,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-max-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-max",
+    "checked_at": "2026-09-13T17:48:32.255Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-max",
+    "bytes": 393925,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-outdoor-us-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-outdoor",
+    "checked_at": "2026-09-13T17:48:32.420Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-outdoor",
+    "bytes": 421732,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-wall-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-wall",
+    "checked_at": "2026-09-13T17:48:32.511Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-wall",
+    "bytes": 444821,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-xg-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-xg?variant=u7-pro-xg-b",
+    "checked_at": "2026-09-13T17:48:32.560Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-xg?variant=u7-pro-xg-b",
+    "bytes": 412188,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-xg-wall-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-xg-wall",
+    "checked_at": "2026-09-13T17:48:32.696Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-xg-wall",
+    "bytes": 411857,
+    "html": true
+  },
+  {
+    "id": "r2-ui-u7-pro-xgs-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/u7-pro-xgs?variant=u7-pro-xgs-b",
+    "checked_at": "2026-09-13T17:48:32.971Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/u7-pro-xgs?variant=u7-pro-xgs-b",
+    "bytes": 414092,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-adapter-ac-210w-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-adapter-ac-210w?variant=uacc-adapter-ac-210w-eu",
+    "checked_at": "2026-09-13T17:48:32.977Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-adapter-ac-210w?variant=uacc-adapter-ac-210w-eu",
+    "bytes": 331422,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-adapter-poe-usbc-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-adapter-poe-usbc",
+    "checked_at": "2026-09-13T17:48:33.420Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-adapter-poe-usbc",
+    "bytes": 425589,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-adapter-rj45-usbc-5ge-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-adapter-rj45-usbc-5ge",
+    "checked_at": "2026-09-13T17:48:33.421Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/pro-store-ethernet-adapter/products/uacc-adapter-rj45-usbc-5ge",
+    "bytes": 351035,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-cable-extender-c6a-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-cable-extender-c6a",
+    "checked_at": "2026-09-13T17:48:33.466Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-cable-extender-c6a",
+    "bytes": 322417,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-cable-patch-el-c6a-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-cable-patch-el-c6a?variant=uacc-cable-patch-el-c6a-0dot15m-w",
+    "checked_at": "2026-09-13T17:48:34.645Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/accessories-pro-patch-cables/products/uacc-cable-patch-el-c6a?variant=uacc-cable-patch-el-c6a-0dot15m-w",
+    "bytes": 581284,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-cable-patch-el-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-cable-patch-el?variant=uacc-cable-patch-el-0dot15m-w",
+    "checked_at": "2026-09-13T17:48:34.354Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/accessories-pro-patch-cables/products/uacc-cable-patch-el?variant=uacc-cable-patch-el-0dot15m-w",
+    "bytes": 573703,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-cable-patch-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-cable-patch?variant=uacc-cable-patch-0dot2m-w",
+    "checked_at": "2026-09-13T17:48:34.226Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/accessories-pro-patch-cables/products/uacc-cable-patch?variant=uacc-cable-patch-0dot2m-w",
+    "bytes": 622646,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-cable-usb-100w-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-cable-usb-100w?variant=uacc-cable-usb-100w-0dot3m-bk",
+    "checked_at": "2026-09-13T17:48:34.956Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-cable-usb-100w?variant=uacc-cable-usb-100w-0dot3m-bk",
+    "bytes": 337871,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-keystone-blank-insert-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-keystone-blank-insert",
+    "checked_at": "2026-09-13T17:48:35.044Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-rack-mount/collections/rackmount-keystone-blank-insert/products/uacc-keystone-blank-insert",
+    "bytes": 406120,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-keystone-blank-insert-th-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-keystone-blank-insert-th",
+    "checked_at": "2026-09-13T17:48:35.252Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-rack-mount/collections/rackmount-keystone-blank-insert/products/uacc-keystone-blank-insert-th",
+    "bytes": 406511,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-pro-max-16-rm-us",
+    "url": "https://store.ui.com/us/en/products/uacc-pro-max-16-rm",
+    "checked_at": "2026-09-13T17:48:35.326Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/uacc-pro-max-16-rm",
+    "bytes": 308213,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-ear-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-ear?variant=uacc-rack-ear-1u",
+    "checked_at": "2026-09-13T17:48:35.594Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-ear?variant=uacc-rack-ear-1u",
+    "bytes": 339888,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-panel-ocd-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-panel-ocd?variant=uacc-rack-panel-blank-1u",
+    "checked_at": "2026-09-13T17:48:35.740Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-panel-ocd?variant=uacc-rack-panel-blank-1u",
+    "bytes": 352744,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-panel-patch-blank-24-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-panel-patch-blank-24",
+    "checked_at": "2026-09-13T17:48:36.107Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-panel-patch-blank-24",
+    "bytes": 372544,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-pm-kit-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-pm-kit",
+    "checked_at": "2026-09-13T17:48:36.174Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-pm-kit",
+    "bytes": 326404,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-rails-slide-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-rails-slide",
+    "checked_at": "2026-09-13T17:48:36.355Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-rails-slide",
+    "bytes": 308295,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rack-stacking-kit-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rack-stacking-kit",
+    "checked_at": "2026-09-13T17:48:36.758Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rack-stacking-kit",
+    "bytes": 325427,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rj45-coupler-c6a-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rj45-coupler-c6a",
+    "checked_at": "2026-09-13T17:48:36.852Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/category/accessories-cables-dacs/collections/accessories-rj45-inline-coupler/products/uacc-rj45-coupler-c6a",
+    "bytes": 318840,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uacc-rj45-cover-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uacc-rj45-cover",
+    "checked_at": "2026-09-13T17:48:37.258Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uacc-rj45-cover",
+    "bytes": 326298,
+    "html": true
+  },
+  {
+    "id": "r2-ui-ucg-fiber-us",
+    "url": "https://store.ui.com/us/en/products/ucg-fiber",
+    "checked_at": "2026-09-13T17:48:37.323Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/category/cloud-gateways-compact/collections/cloud-gateway-fiber/products/ucg-fiber",
+    "bytes": 518700,
+    "html": true
+  },
+  {
+    "id": "r2-ui-ucg-industrial-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/ucg-industrial",
+    "checked_at": "2026-09-13T17:48:37.351Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/ucg-industrial",
+    "bytes": 507815,
+    "html": true
+  },
+  {
+    "id": "r2-ui-udm-beast-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/udm-beast",
+    "checked_at": "2026-09-13T17:48:37.513Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/udm-beast",
+    "bytes": 545013,
+    "html": true
+  },
+  {
+    "id": "r2-ui-udm-pro-max-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/udm-pro-max?variant=udm-pro-max-eu",
+    "checked_at": "2026-09-13T17:48:37.896Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/udm-pro-max?variant=udm-pro-max-eu",
+    "bytes": 504338,
+    "html": true
+  },
+  {
+    "id": "r2-ui-udm-pro-us",
+    "url": "https://store.ui.com/us/en/products/udm-pro",
+    "checked_at": "2026-09-13T17:48:37.596Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/udm-pro",
+    "bytes": 507019,
+    "html": true
+  },
+  {
+    "id": "r2-ui-udm-se-us",
+    "url": "https://store.ui.com/us/en/products/udm-se",
+    "checked_at": "2026-09-13T17:48:37.967Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/udm-se",
+    "bytes": 508352,
+    "html": true
+  },
+  {
+    "id": "r2-ui-unas-2-us",
+    "url": "https://store.ui.com/us/en/products/unas-2?variant=unas-2-b",
+    "checked_at": "2026-09-13T17:48:38.118Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/unas-2?variant=unas-2-b",
+    "bytes": 418148,
+    "html": true
+  },
+  {
+    "id": "r2-ui-unas-pro-4-us",
+    "url": "https://store.ui.com/us/en/products/unas-pro-4",
+    "checked_at": "2026-09-13T17:48:38.370Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/unas-pro-4",
+    "bytes": 417183,
+    "html": true
+  },
+  {
+    "id": "r2-ui-unas-pro-8-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/unas-pro-8?variant=unas-pro-8-eu",
+    "checked_at": "2026-09-13T17:48:38.453Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/unas-pro-8?variant=unas-pro-8-eu",
+    "bytes": 453568,
+    "html": true
+  },
+  {
+    "id": "r2-ui-unas-pro-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/unas-pro?variant=unas-pro-eu",
+    "checked_at": "2026-09-13T17:48:38.221Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/unas-pro?variant=unas-pro-eu",
+    "bytes": 409263,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usp-rps-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usp-rps",
+    "checked_at": "2026-09-13T17:48:38.620Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usp-rps",
+    "bytes": 371640,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-16-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-16-poe",
+    "checked_at": "2026-09-13T17:48:38.680Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-16-poe",
+    "bytes": 387530,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-24-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-24-poe",
+    "checked_at": "2026-09-13T17:48:38.902Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-24-poe",
+    "bytes": 387772,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-24-us",
+    "url": "https://store.ui.com/us/en/products/usw-24",
+    "checked_at": "2026-09-13T17:48:38.762Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-24",
+    "bytes": 393287,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-48-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-48",
+    "checked_at": "2026-09-13T17:48:38.962Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-48",
+    "bytes": 401912,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-48-poe-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-48-poe",
+    "checked_at": "2026-09-13T17:48:39.002Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-48-poe",
+    "bytes": 387352,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-aggregation-us",
+    "url": "https://store.ui.com/us/en/products/usw-aggregation",
+    "checked_at": "2026-09-13T17:48:39.089Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-aggregation",
+    "bytes": 457100,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flex-2-5g-5-us",
+    "url": "https://store.ui.com/us/en/products/usw-flex-2-5g-5",
+    "checked_at": "2026-09-13T17:48:39.452Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-flex-2-5g-5",
+    "bytes": 404238,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flex-2-5g-8-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-flex-2-5g-8-poe",
+    "checked_at": "2026-09-13T17:48:39.566Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-flex-2-5g-8-poe",
+    "bytes": 525549,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flex-2-5g-8-us",
+    "url": "https://store.ui.com/us/en/products/usw-flex-2-5g-8",
+    "checked_at": "2026-09-13T17:48:39.471Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-flex-2-5g-8",
+    "bytes": 463224,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flex-us",
+    "url": "https://store.ui.com/us/en/products/usw-flex?variant=usw-flex",
+    "checked_at": "2026-09-13T17:48:39.214Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-flex?variant=usw-flex",
+    "bytes": 477144,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flex-xg-us",
+    "url": "https://store.ui.com/us/en/products/usw-flex-xg",
+    "checked_at": "2026-09-13T17:48:39.707Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-flex-xg",
+    "bytes": 383849,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-flexutility-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-flexutility",
+    "checked_at": "2026-09-13T17:48:39.744Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-flexutility",
+    "bytes": 395444,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-lite-16-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-lite-16-poe",
+    "checked_at": "2026-09-13T17:48:39.940Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-lite-16-poe",
+    "bytes": 364777,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-lite-8-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-lite-8-poe",
+    "checked_at": "2026-09-13T17:48:39.965Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-lite-8-poe",
+    "bytes": 357264,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-mission-critical-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-mission-critical-eu",
+    "checked_at": "2026-09-13T17:48:40.023Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-mission-critical-eu",
+    "bytes": 503384,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-24-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-24-poe",
+    "checked_at": "2026-09-13T17:48:40.202Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-24-poe",
+    "bytes": 445904,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-48-poe-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-48-poe?variant=usw-pro-48-poe-eu",
+    "checked_at": "2026-09-13T17:48:40.208Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-48-poe?variant=usw-pro-48-poe-eu",
+    "bytes": 453059,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-8-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-8-poe",
+    "checked_at": "2026-09-13T17:48:40.292Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-8-poe",
+    "bytes": 406405,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-aggregation-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-aggregation",
+    "checked_at": "2026-09-13T17:48:40.453Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-aggregation",
+    "bytes": 498542,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-hd-24-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-hd-24-poe",
+    "checked_at": "2026-09-13T17:48:40.566Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-hd-24-poe",
+    "bytes": 483526,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-hd-24-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-hd-24",
+    "checked_at": "2026-09-13T17:48:40.553Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-hd-24",
+    "bytes": 456863,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-16-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-max-16-poe",
+    "checked_at": "2026-09-13T17:48:40.713Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-max-16-poe",
+    "bytes": 483593,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-16-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-max-16",
+    "checked_at": "2026-09-13T17:48:40.628Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-max-16",
+    "bytes": 466643,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-24-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-max-24-poe",
+    "checked_at": "2026-09-13T17:48:40.985Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-max-24-poe",
+    "bytes": 468853,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-24-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-max-24",
+    "checked_at": "2026-09-13T17:48:40.863Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-max-24",
+    "bytes": 477805,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-48-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-48?variant=usw-pro-max-48-eu",
+    "checked_at": "2026-09-13T17:48:41.010Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-48?variant=usw-pro-max-48-eu",
+    "bytes": 457125,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-max-48-poe-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-48-poe?variant=usw-pro-max-48-poe-eu",
+    "checked_at": "2026-09-13T17:48:41.085Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-max-48-poe?variant=usw-pro-max-48-poe-eu",
+    "bytes": 475025,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-10-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-xg-10-poe",
+    "checked_at": "2026-09-13T17:48:41.252Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-xg-10-poe",
+    "bytes": 458239,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-24-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-24",
+    "checked_at": "2026-09-13T17:48:41.291Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-24",
+    "bytes": 465947,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-48-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-48",
+    "checked_at": "2026-09-13T17:48:41.329Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-48",
+    "bytes": 465163,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-48-poe-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-48-poe?variant=usw-pro-xg-48-poe-eu",
+    "checked_at": "2026-09-13T17:48:41.369Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-48-poe?variant=usw-pro-xg-48-poe-eu",
+    "bytes": 474207,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-8-poe-us",
+    "url": "https://store.ui.com/us/en/products/usw-pro-xg-8-poe",
+    "checked_at": "2026-09-13T17:48:41.546Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-pro-xg-8-poe",
+    "bytes": 439279,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-pro-xg-aggregation-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-aggregation?variant=usw-pro-xg-aggregation-eu",
+    "checked_at": "2026-09-13T17:48:41.604Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/usw-pro-xg-aggregation?variant=usw-pro-xg-aggregation-eu",
+    "bytes": 419526,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-wan-rj45-us",
+    "url": "https://store.ui.com/us/en/products/usw-wan-rj45",
+    "checked_at": "2026-09-13T17:48:41.928Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-wan-rj45",
+    "bytes": 582430,
+    "html": true
+  },
+  {
+    "id": "r2-ui-usw-wan-us",
+    "url": "https://store.ui.com/us/en/products/usw-wan",
+    "checked_at": "2026-09-13T17:48:41.742Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/usw-wan",
+    "bytes": 454544,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uxg-enterprise-us",
+    "url": "https://store.ui.com/us/en/products/uxg-enterprise",
+    "checked_at": "2026-09-13T17:48:42.020Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/uxg-enterprise",
+    "bytes": 477234,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uxg-fiber-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uxg-fiber",
+    "checked_at": "2026-09-13T17:48:42.061Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uxg-fiber",
+    "bytes": 415281,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uxg-lite-us",
+    "url": "https://store.ui.com/us/en/products/uxg-lite",
+    "checked_at": "2026-09-13T17:48:42.385Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/uxg-lite",
+    "bytes": 472081,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uxg-max-us",
+    "url": "https://store.ui.com/us/en/products/uxg-max",
+    "checked_at": "2026-09-13T17:48:42.418Z",
+    "status": 200,
+    "final_url": "https://store.ui.com/us/en/products/uxg-max",
+    "bytes": 463787,
+    "html": true
+  },
+  {
+    "id": "r2-ui-uxg-pro-eu",
+    "url": "https://eu.store.ui.com/eu/en/products/uxg-pro",
+    "checked_at": "2026-09-13T17:48:42.725Z",
+    "status": 200,
+    "final_url": "https://eu.store.ui.com/eu/en/products/uxg-pro",
+    "bytes": 444511,
+    "html": true
+  }
+]

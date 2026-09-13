@@ -148,8 +148,9 @@ try {
   assert.equal(q.status, 201, JSON.stringify(q.data));
   quoteId = q.data.id;
   const [saved] =
-    await sql`SELECT referral FROM marcada.quotes WHERE id=${quoteId}`;
+    await sql`SELECT referral, quantity FROM marcada.quotes WHERE id=${quoteId}`;
   assert.equal(saved.referral, ref.referral);
+  assert.equal(saved.quantity, 2);
   for (const code of ["typo", ref.referral + "extra", "0000000000000000"]) {
     const rejected = await request(
       "quotes",
