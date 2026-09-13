@@ -17,7 +17,8 @@ const sql = neon(process.env.DATABASE_URL),
 process.env.ADMIN_EMAIL = owner;
 const cookies = {},
   identities = [customer, support, dealer, admin, owner];
-let offerId, quoteId, wallet;
+let offerId, quoteId, wallet, mediaId, itemQuoteId;
+const testItem = "test-" + tag;
 async function request(path, body, who, custom = {}) {
   let status = 200,
     data,
@@ -34,7 +35,8 @@ async function request(path, body, who, custom = {}) {
       data = d;
       return this;
     },
-    end() {
+    end(value) {
+      if (value) data = value;
       return this;
     },
   };
@@ -57,7 +59,7 @@ async function request(path, body, who, custom = {}) {
 try {
   for (const i of identities) {
     const t = token();
-    cookies[i] = "__Host-marcada=" + t;
+    cookies[i] = "__Host-marcado=" + t;
     await sql`INSERT INTO marcada.users(identity,referral) VALUES(${i},${token().slice(0, 16)})`;
     await sql`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(t)},${i},now()+interval '1 hour')`;
   }
@@ -231,10 +233,103 @@ try {
     401,
   );
   await sql`DELETE FROM marcada.auth_tokens WHERE hash=${hash(n2.data.nonce)}`;
+  assert.equal((await request("admin/item", {}, support)).status, 403);
+  assert.equal((await request("admin/image", {}, customer)).status, 403);
+  const upload = await request(
+    "admin/image",
+    {
+      image:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=",
+    },
+    dealer,
+  );
+  assert.equal(upload.status, 201, JSON.stringify(upload.data));
+  mediaId = upload.data.url.split("=")[1];
+  const photo = await request("image?id=" + mediaId);
+  assert.equal(photo.status, 200);
+  assert.equal(photo.headers["content-type"], "image/png");
+  assert.ok(Buffer.isBuffer(photo.data));
+  const product = {
+    id: testItem,
+    product_id: "bitaxe",
+    name: "Test product",
+    description: "Integration test product",
+    price: 19.95,
+    currency: "USD",
+    price_kind: "asking",
+    price_checked: new Date().toISOString().slice(0, 10),
+    image_url: upload.data.url,
+    active: true,
+  };
+  assert.equal((await request("admin/item", product, dealer)).status, 200);
+  let catalog = await request("catalog");
+  assert.equal(
+    Number(catalog.data.items.find((i) => i.id === testItem).price),
+    19.95,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/item",
+        { ...product, price: 29.95, image_url: "/products/bitaxe-gt.png" },
+        dealer,
+      )
+    ).status,
+    200,
+  );
+  catalog = await request("catalog");
+  assert.equal(
+    catalog.data.items.find((i) => i.id === testItem).image_url,
+    "/products/bitaxe-gt.png",
+  );
+  const iq = await request(
+    "quotes",
+    {
+      product: "bitaxe",
+      item_id: testItem,
+      quantity: 1,
+      details: "Selected item test",
+    },
+    customer,
+  );
+  assert.equal(iq.status, 201);
+  itemQuoteId = iq.data.id;
+  const accountView = await request("me", undefined, customer);
+  assert.equal(
+    accountView.data.quotes.find((q) => q.id === itemQuoteId).item_name,
+    "Test product",
+  );
+  assert.equal(
+    (
+      await request(
+        "quotes",
+        {
+          product: "servers",
+          item_id: testItem,
+          quantity: 1,
+          details: "Mismatched category",
+        },
+        customer,
+      )
+    ).status,
+    400,
+  );
+  await request("admin/item", { ...product, active: false }, dealer);
+  catalog = await request("catalog");
+  assert.equal(
+    catalog.data.items.some((i) => i.id === testItem),
+    false,
+  );
+  assert.equal(catalog.data.commerce.checkout, false);
+  assert.equal((await request("checkout", {}, customer)).status, 403);
   console.log(
     "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.",
   );
 } finally {
+  if (itemQuoteId)
+    await sql`DELETE FROM marcada.quotes WHERE id=${itemQuoteId}`;
+  await sql`DELETE FROM marcada.items WHERE id=${testItem}`;
+  if (mediaId) await sql`DELETE FROM marcada.media WHERE id=${mediaId}`;
   if (offerId) await sql`DELETE FROM marcada.offers WHERE id=${offerId}`;
   if (quoteId) await sql`DELETE FROM marcada.quotes WHERE id=${quoteId}`;
   for (const i of [...identities, wallet].filter(Boolean)) {

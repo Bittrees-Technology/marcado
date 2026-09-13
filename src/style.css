@@ -1059,3 +1059,255 @@ select:focus {
     transition: none !important;
   }
 }
+.equipment-page {
+  padding: 35px 0 20px;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 0 40px;
+}
+.breadcrumbs a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.collection-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+.collection-heading h1 {
+  font-size: clamp(38px, 5vw, 66px);
+  letter-spacing: -2.5px;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+.collection-heading p {
+  max-width: 650px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #66775f;
+}
+.collection-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0;
+}
+.collection-nav a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 24px;
+  border: 1px solid #d0dac8;
+  font-size: 12px;
+}
+.collection-nav .active {
+  background: #254b36;
+  color: white;
+}
+.price-note {
+  background: #edf1e6;
+  border-radius: 6px;
+  padding: 15px 20px;
+  color: #5c7051;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 24px 0 32px;
+}
+.real-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e2e7da;
+  border-radius: 9px;
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  height: 280px;
+  padding: 20px;
+}
+.real-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.real-product > p {
+  min-height: 58px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64755b;
+}
+.real-product .product-title {
+  min-height: 42px;
+}
+.item-price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0 12px;
+}
+.item-price strong {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+}
+.item-price span {
+  font-size: 10px;
+  color: #6b7c62;
+}
+.item-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 10px;
+  color: #6c7a63;
+  margin: 12px 0;
+}
+.item-source a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-decoration: underline;
+}
+.image-credit {
+  display: block;
+  font-size: 9px;
+  color: #7a8771;
+  margin: 12px 0 18px;
+}
+.real-product .text-link {
+  padding-top: 12px;
+  border-top: 1px solid #dfe5d8;
+}
+.item-detail {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 45px;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.item-detail .real-photo {
+  height: 430px;
+  padding: 35px;
+}
+.item-detail .real-photo small {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 10px;
+  color: #7e8777;
+}
+.item-detail h3 {
+  margin-top: 30px;
+}
+.item-detail p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #64735b;
+}
+.category-quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: #e8eeda;
+  border-radius: 10px;
+  margin: 50px 0 20px;
+  padding: 35px;
+}
+.category-quote h2 {
+  margin: 12px 0;
+  font-size: 34px;
+}
+.category-quote p {
+  font-size: 13px;
+  color: #64745c;
+  max-width: 540px;
+  line-height: 1.7;
+}
+.category-quote .primary {
+  white-space: nowrap;
+}
+.admin-image-preview {
+  height: 180px;
+  border: 1px solid #d6ddcd;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+.admin-image-preview img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.upload-label {
+  padding: 15px;
+  border: 1px dashed #a6ba91;
+  border-radius: 5px;
+}
+.photo-missing {
+  padding: 30px;
+  color: #6c7763;
+  font-size: 12px;
+}
+.product-manager {
+  border-top: 1px solid #d7dfca;
+  border-bottom: 1px solid #d7dfca;
+  padding: 12px 0 25px;
+  margin: 25px 0;
+}
+.collection-offers {
+  margin: 35px 0;
+}
+.collection-offers .record {
+  max-width: 650px;
+}
+@media (max-width: 650px) {
+  .collection-heading {
+    align-items: start;
+  }
+  .collection-heading > .pill {
+    display: none;
+  }
+  .collection-nav a {
+    display: block;
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .real-photo {
+    min-height: 180px;
+    height: 210px;
+    padding: 10px;
+  }
+  .real-products {
+    grid-template-columns: 1fr;
+  }
+  .real-product > p {
+    min-height: 0;
+  }
+  .real-photo {
+    height: 300px;
+  }
+  .category-quote {
+    display: block;
+    padding: 25px;
+  }
+  .category-quote .primary {
+    margin-top: 10px;
+  }
+  .item-detail {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .item-detail .real-photo {
+    height: 330px;
+  }
+  .equipment-page {
+    padding-top: 25px;
+  }
+}

@@ -1,3 +1,4 @@
+import { itemInput, imageUpload } from "../lib/catalog.mjs";
 import { neon } from "@neondatabase/serverless";
 import { randomUUID, randomInt } from "node:crypto";
 import { createPublicClient, http } from "viem";
@@ -13,7 +14,7 @@ import {
   textField,
 } from "../lib/security.mjs";
 const sql = () => neon(process.env.DATABASE_URL);
-const origin = () => process.env.APP_ORIGIN || "https://marcada.bittrees.org";
+const origin = () => process.env.APP_ORIGIN || "https://marcado.bittrees.org";
 const cookie = (req, name) =>
   String(req.headers.cookie || "")
     .split(";")
@@ -36,7 +37,7 @@ async function limited(req, bucket, max) {
     throw Object.assign(Error("Please try again shortly."), { status: 429 });
 }
 async function user(req) {
-  const key = cookie(req, "__Host-marcada");
+  const key = cookie(req, "__Host-marcado");
   if (!key) return null;
   const [s] =
     await sql()`SELECT s.identity,u.referral FROM marcada.sessions s JOIN marcada.users u ON u.identity=s.identity WHERE s.hash=${hash(key)} AND s.expires_at>now()`;
@@ -59,7 +60,7 @@ async function session(res, identity) {
   await sql()`INSERT INTO marcada.users(identity,referral) VALUES(${identity},${token().slice(0, 16)}) ON CONFLICT(identity) DO NOTHING`;
   const value = token();
   await sql()`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(value)},${identity},now()+interval '7 days')`;
-  setCookie(res, "__Host-marcada", value, 604800);
+  setCookie(res, "__Host-marcado", value, 604800);
 }
 async function audit(actor, action, detail) {
   await sql()`INSERT INTO marcada.audit(id,actor,action,detail) VALUES(${randomUUID()},${actor},${action},${detail})`;
@@ -78,8 +79,8 @@ async function sendCode(email, code) {
     body: JSON.stringify({
       from: process.env.MAIL_FROM,
       to: [email],
-      subject: "Your Marcada sign-in code",
-      text: `Your Marcada verification code is ${code}. It expires in 10 minutes and works once. If you did not request it, ignore this email.`,
+      subject: "Your Marcado sign-in code",
+      text: `Your Marcado verification code is ${code}. It expires in 10 minutes and works once. If you did not request it, ignore this email.`,
     }),
   });
   if (!r.ok)
@@ -95,7 +96,7 @@ export default async function handler(req, res) {
       route = url.pathname.replace(/^\/api\/?/, "");
     let body = req.body || {};
     if (typeof body === "string") {
-      if (body.length > 16000)
+      if (body.length > (route === "admin/image" ? 1500000 : 16000))
         return json(res, 413, { error: "Request too large" });
       try {
         body = JSON.parse(body);
@@ -103,8 +104,21 @@ export default async function handler(req, res) {
         return json(res, 400, { error: "Invalid JSON" });
       }
     }
-    if (JSON.stringify(body).length > 16000)
+    if (
+      JSON.stringify(body).length > (route === "admin/image" ? 1500000 : 16000)
+    )
       return json(res, 413, { error: "Request too large" });
+    if (route === "image" && req.method === "GET") {
+      const id = url.searchParams.get("id");
+      if (!uuid(id)) return json(res, 400, { error: "Invalid image" });
+      const [m] =
+        await sql()`SELECT mime,data FROM marcada.media WHERE id=${id}`;
+      if (!m) return json(res, 404, { error: "Image not found" });
+      res.setHeader("Content-Type", m.mime);
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      return res.status(200).end(Buffer.from(m.data, "base64"));
+    }
     if (route === "health" && req.method === "GET") {
       await sql()`SELECT 1 FROM marcada.products LIMIT 1`;
       return json(res, 200, { ok: true });
@@ -129,8 +143,15 @@ export default async function handler(req, res) {
       const products =
         await sql()`SELECT * FROM marcada.products WHERE active ORDER BY CASE WHEN id='bitaxe' THEN 0 ELSE 1 END,name`;
       const offers =
-        await sql()`SELECT o.id,o.product_id,o.dealer,o.price,o.currency,o.private,o.expires_at FROM marcada.offers o WHERE o.active AND (o.expires_at IS NULL OR o.expires_at>now()) AND (NOT o.private OR ${u?.canDeals || false} OR EXISTS(SELECT 1 FROM marcada.offer_grants g WHERE g.offer_id=o.id AND g.identity=${u?.identity || ""}))`;
-      return json(res, 200, { products, offers });
+        await sql()`SELECT o.id,o.product_id,o.item_id,o.dealer,o.price,o.currency,o.private,o.expires_at FROM marcada.offers o WHERE o.active AND (o.expires_at IS NULL OR o.expires_at>now()) AND (NOT o.private OR ${u?.canDeals || false} OR EXISTS(SELECT 1 FROM marcada.offer_grants g WHERE g.offer_id=o.id AND g.identity=${u?.identity || ""}))`;
+      const items =
+        await sql()`SELECT * FROM marcada.items WHERE active ORDER BY product_id,name`;
+      return json(res, 200, {
+        products,
+        offers,
+        items,
+        commerce: { checkout: false, delivery: false },
+      });
     }
     if (route === "go" && req.method === "GET") {
       const id = url.searchParams.get("id");
@@ -199,7 +220,7 @@ export default async function handler(req, res) {
       await limited(req, "nonce", 20);
       const nonce = token();
       await sql()`INSERT INTO marcada.auth_tokens(hash,identity,kind,expires_at) VALUES(${hash(nonce)},'', 'siwe',now()+interval '5 minutes')`;
-      setCookie(res, "__Host-marcada-nonce", nonce, 300);
+      setCookie(res, "__Host-marcado-nonce", nonce, 300);
       return json(res, 200, {
         nonce,
         domain: new URL(origin()).host,
@@ -208,7 +229,7 @@ export default async function handler(req, res) {
     }
     if (route === "auth/wallet" && req.method === "POST") {
       await limited(req, "wallet", 20);
-      const nonce = cookie(req, "__Host-marcada-nonce");
+      const nonce = cookie(req, "__Host-marcado-nonce");
       const message = String(body.message || "");
       if (message.length > 3000 || !nonce)
         return json(res, 401, { error: "Request a new wallet challenge" });
@@ -251,15 +272,15 @@ export default async function handler(req, res) {
       return json(res, 200, { ok: true });
     }
     if (route === "auth/logout" && req.method === "POST") {
-      await sql()`DELETE FROM marcada.sessions WHERE hash=${hash(cookie(req, "__Host-marcada"))}`;
-      setCookie(res, "__Host-marcada", "", 0);
+      await sql()`DELETE FROM marcada.sessions WHERE hash=${hash(cookie(req, "__Host-marcado"))}`;
+      setCookie(res, "__Host-marcado", "", 0);
       return json(res, 200, { ok: true });
     }
     const u = await user(req);
     if (!u) return json(res, 401, { error: "Sign in to continue" });
     if (route === "me" && req.method === "GET") {
       const quotes =
-        await sql()`SELECT q.*,p.name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id WHERE identity=${u.identity} ORDER BY created_at DESC LIMIT 100`;
+        await sql()`SELECT q.*,p.name,i.name AS item_name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id WHERE q.identity=${u.identity} ORDER BY q.created_at DESC LIMIT 100`;
       return json(res, 200, { user: u, quotes });
     }
     if (route === "quotes" && req.method === "POST") {
@@ -275,10 +296,20 @@ export default async function handler(req, res) {
         ).length
       )
         return json(res, 400, { error: "Unknown product" });
+      const itemId = body.item_id || null;
+      if (
+        itemId &&
+        !(
+          await sql()`SELECT 1 FROM marcada.items WHERE id=${itemId} AND product_id=${product} AND active`
+        ).length
+      )
+        return json(res, 400, {
+          error: "Choose an available product in this collection",
+        });
       const [ref] =
         await sql()`SELECT referral FROM marcada.users WHERE referral=${String(body.referral || "").slice(0, 16)} AND identity<>${u.identity}`;
       const id = randomUUID();
-      await sql()`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null})`;
+      await sql()`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`;
       return json(res, 201, { id });
     }
     if (!u.staff) return json(res, 403, { error: "Staff access required" });
@@ -291,6 +322,28 @@ export default async function handler(req, res) {
       return json(res, 403, { error: "Dealer manager access required" });
     if (route === "admin/quote" && !u.canQuotes)
       return json(res, 403, { error: "Quote manager access required" });
+    if ((route === "admin/item" || route === "admin/image") && !u.canDeals)
+      return json(res, 403, { error: "Product manager access required" });
+    if (route === "admin/image" && req.method === "POST") {
+      await limited(req, "image-upload", 20);
+      const m = imageUpload(body.image),
+        id = randomUUID();
+      await sql()`INSERT INTO marcada.media(id,mime,data,bytes,created_by) VALUES(${id},${m.mime},${m.data},${m.bytes},${u.identity})`;
+      await audit(u.identity, "upload_product_image", id);
+      return json(res, 201, { url: "/api/image?id=" + id });
+    }
+    if (route === "admin/item" && req.method === "POST") {
+      const p = itemInput(body);
+      if (
+        !(
+          await sql()`SELECT 1 FROM marcada.products WHERE id=${p.product_id} AND active`
+        ).length
+      )
+        return json(res, 400, { error: "Unknown collection" });
+      await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,specifications,active) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.specifications},${p.active}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,specifications=EXCLUDED.specifications,active=EXCLUDED.active,updated_at=now()`;
+      await audit(u.identity, "save_product", p.id);
+      return json(res, 200, { id: p.id });
+    }
     if (route === "admin/role" && req.method === "POST") {
       const identity = normalizeIdentity(body.identity);
       if (isAdmin(identity))
@@ -308,6 +361,9 @@ export default async function handler(req, res) {
     }
     if (route === "admin" && req.method === "GET") {
       return json(res, 200, {
+        items: u.canDeals
+          ? await sql()`SELECT * FROM marcada.items ORDER BY product_id,name`
+          : [],
         roles: u.owner
           ? await sql()`SELECT identity,role FROM marcada.roles ORDER BY identity`
           : [],
@@ -315,7 +371,7 @@ export default async function handler(req, res) {
           ? await sql()`SELECT o.*,COALESCE((SELECT json_agg(g.identity) FROM marcada.offer_grants g WHERE g.offer_id=o.id),'[]') AS recipients FROM marcada.offers o ORDER BY o.created_at DESC`
           : [],
         quotes: u.canQuotes
-          ? await sql()`SELECT q.*,p.name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id ORDER BY created_at DESC LIMIT 500`
+          ? await sql()`SELECT q.*,p.name,i.name AS item_name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id ORDER BY q.created_at DESC LIMIT 500`
           : [],
       });
     }
@@ -335,6 +391,16 @@ export default async function handler(req, res) {
         return json(res, 400, { error: "Invalid price or currency" });
       if (typeof body.private !== "boolean")
         return json(res, 400, { error: "Choose offer visibility" });
+      const itemId = body.item_id || null;
+      if (
+        itemId &&
+        !(
+          await sql()`SELECT 1 FROM marcada.items WHERE id=${itemId} AND product_id=${product}`
+        ).length
+      )
+        return json(res, 400, {
+          error: "Product does not belong to this collection",
+        });
       const expires = body.expires ? new Date(body.expires) : null;
       if (
         expires &&
@@ -346,7 +412,7 @@ export default async function handler(req, res) {
           .length
       )
         return json(res, 400, { error: "Unknown product" });
-      await sql()`INSERT INTO marcada.offers(id,product_id,dealer,url,price,currency,private,notes,expires_at) VALUES(${id},${product},${dealer},${target},${price},${currency},${body.private},${notes},${expires?.toISOString() || null}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,dealer=EXCLUDED.dealer,url=EXCLUDED.url,price=EXCLUDED.price,currency=EXCLUDED.currency,private=EXCLUDED.private,notes=EXCLUDED.notes,expires_at=EXCLUDED.expires_at`;
+      await sql()`INSERT INTO marcada.offers(id,product_id,dealer,url,price,currency,private,notes,expires_at,item_id) VALUES(${id},${product},${dealer},${target},${price},${currency},${body.private},${notes},${expires?.toISOString() || null},${itemId}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,dealer=EXCLUDED.dealer,url=EXCLUDED.url,price=EXCLUDED.price,currency=EXCLUDED.currency,private=EXCLUDED.private,notes=EXCLUDED.notes,expires_at=EXCLUDED.expires_at,item_id=EXCLUDED.item_id`;
       await audit(u.identity, "save_offer", id);
       return json(res, 200, { id });
     }

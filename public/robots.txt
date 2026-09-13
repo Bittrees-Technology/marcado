@@ -3,4 +3,4 @@ Allow: /
 Disallow: /account
 Disallow: /admin
 Disallow: /api/
-Sitemap: https://marcada.bittrees.org/sitemap.xml
+Sitemap: https://marcado.bittrees.org/sitemap.xml

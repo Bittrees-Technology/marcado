@@ -1,3 +1,4 @@
+import { EquipmentPage, ProductManager, equipmentLink } from "./Equipment.jsx";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -106,6 +107,8 @@ function Hardware({ kind = "bitaxe", large = false }) {
 function App() {
   const [products, setProducts] = useState([]),
     [offers, setOffers] = useState([]),
+    [items, setItems] = useState([]),
+    [pendingQuote, setPendingQuote] = useState(null),
     [user, setUser] = useState(null),
     [quotes, setQuotes] = useState([]),
     [category, setCategory] = useState("All equipment"),
@@ -128,6 +131,7 @@ function App() {
     const c = await api("catalog");
     setProducts(c.products);
     setOffers(c.offers);
+    setItems(c.items || []);
     try {
       const m = await api("me");
       setUser(m.user);
@@ -201,16 +205,17 @@ function App() {
     setError("");
     setNotice("");
   }
-  async function share(product = "") {
+  async function share(product = "", item = "") {
     await run(async () => {
       if (!user) {
         open("login");
         setNotice("Sign in to create your referral links.");
         return;
       }
-      const url = new URL("https://marcada.bittrees.org");
+      const url = new URL("https://marcado.bittrees.org");
       url.searchParams.set("ref", user.referral);
-      if (product) url.searchParams.set("product", product);
+      if (product)
+        url.pathname = "/equipment/" + product + (item ? "/" + item : "");
       await navigator.clipboard.writeText(url.href);
       setNotice("Referral link copied.");
     });
@@ -232,7 +237,7 @@ function App() {
         uri: n.uri,
         version: "1",
         nonce: n.nonce,
-        statement: "Sign in to Marcada by Bittrees.",
+        statement: "Sign in to Marcado by Bittrees.",
         issuedAt: new Date(),
       });
       const signature = await window.ethereum.request({
@@ -250,6 +255,36 @@ function App() {
       close();
     });
   }
+  const isEquipment = location.pathname !== "/";
+  function requestQuote(domain, item) {
+    const quote = { type: "quote", product: domain, item: item || null };
+    if (!user) {
+      setPendingQuote(quote);
+      open("login");
+      setNotice("Sign in to submit and track your quote.");
+    } else open(quote);
+  }
+  useEffect(() => {
+    if (user && pendingQuote) {
+      setModal(pendingQuote);
+      setPendingQuote(null);
+    }
+  }, [user, pendingQuote]);
+  useEffect(() => {
+    if (!isEquipment) return;
+    const parts = location.pathname.split("/");
+    const domain = products.find((p) => p.id === parts[2]);
+    const item = items.find((p) => p.id === parts[3]);
+    if (domain) {
+      document.title = (item?.name || domain.name) + " | Marcado";
+      document
+        .querySelector('link[rel="canonical"]')
+        ?.setAttribute(
+          "href",
+          "https://marcado.bittrees.org" + location.pathname,
+        );
+    }
+  }, [items, products]);
   const featured = products.find((p) => p.id === "bitaxe");
   const shown = products.filter(
     (p) =>
@@ -262,17 +297,17 @@ function App() {
     <>
       <div className="topline">
         <span>A BITTREES TECHNOLOGY MARKETPLACE</span>
-        <a href="#catalog">
+        <a href={isEquipment ? "/#catalog" : "#catalog"}>
           Start small. Build something bigger. <ArrowUpRight size={13} />
         </a>
       </div>
       <header>
-        <a className="brand" href="/" aria-label="Marcada home">
-          <span className="brandmark">m</span>marcada
+        <a className="brand" href="/" aria-label="Marcado home">
+          <span className="brandmark">m</span>marcado
           <span className="branddot">®</span>
         </a>
         <nav>
-          <a href="#catalog">Equipment</a>
+          <a href={isEquipment ? "/#catalog" : "#catalog"}>Equipment</a>
           <button onClick={() => open("referrals")}>Referrals</button>
           <button onClick={() => open("deals")}>
             Private deals <Lock size={12} />
@@ -287,232 +322,263 @@ function App() {
         </button>
       </header>
       <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <div className="eyebrow">
-              <i /> HARDWARE FOR THE INDEPENDENT
-            </div>
-            <h1>
-              Your next
-              <br />
-              big thing.
-              <br />
-              <em>Starts here.</em>
-            </h1>
-            <p>
-              From your first Bitaxe to your next compute stack. Find the
-              equipment to mine, build and run it yourself.
-            </p>
-            <a className="primary" href="#catalog">
-              Explore equipment <ArrowUpRight size={18} />
-            </a>
-            <div className="hero-caption">
-              <span>01 / MINING & COMPUTE</span>
-              <span>BY BITTREES ↗</span>
-            </div>
-          </div>
-          <div className="hero-art">
-            <div className="art-top">
-              <span>
-                SMALL MACHINE.
-                <br />
-                BIG POSSIBILITIES.
-              </span>
-              <span className="pill">BITAXE COLLECTION</span>
-            </div>
-            <Hardware large />
-            <div className="art-bottom">
-              <div>
-                <span className="tiny">OPEN-SOURCE MINING</span>
-                <h2>Meet Bitaxe.</h2>
-                <p>Your own piece of the Bitcoin network.</p>
+        {!isEquipment ? (
+          <>
+            <section className="hero">
+              <div className="hero-copy">
+                <div className="eyebrow">
+                  <i /> HARDWARE FOR THE INDEPENDENT
+                </div>
+                <h1>
+                  Your next
+                  <br />
+                  big thing.
+                  <br />
+                  <em>Starts here.</em>
+                </h1>
+                <p>
+                  From your first Bitaxe to your next compute stack. Find the
+                  equipment to mine, build and run it yourself.
+                </p>
+                <a
+                  className="primary"
+                  href={isEquipment ? "/#catalog" : "#catalog"}
+                >
+                  Explore equipment <ArrowUpRight size={18} />
+                </a>
+                <div className="hero-caption">
+                  <span>01 / MINING & COMPUTE</span>
+                  <span>BY BITTREES ↗</span>
+                </div>
               </div>
-              <button
-                className="circle"
-                aria-label="Explore Bitaxe"
-                onClick={() => {
-                  setSelected("bitaxe");
-                  document
-                    .querySelector("#catalog")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <ArrowUpRight />
+              <div className="hero-art">
+                <div className="art-top">
+                  <span>
+                    SMALL MACHINE.
+                    <br />
+                    BIG POSSIBILITIES.
+                  </span>
+                  <span className="pill">BITAXE COLLECTION</span>
+                </div>
+                <Hardware large />
+                <div className="art-bottom">
+                  <div>
+                    <span className="tiny">OPEN-SOURCE MINING</span>
+                    <h2>Meet Bitaxe.</h2>
+                    <p>Your own piece of the Bitcoin network.</p>
+                  </div>
+                  <button
+                    className="circle"
+                    aria-label="Explore Bitaxe"
+                    onClick={() => {
+                      location.href = equipmentLink("bitaxe", referral);
+                    }}
+                  >
+                    <ArrowUpRight />
+                  </button>
+                </div>
+                <span className="illustration-note">
+                  Hardware illustration · model varies by offer
+                </span>
+              </div>
+            </section>
+            <div className="value-strip">
+              <span>
+                <Cpu size={17} /> Mining to AI compute
+              </span>
+              <span>
+                <ShieldCheck size={17} /> Dealer offers, clearly disclosed
+              </span>
+              <span>
+                <Lock size={17} /> Private deals by invitation
+              </span>
+              <button onClick={() => open("referrals")}>
+                <ArrowUpRight size={17} /> Share what you find
               </button>
             </div>
-            <span className="illustration-note">
-              Hardware illustration · model varies by offer
-            </span>
-          </div>
-        </section>
-        <div className="value-strip">
-          <span>
-            <Cpu size={17} /> Mining to AI compute
-          </span>
-          <span>
-            <ShieldCheck size={17} /> Dealer offers, clearly disclosed
-          </span>
-          <span>
-            <Lock size={17} /> Private deals by invitation
-          </span>
-          <button onClick={() => open("referrals")}>
-            <ArrowUpRight size={17} /> Share what you find
-          </button>
-        </div>
-        <section id="catalog" className="catalog">
-          <div className="section-top">
-            <div>
-              <div className="eyebrow">THE EQUIPMENT EDIT</div>
-              <h2>Build your setup.</h2>
-            </div>
-            <label className="search">
-              <Search size={18} />
-              <input
-                aria-label="Search equipment"
-                placeholder="Find your next upgrade"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-            </label>
-          </div>
-          <div className="category-row">
-            <div className="categories">
-              {categories.map((c) => (
-                <button
-                  key={c}
-                  className={category === c ? "active" : ""}
-                  onClick={() => {
-                    setCategory(c);
-                    setSelected("");
-                  }}
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-            <span className="count">{shown.length} collections</span>
-          </div>
-          {error && !modal && (
-            <p role="alert" className="error">
-              {error} <button onClick={() => run(refresh)}>Retry</button>
-            </p>
-          )}
-          {notice && !modal && (
-            <p role="status" className="notice">
-              {notice}
-            </p>
-          )}
-          {loading ? (
-            <p>Loading equipment…</p>
-          ) : shown.length === 0 ? (
-            <div className="empty">
-              No matching equipment. Try another search.
-            </div>
-          ) : (
-            <div className="product-grid">
-              {shown.map((p, i) => {
-                const Icon = icons[p.category];
-                const matching = offers.filter((o) => o.product_id === p.id);
-                return (
-                  <article
-                    key={p.id}
-                    className={
-                      "product " + (selected === p.id ? "selected" : "")
-                    }
-                  >
+            <section id="catalog" className="catalog">
+              <div className="section-top">
+                <div>
+                  <div className="eyebrow">THE EQUIPMENT EDIT</div>
+                  <h2>Build your setup.</h2>
+                </div>
+                <label className="search">
+                  <Search size={18} />
+                  <input
+                    aria-label="Search equipment"
+                    placeholder="Find your next upgrade"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </label>
+              </div>
+              <div className="category-row">
+                <div className="categories">
+                  {categories.map((c) => (
                     <button
-                      className={"product-art tint-" + i}
+                      key={c}
+                      className={category === c ? "active" : ""}
                       onClick={() => {
-                        setSelected(p.id);
-                        open({ type: "product", product: p });
+                        setCategory(c);
+                        setSelected("");
                       }}
-                      aria-label={"View " + p.name}
                     >
-                      <span className="product-tag">
-                        {p.id === "bitaxe"
-                          ? "START HERE"
-                          : p.category.toUpperCase()}
-                      </span>
-                      <Hardware kind={p.id} />
-                      <span className="art-arrow">
-                        <ArrowUpRight size={20} />
-                      </span>
+                      {c}
                     </button>
-                    <div className="product-info">
-                      <div className="product-title">
-                        <h3>{p.name}</h3>
+                  ))}
+                </div>
+                <span className="count">{shown.length} collections</span>
+              </div>
+              {error && !modal && (
+                <p role="alert" className="error">
+                  {error} <button onClick={() => run(refresh)}>Retry</button>
+                </p>
+              )}
+              {notice && !modal && (
+                <p role="status" className="notice">
+                  {notice}
+                </p>
+              )}
+              {loading ? (
+                <p>Loading equipment…</p>
+              ) : shown.length === 0 ? (
+                <div className="empty">
+                  No matching equipment. Try another search.
+                </div>
+              ) : (
+                <div className="product-grid">
+                  {shown.map((p, i) => {
+                    const Icon = icons[p.category];
+                    const matching = offers.filter(
+                      (o) => o.product_id === p.id,
+                    );
+                    return (
+                      <article
+                        key={p.id}
+                        className={
+                          "product " + (selected === p.id ? "selected" : "")
+                        }
+                      >
                         <button
-                          className="icon"
-                          title="Copy product referral link"
-                          aria-label={"Share " + p.name}
-                          onClick={() => share(p.id)}
+                          className={"product-art tint-" + i}
+                          onClick={() => {
+                            setSelected(p.id);
+                            location.href = equipmentLink(p.id, referral);
+                          }}
+                          aria-label={"View " + p.name}
                         >
-                          <Copy size={16} />
+                          <span className="product-tag">
+                            {p.id === "bitaxe"
+                              ? "START HERE"
+                              : p.category.toUpperCase()}
+                          </span>
+                          <Hardware kind={p.id} />
+                          <span className="art-arrow">
+                            <ArrowUpRight size={20} />
+                          </span>
                         </button>
-                      </div>
-                      <p>{p.description}</p>
-                      <div className="product-bottom">
-                        <span>
-                          {matching.length
-                            ? `${matching.length} dealer offer${matching.length > 1 ? "s" : ""}`
-                            : "Price on request"}
-                        </span>
-                        <button
-                          onClick={() => open({ type: "product", product: p })}
-                        >
-                          {matching.length ? "View offers" : "Explore"}{" "}
-                          <ArrowRight size={15} />
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          )}
-        </section>
-        <section className="referral-banner">
-          <div className="referral-art">↗</div>
-          <div>
-            <div className="eyebrow">GOOD FINDS TRAVEL</div>
-            <h2>
-              Found your next upgrade?
-              <br />
-              Pass it on.
-            </h2>
-            <p>
-              Share a product or the whole store with your own referral link.
-            </p>
-          </div>
-          <button className="primary light" onClick={() => open("referrals")}>
-            Create your link <ArrowUpRight size={18} />
-          </button>
-        </section>
-        <section className="sourcing">
-          <div>
-            <span className="eyebrow">SOMETHING SPECIFIC IN MIND?</span>
-            <h2>Let’s find your hardware.</h2>
-          </div>
-          <p>
-            A particular miner, a GPU workstation or a rack of servers. Tell us
-            what you need and we’ll review your request.
-          </p>
-          <button
-            className="text-link"
-            onClick={() => {
-              if (!user) {
-                open("login");
-                setNotice("Sign in to request and track an equipment quote.");
-              } else open({ type: "quote", product: featured || products[0] });
-            }}
-          >
-            Request a quote <ArrowUpRight size={19} />
-          </button>
-        </section>
+                        <div className="product-info">
+                          <div className="product-title">
+                            <h3>
+                              <a href={equipmentLink(p.id, referral)}>
+                                {p.name}
+                              </a>
+                            </h3>
+                            <button
+                              className="icon"
+                              title="Copy product referral link"
+                              aria-label={"Share " + p.name}
+                              onClick={() => share(p.id)}
+                            >
+                              <Copy size={16} />
+                            </button>
+                          </div>
+                          <p>{p.description}</p>
+                          <div className="product-bottom">
+                            <span>
+                              {
+                                items.filter((i) => i.product_id === p.id)
+                                  .length
+                              }{" "}
+                              products
+                            </span>
+                            <button
+                              onClick={() => {
+                                location.href = equipmentLink(p.id, referral);
+                              }}
+                            >
+                              View products <ArrowRight size={15} />
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              )}
+            </section>
+            <section className="referral-banner">
+              <div className="referral-art">↗</div>
+              <div>
+                <div className="eyebrow">GOOD FINDS TRAVEL</div>
+                <h2>
+                  Found your next upgrade?
+                  <br />
+                  Pass it on.
+                </h2>
+                <p>
+                  Share a product or the whole store with your own referral
+                  link.
+                </p>
+              </div>
+              <button
+                className="primary light"
+                onClick={() => open("referrals")}
+              >
+                Create your link <ArrowUpRight size={18} />
+              </button>
+            </section>
+            <section className="sourcing">
+              <div>
+                <span className="eyebrow">SOMETHING SPECIFIC IN MIND?</span>
+                <h2>Let’s find your hardware.</h2>
+              </div>
+              <p>
+                A particular miner, a GPU workstation or a rack of servers. Tell
+                us what you need and we’ll review your request.
+              </p>
+              <button
+                className="text-link"
+                onClick={() => {
+                  if (!user) {
+                    open("login");
+                    setNotice(
+                      "Sign in to request and track an equipment quote.",
+                    );
+                  } else
+                    open({ type: "quote", product: featured || products[0] });
+                }}
+              >
+                Request a quote <ArrowUpRight size={19} />
+              </button>
+            </section>
+          </>
+        ) : (
+          <EquipmentPage
+            collections={products}
+            items={items}
+            loading={loading}
+            referral={referral}
+            onQuote={requestQuote}
+            onShare={share}
+            offers={offers}
+            renderOffer={(o) => <Offer key={o.id} offer={o} />}
+          />
+        )}
       </main>
       <footer>
         <a className="brand" href="/">
-          marcada<span className="branddot">®</span>
+          marcado<span className="branddot">®</span>
         </a>
         <span>Equipment for what comes next.</span>
         <div>
@@ -536,7 +602,7 @@ function App() {
             className={"modal " + (modal === "admin" ? "wide" : "")}
             role="dialog"
             aria-modal="true"
-            aria-label="Marcada account and equipment"
+            aria-label="Marcado account and equipment"
             onKeyDown={(e) => {
               if (e.key === "Escape") close();
             }}
@@ -652,7 +718,7 @@ function App() {
                   quotes.map((q) => (
                     <div className="record" key={q.id}>
                       <strong>
-                        {q.name} × {q.quantity}
+                        {q.item_name || q.name} × {q.quantity}
                       </strong>
                       <span className="pill">{q.status}</span>
                       <p>{q.details}</p>
@@ -684,7 +750,7 @@ function App() {
                 <div className="eyebrow">PASS IT ON</div>
                 <h2>Your finds. Your link.</h2>
                 <p>
-                  Share Marcada or a specific collection. Quote requests
+                  Share Marcado or a specific collection. Quote requests
                   submitted from your link are attributed to your referral code.
                 </p>
                 {user ? (
@@ -694,7 +760,7 @@ function App() {
                       <input
                         readOnly
                         value={
-                          "https://marcada.bittrees.org/?ref=" + user.referral
+                          "https://marcado.bittrees.org/?ref=" + user.referral
                         }
                       />
                     </label>
@@ -826,12 +892,41 @@ function App() {
                 >
                   <label>
                     Equipment
-                    <select name="product" defaultValue={modal.product.id}>
+                    <select
+                      name="product"
+                      defaultValue={modal.product.id}
+                      onChange={(e) =>
+                        setModal({
+                          ...modal,
+                          product: products.find(
+                            (p) => p.id === e.target.value,
+                          ),
+                          item: null,
+                        })
+                      }
+                    >
                       {products.map((p) => (
                         <option key={p.id} value={p.id}>
                           {p.name}
                         </option>
                       ))}
+                    </select>
+                  </label>
+                  <label>
+                    Specific product (optional)
+                    <select
+                      name="item_id"
+                      defaultValue={modal.item?.id || ""}
+                      key={modal.product.id + ":" + (modal.item?.id || "")}
+                    >
+                      <option value="">General collection request</option>
+                      {items
+                        .filter((i) => i.product_id === modal.product.id)
+                        .map((i) => (
+                          <option key={i.id} value={i.id}>
+                            {i.name}
+                          </option>
+                        ))}
                     </select>
                   </label>
                   <label>
@@ -865,7 +960,7 @@ function App() {
                 <h2>Privacy & store terms</h2>
                 <h3>Accounts and requests</h3>
                 <p>
-                  Marcada stores your email or wallet identity, account
+                  Marcado stores your email or wallet identity, account
                   sessions, referral code and quote requests to provide the
                   service. Dealers’ private terms are restricted to authorized
                   accounts. Contact Bittrees through bittrees.org for access or
@@ -883,7 +978,7 @@ function App() {
                 <p>
                   Quotes are requests, not accepted orders. Dealer checkout
                   links take you to the named dealer, whose price, stock,
-                  delivery, warranty and returns terms apply. Marcada may
+                  delivery, warranty and returns terms apply. Marcado may
                   receive commission from dealer links. Confirm the final
                   product and terms with the dealer before payment.
                 </p>
@@ -961,6 +1056,18 @@ function App() {
                   )}
                   {user.canDeals && (
                     <>
+                      <ProductManager
+                        items={admin.items || []}
+                        collections={products}
+                        api={api}
+                        run={run}
+                        refresh={async () => {
+                          setAdmin(await api("admin"));
+                          await refresh();
+                        }}
+                        notify={setNotice}
+                        busy={busy}
+                      />
                       <h3>
                         {editOffer ? "Edit dealer offer" : "Add dealer offer"}
                       </h3>
@@ -993,6 +1100,20 @@ function App() {
                             {products.map((p) => (
                               <option key={p.id} value={p.id}>
                                 {p.name}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
+                        <label>
+                          Specific product (optional)
+                          <select
+                            name="item_id"
+                            defaultValue={editOffer?.item_id || ""}
+                          >
+                            <option value="">Entire collection</option>
+                            {items.map((i) => (
+                              <option key={i.id} value={i.id}>
+                                {i.name}
                               </option>
                             ))}
                           </select>
@@ -1208,7 +1329,7 @@ function App() {
                       {admin.quotes.map((q) => (
                         <div className="record" key={q.id}>
                           <strong>
-                            {q.name} × {q.quantity}
+                            {q.item_name || q.name} × {q.quantity}
                           </strong>
                           <p className="identity">{q.identity}</p>
                           <p>{q.details}</p>
@@ -1289,9 +1410,16 @@ function Offer({ offer: o }) {
   );
 }
 // Keep host-bound authentication and consent on the canonical storefront.
-if (location.hostname.endsWith(".vercel.app")) {
-  location.replace("https://marcada.bittrees.org" + location.pathname + location.search + location.hash);
+if (
+  location.hostname.endsWith(".vercel.app") ||
+  location.hostname === "marcada.bittrees.org"
+) {
+  location.replace(
+    "https://marcado.bittrees.org" +
+      location.pathname +
+      location.search +
+      location.hash,
+  );
 } else {
   createRoot(document.getElementById("root")).render(<App />);
 }
-
