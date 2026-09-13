@@ -467,7 +467,13 @@ export default async function handler(req, res) {
         ).length
       )
         return json(res, 400, { error: "Unknown collection" });
-      await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,specifications,active,supplier_region,tax_note,configuration_note,supplier_status) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.specifications},${p.active},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.supplier_status}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,specifications=EXCLUDED.specifications,active=EXCLUDED.active,supplier_region=EXCLUDED.supplier_region,tax_note=EXCLUDED.tax_note,configuration_note=EXCLUDED.configuration_note,supplier_status=EXCLUDED.supplier_status,updated_at=now()`;
+      const saved =
+        await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,specifications,active,supplier_region,tax_note,configuration_note,supplier_status) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.specifications},${p.active},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.supplier_status}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,specifications=EXCLUDED.specifications,active=EXCLUDED.active,supplier_region=EXCLUDED.supplier_region,tax_note=EXCLUDED.tax_note,configuration_note=EXCLUDED.configuration_note,supplier_status=EXCLUDED.supplier_status,updated_at=now() WHERE ${body.create_only !== true} RETURNING id`;
+      if (!saved.length)
+        return json(res, 409, {
+          error:
+            "Product ID already exists. Enable updates or choose a new ID.",
+        });
       await audit(u.identity, "save_product", p.id);
       return json(res, 200, { id: p.id });
     }

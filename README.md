@@ -15,6 +15,12 @@ Marketplace infrastructure for product discovery, dealer offers, referral attrib
 
 Direct checkout and payouts are not enabled. Supplier reference prices and availability do not represent marketplace inventory or guaranteed fulfillment.
 
+## CSV import
+
+In **Manage store → Products, pricing & photos → Import products from CSV**, download the template and upload up to 200 rows (1 MB). Review rows, complete missing fields, and follow supplier or search links to verify details. Enter the actual price-check date; it is never inferred.
+
+Import saves only ready rows and reports each result. New rows default to hidden. Existing IDs are protected unless updates are explicitly enabled; updates replace all product fields. Unfinished rows remain in the current page only, so keep the source CSV until the import is complete. Product management permissions apply to every imported row.
+
 ## Stack
 
 React and Vite frontend, Vercel server functions, PostgreSQL via Neon, Resend email and viem for wallet verification. Authorization, private deal terms and credentials remain server-side.

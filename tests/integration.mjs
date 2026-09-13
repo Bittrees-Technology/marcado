@@ -294,7 +294,21 @@ try {
     image_url: upload.data.url,
     active: true,
   };
-  assert.equal((await request("admin/item", product, dealer)).status, 200);
+  assert.equal(
+    (await request("admin/item", { ...product, create_only: true }, dealer))
+      .status,
+    200,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/item",
+        { ...product, price: 999, create_only: true },
+        dealer,
+      )
+    ).status,
+    409,
+  );
   let catalog = await request("catalog");
   assert.equal(
     Number(catalog.data.items.find((i) => i.id === testItem).price),

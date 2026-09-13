@@ -1,3 +1,4 @@
+import { CsvImport } from "./CsvImport.jsx";
 import { filterCatalog } from "../lib/filter-catalog.mjs";
 import React, { useState } from "react";
 import {
@@ -284,9 +285,10 @@ export function EquipmentPage({
             <p className="tax-note">
               {selected.tax_note || "Tax and shipping confirmed by quote"}
             </p>
-            {selected.configuration_note && selected.configuration_note!==selected.specifications && (
-              <p>{selected.configuration_note}</p>
-            )}
+            {selected.configuration_note &&
+              selected.configuration_note !== selected.specifications && (
+                <p>{selected.configuration_note}</p>
+              )}
             <h3>About this configuration</h3>
             <p>{selected.specifications}</p>
             <button
@@ -415,6 +417,13 @@ export function ProductManager({
   return (
     <section className="product-manager">
       <h3>Products, pricing & photos</h3>
+      <CsvImport
+        items={items}
+        collections={collections}
+        api={api}
+        refresh={refresh}
+        notify={notify}
+      />
       <p>
         Products appear inside their equipment collection. Photos are public.
         Upload JPEG, PNG or WebP up to 1 MB, or use an HTTPS image URL.
