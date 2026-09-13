@@ -1,25 +1,247 @@
 // Opt-in integration tests against the dedicated Marcada schema. No email is sent.
-import assert from 'node:assert/strict';import {neon} from '@neondatabase/serverless';import {randomUUID} from 'node:crypto';import {generatePrivateKey,privateKeyToAccount} from 'viem/accounts';import {createSiweMessage} from 'viem/siwe';import handler from '../api/index.mjs';import {hash,token} from '../lib/security.mjs';
-const sql=neon(process.env.DATABASE_URL),origin=process.env.APP_ORIGIN,tag=randomUUID(),customer=`customer-${tag}@example.com`,support=`support-${tag}@example.com`,dealer=`dealer-${tag}@example.com`,admin=`admin-${tag}@example.com`,owner=`owner-${tag}@example.com`;process.env.ADMIN_EMAIL=owner;const cookies={},identities=[customer,support,dealer,admin,owner];let offerId,quoteId,wallet;
-async function request(path,body,who,custom={}){let status=200,data,headers={};const res={setHeader(k,v){headers[k.toLowerCase()]=v},status(n){status=n;return this},json(d){data=d;return this},end(){return this}};await handler({url:'/api/'+path,method:body===undefined?'GET':'POST',body,headers:{origin,'x-forwarded-for':tag,...(who?{cookie:cookies[who]}:{}),...custom}},res);return {status,data,headers};}
-try{
- for(const i of identities){const t=token();cookies[i]='__Host-marcada='+t;await sql`INSERT INTO marcada.users(identity,referral) VALUES(${i},${token().slice(0,16)})`;await sql`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(t)},${i},now()+interval '1 hour')`;}
- for(const [i,role] of [[support,'support'],[dealer,'dealer_manager'],[admin,'admin']])await sql`INSERT INTO marcada.roles(identity,role) VALUES(${i},${role})`;
- assert.equal((await request('admin')).status,401);assert.equal((await request('admin',undefined,customer)).status,403);assert.equal((await request('admin/role',{identity:customer,role:'admin'},admin)).status,403);
- assert.equal((await request('admin/offer',{},support)).status,403);assert.equal((await request('admin/quote',{},dealer)).status,403);
- const o=await request('admin/offer',{product:'bitaxe',dealer:'Integration test '+tag,url:'https://example.com/offer?ref=test',price:123,currency:'USD',private:true,notes:'CONFIDENTIAL-'+tag},owner);assert.equal(o.status,200,JSON.stringify(o.data));offerId=o.data.id;
- for(const who of [undefined,customer,support]){const c=await request('catalog',undefined,who);assert.equal(c.status,200);assert.equal(c.data.offers.some(o=>o.id===offerId),false);assert.equal((await request('go?id='+offerId,undefined,who)).status,404);}
- assert.equal((await request('admin/grant',{id:offerId,identity:customer,remove:false},owner)).status,200);const c=await request('catalog',undefined,customer);assert.ok(c.data.offers.some(o=>o.id===offerId));assert.equal(JSON.stringify(c.data).includes('CONFIDENTIAL'),false);assert.equal(JSON.stringify(c.data).includes('example.com/offer'),false);assert.equal((await request('go?id='+offerId,undefined,customer)).status,302);
- await request('admin/grant',{id:offerId,identity:customer,remove:true},owner);assert.equal((await request('go?id='+offerId,undefined,customer)).status,404);
- const [ref]=await sql`SELECT referral FROM marcada.users WHERE identity=${support}`;const q=await request('quotes',{product:'bitaxe',quantity:2,details:'Integration test',referral:ref.referral},customer);assert.equal(q.status,201,JSON.stringify(q.data));quoteId=q.data.id;const [saved]=await sql`SELECT referral FROM marcada.quotes WHERE id=${quoteId}`;assert.equal(saved.referral,ref.referral);
- assert.equal((await request('admin',undefined,dealer)).data.quotes.length,0);assert.equal((await request('admin',undefined,support)).data.offers.length,0);
- assert.equal((await request('admin/offer-state',{id:offerId,active:false},owner, {origin:'https://evil.example'})).status,403);
- const challenge=token(),code='12345678';await sql`INSERT INTO marcada.email_challenges(hash,identity,code_hash,expires_at) VALUES(${hash(challenge)},${customer},${hash(challenge+':'+code)},now()+interval '1 minute')`;
- assert.equal((await request('auth/verify-email',{challenge,code:'00000000'})).status,401);const ok=await request('auth/verify-email',{challenge,code});assert.equal(ok.status,200);assert.match(ok.headers['set-cookie'],/HttpOnly; Secure; SameSite=Lax/);assert.equal((await request('auth/verify-email',{challenge,code})).status,401);
- const account=privateKeyToAccount(generatePrivateKey());wallet=account.address.toLowerCase();const n=await request('auth/nonce',{});const nonceCookie=n.headers['set-cookie'].split(';')[0];const message=createSiweMessage({address:account.address,chainId:1,domain:new URL(origin).host,uri:origin,nonce:n.data.nonce,version:'1',issuedAt:new Date()});const signature=await account.signMessage({message});const args={message,signature};assert.equal((await request('auth/wallet',args,undefined,{cookie:nonceCookie})).status,200);assert.equal((await request('auth/wallet',args,undefined,{cookie:nonceCookie})).status,401);
- const n2=await request('auth/nonce',{});const wrong=createSiweMessage({address:account.address,chainId:1,domain:'evil.example',uri:origin,nonce:n2.data.nonce,version:'1',issuedAt:new Date()});assert.equal((await request('auth/wallet',{message:wrong,signature:await account.signMessage({message:wrong})},undefined,{cookie:n2.headers['set-cookie'].split(';')[0]})).status,401);await sql`DELETE FROM marcada.auth_tokens WHERE hash=${hash(n2.data.nonce)}`;
- console.log('PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.');
-}finally{
- if(offerId)await sql`DELETE FROM marcada.offers WHERE id=${offerId}`;if(quoteId)await sql`DELETE FROM marcada.quotes WHERE id=${quoteId}`;
- for(const i of [...identities,wallet].filter(Boolean)){await sql`DELETE FROM marcada.sessions WHERE identity=${i}`;await sql`DELETE FROM marcada.email_challenges WHERE identity=${i}`;await sql`DELETE FROM marcada.roles WHERE identity=${i}`;await sql`DELETE FROM marcada.audit WHERE actor=${i}`;await sql`DELETE FROM marcada.users WHERE identity=${i}`;}
+import assert from "node:assert/strict";
+import { neon } from "@neondatabase/serverless";
+import { randomUUID } from "node:crypto";
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+import { createSiweMessage } from "viem/siwe";
+import handler from "../api/index.mjs";
+import { hash, token } from "../lib/security.mjs";
+const sql = neon(process.env.DATABASE_URL),
+  origin = process.env.APP_ORIGIN,
+  tag = randomUUID(),
+  customer = `customer-${tag}@example.com`,
+  support = `support-${tag}@example.com`,
+  dealer = `dealer-${tag}@example.com`,
+  admin = `admin-${tag}@example.com`,
+  owner = `owner-${tag}@example.com`;
+process.env.ADMIN_EMAIL = owner;
+const cookies = {},
+  identities = [customer, support, dealer, admin, owner];
+let offerId, quoteId, wallet;
+async function request(path, body, who, custom = {}) {
+  let status = 200,
+    data,
+    headers = {};
+  const res = {
+    setHeader(k, v) {
+      headers[k.toLowerCase()] = v;
+    },
+    status(n) {
+      status = n;
+      return this;
+    },
+    json(d) {
+      data = d;
+      return this;
+    },
+    end() {
+      return this;
+    },
+  };
+  await handler(
+    {
+      url: "/api/" + path,
+      method: body === undefined ? "GET" : "POST",
+      body,
+      headers: {
+        origin,
+        "x-forwarded-for": tag,
+        ...(who ? { cookie: cookies[who] } : {}),
+        ...custom,
+      },
+    },
+    res,
+  );
+  return { status, data, headers };
+}
+try {
+  for (const i of identities) {
+    const t = token();
+    cookies[i] = "__Host-marcada=" + t;
+    await sql`INSERT INTO marcada.users(identity,referral) VALUES(${i},${token().slice(0, 16)})`;
+    await sql`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(t)},${i},now()+interval '1 hour')`;
+  }
+  for (const [i, role] of [
+    [support, "support"],
+    [dealer, "dealer_manager"],
+    [admin, "admin"],
+  ])
+    await sql`INSERT INTO marcada.roles(identity,role) VALUES(${i},${role})`;
+  assert.equal((await request("admin")).status, 401);
+  assert.equal((await request("admin", undefined, customer)).status, 403);
+  assert.equal(
+    (await request("admin/role", { identity: customer, role: "admin" }, admin))
+      .status,
+    403,
+  );
+  assert.equal((await request("admin/offer", {}, support)).status, 403);
+  assert.equal((await request("admin/quote", {}, dealer)).status, 403);
+  const o = await request(
+    "admin/offer",
+    {
+      product: "bitaxe",
+      dealer: "Integration test " + tag,
+      url: "https://example.com/offer?ref=test",
+      price: 123,
+      currency: "USD",
+      private: true,
+      notes: "CONFIDENTIAL-" + tag,
+    },
+    owner,
+  );
+  assert.equal(o.status, 200, JSON.stringify(o.data));
+  offerId = o.data.id;
+  for (const who of [undefined, customer, support]) {
+    const c = await request("catalog", undefined, who);
+    assert.equal(c.status, 200);
+    assert.equal(
+      c.data.offers.some((o) => o.id === offerId),
+      false,
+    );
+    assert.equal(
+      (await request("go?id=" + offerId, undefined, who)).status,
+      404,
+    );
+  }
+  assert.equal(
+    (
+      await request(
+        "admin/grant",
+        { id: offerId, identity: customer, remove: false },
+        owner,
+      )
+    ).status,
+    200,
+  );
+  const c = await request("catalog", undefined, customer);
+  assert.ok(c.data.offers.some((o) => o.id === offerId));
+  assert.equal(JSON.stringify(c.data).includes("CONFIDENTIAL"), false);
+  assert.equal(JSON.stringify(c.data).includes("example.com/offer"), false);
+  assert.equal(
+    (await request("go?id=" + offerId, undefined, customer)).status,
+    302,
+  );
+  await request(
+    "admin/grant",
+    { id: offerId, identity: customer, remove: true },
+    owner,
+  );
+  assert.equal(
+    (await request("go?id=" + offerId, undefined, customer)).status,
+    404,
+  );
+  const [ref] =
+    await sql`SELECT referral FROM marcada.users WHERE identity=${support}`;
+  const q = await request(
+    "quotes",
+    {
+      product: "bitaxe",
+      quantity: 2,
+      details: "Integration test",
+      referral: ref.referral,
+    },
+    customer,
+  );
+  assert.equal(q.status, 201, JSON.stringify(q.data));
+  quoteId = q.data.id;
+  const [saved] =
+    await sql`SELECT referral FROM marcada.quotes WHERE id=${quoteId}`;
+  assert.equal(saved.referral, ref.referral);
+  assert.equal(
+    (await request("admin", undefined, dealer)).data.quotes.length,
+    0,
+  );
+  assert.equal(
+    (await request("admin", undefined, support)).data.offers.length,
+    0,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/offer-state",
+        { id: offerId, active: false },
+        owner,
+        { origin: "https://evil.example" },
+      )
+    ).status,
+    403,
+  );
+  const challenge = token(),
+    code = "12345678";
+  await sql`INSERT INTO marcada.email_challenges(hash,identity,code_hash,expires_at) VALUES(${hash(challenge)},${customer},${hash(challenge + ":" + code)},now()+interval '1 minute')`;
+  assert.equal(
+    (await request("auth/verify-email", { challenge, code: "00000000" }))
+      .status,
+    401,
+  );
+  const ok = await request("auth/verify-email", { challenge, code });
+  assert.equal(ok.status, 200);
+  assert.match(ok.headers["set-cookie"], /HttpOnly; Secure; SameSite=Lax/);
+  assert.equal(
+    (await request("auth/verify-email", { challenge, code })).status,
+    401,
+  );
+  const account = privateKeyToAccount(generatePrivateKey());
+  wallet = account.address.toLowerCase();
+  const n = await request("auth/nonce", {});
+  const nonceCookie = n.headers["set-cookie"].split(";")[0];
+  const message = createSiweMessage({
+    address: account.address,
+    chainId: 1,
+    domain: new URL(origin).host,
+    uri: origin,
+    nonce: n.data.nonce,
+    version: "1",
+    issuedAt: new Date(),
+  });
+  const signature = await account.signMessage({ message });
+  const args = { message, signature };
+  assert.equal(
+    (await request("auth/wallet", args, undefined, { cookie: nonceCookie }))
+      .status,
+    200,
+  );
+  assert.equal(
+    (await request("auth/wallet", args, undefined, { cookie: nonceCookie }))
+      .status,
+    401,
+  );
+  const n2 = await request("auth/nonce", {});
+  const wrong = createSiweMessage({
+    address: account.address,
+    chainId: 1,
+    domain: "evil.example",
+    uri: origin,
+    nonce: n2.data.nonce,
+    version: "1",
+    issuedAt: new Date(),
+  });
+  assert.equal(
+    (
+      await request(
+        "auth/wallet",
+        {
+          message: wrong,
+          signature: await account.signMessage({ message: wrong }),
+        },
+        undefined,
+        { cookie: n2.headers["set-cookie"].split(";")[0] },
+      )
+    ).status,
+    401,
+  );
+  await sql`DELETE FROM marcada.auth_tokens WHERE hash=${hash(n2.data.nonce)}`;
+  console.log(
+    "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence, email code replay, secure cookies, SIWE signature/replay/domain checks.",
+  );
+} finally {
+  if (offerId) await sql`DELETE FROM marcada.offers WHERE id=${offerId}`;
+  if (quoteId) await sql`DELETE FROM marcada.quotes WHERE id=${quoteId}`;
+  for (const i of [...identities, wallet].filter(Boolean)) {
+    await sql`DELETE FROM marcada.sessions WHERE identity=${i}`;
+    await sql`DELETE FROM marcada.email_challenges WHERE identity=${i}`;
+    await sql`DELETE FROM marcada.roles WHERE identity=${i}`;
+    await sql`DELETE FROM marcada.audit WHERE actor=${i}`;
+    await sql`DELETE FROM marcada.users WHERE identity=${i}`;
+  }
 }

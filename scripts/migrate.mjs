@@ -1,1 +1,11 @@
-import {neon} from '@neondatabase/serverless';import {readFile} from 'node:fs/promises';const sql=neon(process.env.DATABASE_URL);for(const query of (await readFile(new URL('../schema.sql',import.meta.url),'utf8')).split(';').map(s=>s.trim()).filter(Boolean))await sql.query(query);console.log('Marcada schema ready');
+import { neon } from "@neondatabase/serverless";
+import { readFile } from "node:fs/promises";
+const sql = neon(process.env.DATABASE_URL);
+for (const query of (
+  await readFile(new URL("../schema.sql", import.meta.url), "utf8")
+)
+  .split(";")
+  .map((s) => s.trim())
+  .filter(Boolean))
+  await sql.query(query);
+console.log("Marcada schema ready");

@@ -39,5 +39,18 @@
       "path": "/api/maintenance",
       "schedule": "35 4 * * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "marcada.vercel.app"
+        }
+      ],
+      "destination": "https://marcada.bittrees.org/:path*",
+      "permanent": true
+    }
   ]
 }
