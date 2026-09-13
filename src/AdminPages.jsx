@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ProductManager } from "./Equipment.jsx";
 import { Vendors } from "./Vendors.jsx";
 import { Plus, ExternalLink } from "lucide-react";
@@ -18,7 +18,39 @@ export function AdminPages({
   setEditOffer,
   open,
 }) {
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState("all");
+  const [limit, setLimit] = useState(20);
+  const [offerCollection, setOfferCollection] = useState(
+    editOffer?.product_id || products[0]?.id || "",
+  );
+  useEffect(
+    () => setOfferCollection(editOffer?.product_id || products[0]?.id || ""),
+    [editOffer?.id, products[0]?.id],
+  );
   const items = admin?.items || [];
+  const matches = (values) =>
+    values
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase()
+      .includes(query.toLowerCase());
+  const quoteList = (admin?.quotes || []).filter(
+    (q) =>
+      matches([q.identity, q.item_name, q.name, q.referral, q.details]) &&
+      (status === "all" || q.status === status),
+  );
+  const offerList = (admin?.offers || []).filter(
+    (o) =>
+      matches([o.dealer, o.product_id, o.item_id, o.notes]) &&
+      (status === "all" ||
+        (status === "private"
+          ? o.private
+          : status === "active"
+            ? o.active
+            : !o.active)),
+  );
+
   const page = location.pathname.split("/")[2] || "overview";
   const pages = [
     ["overview", "Overview", true],
@@ -27,6 +59,7 @@ export function AdminPages({
     ["quotes", "Quotes", user?.canQuotes],
     ["vendors", "Vendors", user?.canVendors || user?.vendor],
     ["team", "Team access", user?.owner],
+    ["notifications", "Notifications", user?.owner],
   ];
   if (!user)
     return (
@@ -43,10 +76,37 @@ export function AdminPages({
     );
   const allowed = pages.some(([id, , ok]) => id === page && ok);
   return (
-    <section className="equipment-page admin-page">
-      <h1>Store administration</h1>
+    <section className="equipment-page admin-page" aria-busy={busy || !admin}>
+      <header className="admin-heading">
+        <div>
+          <small>Mercado workspace</small>
+          <h1>{pages.find(([id]) => id === page)?.[1] || "Administration"}</h1>
+        </div>
+        <div>
+          <span className="pill">{user.role.replaceAll("_", " ")}</span>
+          <p className="identity">{user.identity}</p>
+          <a href="/">View marketplace</a>
+        </div>
+      </header>
       {error && <p role="alert">{error}</p>}
       {notice && <p role="status">{notice}</p>}
+      <label className="admin-mobile-navigation">
+        Workspace page
+        <select
+          value={page}
+          onChange={(e) => {
+            location.href = "/admin/" + e.target.value;
+          }}
+        >
+          {pages
+            .filter((p) => p[2])
+            .map(([id, label]) => (
+              <option value={id} key={id}>
+                {label}
+              </option>
+            ))}
+        </select>
+      </label>
       <nav aria-label="Administration pages">
         {pages
           .filter((p) => p[2])
@@ -61,6 +121,47 @@ export function AdminPages({
             </a>
           ))}
       </nav>
+      {["quotes", "offers"].includes(page) && allowed && admin && (
+        <div className="admin-toolbar">
+          <label>
+            Search {page}
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setLimit(20);
+              }}
+              placeholder={
+                page === "quotes"
+                  ? "Customer, product or referral"
+                  : "Dealer, product or notes"
+              }
+            />
+          </label>
+          <label>
+            Status
+            <select
+              value={status}
+              onChange={(e) => {
+                setStatus(e.target.value);
+                setLimit(20);
+              }}
+            >
+              <option value="all">All statuses</option>
+              {(page === "quotes"
+                ? ["new", "reviewing", "quoted", "closed"]
+                : ["active", "inactive", "private"]
+              ).map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+            </select>
+          </label>
+          <p role="status">
+            {page === "quotes" ? quoteList.length : offerList.length} results
+          </p>
+        </div>
+      )}
       {!allowed ? (
         <p role="alert">Your role does not have access to this page.</p>
       ) : !admin ? (
@@ -74,12 +175,30 @@ export function AdminPages({
                 Role: {user.role.replaceAll("_", " ")}. Choose a page above to
                 manage the tools assigned to you.
               </p>
-              <p>
-                Products includes pricing, images and CSV imports. Dealer offers
-                manages private terms and recipients. Quotes contains customer
-                requests. Vendors manages supplier onboarding. Owners delegate
-                local roles through Team access.
-              </p>
+              <div className="admin-shortcuts">
+                {pages
+                  .filter(([id, , ok]) => ok && id !== "overview")
+                  .map(([id, label]) => (
+                    <a
+                      className="admin-shortcut"
+                      href={"/admin/" + id}
+                      key={id}
+                    >
+                      <strong>{label}</strong>
+                      <span>
+                        {id === "quotes"
+                          ? `${admin.quotes.filter((q) => q.status === "new").length} new requests`
+                          : id === "products"
+                            ? `${items.length} products`
+                            : id === "offers"
+                              ? `${admin.offers.length} offers`
+                              : id === "team"
+                                ? "Delegate access by responsibility"
+                                : "Manage supplier integrations"}
+                      </span>
+                    </a>
+                  ))}
+              </div>
             </>
           )}
           <>
@@ -105,6 +224,72 @@ export function AdminPages({
                 <Vendors
                   {...{ user, admin, api, run, setAdmin, setNotice, busy }}
                 />
+              )}
+              {page === "notifications" && user.owner && (
+                <section>
+                  <h2>Referral email notifications</h2>
+                  <p>
+                    Send new referred quote submissions to your operations
+                    inbox. This includes customer account information and
+                    requirements. Referring members and vendors do not receive
+                    these details.
+                  </p>
+                  <form
+                    className="admin-form"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const f = Object.fromEntries(
+                        new FormData(e.currentTarget),
+                      );
+                      run(async () => {
+                        await api("admin/notifications", {
+                          recipient: f.recipient,
+                          enabled: f.enabled === "on",
+                        });
+                        setAdmin(await api("admin"));
+                        setNotice(
+                          "Notification settings saved. No test email was sent.",
+                        );
+                      });
+                    }}
+                  >
+                    <label className="span2">
+                      Operations email
+                      <input
+                        type="email"
+                        name="recipient"
+                        defaultValue={
+                          admin.notificationSettings?.recipient || ""
+                        }
+                        autoComplete="email"
+                      />
+                    </label>
+                    <label className="span2 checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="enabled"
+                        defaultChecked={
+                          admin.notificationSettings?.enabled || false
+                        }
+                      />{" "}
+                      Email future referred quote submissions
+                    </label>
+                    <p className="span2">
+                      Changes apply to future requests. Messages already queued
+                      retain their original recipient. Delivery attempts appear
+                      on the Quotes page.
+                    </p>
+                    <button className="primary" disabled={busy}>
+                      Save notification settings
+                    </button>
+                  </form>
+                  <h3>Wallet messaging</h3>
+                  <p>
+                    Account updates are available inside Mercado. External
+                    wallet delivery is not active; it requires opt-in, a
+                    dedicated sender and a persistent worker.
+                  </p>
+                </section>
               )}
               {page === "team" && user.owner && (
                 <section className="roles">
@@ -205,7 +390,8 @@ export function AdminPages({
                       Collection
                       <select
                         name="product"
-                        defaultValue={editOffer?.product_id}
+                        value={offerCollection}
+                        onChange={(e) => setOfferCollection(e.target.value)}
                       >
                         {products.map((p) => (
                           <option key={p.id} value={p.id}>
@@ -218,14 +404,17 @@ export function AdminPages({
                       Specific product (optional)
                       <select
                         name="item_id"
+                        key={offerCollection}
                         defaultValue={editOffer?.item_id || ""}
                       >
                         <option value="">Entire collection</option>
-                        {items.map((i) => (
-                          <option key={i.id} value={i.id}>
-                            {i.name}
-                          </option>
-                        ))}
+                        {items
+                          .filter((i) => i.product_id === offerCollection)
+                          .map((i) => (
+                            <option key={i.id} value={i.id}>
+                              {i.name}
+                            </option>
+                          ))}
                       </select>
                     </label>
                     <label>
@@ -325,7 +514,7 @@ export function AdminPages({
                   {admin.offers.length === 0 && (
                     <p>No dealer offers entered yet.</p>
                   )}
-                  {admin.offers.map((o) => (
+                  {offerList.slice(0, limit).map((o) => (
                     <div className="record" key={o.id}>
                       <strong>{o.dealer}</strong>
                       <span className="pill">
@@ -343,6 +532,7 @@ export function AdminPages({
                       </a>
                       <p>{o.notes}</p>
                       <button
+                        disabled={busy}
                         className="secondary"
                         onClick={() => {
                           setEditOffer(o);
@@ -352,6 +542,7 @@ export function AdminPages({
                         Edit offer
                       </button>
                       <button
+                        disabled={busy}
                         className="secondary"
                         onClick={() =>
                           run(async () => {
@@ -428,13 +619,132 @@ export function AdminPages({
                 <>
                   <h3>Quote requests</h3>
                   {admin.quotes.length === 0 && <p>No quote requests yet.</p>}
-                  {admin.quotes.map((q) => (
+                  {quoteList.slice(0, limit).map((q) => (
                     <div className="record" key={q.id}>
                       <strong>
                         {q.item_name || q.name} × {q.quantity}
                       </strong>
                       <p className="identity">{q.identity}</p>
                       <p>{q.details}</p>
+                      {q.offer_snapshot && (
+                        <p>
+                          Private offer reference: {q.offer_snapshot.dealer} ·{" "}
+                          {q.offer_snapshot.currency}{" "}
+                          {q.offer_snapshot.price ?? "Price on request"}
+                        </p>
+                      )}
+                      {q.proposal && (
+                        <p>
+                          Quote version {q.proposal.version} ·{" "}
+                          {new Intl.NumberFormat("en", {
+                            style: "currency",
+                            currency: q.proposal.currency,
+                          }).format(Number(q.proposal.total_minor) / 100)}{" "}
+                          ·{" "}
+                          {q.proposal.accepted_at
+                            ? "Accepted by customer"
+                            : "Awaiting customer acceptance"}
+                        </p>
+                      )}
+                      {!q.proposal?.accepted_at && q.status !== "closed" && (
+                        <details className="admin-editor">
+                          <summary>
+                            {q.proposal ? "Revise quote" : "Prepare a quote"}
+                          </summary>
+                          <form
+                            className="admin-form"
+                            onSubmit={(e) => {
+                              e.preventDefault();
+                              const f = Object.fromEntries(
+                                new FormData(e.currentTarget),
+                              );
+                              run(async () => {
+                                await api("admin/proposal", {
+                                  ...f,
+                                  expires_at: new Date(
+                                    f.expires_at,
+                                  ).toISOString(),
+                                  id: q.id,
+                                });
+                                setAdmin(await api("admin"));
+                                setNotice(
+                                  "Quote issued. The customer can review and accept it in Mercado.",
+                                );
+                              });
+                            }}
+                          >
+                            <label>
+                              Unit price
+                              <input
+                                name="unit_price"
+                                type="number"
+                                min="0"
+                                step="0.01"
+                                required
+                              />
+                            </label>
+                            <label>
+                              Currency
+                              <select name="currency">
+                                {["USD", "EUR", "GBP", "CAD", "AUD"].map(
+                                  (c) => (
+                                    <option key={c}>{c}</option>
+                                  ),
+                                )}
+                              </select>
+                            </label>
+                            <label>
+                              Tax total
+                              <input
+                                name="tax"
+                                type="number"
+                                min="0"
+                                step="0.01"
+                                defaultValue="0"
+                                required
+                              />
+                            </label>
+                            <label>
+                              Delivery total
+                              <input
+                                name="shipping"
+                                type="number"
+                                min="0"
+                                step="0.01"
+                                defaultValue="0"
+                                required
+                              />
+                            </label>
+                            <label>
+                              Valid until
+                              <input
+                                name="expires_at"
+                                type="datetime-local"
+                                required
+                              />
+                            </label>
+                            <label className="span2">
+                              Delivery and purchase terms
+                              <textarea
+                                name="terms"
+                                minLength={10}
+                                maxLength={3000}
+                                required
+                                placeholder="Destination, lead time, condition, warranty and purchase terms"
+                              />
+                            </label>
+                            <p className="span2">
+                              Total is calculated from unit price × {q.quantity}
+                              , tax and delivery. No payment is collected when
+                              the customer accepts.
+                            </p>
+                            <button className="primary" disabled={busy}>
+                              Issue quote
+                            </button>
+                          </form>
+                        </details>
+                      )}
+
                       {q.notification_status && (
                         <p>
                           Referral email:{" "}
@@ -496,6 +806,16 @@ export function AdminPages({
           </>
         </>
       )}
+      {allowed &&
+        (page === "quotes"
+          ? quoteList.length
+          : page === "offers"
+            ? offerList.length
+            : 0) > limit && (
+          <button className="secondary" onClick={() => setLimit((n) => n + 20)}>
+            Show 20 more
+          </button>
+        )}
     </section>
   );
 }

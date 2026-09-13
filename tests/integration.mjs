@@ -23,7 +23,7 @@ const sql = neon(process.env.DATABASE_URL),
 process.env.ADMIN_EMAIL = owner;
 const cookies = {},
   identities = [customer, support, dealer, admin, owner];
-let offerId, quoteId, wallet, mediaId, itemQuoteId;
+let offerId, quoteId, wallet, mediaId, itemQuoteId, privateQuoteId;
 const testItem = "test-" + tag;
 async function request(path, body, who, custom = {}) {
   let status = 200,
@@ -53,7 +53,7 @@ async function request(path, body, who, custom = {}) {
       body,
       headers: {
         origin,
-        "x-forwarded-for": tag,
+        "x-forwarded-for": tag + ":" + (body?.request_key || "default"),
         ...(who ? { cookie: cookies[who] } : {}),
         ...custom,
       },
@@ -83,6 +83,26 @@ try {
     403,
   );
   assert.equal((await request("admin/offer", {}, support)).status, 403);
+  assert.equal(
+    (
+      await request(
+        "admin/notifications",
+        { recipient: "ops@example.com", enabled: true },
+        support,
+      )
+    ).status,
+    403,
+  );
+  assert.equal(
+    (
+      await request(
+        "admin/notifications",
+        { recipient: "bad", enabled: true },
+        owner,
+      )
+    ).status,
+    400,
+  );
   assert.equal((await request("admin/quote", {}, dealer)).status, 403);
   const o = await request(
     "admin/offer",
@@ -121,6 +141,52 @@ try {
     ).status,
     200,
   );
+  const privateRequest = {
+    product: "bitaxe",
+    offer_id: offerId,
+    quantity: 4,
+    details: "Private purchase request",
+    request_key: randomUUID(),
+  };
+  const pq = await request("quotes", privateRequest, customer);
+  assert.equal(pq.status, 201, JSON.stringify(pq.data));
+  privateQuoteId = pq.data.id;
+  const [privateSaved] =
+    await sql`SELECT offer_id,offer_snapshot FROM marcada.quotes WHERE id=${privateQuoteId}`;
+  assert.equal(privateSaved.offer_id, offerId);
+  assert.equal(privateSaved.offer_snapshot.price, 123);
+  assert.equal(privateSaved.offer_snapshot.url, undefined);
+  assert.equal(
+    (
+      await request(
+        "quotes",
+        { ...privateRequest, request_key: randomUUID() },
+        support,
+      )
+    ).status,
+    404,
+  );
+  let activity = await request("notifications", undefined, customer);
+  const privateNote = activity.data.notifications.find(
+    (n) => n.type === "private_offer",
+  );
+  assert.ok(privateNote);
+  assert.equal(
+    (await request("notifications?id=" + privateNote.id, undefined, support))
+      .status,
+    404,
+  );
+  await request(
+    "admin/grant",
+    { id: offerId, identity: customer, remove: false },
+    owner,
+  );
+  activity = await request("notifications", undefined, customer);
+  assert.equal(
+    activity.data.notifications.filter((n) => n.type === "private_offer")
+      .length,
+    1,
+  );
   const c = await request("catalog", undefined, customer);
   assert.ok(c.data.offers.some((o) => o.id === offerId));
   assert.equal(JSON.stringify(c.data).includes("CONFIDENTIAL"), false);
@@ -136,6 +202,21 @@ try {
   );
   assert.equal(
     (await request("go?id=" + offerId, undefined, customer)).status,
+    404,
+  );
+  assert.equal(
+    (await request("notifications?id=" + privateNote.id, undefined, customer))
+      .status,
+    404,
+  );
+  assert.equal(
+    (
+      await request(
+        "quotes",
+        { ...privateRequest, request_key: randomUUID() },
+        customer,
+      )
+    ).status,
     404,
   );
   const [ref] =
@@ -157,6 +238,7 @@ try {
       product: "bitaxe",
       quantity: 2,
       details: "Integration test",
+      request_key: tag,
       referral: "  " + ref.referral.toUpperCase() + "  ",
     },
     customer,
@@ -197,7 +279,147 @@ try {
     await sql`SELECT * FROM marcada.referral_notifications WHERE quote_id=${quoteId}`;
   assert.equal(notice.status, "needs_review");
   assert.equal(notificationCalls.length, 2);
+  const replay = await request(
+    "quotes",
+    {
+      product: "bitaxe",
+      quantity: 2,
+      details: "Integration test",
+      request_key: tag,
+      referral: ref.referral,
+    },
+    customer,
+  );
+  assert.equal(replay.status, 200);
+  assert.equal(replay.data.id, quoteId);
+  assert.equal(
+    (
+      await request(
+        "quotes",
+        {
+          product: "bitaxe",
+          quantity: 3,
+          details: "Integration test",
+          request_key: tag,
+          referral: ref.referral,
+        },
+        customer,
+      )
+    ).status,
+    409,
+  );
+  assert.equal(notificationCalls.length, 2);
+  const referralNotes = (
+    await request("notifications", undefined, support)
+  ).data.notifications.filter((n) => n.type === "referral_activity");
+  assert.equal(referralNotes.length, 1);
+  assert.equal(JSON.stringify(referralNotes).includes(customer), false);
+  assert.equal(
+    JSON.stringify(referralNotes).includes("Integration test"),
+    false,
+  );
+  const parallelKey = randomUUID();
+  const concurrent = await Promise.all(
+    [1, 2].map(() =>
+      request(
+        "quotes",
+        {
+          product: "bitaxe",
+          quantity: 1,
+          details: "Concurrent quote",
+          request_key: parallelKey,
+        },
+        customer,
+      ),
+    ),
+  );
+  assert.ok(
+    concurrent.every((r) => [200, 201].includes(r.status)),
+    JSON.stringify(concurrent),
+  );
+  assert.equal(concurrent[0].data.id, concurrent[1].data.id);
+  await sql`DELETE FROM marcada.quotes WHERE identity=${customer} AND request_key=${parallelKey}`;
   globalThis.fetch = originalFetch;
+  const proposal = {
+    id: quoteId,
+    unit_price: "100.25",
+    tax: "10.00",
+    shipping: "20.00",
+    currency: "EUR",
+    terms: "Delivery to Portugal in 10 days, new equipment, 12-month warranty.",
+    expires_at: new Date(Date.now() + 86400000).toISOString(),
+  };
+  assert.equal((await request("admin/proposal", proposal, dealer)).status, 403);
+  let issued = await request("admin/proposal", proposal, support);
+  assert.equal(issued.status, 200, JSON.stringify(issued.data));
+  assert.equal(issued.data.version, 1);
+  let mine = (await request("me", undefined, customer)).data.quotes.find(
+    (q) => q.id === quoteId,
+  );
+  assert.equal(Number(mine.proposal.total_minor), 23050);
+  assert.equal(
+    (
+      await request(
+        "quote-accept",
+        { id: quoteId, version: 1, confirm: true },
+        dealer,
+      )
+    ).status,
+    409,
+  );
+  issued = await request(
+    "admin/proposal",
+    { ...proposal, unit_price: "101.25" },
+    support,
+  );
+  assert.equal(issued.data.version, 2);
+  assert.equal(
+    (
+      await request(
+        "quote-accept",
+        { id: quoteId, version: 1, confirm: true },
+        customer,
+      )
+    ).status,
+    409,
+  );
+  await sql`UPDATE marcada.quote_proposals SET expires_at=now()-interval '1 minute' WHERE quote_id=${quoteId} AND version=2`;
+  assert.equal(
+    (
+      await request(
+        "quote-accept",
+        { id: quoteId, version: 2, confirm: true },
+        customer,
+      )
+    ).status,
+    409,
+  );
+  issued = await request("admin/proposal", proposal, support);
+  assert.equal(issued.data.version, 3);
+  const accepted = await request(
+    "quote-accept",
+    { id: quoteId, version: 3, confirm: true },
+    customer,
+  );
+  assert.equal(accepted.status, 200, JSON.stringify(accepted.data));
+  assert.equal(
+    (
+      await request(
+        "quote-accept",
+        { id: quoteId, version: 3, confirm: true },
+        customer,
+      )
+    ).status,
+    200,
+  );
+  assert.equal(
+    (await request("admin/proposal", proposal, support)).status,
+    409,
+  );
+  mine = (await request("me", undefined, customer)).data.quotes.find(
+    (q) => q.id === quoteId,
+  );
+  assert.ok(mine.proposal.accepted_at);
   for (const code of ["typo", ref.referral + "extra", "0000000000000000"]) {
     const rejected = await request(
       "quotes",
@@ -597,8 +819,13 @@ try {
     await sql`DELETE FROM marcada.quotes WHERE id=${itemQuoteId}`;
   await sql`DELETE FROM marcada.items WHERE id=${testItem}`;
   if (mediaId) await sql`DELETE FROM marcada.media WHERE id=${mediaId}`;
+  if (privateQuoteId)
+    await sql`DELETE FROM marcada.quotes WHERE id=${privateQuoteId}`;
   if (offerId) await sql`DELETE FROM marcada.offers WHERE id=${offerId}`;
   if (quoteId) await sql`DELETE FROM marcada.quotes WHERE id=${quoteId}`;
+
+  for (const identity of identities)
+    await sql`DELETE FROM marcada.account_notifications WHERE recipient=${identity}`;
   for (const i of [...identities, wallet].filter(Boolean)) {
     await sql`DELETE FROM marcada.vendor_integrations WHERE identity=${i}`;
     await sql`DELETE FROM marcada.sessions WHERE identity=${i}`;

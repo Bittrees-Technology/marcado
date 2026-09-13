@@ -1,6 +1,9 @@
+import { NotificationPage } from "./NotificationPage.jsx";
+import { WalletPicker } from "./WalletPicker.jsx";
+import { signWalletMessage, walletError } from "../lib/wallets.mjs";
 import { AdminPages } from "./AdminPages.jsx";
 import { EquipmentPage, ProductManager, equipmentLink } from "./Equipment.jsx";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowUpRight,
@@ -106,6 +109,8 @@ function Hardware({ kind = "bitaxe", large = false }) {
   );
 }
 function App() {
+  const quoteAttempt = useRef(null);
+  const [signingProvider, setSigningProvider] = useState(null);
   const [products, setProducts] = useState([]),
     [offers, setOffers] = useState([]),
     [items, setItems] = useState([]),
@@ -201,7 +206,7 @@ function App() {
     try {
       await fn();
     } catch (e) {
-      setError(e.message);
+      setError(walletError(e));
     } finally {
       setBusy(false);
     }
@@ -212,6 +217,36 @@ function App() {
         .then(setAdmin)
         .catch((e) => setError(e.message));
   }, [user?.identity, user?.role]);
+  useEffect(() => {
+    if (!signingProvider?.on || !user?.identity.startsWith("0x")) return;
+    const identity = user.identity.toLowerCase();
+    const changed = (accounts) => {
+      if (!accounts?.some((a) => a.toLowerCase() === identity)) {
+        setUser(null);
+        setAdmin(null);
+        setQuotes([]);
+        setSigningProvider(null);
+        api("auth/logout", {})
+          .then(() =>
+            setNotice(
+              "Wallet account changed. Sign in with the account you want to use.",
+            ),
+          )
+          .catch(() =>
+            setError(
+              "Wallet changed while offline. Reconnect and sign in again before continuing.",
+            ),
+          );
+      }
+    };
+    const disconnected = () => changed([]);
+    signingProvider.on("accountsChanged", changed);
+    signingProvider.on("disconnect", disconnected);
+    return () => {
+      signingProvider.removeListener?.("accountsChanged", changed);
+      signingProvider.removeListener?.("disconnect", disconnected);
+    };
+  }, [signingProvider, user?.identity]);
   async function openAdmin() {
     location.href = "/admin";
   }
@@ -221,6 +256,7 @@ function App() {
     setNotice("");
   }
   function open(value) {
+    if (value?.type === "quote") quoteAttempt.current = null;
     setModal(value);
     setError("");
     setNotice("");
@@ -240,15 +276,12 @@ function App() {
       setNotice("Referral link copied.");
     });
   }
-  async function wallet() {
+  async function wallet(provider) {
     await run(async () => {
-      if (!window.ethereum)
-        throw Error(
-          "Open this site in your Ethereum wallet browser, or install a browser wallet.",
-        );
-      const [address] = await window.ethereum.request({
+      const [address] = await provider.request({
         method: "eth_requestAccounts",
       });
+      if (!address) throw Error("No wallet account selected.");
       const n = await api("auth/nonce", {});
       const message = createSiweMessage({
         address,
@@ -260,28 +293,19 @@ function App() {
         statement: "Sign in to Mercado by Bittrees.",
         issuedAt: new Date(),
       });
-      const signature = await window.ethereum.request({
-        method: "personal_sign",
-        params: [
-          "0x" +
-            Array.from(new TextEncoder().encode(message), (b) =>
-              b.toString(16).padStart(2, "0"),
-            ).join(""),
-          address,
-        ],
-      });
+      const signature = await signWalletMessage(provider, address, message);
       await api("auth/wallet", { message, signature });
+      setSigningProvider(provider);
       await refresh();
       close();
     });
   }
-  async function linkWallet() {
+  async function linkWallet(provider) {
     await run(async () => {
-      if (!window.ethereum)
-        throw Error("Open an Ethereum wallet to link your account.");
-      const [address] = await window.ethereum.request({
+      const [address] = await provider.request({
         method: "eth_requestAccounts",
       });
+      if (!address) throw Error("No wallet account selected.");
       const n = await api("auth/link-nonce", {});
       const message = createSiweMessage({
         address,
@@ -293,16 +317,7 @@ function App() {
         statement: n.statement,
         issuedAt: new Date(),
       });
-      const signature = await window.ethereum.request({
-        method: "personal_sign",
-        params: [
-          "0x" +
-            Array.from(new TextEncoder().encode(message), (b) =>
-              b.toString(16).padStart(2, "0"),
-            ).join(""),
-          address,
-        ],
-      });
+      const signature = await signWalletMessage(provider, address, message);
       await api("auth/link-wallet", { message, signature });
       await refresh();
       setNotice(
@@ -311,12 +326,22 @@ function App() {
     });
   }
   const isEquipment = location.pathname !== "/";
-  function requestQuote(domain, item, quantity = 1) {
+  function quoteOffer(o) {
+    requestQuote(
+      products.find((p) => p.id === o.product_id),
+      items.find((i) => i.id === o.item_id),
+      1,
+      o,
+    );
+  }
+  function requestQuote(domain, item, quantity = 1, offer = null) {
+    quoteAttempt.current = null;
     const quote = {
       type: "quote",
       product: domain,
       item: item || null,
       quantity,
+      offer,
     };
     if (!user) {
       setPendingQuote(quote);
@@ -381,7 +406,9 @@ function App() {
         </button>
       </header>
       <main>
-        {location.pathname.startsWith("/admin") ? (
+        {location.pathname.startsWith("/account/notifications") ? (
+          <NotificationPage user={user} api={api} open={open} />
+        ) : location.pathname.startsWith("/admin") ? (
           <AdminPages
             {...{
               error,
@@ -648,7 +675,9 @@ function App() {
             onQuote={requestQuote}
             onShare={share}
             offers={offers}
-            renderOffer={(o) => <Offer key={o.id} offer={o} />}
+            renderOffer={(o) => (
+              <Offer key={o.id} offer={o} onQuote={() => quoteOffer(o)} />
+            )}
           />
         )}
       </main>
@@ -703,7 +732,7 @@ function App() {
             )}
             {modal === "login" && (
               <>
-                <div className="eyebrow">WELCOME TO MARCADA</div>
+                <div className="eyebrow">WELCOME TO MERCADO</div>
                 <h2>Sign in to Mercado.</h2>
                 <p>
                   Sign in to request quotes, create referral links and access
@@ -764,17 +793,13 @@ function App() {
                   </button>
                 </form>
                 <div className="divider">or use your wallet</div>
-                <button
-                  className="secondary full"
-                  disabled={busy}
-                  onClick={wallet}
-                >
-                  <Wallet size={18} /> Sign in with Ethereum
-                </button>
-                <small>
-                  Signing a message does not send a transaction or grant
-                  spending permission.
-                </small>
+                <WalletPicker busy={busy} onChoose={wallet} />
+              </>
+            )}
+            {modal === "link-wallet" && user?.identity.includes("@") && (
+              <>
+                <h2>Link your wallet</h2>
+                <WalletPicker link busy={busy} onChoose={linkWallet} />
               </>
             )}
             {modal === "account" && (
@@ -826,7 +851,7 @@ function App() {
                     ) : (
                       <button
                         className="secondary"
-                        onClick={linkWallet}
+                        onClick={() => open("link-wallet")}
                         disabled={busy}
                       >
                         Link Ethereum wallet
@@ -848,6 +873,9 @@ function App() {
                     Manage store
                   </button>
                 )}
+                <a className="secondary" href="/account/notifications">
+                  Account notifications
+                </a>
                 <h3>Quote requests</h3>
                 {quotes.length ? (
                   quotes.map((q) => (
@@ -857,6 +885,70 @@ function App() {
                       </strong>
                       <span className="pill">{q.status}</span>
                       <p>{q.details}</p>
+                      {q.proposal && (
+                        <div className="quote-proposal">
+                          <strong>
+                            Quote version {q.proposal.version}:{" "}
+                            {new Intl.NumberFormat("en", {
+                              style: "currency",
+                              currency: q.proposal.currency,
+                            }).format(Number(q.proposal.total_minor) / 100)}
+                          </strong>
+                          <p>
+                            {q.proposal.quantity} units · Tax{" "}
+                            {new Intl.NumberFormat("en", {
+                              style: "currency",
+                              currency: q.proposal.currency,
+                            }).format(Number(q.proposal.tax_minor) / 100)}{" "}
+                            · Delivery{" "}
+                            {new Intl.NumberFormat("en", {
+                              style: "currency",
+                              currency: q.proposal.currency,
+                            }).format(Number(q.proposal.shipping_minor) / 100)}
+                          </p>
+                          <p style={{ whiteSpace: "pre-wrap" }}>
+                            {q.proposal.terms}
+                          </p>
+                          <small>
+                            Valid until{" "}
+                            {new Date(q.proposal.expires_at).toLocaleString()}
+                          </small>
+                          {q.proposal.accepted_at ? (
+                            <p>Accepted. No payment has been taken.</p>
+                          ) : q.status === "quoted" &&
+                            new Date(q.proposal.expires_at) > new Date() ? (
+                            <form
+                              onSubmit={(e) => {
+                                e.preventDefault();
+                                run(async () => {
+                                  await api("quote-accept", {
+                                    id: q.id,
+                                    version: q.proposal.version,
+                                    confirm: true,
+                                  });
+                                  await refresh();
+                                  setNotice(
+                                    "Quote accepted. Mercado will coordinate payment and delivery separately.",
+                                  );
+                                });
+                              }}
+                            >
+                              <label>
+                                <input type="checkbox" required /> I accept this
+                                quote version and its stated terms.
+                              </label>
+                              <button className="primary" disabled={busy}>
+                                Accept quote · no payment now
+                              </button>
+                            </form>
+                          ) : (
+                            <p>
+                              This quote is no longer available for acceptance.
+                            </p>
+                          )}
+                        </div>
+                      )}
+
                       <small>
                         {new Date(q.created_at).toLocaleDateString()}
                       </small>
@@ -972,7 +1064,13 @@ function App() {
                 ) : offers.filter((o) => o.private).length ? (
                   offers
                     .filter((o) => o.private)
-                    .map((o) => <Offer key={o.id} offer={o} />)
+                    .map((o) => (
+                      <Offer
+                        key={o.id}
+                        offer={o}
+                        onQuote={() => quoteOffer(o)}
+                      />
+                    ))
                 ) : (
                   <div className="empty">
                     <Lock size={26} />
@@ -991,7 +1089,7 @@ function App() {
                 {offers
                   .filter((o) => o.product_id === modal.product.id)
                   .map((o) => (
-                    <Offer key={o.id} offer={o} />
+                    <Offer key={o.id} offer={o} onQuote={() => quoteOffer(o)} />
                   ))}
                 {!offers.some((o) => o.product_id === modal.product.id) && (
                   <div className="empty">
@@ -1042,7 +1140,23 @@ function App() {
                     e.preventDefault();
                     const f = Object.fromEntries(new FormData(e.target));
                     run(async () => {
-                      await api("quotes", { ...f, referral });
+                      const payload = {
+                        ...f,
+                        product: modal.offer?.product_id || f.product,
+                        item_id: modal.offer?.item_id || f.item_id,
+                        referral,
+                        offer_id: modal.offer?.id || null,
+                      };
+                      const fingerprint = JSON.stringify(payload);
+                      if (quoteAttempt.current?.fingerprint !== fingerprint)
+                        quoteAttempt.current = {
+                          fingerprint,
+                          key: crypto.randomUUID(),
+                        };
+                      await api("quotes", {
+                        ...payload,
+                        request_key: quoteAttempt.current.key,
+                      });
                       await refresh();
                       open("account");
                       setNotice(
@@ -1055,6 +1169,7 @@ function App() {
                     Equipment
                     <select
                       name="product"
+                      disabled={Boolean(modal.offer)}
                       defaultValue={modal.product.id}
                       onChange={(e) =>
                         setModal({
@@ -1077,6 +1192,7 @@ function App() {
                     Specific product (optional)
                     <select
                       name="item_id"
+                      disabled={Boolean(modal.offer?.item_id)}
                       defaultValue={modal.item?.id || ""}
                       key={modal.product.id + ":" + (modal.item?.id || "")}
                     >
@@ -1175,7 +1291,7 @@ function App() {
     </>
   );
 }
-function Offer({ offer: o }) {
+function Offer({ offer: o, onQuote }) {
   return (
     <div className="record">
       <strong>{o.dealer}</strong>
@@ -1197,8 +1313,13 @@ function Offer({ offer: o }) {
           Offer expires {new Date(o.expires_at).toLocaleDateString()}
         </small>
       )}
+      {onQuote && (
+        <button className="primary" onClick={onQuote}>
+          Request through Mercado
+        </button>
+      )}
       <a
-        className="primary"
+        className="secondary"
         data-insights="dealer_checkout"
         href={"/api/go?id=" + o.id}
         target="_blank"

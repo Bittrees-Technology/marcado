@@ -28,6 +28,7 @@ try {
     ["quotes", "Quote requests"],
     ["vendors", "Vendor integrations"],
     ["team", "Team access"],
+    ["notifications", "Referral email notifications"],
   ]) {
     globalThis.location = { pathname: "/admin/" + page };
     const h = renderToStaticMarkup(React.createElement(AdminPages, base));

@@ -1,5 +1,7 @@
+import { proposalInput } from "../lib/proposals.mjs";
 import {
   referralMessage,
+  notificationSettings,
   deliverNotification,
   retryNotifications,
 } from "../lib/notifications.mjs";
@@ -308,9 +310,21 @@ export default async function handler(req, res) {
     }
     const u = await user(req);
     if (!u) return json(res, 401, { error: "Sign in to continue" });
+    if (route === "notifications" && req.method === "GET") {
+      const id = url.searchParams.get("id");
+      if (id && !uuid(id))
+        return json(res, 400, { error: "Invalid notification" });
+      const notifications =
+        await sql()`SELECT n.id,n.type,n.created_at FROM marcada.account_notifications n WHERE n.recipient=${u.identity} AND (${id}::uuid IS NULL OR n.id=${id}::uuid) AND (n.type<>'private_offer' OR EXISTS(SELECT 1 FROM marcada.offers o WHERE o.id::text=n.aggregate_id AND o.active AND (o.expires_at IS NULL OR o.expires_at>now()) AND (NOT o.private OR ${u.canDeals} OR EXISTS(SELECT 1 FROM marcada.offer_grants g WHERE g.offer_id=o.id AND g.identity=${u.identity})))) ORDER BY n.created_at DESC LIMIT 100`;
+      if (id && !notifications.length)
+        return json(res, 404, {
+          error: "Notification unavailable for this account",
+        });
+      return json(res, 200, { notifications });
+    }
     if (route === "me" && req.method === "GET") {
       const quotes =
-        await sql()`SELECT q.*,p.name,i.name AS item_name FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id WHERE q.identity=${u.identity} ORDER BY q.created_at DESC LIMIT 100`;
+        await sql()`SELECT q.*,p.name,i.name AS item_name,(SELECT to_jsonb(qp)-'created_by' FROM marcada.quote_proposals qp WHERE qp.quote_id=q.id AND qp.version=q.proposal_version) AS proposal FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id WHERE q.identity=${u.identity} ORDER BY q.created_at DESC LIMIT 100`;
       return json(res, 200, { user: u, quotes });
     }
     if (route === "quotes" && req.method === "POST") {
@@ -355,37 +369,90 @@ export default async function handler(req, res) {
         return json(res, 400, {
           error: "Referral code not found. Check the code or clear the field.",
         });
+      const requestKey = body.request_key || randomUUID();
+      if (!uuid(requestKey))
+        return json(res, 400, { error: "Invalid request identifier" });
+      const offerId = body.offer_id || null;
+      if (offerId && !uuid(offerId))
+        return json(res, 400, { error: "Invalid offer" });
+      const requestHash = hash(
+        JSON.stringify({
+          product,
+          itemId,
+          quantity,
+          details,
+          referral,
+          offerId,
+        }),
+      );
+      const [prior] =
+        await sql()`SELECT id,request_hash FROM marcada.quotes WHERE identity=${u.identity} AND request_key=${requestKey}`;
+      if (prior)
+        return prior.request_hash === requestHash
+          ? json(res, 200, { id: prior.id, replayed: true })
+          : json(res, 409, {
+              error:
+                "This request identifier was already used for different details.",
+            });
+      if (
+        ref &&
+        (ref.identity === u.linkedWallet || ref.identity === u.linkedEmail)
+      )
+        return json(res, 400, {
+          error: "You cannot use a referral from your linked account.",
+        });
       const id = randomUUID();
       const [label] = ref
         ? await sql()`SELECT p.name AS collection_name,i.name AS item_name FROM marcada.products p LEFT JOIN marcada.items i ON i.id=${itemId} WHERE p.id=${product}`
         : [];
-      const message = ref
-        ? referralMessage(
-            {
-              id,
-              identity: u.identity,
-              product: label.collection_name,
-              item: label.item_name,
-              quantity,
-              details,
-              referral: ref.referral,
-              referrer: ref.identity,
-              submitted: new Date().toISOString(),
-            },
-            process.env.REFERRAL_NOTIFY_EMAIL,
-            process.env.MAIL_FROM,
-            origin(),
-          )
-        : null;
+      const settings = ref ? await notificationSettings(sql()) : null;
+      const message =
+        ref && settings.enabled
+          ? referralMessage(
+              {
+                id,
+                identity: u.identity,
+                product: label.collection_name,
+                item: label.item_name,
+                quantity,
+                details,
+                referral: ref.referral,
+                referrer: ref.identity,
+                submitted: new Date().toISOString(),
+              },
+              settings.recipient,
+              process.env.MAIL_FROM,
+              origin(),
+            )
+          : null;
       const db = sql();
       const writes = [
-        db`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id) VALUES(${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId})`,
+        db`INSERT INTO marcada.quotes(id,identity,product_id,quantity,details,referral,item_id,request_key,request_hash,offer_id,offer_snapshot) SELECT ${id},${u.identity},${product},${quantity},${details},${ref?.referral || null},${itemId},${requestKey},${requestHash},${offerId}::uuid,(SELECT jsonb_build_object('dealer',o.dealer,'price',o.price,'currency',o.currency,'expires_at',o.expires_at) FROM marcada.offers o WHERE o.id=${offerId}::uuid) WHERE ${offerId}::uuid IS NULL OR EXISTS(SELECT 1 FROM marcada.offers o WHERE o.id=${offerId}::uuid AND o.product_id=${product} AND (o.item_id IS NULL OR o.item_id=${itemId}) AND o.active AND (o.expires_at IS NULL OR o.expires_at>now()) AND (NOT o.private OR ${u.canDeals} OR EXISTS(SELECT 1 FROM marcada.offer_grants g WHERE g.offer_id=o.id AND g.identity=${u.identity}))) ON CONFLICT(identity,request_key) DO NOTHING RETURNING id`,
       ];
       if (message)
         writes.push(
-          db`INSERT INTO marcada.referral_notifications(quote_id,payload) VALUES(${id},${JSON.stringify(message)}::jsonb)`,
+          db`INSERT INTO marcada.referral_notifications(quote_id,payload) SELECT ${id},${JSON.stringify(message)}::jsonb WHERE EXISTS(SELECT 1 FROM marcada.quotes WHERE id=${id})`,
         );
-      await db.transaction(writes);
+      if (ref)
+        writes.push(
+          db`INSERT INTO marcada.account_notifications(id,recipient,type,aggregate_id,event_key) SELECT ${randomUUID()},${ref.identity},'referral_activity',${id},${"referral/" + id} WHERE EXISTS(SELECT 1 FROM marcada.quotes WHERE id=${id}) ON CONFLICT(event_key) DO NOTHING`,
+        );
+      const result = await db.transaction(writes);
+      if (!result[0].length) {
+        const [existing] =
+          await db`SELECT id,request_hash FROM marcada.quotes WHERE identity=${u.identity} AND request_key=${requestKey}`;
+        if (existing)
+          return existing.request_hash === requestHash
+            ? json(res, 200, { id: existing.id, replayed: true })
+            : json(res, 409, {
+                error:
+                  "This request identifier was already used for different details.",
+              });
+        return json(res, 404, {
+          error:
+            "Offer unavailable for this account or product. Refresh and request a current quote.",
+        });
+      }
       if (message) {
         try {
           await deliverNotification(db, id);
@@ -394,6 +461,24 @@ export default async function handler(req, res) {
         }
       }
       return json(res, 201, { id });
+    }
+    if (route === "quote-accept" && req.method === "POST") {
+      if (
+        !uuid(body.id) ||
+        !Number.isInteger(body.version) ||
+        body.confirm !== true
+      )
+        return json(res, 400, {
+          error: "Confirm the quote version and terms.",
+        });
+      const [accepted] =
+        await sql()`WITH accepted AS (UPDATE marcada.quotes q SET accepted_proposal_version=${body.version} WHERE q.id=${body.id} AND q.identity=${u.identity} AND q.status='quoted' AND q.proposal_version=${body.version} AND EXISTS(SELECT 1 FROM marcada.quote_proposals qp WHERE qp.quote_id=q.id AND qp.version=q.proposal_version AND (qp.expires_at>now() OR qp.accepted_at IS NOT NULL)) AND (q.offer_id IS NULL OR EXISTS(SELECT 1 FROM marcada.offers o WHERE o.id=q.offer_id AND o.active AND (o.expires_at IS NULL OR o.expires_at>now()) AND (NOT o.private OR ${u.canDeals} OR EXISTS(SELECT 1 FROM marcada.offer_grants g WHERE g.offer_id=o.id AND g.identity=${u.identity})))) RETURNING q.id,q.proposal_version) UPDATE marcada.quote_proposals qp SET accepted_at=coalesce(qp.accepted_at,now()) FROM accepted WHERE qp.quote_id=accepted.id AND qp.version=accepted.proposal_version RETURNING qp.version,qp.accepted_at`;
+      if (!accepted)
+        return json(res, 409, {
+          error:
+            "This quote is unavailable, expired or replaced. Refresh to review the latest version.",
+        });
+      return json(res, 200, { accepted });
     }
     if (route === "auth/link-nonce" && req.method === "POST") {
       if (!u.identity.includes("@"))
@@ -482,7 +567,10 @@ export default async function handler(req, res) {
             ? "Governance access is temporarily unavailable. Try again shortly."
             : "Staff access required",
       });
-    if (route.startsWith("admin/role") && !u.owner)
+    if (
+      (route.startsWith("admin/role") || route === "admin/notifications") &&
+      !u.owner
+    )
       return json(res, 403, { error: "Owner access required" });
     if (
       (route.startsWith("admin/offer") || route === "admin/grant") &&
@@ -490,7 +578,9 @@ export default async function handler(req, res) {
     )
       return json(res, 403, { error: "Dealer manager access required" });
     if (
-      ["admin/quote", "admin/notification-retry"].includes(route) &&
+      ["admin/quote", "admin/notification-retry", "admin/proposal"].includes(
+        route,
+      ) &&
       !u.canQuotes
     )
       return json(res, 403, { error: "Quote manager access required" });
@@ -579,6 +669,9 @@ export default async function handler(req, res) {
     }
     if (route === "admin" && req.method === "GET") {
       return json(res, 200, {
+        notificationSettings: u.owner
+          ? await notificationSettings(sql())
+          : null,
         items: u.canProducts
           ? await sql()`SELECT * FROM marcada.items ORDER BY product_id,name`
           : [],
@@ -599,7 +692,7 @@ export default async function handler(req, res) {
           ? await sql()`SELECT o.*,COALESCE((SELECT json_agg(g.identity) FROM marcada.offer_grants g WHERE g.offer_id=o.id),'[]') AS recipients FROM marcada.offers o ORDER BY o.created_at DESC`
           : [],
         quotes: u.canQuotes
-          ? await sql()`SELECT q.*,p.name,i.name AS item_name,n.status AS notification_status FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id LEFT JOIN marcada.referral_notifications n ON n.quote_id=q.id ORDER BY q.created_at DESC LIMIT 500`
+          ? await sql()`SELECT q.*,p.name,i.name AS item_name,(SELECT to_jsonb(qp)-'created_by' FROM marcada.quote_proposals qp WHERE qp.quote_id=q.id AND qp.version=q.proposal_version) AS proposal,n.status AS notification_status FROM marcada.quotes q JOIN marcada.products p ON p.id=q.product_id LEFT JOIN marcada.items i ON i.id=q.item_id LEFT JOIN marcada.referral_notifications n ON n.quote_id=q.id ORDER BY q.created_at DESC LIMIT 500`
           : [],
       });
     }
@@ -658,13 +751,50 @@ export default async function handler(req, res) {
       if (body.remove)
         await sql()`DELETE FROM marcada.offer_grants WHERE offer_id=${body.id} AND identity=${identity}`;
       else
-        await sql()`INSERT INTO marcada.offer_grants(offer_id,identity) VALUES(${body.id},${identity}) ON CONFLICT DO NOTHING`;
+        await sql()`WITH granted AS (INSERT INTO marcada.offer_grants(offer_id,identity) VALUES(${body.id},${identity}) ON CONFLICT DO NOTHING RETURNING offer_id) INSERT INTO marcada.account_notifications(id,recipient,type,aggregate_id,event_key) SELECT ${randomUUID()},${identity},'private_offer',${body.id},${"grant/" + randomUUID()} FROM granted`;
       await audit(
         u.identity,
         body.remove ? "revoke_offer" : "grant_offer",
         body.id,
       );
       return json(res, 200, { ok: true });
+    }
+    if (route === "admin/notifications" && req.method === "POST") {
+      const recipient = String(body.recipient || "")
+        .trim()
+        .toLowerCase();
+      if (
+        typeof body.enabled !== "boolean" ||
+        recipient.length > 254 ||
+        (recipient && !/^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$/.test(recipient)) ||
+        (body.enabled && !recipient)
+      )
+        return json(res, 400, {
+          error: "Choose an operations email before enabling notifications.",
+        });
+      await sql()`INSERT INTO marcada.notification_settings(id,recipient,enabled) VALUES('operations',${recipient},${body.enabled}) ON CONFLICT(id) DO UPDATE SET recipient=EXCLUDED.recipient,enabled=EXCLUDED.enabled,updated_at=now()`;
+      await audit(
+        u.identity,
+        "notification_settings",
+        body.enabled ? "enabled" : "disabled",
+      );
+      return json(res, 200, { ok: true });
+    }
+    if (route === "admin/proposal" && req.method === "POST") {
+      if (!uuid(body.id)) return json(res, 400, { error: "Invalid quote" });
+      const p = proposalInput(body);
+      const [issued] =
+        await sql()`WITH bumped AS (UPDATE marcada.quotes q SET proposal_version=proposal_version+1,status='quoted' WHERE q.id=${body.id} AND q.status<>'closed' AND q.accepted_proposal_version=0 AND NOT EXISTS(SELECT 1 FROM marcada.quote_proposals old WHERE old.quote_id=q.id AND old.version=q.proposal_version AND old.accepted_at IS NOT NULL) RETURNING q.id,q.proposal_version,q.quantity), issued AS (INSERT INTO marcada.quote_proposals(quote_id,version,unit_minor,quantity,tax_minor,shipping_minor,total_minor,currency,terms,expires_at,created_by) SELECT id,proposal_version,${p.unit},quantity,${p.tax},${p.shipping},${p.unit}::bigint*quantity+${p.tax}::bigint+${p.shipping}::bigint,${p.currency},${p.terms},${p.expires},${u.identity} FROM bumped RETURNING quote_id,version), notified AS (INSERT INTO marcada.account_notifications(id,recipient,type,aggregate_id,event_key) SELECT ${randomUUID()},q.identity,'quote_update',q.id::text,'proposal/'||q.id::text||'/'||i.version::text FROM issued i JOIN marcada.quotes q ON q.id=i.quote_id RETURNING id) SELECT version FROM issued`;
+      if (!issued)
+        return json(res, 409, {
+          error: "Quote is closed, accepted or unavailable.",
+        });
+      await audit(
+        u.identity,
+        "issue_quote_proposal",
+        body.id + ":" + issued.version,
+      );
+      return json(res, 200, { version: issued.version });
     }
     if (route === "admin/notification-retry" && req.method === "POST") {
       if (!uuid(body.id)) return json(res, 400, { error: "Invalid quote" });
@@ -679,7 +809,7 @@ export default async function handler(req, res) {
         !["new", "reviewing", "quoted", "closed"].includes(body.status)
       )
         return json(res, 400, { error: "Invalid quote status" });
-      await sql()`UPDATE marcada.quotes SET status=${body.status} WHERE id=${body.id}`;
+      await sql()`WITH updated AS (UPDATE marcada.quotes SET status=${body.status} WHERE id=${body.id} AND status<>${body.status} RETURNING identity) INSERT INTO marcada.account_notifications(id,recipient,type,aggregate_id,event_key) SELECT ${randomUUID()},identity,'quote_update',${body.id},${"quote/" + randomUUID()} FROM updated`;
       await audit(u.identity, "quote_status", body.id);
       return json(res, 200, { ok: true });
     }

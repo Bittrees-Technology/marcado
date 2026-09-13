@@ -40,3 +40,14 @@ ALTER TABLE marcada.roles ADD CONSTRAINT roles_role_check CHECK(role IN ('admin'
 CREATE TABLE IF NOT EXISTS marcada.vendor_integrations(identity text PRIMARY KEY,name text NOT NULL,website text NOT NULL,contact_email text NOT NULL,feed_url text NOT NULL DEFAULT '',feed_format text NOT NULL DEFAULT 'csv' CHECK(feed_format IN ('csv','json','manual')),notes text NOT NULL DEFAULT '',status text NOT NULL DEFAULT 'draft' CHECK(status IN ('draft','submitted','approved','paused')),updated_at timestamptz NOT NULL DEFAULT now());
 
 CREATE TABLE IF NOT EXISTS marcada.referral_notifications(quote_id uuid PRIMARY KEY REFERENCES marcada.quotes(id) ON DELETE CASCADE,payload jsonb NOT NULL,status text NOT NULL DEFAULT 'pending' CHECK(status IN ('pending','sending','accepted','needs_review')),attempts integer NOT NULL DEFAULT 0,first_attempt_at timestamptz,locked_until timestamptz,provider_id text,accepted_at timestamptz,created_at timestamptz NOT NULL DEFAULT now());
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS request_key uuid;
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS request_hash text;
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS offer_id uuid REFERENCES marcada.offers(id);
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS offer_snapshot jsonb;
+CREATE UNIQUE INDEX IF NOT EXISTS marcada_quote_request_key ON marcada.quotes(identity,request_key);
+CREATE TABLE IF NOT EXISTS marcada.account_notifications(id uuid PRIMARY KEY,recipient text NOT NULL,type text NOT NULL CHECK(type IN ('referral_activity','private_offer','quote_update')),aggregate_id text NOT NULL,event_key text NOT NULL UNIQUE,created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS marcada_account_notifications_recipient ON marcada.account_notifications(recipient,created_at DESC);
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS proposal_version integer NOT NULL DEFAULT 0;
+CREATE TABLE IF NOT EXISTS marcada.quote_proposals(quote_id uuid NOT NULL REFERENCES marcada.quotes(id) ON DELETE CASCADE,version integer NOT NULL,unit_minor bigint NOT NULL,quantity integer NOT NULL,tax_minor bigint NOT NULL,shipping_minor bigint NOT NULL,total_minor bigint NOT NULL,currency text NOT NULL,terms text NOT NULL,expires_at timestamptz NOT NULL,created_by text NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),accepted_at timestamptz,PRIMARY KEY(quote_id,version));
+ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS accepted_proposal_version integer NOT NULL DEFAULT 0;
+CREATE TABLE IF NOT EXISTS marcada.notification_settings(id text PRIMARY KEY CHECK(id='operations'),recipient text NOT NULL,enabled boolean NOT NULL DEFAULT false,updated_at timestamptz NOT NULL DEFAULT now());

@@ -2,7 +2,7 @@
 
 ## Operations email
 
-Set `REFERRAL_NOTIFY_EMAIL` to the approved Mercado operations mailbox in Vercel production. `MAIL_FROM` and `RESEND_API_KEY` use the existing verified sender. A blank or invalid recipient disables new notification creation. Changing the recipient affects future requests only; already queued messages retain their original recipient and content.
+Owners can configure the approved operations mailbox and enable future notifications in **Admin → Notifications**. Saved settings take precedence over the deployment fallback `REFERRAL_NOTIFY_EMAIL`. `MAIL_FROM` and `RESEND_API_KEY` use the existing verified sender. An empty fallback leaves notification creation disabled; the settings form rejects enabling an empty or invalid mailbox. Changing the recipient affects future requests only; already queued messages retain their original recipient and content.
 
 A successful purchase-quote submission with a valid member referral code atomically saves the quote and an email outbox record. Link visits and code entry alone do not send mail. The email contains the quote ID, timestamp, submitting account, referral code, referring account, product/collection, quantity, submitted requirements and an authenticated admin link. Only the configured operations recipient receives this message. Referrers and vendors do not automatically receive customer information, private offers or dealer notes. Historical quotes are not replayed.
 
@@ -20,7 +20,9 @@ The catalog API returns the offer's dealer, price, currency and expiry only to a
 
 Opening the dealer link redirects to the dealer's website. Mercado does not transmit the customer's quote form to the vendor in that redirect. Any affiliate or deal parameters already placed in the configured dealer URL are passed to the dealer. The vendor then collects its own checkout information and controls its purchase terms. Mercado does not yet confirm external sales or calculate/pay commissions.
 
-The separate Mercado purchase-quote path stores the customer's request for authorized quote staff. It does not currently bind the request to a private offer, send a formal price proposal, collect acceptance, process payment, or book delivery. Those steps remain manual. Quote statuses describe operator progress and do not execute a transaction.
+The Mercado purchase-quote path now binds an optional offer to the request, with a server-captured dealer/price/currency/expiry snapshot. Authorization, collection and item membership, active state and expiry are checked when creating the request. This snapshot does not include the dealer URL or internal notes.
+
+Authorized quote staff issue a versioned proposal from Admin → Quotes, specifying unit price, currency, tax, delivery, expiry and purchase terms. The server calculates totals in integer minor units using the requested quantity. Customers review the current proposal in their account and explicitly accept its exact version. Superseded, expired, closed or inaccessible offers are rejected. Acceptance and revision serialize on the quote row; an accepted proposal cannot be silently replaced. Payment, inventory reservation and shipment booking are not performed by acceptance.
 
 ## Wallet messaging integration direction
 
@@ -38,4 +40,15 @@ Recommended first integration: opted-in direct-message alerts, a dedicated persi
 
 Before wallet activation, choose the service host and organization/key custodian, permitted notification categories and recipients, opt-out/retention owner, and whether negotiations include dealers. Linked accounts currently remain separate access/referral principals; a canonical-member policy is needed before cross-alias rewards. Referral attribution is not a completed sale or earned commission. XMTP delivery does not establish operating-system push delivery.
 
-Chirpy messaging must never grant an offer, accept final terms or mark payment complete. Quote-submit idempotency, versioned offer acceptance, and a recipient-authorized notification endpoint are follow-on Mercado work. These are distinct from the implemented operations-email outbox and are not yet shipped.
+Chirpy messaging must never grant an offer, accept final terms or mark payment complete. Mercado now implements identity-scoped quote request idempotency, versioned quote acceptance, and recipient-authorized account notifications. External XMTP dispatch remains follow-on work.
+
+
+## Implemented workflow changes
+
+- Quote retries use an identity-scoped request key and normalized request hash. Concurrent duplicates create one quote and one associated referral event/outbox record; reusing a key with different details returns a conflict. The browser preserves the key during a failed attempt and changes it when the submitted content changes. Refreshing the browser starts a new attempt.
+- Verified linked email/wallet aliases cannot refer themselves when a new quote is submitted. Linking still does not merge authorization principals or historical records.
+- `/account/notifications` lists updates for the signed-in identity. `/account/notifications/<id>` and `/api/notifications?id=<id>` authorize each request. Forwarding a link grants no access. Referral activity is generic and reveals no buyer, quantity or requirements. Private-offer notifications disappear from results when access is revoked, the offer expires or it is deactivated. Quote updates link back to the signed-in customer's account.
+- Grant notifications are inserted only on a new grant transition. Quote status changes and issued proposals create customer updates atomically with the change. These are in-app records, not proof of external message delivery.
+- Chirpy PR [54](https://github.com/Bittrees-Technology/chirpy/pull/54) deployed safe HTTPS message links at main `af16029783c7397e85d612a66138c95f2746acb4`. No automatic link preview or destination request occurs before clicking. This completes the link-rendering prerequisite, not the sender/worker integration.
+
+External wallet delivery still requires a dedicated sender and persistent worker host/key custodian, explicit opt-in and verified inbox enrollment, opt-out and retention ownership, subscription-version checks and send reconciliation. No arbitrary client-supplied recipient or message should enter the future dispatcher. In-app records remain available while this is configured.

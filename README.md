@@ -11,7 +11,9 @@ Marketplace infrastructure for product discovery, dealer offers, referral attrib
 - Member referral codes and shareable links, attributed to customer quote requests.
 - Optional operations email for referred quotes, with tracked delivery attempts and restricted retries.
 - Email verification and Sign-In with Ethereum, with verified email–wallet linking.
-- Role-based administration and optional Bittrees governance role resolution.
+- Role-based administration with searchable lists, mobile page navigation and optional Bittrees governance role resolution.
+- Multiple injected wallet discovery, account-change handling and email fallback.
+- Private-offer quote requests, versioned proposals, customer acceptance and private account notifications.
 - Consent-controlled analytics and foundations for future payments and delivery.
 
 Direct checkout and payouts are not enabled. Supplier reference prices and availability do not represent marketplace inventory or guaranteed fulfillment.
@@ -27,7 +29,7 @@ Direct checkout and payouts are not enabled. Supplier reference prices and avail
 | Catalog manager | Products, images and CSV imports |
 | Offer manager | Dealer offers and private recipients |
 | Dealer manager | Products and offers |
-| Support | Customer quotes |
+| Support | Customer quotes, proposals and notification retries |
 | Vendor manager | All vendor integration submissions and review statuses |
 | Vendor | Own integration submission only |
 
@@ -39,7 +41,7 @@ In **Manage store → Products, pricing & photos → Import products from CSV**,
 
 Import saves only ready rows and reports each result. New rows default to hidden. Existing IDs are protected unless updates are explicitly enabled; updates replace all product fields. Unfinished rows remain in the current page only, so keep the source CSV until the import is complete. Product management permissions apply to every imported row.
 
-See [notifications and private deals](NOTIFICATIONS.md) for recipient configuration, delivery behavior and the proposed Chirpy wallet integration.
+See [admin and wallet UX validation](ADMIN-UX.md) and [notifications and private deals](NOTIFICATIONS.md) for recipient configuration, delivery behavior and the proposed Chirpy wallet integration.
 
 ## Stack
 
