@@ -15,7 +15,7 @@ import {
   textField,
 } from "../lib/security.mjs";
 const sql = () => neon(process.env.DATABASE_URL);
-const origin = () => process.env.APP_ORIGIN || "https://marcado.bittrees.org";
+const origin = () => process.env.APP_ORIGIN || "https://mercado.bittrees.org";
 const cookie = (req, name) =>
   String(req.headers.cookie || "")
     .split(";")
@@ -38,7 +38,7 @@ async function limited(req, bucket, max) {
     throw Object.assign(Error("Please try again shortly."), { status: 429 });
 }
 async function user(req) {
-  const key = cookie(req, "__Host-marcado");
+  const key = cookie(req, "__Host-mercado");
   if (!key) return null;
   const [s] =
     await sql()`SELECT s.identity,u.referral FROM marcada.sessions s JOIN marcada.users u ON u.identity=s.identity WHERE s.hash=${hash(key)} AND s.expires_at>now()`;
@@ -84,7 +84,7 @@ async function session(res, identity) {
   await sql()`INSERT INTO marcada.users(identity,referral) VALUES(${identity},${token().slice(0, 16)}) ON CONFLICT(identity) DO NOTHING`;
   const value = token();
   await sql()`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(value)},${identity},now()+interval '7 days')`;
-  setCookie(res, "__Host-marcado", value, 604800);
+  setCookie(res, "__Host-mercado", value, 604800);
 }
 async function audit(actor, action, detail) {
   await sql()`INSERT INTO marcada.audit(id,actor,action,detail) VALUES(${randomUUID()},${actor},${action},${detail})`;
@@ -103,8 +103,8 @@ async function sendCode(email, code) {
     body: JSON.stringify({
       from: process.env.MAIL_FROM,
       to: [email],
-      subject: "Your Marcado sign-in code",
-      text: `Your Marcado verification code is ${code}. It expires in 10 minutes and works once. If you did not request it, ignore this email.`,
+      subject: "Your Mercado sign-in code",
+      text: `Your Mercado verification code is ${code}. It expires in 10 minutes and works once. If you did not request it, ignore this email.`,
     }),
   });
   if (!r.ok)
@@ -244,7 +244,7 @@ export default async function handler(req, res) {
       await limited(req, "nonce", 20);
       const nonce = token();
       await sql()`INSERT INTO marcada.auth_tokens(hash,identity,kind,expires_at) VALUES(${hash(nonce)},'', 'siwe',now()+interval '5 minutes')`;
-      setCookie(res, "__Host-marcado-nonce", nonce, 300);
+      setCookie(res, "__Host-mercado-nonce", nonce, 300);
       return json(res, 200, {
         nonce,
         domain: new URL(origin()).host,
@@ -253,7 +253,7 @@ export default async function handler(req, res) {
     }
     if (route === "auth/wallet" && req.method === "POST") {
       await limited(req, "wallet", 20);
-      const nonce = cookie(req, "__Host-marcado-nonce");
+      const nonce = cookie(req, "__Host-mercado-nonce");
       const message = String(body.message || "");
       if (message.length > 3000 || !nonce)
         return json(res, 401, { error: "Request a new wallet challenge" });
@@ -296,8 +296,8 @@ export default async function handler(req, res) {
       return json(res, 200, { ok: true });
     }
     if (route === "auth/logout" && req.method === "POST") {
-      await sql()`DELETE FROM marcada.sessions WHERE hash=${hash(cookie(req, "__Host-marcado"))}`;
-      setCookie(res, "__Host-marcado", "", 0);
+      await sql()`DELETE FROM marcada.sessions WHERE hash=${hash(cookie(req, "__Host-mercado"))}`;
+      setCookie(res, "__Host-mercado", "", 0);
       return json(res, 200, { ok: true });
     }
     const u = await user(req);
@@ -361,19 +361,19 @@ export default async function handler(req, res) {
       await limited(req, "link-wallet", 10);
       const nonce = token();
       await sql()`INSERT INTO marcada.auth_tokens(hash,identity,kind,expires_at) VALUES(${hash(nonce)},${u.identity},'link',now()+interval '5 minutes')`;
-      setCookie(res, "__Host-marcado-link", nonce, 300);
+      setCookie(res, "__Host-mercado-link", nonce, 300);
       return json(res, 200, {
         nonce,
         domain: new URL(origin()).host,
         uri: origin(),
-        statement: `Link this Ethereum wallet to Marcado email account ${u.identity}.`,
+        statement: `Link this Ethereum wallet to Mercado email account ${u.identity}.`,
       });
     }
     if (route === "auth/link-wallet" && req.method === "POST") {
       if (!u.identity.includes("@"))
         return json(res, 400, { error: "Use your verified email account" });
       await limited(req, "link-verify", 15);
-      const nonce = cookie(req, "__Host-marcado-link"),
+      const nonce = cookie(req, "__Host-mercado-link"),
         message = String(body.message || "");
       if (!nonce || message.length > 3000)
         return json(res, 401, { error: "Request a new linking challenge" });
@@ -384,7 +384,7 @@ export default async function handler(req, res) {
         parsed.uri !== origin() ||
         parsed.chainId !== 1 ||
         parsed.statement !==
-          `Link this Ethereum wallet to Marcado email account ${u.identity}.` ||
+          `Link this Ethereum wallet to Mercado email account ${u.identity}.` ||
         !parsed.issuedAt ||
         Math.abs(Date.now() - parsed.issuedAt.getTime()) > 300000
       )

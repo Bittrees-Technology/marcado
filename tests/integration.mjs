@@ -60,7 +60,7 @@ async function request(path, body, who, custom = {}) {
 try {
   for (const i of identities) {
     const t = token();
-    cookies[i] = "__Host-marcado=" + t;
+    cookies[i] = "__Host-mercado=" + t;
     await sql`INSERT INTO marcada.users(identity,referral) VALUES(${i},${token().slice(0, 16)})`;
     await sql`INSERT INTO marcada.sessions(hash,identity,expires_at) VALUES(${hash(t)},${i},now()+interval '1 hour')`;
   }

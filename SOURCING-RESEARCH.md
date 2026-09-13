@@ -1,10 +1,10 @@
-# Marcado hardware sourcing review
+# Mercado hardware sourcing review
 
-**Research date: 13 September 2026. Scope: the six Marcado equipment verticals, with US and EU sourcing preferred.**
+**Research date: 13 September 2026. Scope: the six Mercado equipment verticals, with US and EU sourcing preferred.**
 
 ## Recommendation
 
-Expand the catalog from 20 to 128 supplier listings, adding 108 products. The expansion contains 63 US-market listings, 43 EU-market listings and two complete AI systems whose dispatch market remains unverified. All 108 new listings had a positive public price, an original supplier product photograph and an affirmative stock indication at review. These are reference listings for quote requests, not Marcado warehouse inventory or confirmed reseller agreements.
+Expand the catalog from 20 to 128 supplier listings, adding 108 products. The expansion contains 63 US-market listings, 43 EU-market listings and two complete AI systems whose dispatch market remains unverified. All 108 new listings had a positive public price, an original supplier product photograph and an affirmative stock indication at review. These are reference listings for quote requests, not Mercado warehouse inventory or confirmed reseller agreements.
 
 A catalog near the lower end of the requested 100–200 range is appropriate. Extending the selection to 200 at this stage would disproportionately add networking variants, minor accessories or uncertain stock. The selected range covers home mining, maintenance, local AI development, self-hosted services, network infrastructure and supporting electronics. It does not yet constitute a comprehensive enterprise server or GPU distribution business.
 
@@ -22,7 +22,7 @@ The structured decision register contains 304 candidate records. Its coverage in
 
 ## Commercial interpretation
 
-The strongest immediate fit is a quote-led storefront. A visitor can identify a product, inspect its reference price and supplier market, then request a quote for a specific quantity and destination. Marcado can subsequently confirm the actual purchasing route, lead time and negotiated terms. This supports the existing referral workflow while leaving room for direct sales later.
+The strongest immediate fit is a quote-led storefront. A visitor can identify a product, inspect its reference price and supplier market, then request a quote for a specific quantity and destination. Mercado can subsequently confirm the actual purchasing route, lead time and negotiated terms. This supports the existing referral workflow while leaving room for direct sales later.
 
 A listed supplier price does not establish a dealer margin. Retail prices are useful for discovery and budget discussions, but resale economics depend on negotiated discounts, inbound transport, handling, outbound delivery, returns and payment costs. No commission, exclusive territory, dropshipping service or wholesale account was inferred from a public product page. Private referral terms can be added later through the existing administrative workflow without replacing the underlying product record.
 
@@ -38,7 +38,7 @@ The new Bitaxe selection adds Naja Duo, Gamma Hex, Touch, Gamma Duo, GT Gamma Tu
 
 Buyers should be able to distinguish a single-board miner from a complete package. Some supplier products use a base price that changes with accessories or configuration. Such records carry a “From-price” note rather than implying that every photographed accessory is included. Photos show the supplier configuration, but the quote must identify the exact power supply, stand and cooling components included.
 
-Mining performance should not be marketed as a promise of income. The public catalog deliberately avoids supplier lottery language, electricity-cost assumptions and projected returns. Hashrate, tuning and cooling claims need to be tied to a particular revision and configuration if Marcado later adds structured performance filters. A generic “Bitaxe compatible” label is not sufficient to establish electrical or mechanical compatibility.
+Mining performance should not be marketed as a promise of income. The public catalog deliberately avoids supplier lottery language, electricity-cost assumptions and projected returns. Hashrate, tuning and cooling claims need to be tied to a particular revision and configuration if Mercado later adds structured performance filters. A generic “Bitaxe compatible” label is not sufficient to establish electrical or mechanical compatibility.
 
 ### Other ASIC and crypto mining equipment
 
@@ -72,7 +72,7 @@ The server/networking additions include a Start9 home server, Raspberry Pi 5 boa
 
 Port speed, uplink capacity, PoE budget and management requirements are substantive reasons to retain multiple switches. The shortlist excludes a product explicitly labeled “Vintage,” an unavailable Pro 24 configuration and an unavailable UNAS 2 variant. It also avoids adding both US and EU versions of every new switch merely to multiply listings. When dual-region offers become commercially useful, multiple dealer offers beneath one model will be clearer than an indefinitely growing list of regional duplicates.
 
-Ubiquiti EU prices are explicitly marked as excluding VAT. They should not be compared directly against tax-inclusive European listings or USD prices without resolving the final destination treatment. Marcado's currency filter and currency-specific price sorting support that distinction. No converted “global price” was invented during this research.
+Ubiquiti EU prices are explicitly marked as excluding VAT. They should not be compared directly against tax-inclusive European listings or USD prices without resolving the final destination treatment. Mercado's currency filter and currency-specific price sorting support that distinction. No converted “global price” was invented during this research.
 
 The electronic-components additions focus on storage adapters, cases, cooling, power and connectivity for Raspberry Pi systems. They exclude unrelated craft products, merchandise, free print files and obsolete compute-module variants. These products are useful as a supporting assortment, but many are not complete computers and must be described accordingly. [Adafruit Raspberry Pi catalog](https://www.adafruit.com/category/105).
 

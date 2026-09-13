@@ -127,15 +127,15 @@ function App() {
     if (initial.searchParams.has("ref"))
       return initial.searchParams.get("ref") || "";
     try {
-      return sessionStorage.getItem("marcado-referral") || "";
+      return sessionStorage.getItem("mercado-referral") || "";
     } catch {
       return "";
     }
   });
   useEffect(() => {
     try {
-      if (referral) sessionStorage.setItem("marcado-referral", referral);
-      else sessionStorage.removeItem("marcado-referral");
+      if (referral) sessionStorage.setItem("mercado-referral", referral);
+      else sessionStorage.removeItem("mercado-referral");
     } catch {
       /* Storage may be disabled. The current page still works. */
     }
@@ -228,7 +228,7 @@ function App() {
         setNotice("Sign in to create your referral links.");
         return;
       }
-      const url = new URL("https://marcado.bittrees.org");
+      const url = new URL("https://mercado.bittrees.org");
       url.searchParams.set("ref", user.referral);
       if (product)
         url.pathname = "/equipment/" + product + (item ? "/" + item : "");
@@ -253,7 +253,7 @@ function App() {
         uri: n.uri,
         version: "1",
         nonce: n.nonce,
-        statement: "Sign in to Marcado by Bittrees.",
+        statement: "Sign in to Mercado by Bittrees.",
         issuedAt: new Date(),
       });
       const signature = await window.ethereum.request({
@@ -327,12 +327,12 @@ function App() {
     const domain = products.find((p) => p.id === parts[2]);
     const item = items.find((p) => p.id === parts[3]);
     if (domain) {
-      document.title = (item?.name || domain.name) + " | Marcado";
+      document.title = (item?.name || domain.name) + " | Mercado";
       document
         .querySelector('link[rel="canonical"]')
         ?.setAttribute(
           "href",
-          "https://marcado.bittrees.org" + location.pathname,
+          "https://mercado.bittrees.org" + location.pathname,
         );
     }
   }, [items, products]);
@@ -353,8 +353,8 @@ function App() {
         </a>
       </div>
       <header>
-        <a className="brand" href="/" aria-label="Marcado home">
-          <span className="brandmark">m</span>marcado
+        <a className="brand" href="/" aria-label="Mercado home">
+          <span className="brandmark">m</span>mercado
         </a>
         <nav>
           <a href={isEquipment ? "/#catalog" : "#catalog"}>Equipment</a>
@@ -626,7 +626,7 @@ function App() {
       </main>
       <footer>
         <a className="brand" href="/">
-          marcado
+          mercado
         </a>
         <span>Mining, compute and networking equipment.</span>
         <div>
@@ -650,7 +650,7 @@ function App() {
             className={"modal " + (modal === "admin" ? "wide" : "")}
             role="dialog"
             aria-modal="true"
-            aria-label="Marcado account and equipment"
+            aria-label="Mercado account and equipment"
             onKeyDown={(e) => {
               if (e.key === "Escape") close();
             }}
@@ -676,7 +676,7 @@ function App() {
             {modal === "login" && (
               <>
                 <div className="eyebrow">WELCOME TO MARCADA</div>
-                <h2>Sign in to Marcado.</h2>
+                <h2>Sign in to Mercado.</h2>
                 <p>
                   Sign in to request quotes, create referral links and access
                   deals shared with you.
@@ -857,7 +857,7 @@ function App() {
                 <div className="eyebrow">REFERRALS</div>
                 <h2>Share a product or collection.</h2>
                 <p>
-                  Share Marcado or a specific collection. Quote requests
+                  Share Mercado or a specific collection. Quote requests
                   submitted from your link are attributed to your referral code.
                 </p>
                 {user ? (
@@ -890,7 +890,7 @@ function App() {
                       <input
                         readOnly
                         value={
-                          "https://marcado.bittrees.org/?ref=" + user.referral
+                          "https://mercado.bittrees.org/?ref=" + user.referral
                         }
                       />
                     </label>
@@ -1108,7 +1108,7 @@ function App() {
                 <h2>Privacy & store terms</h2>
                 <h3>Accounts and requests</h3>
                 <p>
-                  Marcado stores your email or wallet identity, account
+                  Mercado stores your email or wallet identity, account
                   sessions, referral code and quote requests to provide the
                   service. Dealers’ private terms are restricted to authorized
                   accounts. Contact Bittrees through bittrees.org for access or
@@ -1126,7 +1126,7 @@ function App() {
                 <p>
                   Quotes are requests, not accepted orders. Dealer checkout
                   links take you to the named dealer, whose price, stock,
-                  delivery, warranty and returns terms apply. Marcado may
+                  delivery, warranty and returns terms apply. Mercado may
                   receive commission from dealer links. Confirm the final
                   product and terms with the dealer before payment.
                 </p>
@@ -1571,10 +1571,10 @@ function Offer({ offer: o }) {
 // Keep host-bound authentication and consent on the canonical storefront.
 if (
   location.hostname.endsWith(".vercel.app") ||
-  location.hostname === "marcada.bittrees.org"
+  ["marcada.bittrees.org", "marcado.bittrees.org"].includes(location.hostname)
 ) {
   location.replace(
-    "https://marcado.bittrees.org" +
+    "https://mercado.bittrees.org" +
       location.pathname +
       location.search +
       location.hash,
