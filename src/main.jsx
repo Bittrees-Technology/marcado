@@ -1288,4 +1288,10 @@ function Offer({ offer: o }) {
     </div>
   );
 }
-createRoot(document.getElementById("root")).render(<App />);
+// Keep host-bound authentication and consent on the canonical storefront.
+if (location.hostname.endsWith(".vercel.app")) {
+  location.replace("https://marcada.bittrees.org" + location.pathname + location.search + location.hash);
+} else {
+  createRoot(document.getElementById("root")).render(<App />);
+}
+
