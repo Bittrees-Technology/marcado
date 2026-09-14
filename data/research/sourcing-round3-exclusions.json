@@ -1,0 +1,590 @@
+[
+  {
+    "vendor": "pihut",
+    "id": "15399569686913",
+    "name": "R PRO-1 PoE mmWave Multisensor",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "15264290341249",
+    "name": "HiFiBerry Steel Case for XLR and Raspberry Pi 5",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "15254419505537",
+    "name": "The Official Raspberry Pi Handbook 2026",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "15202856960385",
+    "name": "Key Dampener Kit for Raspberry Pi 500+",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "15041647477121",
+    "name": "Kodi Edition Raspberry Pi 5 FLIRC Case",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "14996948353409",
+    "name": "HiFiBerry Universal Steel Case for Raspberry Pi 4",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "14969431163265",
+    "name": "RetroFlag 64Pi Case for Raspberry Pi 5",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pihut",
+    "id": "8020536754371",
+    "name": "HiFiBerry Universal Steel Case for Raspberry Pi 5",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pimoroni",
+    "id": "7083115216979",
+    "name": "Kitronik Air Quality Control HAT for Raspberry Pi",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pimoroni",
+    "id": "6812440297555",
+    "name": "Raspberry Pi Laser Engraved Drinks Bottle",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "pimoroni",
+    "id": "6658728591443",
+    "name": "PiStation Case for Raspberry Pi 4",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545474830614",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to HM7M3",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545303912726",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to R3T9K",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545303716118",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to NMCFM",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545303421206",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to 1VGG0",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545303191830",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to 0R3T9K",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545302896918",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to 0NMCFM",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545302700310",
+    "name": "Kioxia CD8P-V KCD8XPUG12T8 12.8TB 3 DWPD PCIe Gen 5.0 x4 16GB/s 3D TLC U.3 NVMe 2.5in Mixed Use SSD in Dell G14 Tray - Comparable to 01VGG0",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10597141184790",
+    "name": "Dell G14 118000659 15.36TB 1 DWPD SAS 12Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10597106483478",
+    "name": "Dell G13 118000659 15.36TB 1 DWPD SAS 12Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10597064114454",
+    "name": "Dell G14 118000659 15.36TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10596883235094",
+    "name": "Dell G13 118000659 15.36TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10726362611990",
+    "name": "HP Generation 11 MZXLR6T4HALA-000H3 P36975-004 6.4TB 3 DWPD PCIe Gen 4.0 x8 16GB/s 3D TLC U.3 NVMe 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10580758266134",
+    "name": "Dell G14 118000590-04 7.68TB 1 DWPD PCIe Gen 3.0 x4 4GB/s MLC U.2 NVMe Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10580754694422",
+    "name": "Dell G14 118000590-04 7.68TB 1 DWPD PCIe Gen 3.0 x4 4GB/s MLC U.2 NVMe 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10628905140502",
+    "name": "Dell G14 09Y3HD 3.84TB 1.3 DWPD SATA 6Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10628904878358",
+    "name": "Dell G13 09Y3HD 3.84TB 1.3 DWPD SATA 6Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10628904616214",
+    "name": "Dell G14 09Y3HD 3.84TB 1.3 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10628904386838",
+    "name": "Dell G13 09Y3HD 3.84TB 1.3 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10627029795094",
+    "name": "HP Generation 11 MB018000GYDKR P44757-005 18TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10627029074198",
+    "name": "HP Generation 8 MB018000GYDKR P44757-005 18TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10624396820758",
+    "name": "HP Generation 11 MB016000JWZHE P15760-004 16TB 7.2K RPM SAS 12Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10624396722454",
+    "name": "HP Generation 8 MB016000JWZHE P15760-004 16TB 7.2K RPM SAS 12Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10669623836950",
+    "name": "HP Generation 11 MB018000GXLAV P37677-001 18TB 7.2K RPM SATA 6Gb/s 512e 512MB Power Disable 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10669611483414",
+    "name": "HP Generation 8 MB018000GXLAV P37677-001 18TB 7.2K RPM SATA 6Gb/s 512e 512MB Power Disable 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10627029893398",
+    "name": "HP Generation 11 MB018000GYDKR P44757-005 18TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10627029172502",
+    "name": "HP Generation 8 MB018000GYDKR P44757-005 18TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625831600406",
+    "name": "HP Generation 11 P41533-001 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625831502102",
+    "name": "HP Generation 11 P41107-001 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625831371030",
+    "name": "HP Generation 11 P40508-X21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625831272726",
+    "name": "HP Generation 11 P40508-S21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625831141654",
+    "name": "HP Generation 11 P40508-K21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625830879510",
+    "name": "HP Generation 11 P40508-H21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625830486294",
+    "name": "HP Generation 11 P40508-B21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625810071830",
+    "name": "HP Generation 8 P20835-001 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625809973526",
+    "name": "HP Generation 8 P19921-003 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625809875222",
+    "name": "HP Generation 8 P19907-X21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10625809776918",
+    "name": "HP Generation 8 P19907-S21 3.84TB 1 DWPD SAS 12Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10624396886294",
+    "name": "HP Generation 11 MB016000JWZHE P15760-004 16TB 7.2K RPM SAS 12Gb/s 512e 256MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10624396787990",
+    "name": "HP Generation 8 MB016000JWZHE P15760-004 16TB 7.2K RPM SAS 12Gb/s 512e 256MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10714572882198",
+    "name": "HP Generation 8 MB012000GYCJL P44757-001 12TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10714569834774",
+    "name": "HP Generation 11 MB012000GYCJL P44757-001 12TB 7.2K RPM SATA 6Gb/s 512e 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10507427741974",
+    "name": "Dell G14 118000275 8TB 7.2K RPM SAS 12Gb/s 4Kn 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10507427610902",
+    "name": "Dell G13 118000275 8TB 7.2K RPM SAS 12Gb/s 4Kn 256MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10523054670102",
+    "name": "Dell G14 0X31G3 960GB 3 DWPD SATA 6Gb/s 3D TLC Mixed Use Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10523054571798",
+    "name": "Dell G13 0X31G3 960GB 3 DWPD SATA 6Gb/s 3D TLC Mixed-Used Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10523054473494",
+    "name": "Dell G14 0X31G3 960GB 3 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished Mixed Use SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10523054375190",
+    "name": "Dell G13 0X31G3 960GB 3 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished Mixed Use SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10683511800086",
+    "name": "Dell G14 0KP22D 6TB 7.2K RPM SATA 6Gb/s 512e 128MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10683498135830",
+    "name": "Dell G13 0KP22D 6TB 7.2K RPM SATA 6Gb/s 512e 128MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10728171897110",
+    "name": "Dell G14 06WR5M 960GB 1 DWPD SATA 6Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10728171536662",
+    "name": "Dell G13 06WR5M 960GB 1 DWPD SATA 6Gb/s 3D TLC Hybrid 3.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10728171438358",
+    "name": "Dell G14 06WR5M 960GB 1 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10728171340054",
+    "name": "Dell G13 06WR5M 960GB 1 DWPD SATA 6Gb/s 3D TLC 2.5in Refurbished SSD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10715633811734",
+    "name": "Dell G14 0908XX 6TB 7.2K RPM SATA 6Gb/s 512e 128MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10726191923478",
+    "name": "Dell G14 0TX8WW 4TB 7.2K RPM SAS 12Gb/s 512n 128MB 3.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545374167318",
+    "name": "Dell G14 022GCD 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545374036246",
+    "name": "Dell G14 400-ACCL 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373937942",
+    "name": "Dell G14 400-AHDI 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373839638",
+    "name": "Dell G14 0YXG4K 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373741334",
+    "name": "Dell G14 400-AHKK 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373643030",
+    "name": "Dell G14 400-AAEH 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373511958",
+    "name": "Dell G14 400-AEGH 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373413654",
+    "name": "Dell G14 400-AAIG 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373315350",
+    "name": "Dell G14 400-AFBG 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373217046",
+    "name": "Dell G14 400-AAFV 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545373085974",
+    "name": "Dell G14 0H9N7X 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372987670",
+    "name": "Dell G14 0W5M2R 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372889366",
+    "name": "Dell G14 400-26630 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372791062",
+    "name": "Dell G14 06KGCC 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372692758",
+    "name": "Dell G14 400-AEQT 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372594454",
+    "name": "Dell G14 400-AGDB 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10545372496150",
+    "name": "Dell G14 400-AFZS 4TB 7.2K RPM SAS 12Gb/s 4Kn 128MB 3.5in HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "spd",
+    "id": "10726217941270",
+    "name": "Dell G14 0VJ7CD 1.8TB 10K RPM SAS 12Gb/s 512e 128MB 2.5in Refurbished HDD",
+    "decision": "Consolidated OEM-compatible aliases and tray alternatives; retain underlying drive model offerings"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "9045514944742",
+    "name": "Bitcoin Merch® - Bitaxe Gamma Bitcoin Miner \"Black Ice\" Edition",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "9032193540326",
+    "name": "Bitcoin Merch® - The Bitaxe “Black Edition” BitHalo Kit",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "9032192983270",
+    "name": "Bitcoin Merch® - Bitaxe Gamma Bitcoin Miner “Ice Angel” Edition",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "1920579305562",
+    "name": "Bitcoin Merch® - Antminer Z11 135Ksol/s Zcash ZEC Miner",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "780980453466",
+    "name": "Bitcoin Merch® - Antminer Z9 Mini 10Ksol/s ZCash ZEC ASIC Miner",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "id": "9457711808742",
+    "name": "Bitcoin Merch® - Colored Case Gold Nugget",
+    "decision": "Cosmetic variant or older low-priority mining platform"
+  },
+  {
+    "vendor": "solomining-de",
+    "id": "15097605652812",
+    "name": "Bitaxe Hoodie - Bio-Baumwoll Bitcoin Hoodie",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "65649",
+    "name": "Bitkey Mount",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "55136",
+    "name": "Bitcoin Trading Card Lanyard Case",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "53791",
+    "name": "AR15 Multi Magazine Mount – Vertical",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "53778",
+    "name": "AR15 Single Magazine Mount",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "47281",
+    "name": "Android Phone Stand",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "47275",
+    "name": "Bitcoin BIC Lighter Case",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  },
+  {
+    "vendor": "cryptocloaks",
+    "id": "46865",
+    "name": "BitBox Mount",
+    "decision": "Outside marketplace scope or unnecessary cosmetic / peripheral variation"
+  }
+]

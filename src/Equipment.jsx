@@ -58,13 +58,13 @@ function Source({ item }) {
       )}
       <span>Checked {String(item.price_checked).slice(0, 10)}</span>
       <span>
-        {item.supplier_region === "US"
-          ? "US supplier market"
-          : item.supplier_region === "EU"
-            ? "EU supplier market"
-            : item.supplier_region === "CA"
-              ? "Canada supplier"
-              : "Supplier market unverified"}
+        {{
+          US: "US supplier market",
+          EU: "EU supplier market",
+          UK: "UK supplier market",
+          CA: "Canada supplier",
+          CN: "China supplier",
+        }[item.supplier_region] || "Supplier market unverified"}
       </span>
       {item.supplier_status === "OutOfStock" && (
         <span>Source reported out of stock</span>
@@ -191,6 +191,7 @@ export function EquipmentPage({
               <option>All</option>
               <option value="US">United States</option>
               <option value="EU">European Union</option>
+              <option value="UK">United Kingdom</option>
               <option value="CA">Canada</option>
               <option value="CN">China</option>
               <option value="Unverified">Unverified</option>
@@ -694,6 +695,7 @@ export function ProductManager({
               <option value="Unverified">Unverified</option>
               <option value="US">United States</option>
               <option value="EU">European Union</option>
+              <option value="UK">United Kingdom</option>
               <option value="CA">Canada</option>
             </select>
           </label>

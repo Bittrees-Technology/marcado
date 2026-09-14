@@ -1,0 +1,58 @@
+[
+  {
+    "vendor": "pimoroni",
+    "source_id": "6783385043027",
+    "name": "Argon Type-C Power Supply 18 Watts 5 Volts",
+    "source_url": "https://shop.pimoroni.com/products/argon-type-c-power-supply-18-watts-5-volts",
+    "reason": "Retail price could not be reconciled with net catalog price"
+  },
+  {
+    "vendor": "spd",
+    "source_id": "10726212632854",
+    "name": "Dell/Seagate v8 ST1200MM0088 1.2TB 10K RPM SAS 12Gb/s 512n 128MB 2.5in Refurbished HDD",
+    "source_url": "https://serverpartdeals.com/products/dell-seagate-v8-st1200mm0088-1-2tb-10k-rpm-sas-12gb-s-512n-128mb-2-5-refurbished-hdd",
+    "reason": "Equivalent same-condition ST1200MM0088 offering from the same supplier"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "source_id": "9815021519078",
+    "name": "Bitcoin Merch® - Hammer Miner 440MH/s DC08 SCRYPT DOGE / LTC",
+    "source_url": "https://bitcoinmerch.com/products/bitcoin-merch®-hammer-miner-480mh-s-dc04-scrypt-doge-ltc",
+    "reason": "440 MH/s title conflicts with 480 MH/s description"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "source_id": "9814919610598",
+    "name": "Bitcoin Merch® - Hammer Miner Glod P3 12TH/s Lottery Miner w/ Power Supply",
+    "source_url": "https://bitcoinmerch.com/products/bitcoin-merch®-hammer-miner-glod-p3-12th-s-lottery-miner-w-power-supply",
+    "reason": "Glod P3 title conflicts with Thor P3 description"
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "source_id": "9642844553446",
+    "name": "Bitcoin Merch® - BitForge Nano 2.6TH/s Ghost Edition w Power Supply",
+    "source_url": "https://bitcoinmerch.com/products/bitcoin-merch®-bitforge-nano-2-6th-s-ghost-edition-w-power-supply",
+    "reason": "Ghost cosmetic edition duplicates the underlying BitForge Nano offering"
+  },
+  {
+    "vendor": "miningwholesale",
+    "source_id": "29116",
+    "name": "Bitmain Antminer S21++",
+    "source_url": "https://miningwholesale.eu/product/bitmain-antminer-s21-plus-plus/",
+    "reason": "S21++ title conflicts with S21+ description"
+  },
+  {
+    "vendor": "bss",
+    "source_id": "7347",
+    "name": "NerdMiner T Display S3",
+    "source_url": "https://www.bitcoinstuffstore.com/product/nerdminer-t-display-s3/",
+    "reason": "Educational CPU lottery device deferred from ASIC catalog"
+  },
+  {
+    "vendor": "miningwholesale",
+    "source_id": "14558",
+    "name": "Delta 2400W 94% High Efficiency Power Supply DPS-2400AB",
+    "source_url": "https://miningwholesale.eu/product/delta-2400w-94-high-efficiency-power-supply-dps-2400ab/",
+    "reason": "Supplier image could not be validated"
+  }
+]

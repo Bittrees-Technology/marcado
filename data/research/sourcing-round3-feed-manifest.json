@@ -1,0 +1,66 @@
+[
+  {
+    "vendor": "pihut",
+    "public_feed": "https://thepihut.com/products.json",
+    "collected_rows": 2000,
+    "collected_json_sha256": "a14a1590514c6e2918a671e7ceea17a155bb491c006db318c953c9f362515bde",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "pimoroni",
+    "public_feed": "https://shop.pimoroni.com/products.json",
+    "collected_rows": 1500,
+    "collected_json_sha256": "ccd7189b4668797c6c5662ff82778f0935c3203db4c9ba7f7425682e853f8fb1",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "spd",
+    "public_feed": "https://serverpartdeals.com/products.json",
+    "collected_rows": 1000,
+    "collected_json_sha256": "e5cd177211f44be9db38111766765559785abce0a36bbe7f8c4affc6586b7aeb",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "bitcoinmerch",
+    "public_feed": "https://bitcoinmerch.com/products.json",
+    "collected_rows": 289,
+    "collected_json_sha256": "48541943707ce3fe19c93c0e7fb74875584bf6ae88a5a17aa93995831eb86c6d",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "solomining-de",
+    "public_feed": "https://solomining.de/products.json",
+    "collected_rows": 25,
+    "collected_json_sha256": "734f0a922356b0ab68fdff906664862f5a012a6f564df1110be577568a4411c5",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "miningwholesale",
+    "public_feed": "https://miningwholesale.eu/wp-json/wc/store/v1/products",
+    "collected_rows": 181,
+    "collected_json_sha256": "277e1861e842a872f76f1723ccc018e8271d9b5171d147575f900820efbf6070",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "cryptocloaks",
+    "public_feed": "https://www.cryptocloaks.com/wp-json/wc/store/v1/products",
+    "collected_rows": 191,
+    "collected_json_sha256": "f5554a6a439bcff8805c00e2ac2bde3992238b27352d0494e09becfa4775f869",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  },
+  {
+    "vendor": "bss",
+    "public_feed": "https://www.bitcoinstuffstore.com/wp-json/wc/store/v1/products",
+    "collected_rows": 77,
+    "collected_json_sha256": "29e21c19f7ee4a20d7582a05f69c68d4d6cd096e4114a0433e40b71159cf397c",
+    "checked_date": "2026-09-14",
+    "bounded_collection": true
+  }
+]
