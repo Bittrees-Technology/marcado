@@ -68,4 +68,4 @@ Deploy to Vercel with `APP_ORIGIN` set to the canonical HTTPS domain and a verif
 
 The existing deployment retains the internal `marcada` database schema and analytics identifier to preserve records and reporting history. Public branding, links and authentication use Mercado. Previous storefront domains redirect to the canonical domain while preserving product paths and referral parameters.
 
-See [initial sourcing research](SOURCING-RESEARCH.md) and the [300-listing expansion](SOURCING-ROUND2.md) for catalog evidence. Products, supplier relationships and commercial terms are deployment data, independent of the marketplace infrastructure.
+See [initial sourcing research](SOURCING-RESEARCH.md) and the [300-listing expansion](SOURCING-ROUND2.md) and the [DTV Electronics additions](SOURCING-DTV.md) for catalog evidence. Products, supplier relationships and commercial terms are deployment data, independent of the marketplace infrastructure.

@@ -51,3 +51,5 @@ ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS proposal_version integer NOT
 CREATE TABLE IF NOT EXISTS marcada.quote_proposals(quote_id uuid NOT NULL REFERENCES marcada.quotes(id) ON DELETE CASCADE,version integer NOT NULL,unit_minor bigint NOT NULL,quantity integer NOT NULL,tax_minor bigint NOT NULL,shipping_minor bigint NOT NULL,total_minor bigint NOT NULL,currency text NOT NULL,terms text NOT NULL,expires_at timestamptz NOT NULL,created_by text NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),accepted_at timestamptz,PRIMARY KEY(quote_id,version));
 ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS accepted_proposal_version integer NOT NULL DEFAULT 0;
 CREATE TABLE IF NOT EXISTS marcada.notification_settings(id text PRIMARY KEY CHECK(id='operations'),recipient text NOT NULL,enabled boolean NOT NULL DEFAULT false,updated_at timestamptz NOT NULL DEFAULT now());
+ALTER TABLE marcada.items DROP CONSTRAINT IF EXISTS items_supplier_region_check;
+ALTER TABLE marcada.items ADD CONSTRAINT items_supplier_region_check CHECK(supplier_region IN ('US','EU','CA','CN','Unverified'));

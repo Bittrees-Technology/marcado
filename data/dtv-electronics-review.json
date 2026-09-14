@@ -1,0 +1,80 @@
+{
+  "store": "https://dtvelectronics.com/store/",
+  "catalog_api": "https://dtvelectronics.com/wp-json/wc/store/v1/products?per_page=100",
+  "products": [
+    {
+      "supplier_product_id": 3008,
+      "supplier_name": "Bitforge Nano Solo Bitcoin Miner | Open-Source 2.6TH/s Dual BM1370 ASIC for Home Mining",
+      "source_url": "https://dtvelectronics.com/product/bitforge-nano/",
+      "checked_at": "2026-09-14T01:06:11.069Z",
+      "http_status": 200,
+      "price": 169.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "asic"
+    },
+    {
+      "supplier_product_id": 2331,
+      "supplier_name": "CmRat v2.8 Carrier Board &#038; Case for RPI Raspberry Pi CM4/CM5 &#038; Radxa CM3/CM5",
+      "source_url": "https://dtvelectronics.com/product/cmrat-carrier-board/",
+      "checked_at": "2026-09-14T01:06:12.632Z",
+      "http_status": 200,
+      "price": 39.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "components"
+    },
+    {
+      "supplier_product_id": 2223,
+      "supplier_name": "Bitaxe Gamma Retail Edition with Multi-Region PSU and Case",
+      "source_url": "https://dtvelectronics.com/product/bitaxe-gamma/",
+      "checked_at": "2026-09-14T01:06:14.206Z",
+      "http_status": 200,
+      "price": 74.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "bitaxe"
+    },
+    {
+      "supplier_product_id": 2211,
+      "supplier_name": "Bitaxe Supra Retail Edition with Multi-Region PSU and Case",
+      "source_url": "https://dtvelectronics.com/product/bitaxe-supra/",
+      "checked_at": "2026-09-14T01:06:15.743Z",
+      "http_status": 200,
+      "price": 64.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "bitaxe"
+    },
+    {
+      "supplier_product_id": 1701,
+      "supplier_name": "Bitaxe Ultra Retail Edition with Multi-Region PSU and Case",
+      "source_url": "https://dtvelectronics.com/product/bitaxe-ultra/",
+      "checked_at": "2026-09-14T01:06:17.339Z",
+      "http_status": 200,
+      "price": 59.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "bitaxe"
+    },
+    {
+      "supplier_product_id": 1328,
+      "supplier_name": "Barebones CmRat LCD Screen, Switch Controller and Cables",
+      "source_url": "https://dtvelectronics.com/product/barebones-cmrat-compatible-lcd-screen-holder/",
+      "checked_at": "2026-09-14T01:06:18.756Z",
+      "http_status": 200,
+      "price": 9.99,
+      "currency": "USD",
+      "in_stock": true,
+      "decision": "include",
+      "mercado_collection": "components"
+    }
+  ],
+  "shipping_source": "https://dtvelectronics.com/shipping-delivery/",
+  "tax_source": "https://dtvelectronics.com/tax-duty-vat-information/"
+}

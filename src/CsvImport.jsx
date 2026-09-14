@@ -5,7 +5,7 @@ const choices = {
   price_kind: ["reference", "asking"],
   active: ["false", "true"],
   supplier_status: ["Unknown", "InStock", "OutOfStock"],
-  supplier_region: ["Unverified", "US", "EU", "CA"],
+  supplier_region: ["Unverified", "US", "EU", "CA", "CN"],
 };
 export function CsvImport({ items, collections, api, refresh, notify }) {
   const [rows, setRows] = useState([]),

@@ -192,6 +192,7 @@ export function EquipmentPage({
               <option value="US">United States</option>
               <option value="EU">European Union</option>
               <option value="CA">Canada</option>
+              <option value="CN">China</option>
               <option value="Unverified">Unverified</option>
             </select>
           </label>
@@ -674,6 +675,7 @@ export function ProductManager({
               name="supplier_region"
               defaultValue={p.supplier_region || "Unverified"}
             >
+              <option value="CN">China</option>
               <option value="Unverified">Unverified</option>
               <option value="US">United States</option>
               <option value="EU">European Union</option>
