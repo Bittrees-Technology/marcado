@@ -14,7 +14,8 @@
     "image_url": "/products/bitaxe-gt.png",
     "price_kind": "reference",
     "price_checked": "2026-09-13",
-    "active": true
+    "active": true,
+    "hashrate": "2.1–2.45 TH/s (standard; configuration dependent)"
   },
   {
     "id": "minibit-gamma",
@@ -31,7 +32,8 @@
     "image_url": "/products/minibit-gamma.png",
     "price_kind": "reference",
     "price_checked": "2026-09-13",
-    "active": true
+    "active": true,
+    "hashrate": "1.0–1.2 TH/s standard; 1.8+ TH/s overclocked"
   },
   {
     "id": "bitsupra-1368",
@@ -48,7 +50,8 @@
     "image_url": "/products/bitsupra-1368.webp",
     "price_kind": "reference",
     "price_checked": "2026-09-13",
-    "active": true
+    "active": true,
+    "hashrate": "500–700 GH/s (settings dependent)"
   },
   {
     "id": "bitaxe-power-supply",
@@ -100,7 +103,8 @@
     "image_url": "/products/avalon-nano-3s.png",
     "price_kind": "reference",
     "price_checked": "2026-09-13",
-    "active": true
+    "active": true,
+    "hashrate": "6 TH/s"
   },
   {
     "id": "avalon-mini-3",
@@ -118,7 +122,8 @@
     "image_url": "/products/avalon-mini-3.png",
     "price_kind": "reference",
     "price_checked": "2026-09-13",
-    "active": true
+    "active": true,
+    "hashrate": "37.5 TH/s"
   },
   {
     "id": "raspberry-pi-ai-hat-2",

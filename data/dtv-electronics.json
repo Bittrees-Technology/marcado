@@ -19,7 +19,8 @@
     "configuration_note": "UK-registered supplier; direct-store orders dispatch from China according to its shipping policy. Price and availability checked 14 September 2026; final quantity and delivered total require confirmation.",
     "active": true,
     "remote_image": "https://dtvelectronics.com/wp-content/uploads/2026/01/Bitforge-Nano.webp",
-    "image_sha256": "fae1e4c0244a898ec4311ae82d9ee58f7ec025cc68892f7498131f1269545e18"
+    "image_sha256": "fae1e4c0244a898ec4311ae82d9ee58f7ec025cc68892f7498131f1269545e18",
+    "hashrate": "Up to 2.6 TH/s"
   },
   {
     "id": "dtv-2331",
@@ -63,7 +64,8 @@
     "configuration_note": "UK-registered supplier; direct-store orders dispatch from China according to its shipping policy. Supplier SKU: Bitaxe-Gamma-Retail-001. Price and availability checked 14 September 2026; final quantity and delivered total require confirmation.",
     "active": true,
     "remote_image": "https://dtvelectronics.com/wp-content/uploads/2025/03/gamma.jpg",
-    "image_sha256": "2b4ab21c42b2adee1a93f15f0072a98854a85ee3952546a98e15382db6b0c9d7"
+    "image_sha256": "2b4ab21c42b2adee1a93f15f0072a98854a85ee3952546a98e15382db6b0c9d7",
+    "hashrate": ""
   },
   {
     "id": "dtv-2211",
@@ -85,7 +87,8 @@
     "configuration_note": "UK-registered supplier; direct-store orders dispatch from China according to its shipping policy. Supplier SKU: Bitaxe-Supra-Retail-001. Price and availability checked 14 September 2026; final quantity and delivered total require confirmation.",
     "active": true,
     "remote_image": "https://dtvelectronics.com/wp-content/uploads/2025/03/IMG_3240-AMENDED-MAIN-BOX-scaled.jpg",
-    "image_sha256": "653698d7c09b99a34120f7ee58b67cbd2b6d3c2b906d2ab86f00c7fd7b4130ec"
+    "image_sha256": "653698d7c09b99a34120f7ee58b67cbd2b6d3c2b906d2ab86f00c7fd7b4130ec",
+    "hashrate": ""
   },
   {
     "id": "dtv-1701",
@@ -107,7 +110,8 @@
     "configuration_note": "UK-registered supplier; direct-store orders dispatch from China according to its shipping policy. Supplier SKU: Bitaxe-Ultra-Retail-001. Price and availability checked 14 September 2026; final quantity and delivered total require confirmation.",
     "active": true,
     "remote_image": "https://dtvelectronics.com/wp-content/uploads/2024/11/ultra.jpg",
-    "image_sha256": "3df9dd8b4d612ab2862c6907c96089771cb253ee86b6e642ae3c783915912387"
+    "image_sha256": "3df9dd8b4d612ab2862c6907c96089771cb253ee86b6e642ae3c783915912387",
+    "hashrate": ""
   },
   {
     "id": "dtv-1328",

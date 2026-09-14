@@ -1684,3 +1684,14 @@ button:disabled {
 .quote-proposal label {
   min-height: 44px;
 }
+
+.miner-hashrate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  padding: 0.65rem 0;
+  border-block: 1px solid #d9dedb;
+}
+.miner-hashrate strong {
+  white-space: nowrap;
+}

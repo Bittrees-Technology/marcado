@@ -17,7 +17,8 @@
     "price_checked": "2026-09-13",
     "price_kind": "reference",
     "image_credit": "Solo Satoshi product photo",
-    "specifications": "From-price for the lowest-priced configuration. Stand and power-supply choices change the price."
+    "specifications": "From-price for the lowest-priced configuration. Stand and power-supply choices change the price.",
+    "hashrate": "1.2 TH/s (standard)"
   },
   {
     "id": "bitaxe-40w-5v-8a-power-supply-us",
@@ -95,7 +96,8 @@
     "price_checked": "2026-09-13",
     "price_kind": "reference",
     "image_credit": "bitshopper product photo",
-    "specifications": "GekkoScience edition with the supplier-listed 5V power supply. Availability must be reconfirmed."
+    "specifications": "GekkoScience edition with the supplier-listed 5V power supply. Availability must be reconfirmed.",
+    "hashrate": "Up to 1.2 TH/s"
   },
   {
     "id": "bitaxe-gamma-supersink-eu",
@@ -115,7 +117,8 @@
     "price_checked": "2026-09-13",
     "price_kind": "reference",
     "image_credit": "bitshopper product photo",
-    "specifications": "German supplier listing. Check the exact included accessories before accepting a quote."
+    "specifications": "German supplier listing. Check the exact included accessories before accepting a quote.",
+    "hashrate": "Up to 1.9 TH/s (overclocked)"
   },
   {
     "id": "bitaxe-supersilent-fan-eu",

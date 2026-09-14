@@ -556,6 +556,7 @@ try {
     id: testItem,
     product_id: "bitaxe",
     name: "Test product",
+    hashrate: "1.2 TH/s (standard)",
     description: "Integration test product",
     price: 19.95,
     currency: "USD",
@@ -630,6 +631,11 @@ try {
       )
     ).status,
     400,
+  );
+  assert.equal(
+    (await sql`SELECT hashrate FROM marcada.items WHERE id=${testItem}`)[0]
+      .hashrate,
+    product.hashrate,
   );
   await request("admin/item", { ...product, active: false }, dealer);
   catalog = await request("catalog");

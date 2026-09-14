@@ -285,6 +285,7 @@ export function EquipmentPage({
             <small>{selected.image_credit}</small>
           </div>
           <div>
+            <Hashrate item={selected} />
             <Price item={selected} />
             <Source item={selected} />
             <p className="tax-note">
@@ -358,6 +359,7 @@ export function EquipmentPage({
                 </button>
               </div>
               <p>{item.description}</p>
+              <Hashrate item={item} />
               <Price item={item} />
               <Source item={item} />
               <small className="image-credit">
@@ -662,6 +664,19 @@ export function ProductManager({
             />
           </label>
           <label className="span2">
+            Hash rate (miners)
+            <input
+              name="hashrate"
+              defaultValue={p.hashrate || ""}
+              maxLength={200}
+              placeholder="1.2 TH/s (standard settings)"
+            />
+            <small>
+              Include units and configuration or overclocking conditions. Leave
+              blank if unverified.
+            </small>
+          </label>
+          <label className="span2">
             Specifications
             <textarea
               name="specifications"
@@ -738,5 +753,15 @@ export function ProductManager({
         </form>
       </details>
     </section>
+  );
+}
+
+function Hashrate({ item }) {
+  if (!["bitaxe", "asic"].includes(item.product_id)) return null;
+  return (
+    <p className="miner-hashrate">
+      <strong>Hash rate</strong>
+      <span>{item.hashrate || "Confirm with supplier"}</span>
+    </p>
   );
 }

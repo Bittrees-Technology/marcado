@@ -57,6 +57,12 @@ try {
         offers: [],
       }),
     );
+    assert.equal(
+      html.includes('class="miner-hashrate"'),
+      ["bitaxe", "asic"].includes(item.product_id),
+    );
+    if (["bitaxe", "asic"].includes(item.product_id))
+      assert.ok(html.includes(item.hashrate || "Confirm with supplier"));
     assert.ok(html.includes(item.image_url));
     assert.ok(html.includes("Request a purchase quote"));
     assert.ok(html.includes(item.currency));

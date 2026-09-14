@@ -43,3 +43,11 @@ test("Missing dates and duplicate IDs require correction", () => {
     ),
   );
 });
+
+test("CSV accepts qualified miner hash rates and older files without them", () => {
+  assert.equal(
+    parseCsv('id,hashrate\na,"4.8 TH/s (standard, ±15%)"')[0].hashrate,
+    "4.8 TH/s (standard, ±15%)",
+  );
+  assert.equal(parseCsv("id\na")[0].hashrate, undefined);
+});

@@ -1,0 +1,333 @@
+[
+  {
+    "id": "bitaxe-gt",
+    "hashrate": "2.1–2.45 TH/s (standard; configuration dependent)",
+    "source_url": "https://d-central.tech/product/the-bitaxe-gt/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "minibit-gamma",
+    "hashrate": "1.0–1.2 TH/s standard; 1.8+ TH/s overclocked",
+    "source_url": "https://d-central.tech/product/the-minibit-powered-by-bitaxe/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitsupra-1368",
+    "hashrate": "500–700 GH/s (settings dependent)",
+    "source_url": "https://d-central.tech/product/bitsupra-1368-powered-by-bitaxe-supra/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "avalon-nano-3s",
+    "hashrate": "6 TH/s",
+    "source_url": "https://shop.canaan.io/products/avalon-nano-3s-1",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration.",
+    "additional_source": "https://investor.canaan-creative.com/static-files/ab103039-465e-4f5c-9206-1480290bf816"
+  },
+  {
+    "id": "avalon-mini-3",
+    "hashrate": "37.5 TH/s",
+    "source_url": "https://shop.canaan.io/products/avalon-mini-3",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration.",
+    "additional_source": "https://investor.canaan-creative.com/static-files/ab103039-465e-4f5c-9206-1480290bf816"
+  },
+  {
+    "id": "bitaxe-gamma-us",
+    "hashrate": "1.2 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-gamma/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitaxe-gamma-601-eu",
+    "hashrate": "Up to 1.2 TH/s",
+    "source_url": "https://www.bitshopper.de/en/shop/bitaxe-en/bitaxe-gamma-v601-open-source-bitcoin-miner-kopie/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitaxe-gamma-supersink-eu",
+    "hashrate": "Up to 1.9 TH/s (overclocked)",
+    "source_url": "https://www.bitshopper.de/shop/bitaxe/bitaxe-gamma-v601-supersink/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-56219",
+    "hashrate": "4.4 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-naja-duo/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-54150",
+    "hashrate": "8.4 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-gamma-hex/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-11327",
+    "hashrate": "4.8 TH/s (standard, ±15%)",
+    "source_url": "https://www.solosatoshi.com/product/nerdqaxe-plus-plus/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-50192",
+    "hashrate": "2.4 TH/s default; 2.6 TH/s Power mode",
+    "source_url": "https://www.solosatoshi.com/product/bitforge-nano-ghost-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-4695",
+    "hashrate": "2.15 TH/s (standard, ±10%)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-touch/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-44838",
+    "hashrate": "1.63 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-duo-bitcoin-solo-miner-650-model/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-25241",
+    "hashrate": "1.2 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/nerdaxe-gamma-bitcoin-solo-miner/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-11318",
+    "hashrate": "2.15 TH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-gt-gamma-turbo/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-36612",
+    "hashrate": "90 TH/s (Super mode)",
+    "source_url": "https://www.solosatoshi.com/product/canaan-avalon-q-90th-bitcoin-home-miner/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "solo-23160",
+    "hashrate": "650 GH/s (standard)",
+    "source_url": "https://www.solosatoshi.com/product/bitaxe-supra/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitshopper-27631",
+    "hashrate": "Up to 1 TH/s",
+    "source_url": "https://www.bitshopper.de/shop/gekkoscience/compac-a2/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitshopper-23685",
+    "hashrate": "700 GH/s",
+    "source_url": "https://www.bitshopper.de/shop/gekkoscience/gekkoscience-meincoffee/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitshopper-22119",
+    "hashrate": "1.5 TH/s; up to 2 TH/s with tuning",
+    "source_url": "https://www.bitshopper.de/shop/gekkoscience/r909/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "bitshopper-1321",
+    "hashrate": "3–5 MH/s (Scrypt)",
+    "source_url": "https://www.bitshopper.de/shop/futurebit/moonlander2/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-76747-ca",
+    "hashrate": "3.5 GH/s (Scrypt)",
+    "source_url": "https://d-central.tech/product/l7-heater-pivotal-edition-3-5ghs-1300w/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-71862-ca",
+    "hashrate": "37.5 TH/s",
+    "source_url": "https://d-central.tech/product/canaan-avalon-mini-3/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-71350-ca",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)",
+    "source_url": "https://d-central.tech/product/antminer-pivotal-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-70852-ca",
+    "hashrate": "9.6–12 TH/s (settings dependent)",
+    "source_url": "https://d-central.tech/product/the-nerdoctaxe-gamma/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-68809-ca",
+    "hashrate": "2.4–2.5 TH/s",
+    "source_url": "https://d-central.tech/product/the-nerdqaxe-plus/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-68243-ca",
+    "hashrate": "26–38 TH/s (configuration dependent)",
+    "source_url": "https://d-central.tech/product/the-stealthminer/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-68072-ca",
+    "hashrate": "270 TH/s",
+    "source_url": "https://d-central.tech/product/bitmain-antminer-s21-xp/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-67804-ca",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)",
+    "source_url": "https://d-central.tech/product/antminer-loki-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-61966-ca",
+    "hashrate": "Confirm chip version and rate with supplier",
+    "source_url": "https://d-central.tech/product/the-nerdaxe/",
+    "checked": "2026-09-14",
+    "note": "Supplier page does not establish an unambiguous rating for this configuration."
+  },
+  {
+    "id": "r2-dc-61530-ca",
+    "hashrate": "234 TH/s",
+    "source_url": "https://d-central.tech/product/bitmain-antminer-s21-pro/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-59651-ca",
+    "hashrate": "3.0–3.3 TH/s (standard Hex; confirm variant)",
+    "source_url": "https://d-central.tech/product/the-bitaxe-hex/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-59650-ca",
+    "hashrate": "Approximately 1.7 TH/s",
+    "source_url": "https://d-central.tech/product/the-qaxe/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-58726-ca",
+    "hashrate": "23–30 TH/s (configuration dependent)",
+    "source_url": "https://d-central.tech/product/antminer-slim-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-58676-ca",
+    "hashrate": "625–775 GH/s (Supra) or 1.0–1.3 TH/s (Gamma)",
+    "source_url": "https://d-central.tech/product/the-bitaxe/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-58377-ca",
+    "hashrate": "21 TH/s (S19) or 24 TH/s (S19j Pro)",
+    "source_url": "https://d-central.tech/product/the-bitchimney/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-55577-ca",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)",
+    "source_url": "https://d-central.tech/product/antminer-s19-space-heater-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-52963-ca",
+    "hashrate": "Confirm configuration with supplier",
+    "source_url": "https://d-central.tech/product/bitmain-antminer-s19k-pro/",
+    "checked": "2026-09-14",
+    "note": "Supplier page does not establish an unambiguous rating for this configuration."
+  },
+  {
+    "id": "r2-dc-28016-ca",
+    "hashrate": "504 MH/s (Scrypt)",
+    "source_url": "https://d-central.tech/product/antminer-l3-space-heater-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-28015-ca",
+    "hashrate": "13.5 TH/s standard; 7–9 TH/s undervolted",
+    "source_url": "https://d-central.tech/product/antminer-s9-space-heater-edition/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-23125-ca",
+    "hashrate": "9.05–9.5 GH/s (Scrypt; configuration dependent)",
+    "source_url": "https://d-central.tech/product/bitmain-antminer-l7/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "r2-dc-23105-ca",
+    "hashrate": "Up to 104 TH/s (confirm configuration)",
+    "source_url": "https://d-central.tech/product/bitmain-antminer-s19j-pro/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "dtv-3008",
+    "hashrate": "Up to 2.6 TH/s",
+    "source_url": "https://dtvelectronics.com/product/bitforge-nano/",
+    "checked": "2026-09-14",
+    "note": "Supplier rating; actual performance depends on settings and configuration."
+  },
+  {
+    "id": "dtv-2223",
+    "hashrate": "",
+    "source_url": "https://dtvelectronics.com/product/bitaxe-gamma/",
+    "checked": "2026-09-14",
+    "note": "Supplier page does not establish an unambiguous rating for this configuration."
+  },
+  {
+    "id": "dtv-2211",
+    "hashrate": "",
+    "source_url": "https://dtvelectronics.com/product/bitaxe-supra/",
+    "checked": "2026-09-14",
+    "note": "Supplier page does not establish an unambiguous rating for this configuration."
+  },
+  {
+    "id": "dtv-1701",
+    "hashrate": "",
+    "source_url": "https://dtvelectronics.com/product/bitaxe-ultra/",
+    "checked": "2026-09-14",
+    "note": "Supplier page does not establish an unambiguous rating for this configuration."
+  }
+]

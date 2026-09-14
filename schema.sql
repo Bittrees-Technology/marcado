@@ -53,3 +53,5 @@ ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS accepted_proposal_version in
 CREATE TABLE IF NOT EXISTS marcada.notification_settings(id text PRIMARY KEY CHECK(id='operations'),recipient text NOT NULL,enabled boolean NOT NULL DEFAULT false,updated_at timestamptz NOT NULL DEFAULT now());
 ALTER TABLE marcada.items DROP CONSTRAINT IF EXISTS items_supplier_region_check;
 ALTER TABLE marcada.items ADD CONSTRAINT items_supplier_region_check CHECK(supplier_region IN ('US','EU','CA','CN','Unverified'));
+
+ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS hashrate text NOT NULL DEFAULT '';

@@ -18,7 +18,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-56219.png"
+    "image_url": "/products/solo-56219.png",
+    "hashrate": "4.4 TH/s (standard)"
   },
   {
     "id": "solo-54150",
@@ -39,7 +40,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-54150.png"
+    "image_url": "/products/solo-54150.png",
+    "hashrate": "8.4 TH/s (standard)"
   },
   {
     "id": "solo-51904",
@@ -81,7 +83,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-11327.webp"
+    "image_url": "/products/solo-11327.webp",
+    "hashrate": "4.8 TH/s (standard, ±15%)"
   },
   {
     "id": "solo-50993",
@@ -186,7 +189,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-50192.png"
+    "image_url": "/products/solo-50192.png",
+    "hashrate": "2.4 TH/s default; 2.6 TH/s Power mode"
   },
   {
     "id": "solo-4695",
@@ -207,7 +211,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-4695.png"
+    "image_url": "/products/solo-4695.png",
+    "hashrate": "2.15 TH/s (standard, ±10%)"
   },
   {
     "id": "solo-44838",
@@ -228,7 +233,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-44838.png"
+    "image_url": "/products/solo-44838.png",
+    "hashrate": "1.63 TH/s (standard)"
   },
   {
     "id": "solo-25241",
@@ -249,7 +255,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-25241.png"
+    "image_url": "/products/solo-25241.png",
+    "hashrate": "1.2 TH/s (standard)"
   },
   {
     "id": "solo-11318",
@@ -270,7 +277,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-11318.png"
+    "image_url": "/products/solo-11318.png",
+    "hashrate": "2.15 TH/s (standard)"
   },
   {
     "id": "solo-41516",
@@ -312,7 +320,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-36612.png"
+    "image_url": "/products/solo-36612.png",
+    "hashrate": "90 TH/s (Super mode)"
   },
   {
     "id": "solo-50888",
@@ -774,7 +783,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "Solo Satoshi product photo",
     "active": true,
-    "image_url": "/products/solo-23160.webp"
+    "image_url": "/products/solo-23160.webp",
+    "hashrate": "650 GH/s (standard)"
   },
   {
     "id": "solo-24030",
@@ -837,7 +847,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "bitshopper product photo",
     "active": true,
-    "image_url": "/products/bitshopper-27631.jpg"
+    "image_url": "/products/bitshopper-27631.jpg",
+    "hashrate": "Up to 1 TH/s"
   },
   {
     "id": "bitshopper-25547",
@@ -942,7 +953,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "bitshopper product photo",
     "active": true,
-    "image_url": "/products/bitshopper-23685.png"
+    "image_url": "/products/bitshopper-23685.png",
+    "hashrate": "700 GH/s"
   },
   {
     "id": "bitshopper-23340",
@@ -1005,7 +1017,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "bitshopper product photo",
     "active": true,
-    "image_url": "/products/bitshopper-22119.png"
+    "image_url": "/products/bitshopper-22119.png",
+    "hashrate": "1.5 TH/s; up to 2 TH/s with tuning"
   },
   {
     "id": "bitshopper-1321",
@@ -1026,7 +1039,8 @@
     "price_checked": "2026-09-13",
     "image_credit": "bitshopper product photo",
     "active": true,
-    "image_url": "/products/bitshopper-1321.jpg"
+    "image_url": "/products/bitshopper-1321.jpg",
+    "hashrate": "3–5 MH/s (Scrypt)"
   },
   {
     "id": "bitshopper-939",

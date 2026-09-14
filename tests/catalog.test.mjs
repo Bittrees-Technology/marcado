@@ -47,3 +47,15 @@ test("image uploads reject active content, mime spoofing and oversized payloads"
   assert.equal(p.mime, "image/png");
   assert.ok(p.bytes > 12);
 });
+
+test("hash rates retain units and conditions, are optional and bounded", () => {
+  assert.equal(itemInput(valid).hashrate, "");
+  assert.equal(
+    itemInput({ ...valid, hashrate: " 1.2 TH/s (standard) " }).hashrate,
+    "1.2 TH/s (standard)",
+  );
+  assert.equal(
+    itemInput({ ...valid, hashrate: "x".repeat(201) }).hashrate.length,
+    200,
+  );
+});

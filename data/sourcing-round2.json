@@ -4991,7 +4991,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2025/08/The-Antminer-Pivotal-Edition.png",
-    "image_sha256": "e68422e57eb7510555fba337fbb517bec2388a3adfaf9074bf87136daec66fba"
+    "image_sha256": "e68422e57eb7510555fba337fbb517bec2388a3adfaf9074bf87136daec66fba",
+    "hashrate": "3.5 GH/s (Scrypt)"
   },
   {
     "id": "r2-dc-76578-ca",
@@ -5365,7 +5366,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2025/01/canaan-avalon-mini-3.png",
-    "image_sha256": "a8739fc9e8803456a2bde2ce3be8dca96e4e21460d7e922a43d5ac1d89f6a0c1"
+    "image_sha256": "a8739fc9e8803456a2bde2ce3be8dca96e4e21460d7e922a43d5ac1d89f6a0c1",
+    "hashrate": "37.5 TH/s"
   },
   {
     "id": "r2-dc-71350-ca",
@@ -5387,7 +5389,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/12/The-Antminer-Pivotal-Edition.png",
-    "image_sha256": "a8dc3fdb5361150bf2843e070d842a7d3415ad5d15bb841e2339fd6b9f09fe55"
+    "image_sha256": "a8dc3fdb5361150bf2843e070d842a7d3415ad5d15bb841e2339fd6b9f09fe55",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)"
   },
   {
     "id": "r2-dc-70852-ca",
@@ -5409,7 +5412,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/11/The-NerdOctaxe.png",
-    "image_sha256": "9e6e2c6cadb009281e0db63f6510a5092f662b580e8574510b6e1c2fef228690"
+    "image_sha256": "9e6e2c6cadb009281e0db63f6510a5092f662b580e8574510b6e1c2fef228690",
+    "hashrate": "9.6–12 TH/s (settings dependent)"
   },
   {
     "id": "r2-dc-68809-ca",
@@ -5431,7 +5435,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/08/IMG_20260504_122910.png",
-    "image_sha256": "1cfeb48d434c55df4c62d1a0f10afe7b5863f5203f93f35d099a37c1475b6c9d"
+    "image_sha256": "1cfeb48d434c55df4c62d1a0f10afe7b5863f5203f93f35d099a37c1475b6c9d",
+    "hashrate": "2.4–2.5 TH/s"
   },
   {
     "id": "r2-dc-68243-ca",
@@ -5453,7 +5458,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/08/The-StealthMiner.png",
-    "image_sha256": "7d8c7d3db54d0ed1fb0e2233da13e1f8a6f8d1d772584069f807031910892e0a"
+    "image_sha256": "7d8c7d3db54d0ed1fb0e2233da13e1f8a6f8d1d772584069f807031910892e0a",
+    "hashrate": "26–38 TH/s (configuration dependent)"
   },
   {
     "id": "r2-dc-68072-ca",
@@ -5475,7 +5481,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/08/The-Antminer-S21-XP.png",
-    "image_sha256": "d907ffe24c15a718912be4eb3d5d16115a68f47c2d5921127e539ddbaaf8d4ef"
+    "image_sha256": "d907ffe24c15a718912be4eb3d5d16115a68f47c2d5921127e539ddbaaf8d4ef",
+    "hashrate": "270 TH/s"
   },
   {
     "id": "r2-dc-67804-ca",
@@ -5497,7 +5504,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/08/Antminer-Loki-Edition.png",
-    "image_sha256": "998bd901dde5530df8e834ad5b73d585987ea9e357e069f2766b570a049622fd"
+    "image_sha256": "998bd901dde5530df8e834ad5b73d585987ea9e357e069f2766b570a049622fd",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)"
   },
   {
     "id": "r2-dc-66732-ca",
@@ -5585,7 +5593,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/04/The-Nerdaxe-1.jpg",
-    "image_sha256": "8509ad65120cf42704a13769461c7e80fd049bbd3be84bbca9ed94cb0a7ec9fc"
+    "image_sha256": "8509ad65120cf42704a13769461c7e80fd049bbd3be84bbca9ed94cb0a7ec9fc",
+    "hashrate": "Confirm chip version and rate with supplier"
   },
   {
     "id": "r2-dc-61530-ca",
@@ -5607,7 +5616,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/06/Coming-soon.png",
-    "image_sha256": "0fa5d06661a3427542ae0ac8b26a4b09d73e9c34739b1e6dcaccbc889e1b5f05"
+    "image_sha256": "0fa5d06661a3427542ae0ac8b26a4b09d73e9c34739b1e6dcaccbc889e1b5f05",
+    "hashrate": "234 TH/s"
   },
   {
     "id": "r2-dc-61208-ca",
@@ -5827,7 +5837,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/02/IMG_20260305_150403-scaled.png",
-    "image_sha256": "860e7d7802f5345b9875b2ef707f3f503cb8edb23743edd22ef98dc7101c2ed6"
+    "image_sha256": "860e7d7802f5345b9875b2ef707f3f503cb8edb23743edd22ef98dc7101c2ed6",
+    "hashrate": "3.0–3.3 TH/s (standard Hex; confirm variant)"
   },
   {
     "id": "r2-dc-59650-ca",
@@ -5849,7 +5860,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/02/The-QAxe.png",
-    "image_sha256": "c4a9f95f6780d90b559d12538f896604c0b43486183ad35ede16096bdcca47a9"
+    "image_sha256": "c4a9f95f6780d90b559d12538f896604c0b43486183ad35ede16096bdcca47a9",
+    "hashrate": "Approximately 1.7 TH/s"
   },
   {
     "id": "r2-dc-58770-ca",
@@ -5893,7 +5905,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/02/Antminer-Slim-Edition.png",
-    "image_sha256": "f5fe2f1490854bf58c45150ae6ed9a8486e169417acdc287fec27cd5e96b6f69"
+    "image_sha256": "f5fe2f1490854bf58c45150ae6ed9a8486e169417acdc287fec27cd5e96b6f69",
+    "hashrate": "23–30 TH/s (configuration dependent)"
   },
   {
     "id": "r2-dc-58676-ca",
@@ -5915,7 +5928,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/02/The-Bitaxe.jpg",
-    "image_sha256": "e68ca1283ecf8d4cdb74c3584ddf107a229b7366bf4ebd542e553903a8cf76fc"
+    "image_sha256": "e68ca1283ecf8d4cdb74c3584ddf107a229b7366bf4ebd542e553903a8cf76fc",
+    "hashrate": "625–775 GH/s (Supra) or 1.0–1.3 TH/s (Gamma)"
   },
   {
     "id": "r2-dc-58429-ca",
@@ -5959,7 +5973,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2024/01/BitChimney.png",
-    "image_sha256": "d564d63d64848ae69fcffe2446fdea19bf11aabc77243eb2965cc27b20f58391"
+    "image_sha256": "d564d63d64848ae69fcffe2446fdea19bf11aabc77243eb2965cc27b20f58391",
+    "hashrate": "21 TH/s (S19) or 24 TH/s (S19j Pro)"
   },
   {
     "id": "r2-dc-55577-ca",
@@ -5981,7 +5996,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/11/The-Antminer-S19-Space-Heater-Edition.png",
-    "image_sha256": "1a9e3b8b4b292c981fce9c04fabdefe153d48b520deda1d37296d655399eafe6"
+    "image_sha256": "1a9e3b8b4b292c981fce9c04fabdefe153d48b520deda1d37296d655399eafe6",
+    "hashrate": "42 TH/s (S19) or 46 TH/s (S19j Pro)"
   },
   {
     "id": "r2-dc-52963-ca",
@@ -6003,7 +6019,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/10/Bitmain-Antminer-S19k-Pro.png",
-    "image_sha256": "8533f4ecce6b0792a27b8cce99dc47b12161828c017d52d67731ae05ce60c7f1"
+    "image_sha256": "8533f4ecce6b0792a27b8cce99dc47b12161828c017d52d67731ae05ce60c7f1",
+    "hashrate": "Confirm configuration with supplier"
   },
   {
     "id": "r2-dc-51603-ca",
@@ -6421,7 +6438,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/03/51ZG6i2e1LL._AC_SL1500_.jpg",
-    "image_sha256": "a993c1dbc8ab50c91be1cedca5341ead2a2d4b380a487ff58afbbf1e622c5777"
+    "image_sha256": "a993c1dbc8ab50c91be1cedca5341ead2a2d4b380a487ff58afbbf1e622c5777",
+    "hashrate": "504 MH/s (Scrypt)"
   },
   {
     "id": "r2-dc-28015-ca",
@@ -6443,7 +6461,8 @@
     "configuration_note": "From-price for the lowest supplier configuration. Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/03/51ZG6i2e1LL._AC_SL1500_.jpg",
-    "image_sha256": "a993c1dbc8ab50c91be1cedca5341ead2a2d4b380a487ff58afbbf1e622c5777"
+    "image_sha256": "a993c1dbc8ab50c91be1cedca5341ead2a2d4b380a487ff58afbbf1e622c5777",
+    "hashrate": "13.5 TH/s standard; 7–9 TH/s undervolted"
   },
   {
     "id": "r2-dc-27811-ca",
@@ -6509,7 +6528,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/01/Bitmain-Antminer-L7.png",
-    "image_sha256": "3d3bca2071f847dea9d4aa97923d33134a053ef28a25819faad8e5cc099e012a"
+    "image_sha256": "3d3bca2071f847dea9d4aa97923d33134a053ef28a25819faad8e5cc099e012a",
+    "hashrate": "9.05–9.5 GH/s (Scrypt; configuration dependent)"
   },
   {
     "id": "r2-dc-23105-ca",
@@ -6531,7 +6551,8 @@
     "configuration_note": "Confirm hardware condition, revision and included power supply.",
     "active": true,
     "remote_image": "https://d-central.tech/wp-content/uploads/2023/01/Bitmain-Antminer-S19j.png",
-    "image_sha256": "4524292205378a6f3a518df4c4c078345f2ee31491b9dd4ea811629d636de1a1"
+    "image_sha256": "4524292205378a6f3a518df4c4c078345f2ee31491b9dd4ea811629d636de1a1",
+    "hashrate": "Up to 104 TH/s (confirm configuration)"
   },
   {
     "id": "r2-dc-17799-ca",
