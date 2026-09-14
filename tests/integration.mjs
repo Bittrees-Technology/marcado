@@ -221,6 +221,29 @@ try {
   );
   const [ref] =
     await sql`SELECT referral FROM marcada.users WHERE identity=${support}`;
+  assert.equal((await request("referrals/new", {})).status, 401);
+  assert.equal(
+    (
+      await request("referrals/new", {}, support, {
+        origin: "https://untrusted.example",
+      })
+    ).status,
+    403,
+  );
+  const renewed = await request("referrals/new", {}, support);
+  assert.equal(renewed.status, 201);
+  assert.match(renewed.data.referral, /^[a-f0-9]{16}$/);
+  assert.notEqual(renewed.data.referral, ref.referral);
+  assert.equal(
+    (await request("me", undefined, support)).data.user.referral,
+    renewed.data.referral,
+  );
+  assert.equal(
+    (
+      await sql`SELECT identity FROM marcada.referral_codes WHERE code=${ref.referral}`
+    )[0].identity,
+    support,
+  );
   globalThis.fetch = async (url, options) => {
     if (String(url) !== "https://api.resend.com/emails")
       return originalFetch(url, options);
@@ -436,6 +459,7 @@ try {
   }
   const [self] =
     await sql`SELECT referral FROM marcada.users WHERE identity=${customer}`;
+  assert.equal((await request("referrals/new", {}, customer)).status, 201);
   assert.equal(
     (
       await request(
@@ -814,6 +838,26 @@ try {
   );
   await request("admin/role", { identity: customer, role: "customer" }, owner);
   assert.equal((await request("admin", undefined, customer)).status, 403);
+  for (const code of [ref.referral, renewed.data.referral]) {
+    const result = await request(
+      "quotes",
+      {
+        product: "asic",
+        item_id: "bitshopper-23685",
+        quantity: 3,
+        details: "Catalog-wide referral check",
+        referral: code,
+        request_key: randomUUID(),
+      },
+      customer,
+    );
+    assert.equal(result.status, 201, JSON.stringify(result.data));
+    const [saved] =
+      await sql`SELECT referral,item_id FROM marcada.quotes WHERE id=${result.data.id}`;
+    assert.equal(saved.referral, code);
+    assert.equal(saved.item_id, "bitshopper-23685");
+    await sql`DELETE FROM marcada.quotes WHERE id=${result.data.id}`;
+  }
   globalThis.fetch = originalFetch;
   console.log(
     "PASS: role boundaries, private offers and revocation, CSRF, quote/referral persistence and notification failure/retry/expiry, email code replay, secure cookies, SIWE signature/replay/domain checks.",

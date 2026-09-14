@@ -1,5 +1,11 @@
 # Referral notifications and private deals
 
+## Member referral codes
+
+Signed-in members can use **Referrals → Request a new code** to receive a new default code immediately. Previous codes and links remain valid through `referral_codes`; existing quote attribution is unchanged. Codes apply to all active products and collections. The sharing panel supports store links, collection links and searchable individual product links. Customers can also enter any valid member code during a quote request.
+
+`POST /api/referrals/new` requires a session and same-origin protection and is rate limited to five requests per ten-minute IP bucket. It atomically retains the previous code, records the new code, updates the member default and audits the action. Quote validation resolves both current and previous codes and rejects self-referrals, including linked email/wallet identities. Creating a code does not send a notification or grant a commission.
+
 ## Operations email
 
 Owners can configure the approved operations mailbox and enable future notifications in **Admin → Notifications**. Saved settings take precedence over the deployment fallback `REFERRAL_NOTIFY_EMAIL`. `MAIL_FROM` and `RESEND_API_KEY` use the existing verified sender. An empty fallback leaves notification creation disabled; the settings form rejects enabling an empty or invalid mailbox. Changing the recipient affects future requests only; already queued messages retain their original recipient and content.

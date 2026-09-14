@@ -310,6 +310,18 @@ export default async function handler(req, res) {
     }
     const u = await user(req);
     if (!u) return json(res, 401, { error: "Sign in to continue" });
+    if (route === "referrals/new" && req.method === "POST") {
+      await limited(req, "referral-code", 5);
+      const code = token().slice(0, 16);
+      const db = sql();
+      await db.transaction([
+        db`INSERT INTO marcada.referral_codes(code,identity) SELECT referral,identity FROM marcada.users WHERE identity=${u.identity} ON CONFLICT(code) DO NOTHING`,
+        db`INSERT INTO marcada.referral_codes(code,identity) VALUES(${code},${u.identity})`,
+        db`UPDATE marcada.users SET referral=${code} WHERE identity=${u.identity}`,
+        db`INSERT INTO marcada.audit(id,actor,action,detail) VALUES(${randomUUID()},${u.identity},'new_referral_code',${code})`,
+      ]);
+      return json(res, 201, { referral: code });
+    }
     if (route === "notifications" && req.method === "GET") {
       const id = url.searchParams.get("id");
       if (id && !uuid(id))
@@ -363,8 +375,12 @@ export default async function handler(req, res) {
           error: "You cannot use your own referral code.",
         });
       const [ref] = referral
-        ? await sql()`SELECT referral,identity FROM marcada.users WHERE referral=${referral} AND identity<>${u.identity}`
+        ? await sql()`SELECT referral,identity FROM marcada.users WHERE referral=${referral} UNION SELECT code AS referral,identity FROM marcada.referral_codes WHERE code=${referral}`
         : [];
+      if (ref?.identity === u.identity)
+        return json(res, 400, {
+          error: "You cannot use your own referral code.",
+        });
       if (referral && !ref)
         return json(res, 400, {
           error: "Referral code not found. Check the code or clear the field.",

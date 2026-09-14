@@ -55,3 +55,7 @@ ALTER TABLE marcada.items DROP CONSTRAINT IF EXISTS items_supplier_region_check;
 ALTER TABLE marcada.items ADD CONSTRAINT items_supplier_region_check CHECK(supplier_region IN ('US','EU','CA','CN','Unverified'));
 
 ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS hashrate text NOT NULL DEFAULT '';
+
+CREATE TABLE IF NOT EXISTS marcada.referral_codes(code text PRIMARY KEY CHECK(code ~ '^[a-f0-9]{16}$'),identity text NOT NULL REFERENCES marcada.users(identity) ON DELETE CASCADE,created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS referral_codes_identity_idx ON marcada.referral_codes(identity);
+INSERT INTO marcada.referral_codes(code,identity) SELECT referral,identity FROM marcada.users ON CONFLICT(code) DO NOTHING;

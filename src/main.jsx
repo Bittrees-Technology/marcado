@@ -261,6 +261,8 @@ function App() {
     setError("");
     setNotice("");
   }
+  const [referralItem, setReferralItem] = useState("");
+  const [referralSearch, setReferralSearch] = useState("");
   async function share(product = "", item = "") {
     await run(async () => {
       if (!user) {
@@ -975,10 +977,11 @@ function App() {
             {modal === "referrals" && (
               <>
                 <div className="eyebrow">REFERRALS</div>
-                <h2>Share a product or collection.</h2>
+                <h2>Your code. Every product.</h2>
                 <p>
-                  Share Mercado or a specific collection. Quote requests
-                  submitted from your link are attributed to your referral code.
+                  Your referral code works across every Mercado product and
+                  collection. Share the whole store or link directly to a
+                  product.
                 </p>
                 {user ? (
                   <>
@@ -1001,6 +1004,28 @@ function App() {
                     >
                       Copy referral code <Copy size={16} />
                     </button>
+                    <button
+                      className="secondary"
+                      disabled={busy}
+                      onClick={() =>
+                        run(async () => {
+                          const result = await api("referrals/new", {});
+                          setUser((current) => ({
+                            ...current,
+                            referral: result.referral,
+                          }));
+                          setNotice(
+                            "New referral code ready. Your previous codes and links still work.",
+                          );
+                        })
+                      }
+                    >
+                      Request a new code
+                    </button>
+                    <small>
+                      Previous codes and links remain valid and attributed to
+                      you.
+                    </small>
                     <p>
                       Share this code with customers. They can enter it when
                       requesting a quote, or use your referral link.
@@ -1032,6 +1057,47 @@ function App() {
                       onClick={() =>
                         share(document.querySelector("#ref-product").value)
                       }
+                    >
+                      Copy collection link <Copy size={16} />
+                    </button>
+                    <label>
+                      Search products
+                      <input
+                        type="search"
+                        value={referralSearch}
+                        onChange={(e) => setReferralSearch(e.target.value)}
+                        placeholder="Product name or supplier"
+                      />
+                    </label>
+                    <label>
+                      Individual product
+                      <select
+                        value={referralItem}
+                        onChange={(e) => setReferralItem(e.target.value)}
+                      >
+                        <option value="">Choose a product</option>
+                        {items
+                          .filter(
+                            (p) =>
+                              p.id === referralItem ||
+                              (p.name + " " + p.source_name)
+                                .toLowerCase()
+                                .includes(referralSearch.toLowerCase()),
+                          )
+                          .map((p) => (
+                            <option key={p.id} value={p.id}>
+                              {p.name} · {p.source_name}
+                            </option>
+                          ))}
+                      </select>
+                    </label>
+                    <button
+                      className="secondary"
+                      disabled={!referralItem || busy}
+                      onClick={() => {
+                        const item = items.find((p) => p.id === referralItem);
+                        if (item) share(item.product_id, item.id);
+                      }}
                     >
                       Copy product link <Copy size={16} />
                     </button>
