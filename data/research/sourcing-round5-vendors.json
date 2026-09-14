@@ -1,0 +1,42 @@
+[
+  {
+    "name": "PiShop.us",
+    "country": "United States",
+    "location": "New Castle, Delaware",
+    "source": "https://www.pishop.us/contact-us/",
+    "commercial_source": "https://www.pishop.us/about/",
+    "offers": 66,
+    "qualification": "Public supplier lead; reseller terms and fulfillment must be confirmed",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "name": "330ohms",
+    "country": "Mexico",
+    "location": "Coyoac\u00e1n, Mexico City",
+    "source": "https://www.330ohms.com/contacto",
+    "commercial_source": "https://www.330ohms.com/contacto",
+    "offers": 36,
+    "qualification": "Public supplier lead; reseller terms and fulfillment must be confirmed",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "name": "BerryBase",
+    "country": "Germany",
+    "location": "Berlin branch; Hamburg head office",
+    "source": "https://www.berrybase.de/en/footer/information/imprint/",
+    "commercial_source": "https://support.berrybase.de/",
+    "offers": 55,
+    "qualification": "Public supplier lead; reseller terms and fulfillment must be confirmed",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "name": "The Solo Mining Co'",
+    "country": "United Kingdom",
+    "location": "CFLT Limited, company 15385088",
+    "source": "https://www.thesolomining.co/",
+    "commercial_source": "https://www.thesolomining.co/",
+    "offers": 21,
+    "qualification": "Public supplier lead; reseller terms and fulfillment must be confirmed",
+    "checked_date": "2026-09-14"
+  }
+]

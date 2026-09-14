@@ -1,0 +1,18 @@
+[
+  {
+    "snapshot": "330ohms-discovery",
+    "sha256": "a94f4338bc97586baa6d386677997121a5dd90c84b46d24cf973028ce132ed75"
+  },
+  {
+    "snapshot": "pishop-xml-discovery",
+    "sha256": "d1625baf10482d5c0d24c0fd3097df3a931573fed1c5357585cbe5b91cd8724b"
+  },
+  {
+    "snapshot": "berrybase-sitemap.xml",
+    "sha256": "a9269c7240bab7379afd5e458a13caccfbae1183a31b6e6218796aa3adcaa67e"
+  },
+  {
+    "snapshot": "solo-wc-discovery",
+    "sha256": "e790751ba71d77e4e6c987399057ea9a094fab955510e720290fabec3d753527"
+  }
+]

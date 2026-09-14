@@ -1,0 +1,462 @@
+[
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/google-coral/",
+    "reason": "Missing structured product offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-02162-raspberry-pi-5-1gb-1618",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/waveshare-rp2040-eth-mini-development-board-rp2040-ethernet-port-module/",
+    "reason": "Missing structured product offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-01112-raspberry-pi-5-8gb-1378",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-ram",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-16gb-ram-32gb-emmc-cm5116032/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-m-2-hat-ssd-kit-for-raspberry-pi-5-512gb/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-8gb-ram-64gb-emmc-cm5008064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/dn-e1405-raspberry-pi-3b-131",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/4-channel-relay-module-for-arduino-raspberry-pi-5v/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-00020-raspberry-pi-zero-w-1336",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/p3-b0041-raspberry-pi-zero-w-con-headers-1669",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-01633-raspberry-pi-pico-2-w-1563",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/luefter-40x40x10mm-fuer-nvidia-jetson-nano",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-01634-raspberry-pi-pico-2-w-con-headers-1627",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-8gb-ram-32gb-emmc-cm5108032/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/google-coral-usb-accelerator-fuer-raspberry-pi",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/p3-b0099-kit-basico-de-raspberry-pi-5-8gb-1597",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-4gb-ram-64gb-emmc-cm5004064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-4gb-ram-32gb-emmc-cm5104032/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-5-desktop-kit-8gb/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-2gb-ram-64gb-emmc-cm5102064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/nvidia-jetson-orin-nano-developer-kit-8gb",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-00940-monitor-oficial-raspberry-pi-rojo-blanco-1491",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-00025-raspberry-pi-pantalla-touch-7-195",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-01771-raspberry-pi-hat-m-2-compacto-1566",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/rp-01022-raspberry-pi-poe-hat-r2-1562",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-ram-active-cooler-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-2gb-ram-lite-cm5002000/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/slim-acryl-gehaeuse-fuer-raspberry-pi-5-active-cooler-stackable-transparent-schwarz",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/armor-gehaeuse-fuer-raspberry-pi-5-schwarz",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "330ohms",
+    "url": "https://www.330ohms.com/shop/lt-05c06-carcasa-de-metal-para-pi-5-1429",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/pikvm-v3-2-hat-for-raspberry-pi-4/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-16gb-ram-32gb-emmc-cm5016032/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/pcie-to-m-2-adapter-board-c-for-raspberry-pi-5/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-ram-b-ware",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-4gb-ram-lite-cm5004000/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-8gb-ram-64gb-emmc-cm5108064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/techship-mc201-pc201-mounting-accessories-for-raspberry-pi-5/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/pimoroni-nvme-base-fuer-raspberry-pi-5-pcie-m-key-nvme-ssd-unterstuetzung",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-nvme-ssd-256gb/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/pimoroni-pcie-flex-kabel-fuer-nvme-base-and-raspberry-pi-5-pcie-gen-3-18-pins-50-mm-pipe",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-5-desktop-kit-16gb/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raidsonic-ib-1807mt-c31-m.2-nvme-ssd-gehaeuse-10gbps-usb-c-aluminium-schwarz",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-8gb-ram-lite-cm5008000/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/poe-ups-mini-computer-designed-for-raspberry-pi-cm4-gigabit-ethernet-dual-hdmi-quad-usb2-0/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-4gb-ram-64gb-emmc-cm5104064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/power-over-ethernet-hat-h-for-raspberry-pi-5-cm-5-5v-5a-output-supports-802-3af-at-poe-isolated/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-16gb-ram-16gb-emmc-cm5116016/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/3ft-cat6-ethernet-cable-black/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-passive-cooler-starter-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-8gb-passive-cooler-starter-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-8gb-active-cooler-starter-kit-mit-aluminium-gehaeuse",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/pikvm-v3-hat-for-raspberry-pi-4/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-active-cooler-starter-kit-mit-aluminium-gehaeuse",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-2gb-ram-64gb-emmc-cm5002064/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/waveshare-aktiver-kuehler-luefter-fuer-raspberry-pi-5-aluminium-pwm-2.35-cfm-8000-rpm-5v-dc",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/dfrobot-io-expansion-hat-fuer-raspberry-pi-5-4b-3b-sensor-schnittstelle-pwm-i2c-uart-5v",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-2gb-ram-32gb-emmc-cm5102032/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-wireless-16gb-ram-lite-cm5116000/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/nx-m2-nvme-2280-256gb-solid-state-drive-3d-tlc-flash-memory/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/aluminium-gehaeuse-fuer-raspberry-pi-5-schwarz-b-ware",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "PiShop.us",
+    "url": "https://www.pishop.us/product/raspberry-pi-5-2gb/",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/dfrobot-18650-batterie-ups-hat-fuer-raspberry-pi-5-5.1v-5a-3a-quick-charge-i2c-95-effizienz",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-8gb-starter-kit-mit-microsd-netzteil-gehaeuse-luefter-hdmi-kabel-und-sd-reader",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-ssd-kit-fuer-raspberry-pi-5-256gb",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-ssd-kit-fuer-raspberry-pi-5-512gb",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-compute-module-5-development-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-4gb-ram-ultimate-starter-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-8gb-ram-ultimate-starter-kit",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/raspberry-pi-5-16gb-ram",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "vendor": "BerryBase",
+    "url": "https://www.berrybase.de/waveshare-pi5-module-box-b-pcie-zu-4x-usb-3.2-gen1-aluminiumgehaeuse-dual-hdmi-fuer-raspberry-pi-5",
+    "reason": "No fixed-price, in-stock structured offer"
+  },
+  {
+    "id": "r5-pishop-29cc94a4e927",
+    "source_url": "https://www.pishop.us/product/raspberry-pi-500-desktop-kit/",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-96b4a69bbd55",
+    "source_url": "https://www.berrybase.de/offizielles-gehaeuse-fuer-raspberry-pi-5-rot-weiss",
+    "reason": "Redundant cosmetic enclosure variant in this pass"
+  },
+  {
+    "id": "r5-pishop-22f46e4abda5",
+    "source_url": "https://www.pishop.us/product/mini-computer-kit-for-raspberry-pi-5-aluminum-alloy-case-pcie-to-m-2-interface-box-c-dol3/",
+    "reason": "Accessory-kit included-compute configuration requires clarification"
+  },
+  {
+    "id": "r5-berrybase-28806539c53e",
+    "source_url": "https://www.berrybase.de/pibow-coupe-gehaeuse-fuer-raspberry-pi-5-royale",
+    "reason": "Redundant cosmetic enclosure variant in this pass"
+  },
+  {
+    "id": "r5-berrybase-6f6baf89b97d",
+    "source_url": "https://www.berrybase.de/pibow-coupe-gehaeuse-fuer-raspberry-pi-5-ninja",
+    "reason": "Redundant cosmetic enclosure variant in this pass"
+  },
+  {
+    "id": "r5-pishop-195bf72876b4",
+    "source_url": "https://www.pishop.us/product/io-board-with-poe-feature-for-raspberry-pi-cm5-mini-computer-kit/",
+    "reason": "Accessory-kit included-compute configuration requires clarification"
+  },
+  {
+    "id": "r5-pishop-e7601f1520f7",
+    "source_url": "https://www.pishop.us/product/raspberry-pi-500-unit-only/",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-pishop-5bcd0735332b",
+    "source_url": "https://www.pishop.us/product/mini-dual-gigabit-ethernet-mini-computer-kit-designed-for-raspberry-pi-cm4/",
+    "reason": "Accessory-kit included-compute configuration requires clarification"
+  },
+  {
+    "id": "r5-berrybase-9b236f2e5d96",
+    "source_url": "https://www.berrybase.de/acryl-gehaeuse-fuer-raspberry-pi-5-active-cooler-stackable-rainbow",
+    "reason": "Redundant cosmetic enclosure variant in this pass"
+  },
+  {
+    "id": "r5-pishop-0b0016e84521",
+    "source_url": "https://www.pishop.us/product/raspberry-pi-compute-module-5-development-kit-us-rev-2/",
+    "reason": "Duplicate supplier product title / alias URL"
+  },
+  {
+    "id": "r5-pishop-a59401a47d00",
+    "source_url": "https://www.pishop.us/product/8-channel-relay-module-for-arduino-raspberry-pi-5v/",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-c5d9589a69e7",
+    "source_url": "https://www.berrybase.de/full-armor-gehaeuse-fuer-raspberry-pi-5-silber",
+    "reason": "Redundant cosmetic enclosure variant in this pass"
+  },
+  {
+    "id": "r5-pishop-91a05b1fdb83",
+    "source_url": "https://www.pishop.us/product/raspberry-pi-500-us-main-unit-only/",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-ed8302ed0527",
+    "source_url": "https://www.berrybase.de/waveshare-rasprover-pt-pi5-ai-kit-acce-pan-tilt-einheit-dual-vision-esp-now-fuer-raspberry-pi-5",
+    "reason": "Robotics kit or B-grade condition outside this focused pass"
+  },
+  {
+    "id": "r5-berrybase-ad1af87aa977",
+    "source_url": "https://www.berrybase.de/argon40-neo-5-bred-aluminiumgehaeuse-fuer-raspberry-pi-5-passive-aktive-kuehlung-30mm-pwm-luefter-b-ware",
+    "reason": "Robotics kit or B-grade condition outside this focused pass"
+  },
+  {
+    "id": "r5-berrybase-16aa6dbf7c11",
+    "source_url": "https://www.berrybase.de/waveshare-rasprover-pi5-ai-kit-acce-duale-steuerungen-dual-vision-esp-now-fuer-raspberry-pi-5",
+    "reason": "Robotics kit or B-grade condition outside this focused pass"
+  },
+  {
+    "id": "r5-berrybase-9aaf7f02f0bf",
+    "source_url": "https://www.berrybase.de/raspberry-pi-500-unit-de-layout-01939c4a5c5f73b595ec8dcae9946de7",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-2d995b9f80dd",
+    "source_url": "https://www.berrybase.de/raspberry-pi-500-unit-us-layout-01939c4a817570a187e94ae5e4a67d35",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-febe6473de0c",
+    "source_url": "https://www.berrybase.de/raspberry-pi-500-de-kit-de-layout",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  },
+  {
+    "id": "r5-berrybase-4429bc967d2e",
+    "source_url": "https://www.berrybase.de/raspberry-pi-500-eu-kit-us-layout",
+    "reason": "Consumer desktop or general relay outside focused compute infrastructure pass"
+  }
+]

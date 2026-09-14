@@ -78,6 +78,7 @@ test("comparison assignments reference real offers and retain configuration-spec
     "home-mining-gadgets",
     "sourcing-round3",
     "sourcing-round4",
+    "sourcing-round5",
   ].flatMap((f) => read("data/" + f + ".json"));
   const ids = new Set(all.map((p) => p.id));
   const assignments = read("data/comparison-groups.json");

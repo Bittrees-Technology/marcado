@@ -72,3 +72,5 @@ The existing deployment retains the internal `marcada` database schema and analy
 See [initial sourcing research](SOURCING-RESEARCH.md) and the [300-listing expansion](SOURCING-ROUND2.md) and the [DTV Electronics additions](SOURCING-DTV.md) for catalog evidence. Products, supplier relationships and commercial terms are deployment data, independent of the marketplace infrastructure.
 
 Regional sourcing evidence and comparison-group administration are documented in [US, Mexico and Western Europe sourcing](SOURCING-US-MEXICO-EUROPE.md).
+
+The [additional regional sourcing pass](SOURCING-ROUND5.md) records subsequent qualified vendors, product evidence and exclusions.

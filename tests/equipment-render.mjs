@@ -20,6 +20,7 @@ try {
     ...JSON.parse(await readFile("data/home-mining-gadgets.json", "utf8")),
     ...JSON.parse(await readFile("data/sourcing-round3.json", "utf8")),
     ...JSON.parse(await readFile("data/sourcing-round4.json", "utf8")),
+    ...JSON.parse(await readFile("data/sourcing-round5.json", "utf8")),
   ];
   const groupAssignments = new Map(
     JSON.parse(await readFile("data/comparison-groups.json", "utf8")).map(
