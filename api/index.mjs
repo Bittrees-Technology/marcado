@@ -619,7 +619,7 @@ export default async function handler(req, res) {
       )
         return json(res, 400, { error: "Unknown collection" });
       const saved =
-        await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,hashrate,specifications,active,supplier_region,tax_note,configuration_note,supplier_status) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.hashrate || ""},${p.specifications},${p.active},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.supplier_status}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,hashrate=EXCLUDED.hashrate,specifications=EXCLUDED.specifications,active=EXCLUDED.active,supplier_region=EXCLUDED.supplier_region,tax_note=EXCLUDED.tax_note,configuration_note=EXCLUDED.configuration_note,supplier_status=EXCLUDED.supplier_status,updated_at=now() WHERE ${body.create_only !== true} RETURNING id`;
+        await sql()`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,hashrate,model_group,specifications,active,supplier_region,tax_note,configuration_note,supplier_status) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.hashrate || ""},${p.model_group || ""},${p.specifications},${p.active},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.supplier_status}) ON CONFLICT(id) DO UPDATE SET product_id=EXCLUDED.product_id,name=EXCLUDED.name,description=EXCLUDED.description,price=EXCLUDED.price,currency=EXCLUDED.currency,price_kind=EXCLUDED.price_kind,price_checked=EXCLUDED.price_checked,source_url=EXCLUDED.source_url,source_name=EXCLUDED.source_name,image_url=EXCLUDED.image_url,image_credit=EXCLUDED.image_credit,hashrate=EXCLUDED.hashrate,model_group=EXCLUDED.model_group,specifications=EXCLUDED.specifications,active=EXCLUDED.active,supplier_region=EXCLUDED.supplier_region,tax_note=EXCLUDED.tax_note,configuration_note=EXCLUDED.configuration_note,supplier_status=EXCLUDED.supplier_status,updated_at=now() WHERE ${body.create_only !== true} RETURNING id`;
       if (!saved.length)
         return json(res, 409, {
           error:
@@ -723,7 +723,7 @@ export default async function handler(req, res) {
         currency = String(body.currency || "USD");
       if (
         (price !== null && (!Number.isFinite(price) || price < 0)) ||
-        !["USD", "EUR", "GBP", "CAD", "AUD"].includes(currency)
+        !["USD", "EUR", "GBP", "MXN", "CAD", "AUD"].includes(currency)
       )
         return json(res, 400, { error: "Invalid price or currency" });
       if (typeof body.private !== "boolean")

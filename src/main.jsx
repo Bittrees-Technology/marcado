@@ -385,7 +385,7 @@ function App() {
       <div className="topline">
         <span>A BITTREES TECHNOLOGY MARKETPLACE</span>
         <a href={isEquipment ? "/#catalog" : "#catalog"}>
-          US & European equipment sourcing <ArrowUpRight size={13} />
+          US, Mexico & European sourcing <ArrowUpRight size={13} />
         </a>
       </div>
       <header>

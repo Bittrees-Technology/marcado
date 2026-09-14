@@ -1,0 +1,891 @@
+[
+  {
+    "vendor": "ameridroid",
+    "source_id": "10374545604887",
+    "name": "SwitchBot Keypad Vision",
+    "source_url": "https://ameridroid.com/products/switchbot-keypad-vision",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10374545309975",
+    "name": "SwitchBot Keypad Vision Pro",
+    "source_url": "https://ameridroid.com/products/switchbot-keypad-vision-pro",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10275634872599",
+    "name": "CrowPanel Advance 3.5\" ESP32-S3 AI HMI Display for Meshtastic – 480x320 IPS Touch Screen with Case",
+    "source_url": "https://ameridroid.com/products/crowpanel-advance-3-5-esp32-s3-ai-hmi-display-for-meshtastic-480x320-ips-touch-screen-with-case",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10372957929751",
+    "name": "SONOFF Z-Wave 800 PoE Dongle Max | Dongle-MZG23",
+    "source_url": "https://ameridroid.com/products/sonoff-z-wave-800-poe-dongle-max-dongle-mzg23",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10348294963479",
+    "name": "Reolink OMVI 3i PoE",
+    "source_url": "https://ameridroid.com/products/reolink-omvi-3i-poe",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10147011199255",
+    "name": "3D Printed Case Indiedroid Nova NES",
+    "source_url": "https://ameridroid.com/products/3d-printed-case-indiedroid-nova-nes",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10140822962455",
+    "name": "Reolink Video Doorbell PoE",
+    "source_url": "https://ameridroid.com/products/reolink-video-doorbell-poe",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "10076229861655",
+    "name": "SONOFF Dongle Max Zigbee/Thread PoE Dongle | Dongle-M",
+    "source_url": "https://ameridroid.com/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "9961462530327",
+    "name": "Ethernet Adapter for Homey Pro",
+    "source_url": "https://ameridroid.com/products/ethernet-adapter-for-homey-pro",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "9931287232791",
+    "name": "Reolink TrackMix PoE",
+    "source_url": "https://ameridroid.com/products/reolink-trackmix-poe",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "9931284414743",
+    "name": "Reolink Duo 3 PoE",
+    "source_url": "https://ameridroid.com/products/reolink-duo-3-poe",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "9818575208727",
+    "name": "iSG Max + USB-C to Ethernet Adapter",
+    "source_url": "https://ameridroid.com/products/isg-max-usb-c-to-ethernet-adapter",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "7999383896343",
+    "name": "eMMC Module N2L Android (Yellow Box)",
+    "source_url": "https://ameridroid.com/products/emmc-module-n2l-android-yellow-box",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "6973066903586",
+    "name": "eMMC Module M1 Android (Gray Box)",
+    "source_url": "https://ameridroid.com/products/emmc-module-m1-android-grey-square",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "4492716736546",
+    "name": "eMMC Module C4 Android (Purple Box)",
+    "source_url": "https://ameridroid.com/products/emmc-module-c4-android-purple-box",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "4422490914850",
+    "name": "ODROID-GO ADVANCE Colored Buttons",
+    "source_url": "https://ameridroid.com/products/odroid-go-advance-colored-buttons",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "589084885026",
+    "name": "eMMC Module C2 Android (Green Box)",
+    "source_url": "https://ameridroid.com/products/emmc-module-c2-android-green-box",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "1792918552610",
+    "name": "eMMC Module N2 Android (Green Dot)",
+    "source_url": "https://ameridroid.com/products/emmc-module-n2-linux-green-dot",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "589081870370",
+    "name": "eMMC 5.1 Module XU3/XU4 Android (White Dot)",
+    "source_url": "https://ameridroid.com/products/emmc-5-1-module-xu3-xu4-android-white-dot",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "1546217816098",
+    "name": "ODROID C1+/C2 Case by ameriDroid",
+    "source_url": "https://ameridroid.com/products/ameridroid-odroid-c2-case",
+    "reason": "Duplicate same-vendor ODROID C1/C2 case offer"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "3857590845474",
+    "name": "ODROID C1+/C2 Case by ameriDroid",
+    "source_url": "https://ameridroid.com/products/odroid-c1-c2-case-by-ameridroid",
+    "reason": "Duplicate same-vendor ODROID C1/C2 case offer"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "3845044371490",
+    "name": "ODROID-C2 User Manual",
+    "source_url": "https://ameridroid.com/products/odroid-c2-user-manual",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "589091930146",
+    "name": "eMMC Module C0/C1/C1+ Android (Chartreuse Dot)",
+    "source_url": "https://ameridroid.com/products/emmc-module-c0-c1-c1-android-chartreuse-dot",
+    "reason": "Retain Linux/base module rather than another OS image of the same hardware"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "1444485890082",
+    "name": "ODROID-GO 10pin male header 5 pack",
+    "source_url": "https://ameridroid.com/products/odroid-go-10pin-male-header-5-pack",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "588572131362",
+    "name": "ODROID-C0/C1/C1+ User Manual",
+    "source_url": "https://ameridroid.com/products/odroid-c0-c1-c1-user-manual",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "ameridroid",
+    "source_id": "588543557666",
+    "name": "ODROID-XU4 User Manual",
+    "source_url": "https://ameridroid.com/products/odroid-xu4-user-manual",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "microbot",
+    "source_id": "7293698048077",
+    "name": "Raspberry Pi 5 - 4GB RAM",
+    "source_url": "https://microbot.com.mx/products/raspberry-pi-5-4gb-ram",
+    "reason": "Same-vendor Raspberry Pi 5 4GB already represented by selected parent variant"
+  },
+  {
+    "vendor": "microbot",
+    "source_id": "6711758258253",
+    "name": "Teclado Hub Oficial Raspberry Pi",
+    "source_url": "https://microbot.com.mx/products/teclado-hub-oficial-raspberry-pi-rpi-kyb",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "microbot",
+    "source_id": "6711756390477",
+    "name": "Lente Teleobjetivo 16mm 10MP Raspberry Pi C-Mount IMX477",
+    "source_url": "https://microbot.com.mx/products/lente-teleobjetivo-16mm-10mp-raspberry-pi-pt3611614m10mp",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "microbot",
+    "source_id": "6711756357709",
+    "name": "Lente 6mm CS-Mount F1.2 para Cámara HQ Raspberry Pi IMX477",
+    "source_url": "https://microbot.com.mx/products/lente-6mm-cs-mount-f12-camara-hq-raspberry-pi",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "bitronics",
+    "source_id": "10479015461203",
+    "name": "Bitaxe “Do Not Disturb I'm Hashing” Panel",
+    "source_url": "https://bitronics.store/products/bitaxe-do-not-disturb-im-hashing-panel",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7639403692111",
+    "name": "Raspberry Pi 500 US - Complete Kit",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-500-us-complete-kit",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602145296463",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 8GB, 8GB - CM4108008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-8gb-8gb-cm4108008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600438018127",
+    "name": "Raspberry Pi Compute Module CM4 IO Board",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-cm4-io-board",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602131238991",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 4GB, 8GB - CM4104008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-4gb-8gb-cm4104008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602129305679",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 8GB, 16GB - CM4108016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-8gb-16gb-cm4108016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600507551823",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 8GB Lite - CM4108000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-8gb-lite-cm4108000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600488742991",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 8GB, 32GB - CM4108032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-8gb-32gb-cm4108032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602128420943",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 4GB Lite - CM4104000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-4gb-lite-cm4104000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600626008143",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 2GB, 8GB - CM4102008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-2gb-8gb-cm4102008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600604381263",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 4GB, 32GB - CM4104032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-4gb-32gb-cm4104032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600636690511",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 4GB, 16GB - CM4104016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-4gb-16gb-cm4104016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602139693135",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 2GB, 32GB - CM4102032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-2gb-32gb-cm4102032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602138546255",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 1GB, 8GB - CM4101008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-1gb-8gb-cm4101008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600575774799",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 2GB Lite - CM4102000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-2gb-lite-cm4102000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600548216911",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 2GB, 16GB - CM4102016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-2gb-16gb-cm4102016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602142806095",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 1GB Lite - CM4101000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-1gb-lite-cm4101000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602135269455",
+    "name": "Raspberry Pi Compute Module 4, 8GB, 16GB - CM4008016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-8gb-16gb-cm4008016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600582459471",
+    "name": "Raspberry Pi Compute Module 4, Wireless, 1GB, 16GB - CM4101016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-wireless-1gb-16gb-cm4101016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600523608143",
+    "name": "Raspberry Pi Compute Module 4, 8GB, 32GB - CM4008032 - NO WIFI!",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-8gb-32gb-cm4008032-no-wifi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602154831951",
+    "name": "Raspberry Pi Compute Module 4, 4GB Lite - CM4004000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-4gb-lite-cm4004000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602146771023",
+    "name": "Raspberry Pi Compute Module 4, 4GB, 32GB, No WiFi - CM4004032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-4gb-32gb-no-wifi-cm4004032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602141397071",
+    "name": "Raspberry Pi Compute Module 4, 4GB, 8GB - CM4004008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-4gb-8gb-cm4004008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600538845263",
+    "name": "Raspberry Pi Compute Module 4, 8GB Lite - CM4008000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-8gb-lite-cm4008000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602137366607",
+    "name": "Raspberry Pi Compute Module 4, 2GB, 16GB - CM4002016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-2gb-16gb-cm4002016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602133893199",
+    "name": "Raspberry Pi Compute Module 4, 2GB, 32GB, No WiFi - CM4002032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-2gb-32gb-no-wifi-cm4002032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602132254799",
+    "name": "Raspberry Pi Compute Module 4, 2GB, 8GB - CM4002008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-2gb-8gb-cm4002008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600614572111",
+    "name": "Raspberry Pi Compute Module 4, 2GB Lite - CM4002000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-2gb-lite-cm4002000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602136973391",
+    "name": "Raspberry Pi Compute Module 4, 1GB, 16GB - CM4001016",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-1gb-16gb-cm4001016",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7602136383567",
+    "name": "Raspberry Pi Compute Module 4, 1GB, 32GB - CM4001032",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-1gb-32gb-cm4001032",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600590389327",
+    "name": "Raspberry Pi Compute Module 4, 1GB Lite - CM4001000",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-1gb-lite-cm4001000",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7600560635983",
+    "name": "Raspberry Pi Compute Module 4, 1GB, 8GB - CM4001008",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-compute-module-4-1gb-8gb-cm4001008",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "7113152888911",
+    "name": "Raspberry Pi microSD Card with Raspberry Pi OS 64-bit - 32GB",
+    "source_url": "https://chicagodist.com/products/class-10-microsd-card-with-raspberry-pi-os-bookworm-32gb",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6614092054607",
+    "name": "Raspberry Pi 4 Power Supply",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-4-power-supply",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6570294116431",
+    "name": "Four (4) Layer Stackable Clear Acrylic Raspberry Pi Case with Fans and Heatsinks",
+    "source_url": "https://chicagodist.com/products/four-4-layer-stackable-clear-acrylic-raspberry-pi-case-with-fans-and-heatsinks",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6564619812943",
+    "name": "Quectel EC25 Mini PCIe 4G/LTE module",
+    "source_url": "https://chicagodist.com/products/quectel-ec25-mini-pcie-4g-lte-module-with-sim-card",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6546655346767",
+    "name": "Aluminum Standoff for Raspberry Pi: 18.6mm Length, 6mm M2.5 Thread, M-F (4-Pack)",
+    "source_url": "https://chicagodist.com/products/aluminum-standoff-for-raspberry-pi-18-6mm-length-6mm-m2-5-thread-m-f-4-pack",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4857621151823",
+    "name": "Raspberry Pi Camera Cable (6, 12, 20, 39, 79 inch)",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-camera-cable-6-12-20-39-79-inch",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4845341147215",
+    "name": "SparkFun Qwiic SHIM Kit for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/sparkfun-qwiic-shim-kit-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4845341114447",
+    "name": "SparkFun Qwiic Starter Kit for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/sparkfun-qwiic-starter-kit-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4777541468239",
+    "name": "Raspberry Pi Drawstring Bag",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-drawstring-bag",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4772805738575",
+    "name": "Cyntech Raspberry Pi 4 Case in Black or Clear",
+    "source_url": "https://chicagodist.com/products/cyntech-pi-4-case",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4750141554767",
+    "name": "Raspberry Pi Cellular IoT Application Shield – LTE-M & NB-IoT & eGPRS",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-cellular-iot-application-shield-lte-m-nb-iot-egprs",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4636895248463",
+    "name": "SparkFun Auto pHAT for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/sparkfun-auto-phat-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4603246968911",
+    "name": "Hammer Header Female - Solderless Raspberry Pi Connector",
+    "source_url": "https://chicagodist.com/products/3663-adafruit-hammer-header-female-solderless-raspberry-pi-connector",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4506141130831",
+    "name": "SparkFun Qwiic pHAT V2.0 for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/sparkfun-qwiic-phat-v2-0-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4506114031695",
+    "name": "SparkFun Qwiic Kit for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/sparkfun-qwiic-kit-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4412111618127",
+    "name": "TinkerKit - add some juice to your Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/tinkerkit-add-some-juice-to-your-raspberry-pi",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4412098576463",
+    "name": "TINKERplate – a Multifunctional I/O HAT for the Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/tinkerplate-a-multifunctional-i-o-hat-for-the-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "3855112536143",
+    "name": "Official Raspberry Pi 4 Case in Black/Grey",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-4-case-black-grey",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4165917573199",
+    "name": "Raspberry Pi 4 Slide Case",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-4-slide-case",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "3855112175695",
+    "name": "Raspberry Pi 4 Desktop Kit",
+    "source_url": "https://chicagodist.com/products/raspberry-pi-4-desktop-kit-us",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "2369999339599",
+    "name": "Pi Foundation Raspberry Pi 3 A+ Case",
+    "source_url": "https://chicagodist.com/products/pi-foundation-raspberry-pi-3-a-case",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "133156057",
+    "name": "Adafruit RGB Negative 16x2 LCD+Keypad Kit for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/adafruit-rgb-negative-16x2-lcd-keypad-kit-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "142964279",
+    "name": "Adafruit RGB Positive 16x2 LCD+Keypad Kit for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/adafruit-rgb-positive-16x2-lcd-keypad-kit-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "488233926686",
+    "name": "eMMC reader",
+    "source_url": "https://chicagodist.com/products/emmc-reader",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "9564028488",
+    "name": "Passive PoE Injector Cable Set",
+    "source_url": "https://chicagodist.com/products/passive-poe-injector-cable-set",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294922820",
+    "name": "Panel Mount Ethernet Extension Cable",
+    "source_url": "https://chicagodist.com/products/panel-mount-ethernet-extension-cable",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294926596",
+    "name": "GPIO Ribbon Cable for Raspberry Pi Model A and B - 26 pin",
+    "source_url": "https://chicagodist.com/products/gpio-ribbon-cable-for-raspberry-pi-model-a-and-b-26-pin",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294890756",
+    "name": "Flex Cable for Raspberry Pi Camera - 100mm / 4\"",
+    "source_url": "https://chicagodist.com/products/flex-cable-for-raspberry-pi-camera-100mm-4",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294917956",
+    "name": "Ethernet Cable - 5 ft long",
+    "source_url": "https://chicagodist.com/products/ethernet-cable-5-ft-long",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294935364",
+    "name": "Ethernet Cable - 10 ft long",
+    "source_url": "https://chicagodist.com/products/ethernet-cable-10-ft-long",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294929284",
+    "name": "Cable Gland - Waterproof RJ-45 / Ethernet connector",
+    "source_url": "https://chicagodist.com/products/cable-gland-waterproof-rj-45-ethernet-connector",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294857348",
+    "name": "Adafruit Raspberry Pi A+ Case - Smoke Base w/ Clear Top",
+    "source_url": "https://chicagodist.com/products/adafruit-raspberry-pi-a-case-smoke-base-w-clear-top",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294854084",
+    "name": "Adafruit DPI TFT Kippah for Raspberry Pi",
+    "source_url": "https://chicagodist.com/products/adafruit-dpi-tft-kippah-for-raspberry-pi",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6294871364",
+    "name": "2x20 pin IDC Box Header - Raspberry Pi A+/B+/Pi 2/Pi 3",
+    "source_url": "https://chicagodist.com/products/2x20-pin-idc-box-header-raspberry-pi-a-b-pi-2-pi-3",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6355711620",
+    "name": "Adafruit Ethernet FeatherWing",
+    "source_url": "https://chicagodist.com/products/adafruit-ethernet-featherwing",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "6295235332",
+    "name": "VESA Mount for Cyntech Raspberry Pi Case",
+    "source_url": "https://chicagodist.com/products/vesa-splash",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4774956164",
+    "name": "Peltier Thermo-Electric Cooler Module+Heatsink Assembly - 12V 5A",
+    "source_url": "https://chicagodist.com/products/peltier-thermo-electric-cooler-module-heatsink-assembly-12v-5a",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "4769988356",
+    "name": "Adafruit DPI TFT Kippah for Raspberry Pi with Touch Support",
+    "source_url": "https://chicagodist.com/products/adafruit-dpi-tft-kippah-for-raspberry-pi-with-touch-support",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "chicago",
+    "source_id": "146613738",
+    "name": "Monochrome 128x32 SPI OLED graphic display for Raspberry Pi or Arduino",
+    "source_url": "https://chicagodist.com/products/monochrome-128x32-spi-oled-graphic-display-for-raspberry-pi-or-arduino",
+    "reason": "Store no longer accepts orders; official notice directs customers to PiShop.us"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7662390739038",
+    "name": "Guide - Making a Home Server with Raspberry Pi",
+    "source_url": "https://vilros.com/products/guide-making-a-home-server-with-raspberry-pi",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7564379848798",
+    "name": "Neoprene Case/Sleeve For Raspberry Pi 500+ With Accessory storage pocket",
+    "source_url": "https://vilros.com/products/neoprene-case-sleeve-for-raspberry-pi-500-with-accessory-storage-pocket",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7422158569566",
+    "name": "The Official Raspberry Pi Camera Module Guide, 2nd Edition",
+    "source_url": "https://vilros.com/products/the-official-raspberry-pi-camera-module-guide-2nd-edition",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7280148840542",
+    "name": "Raspberry Pi Carbon Removal Credit",
+    "source_url": "https://vilros.com/products/raspberry-pi-carbon-removal-credit",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7275613454430",
+    "name": "Vilros Accessory Kit For Raspberry Pi 500",
+    "source_url": "https://vilros.com/products/vilros-accessory-kit-for-raspberry-pi-500",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7275581636702",
+    "name": "Vilros Neoprene Case With Storage Pocket For Raspberry Pi15.6 Inch Monitor",
+    "source_url": "https://vilros.com/products/vilros-neoprene-case-with-storage-pocket-for-raspberry-pi15-6-inch-monitor",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "7071969050718",
+    "name": "Raspberry Pi 4 Model B",
+    "source_url": "https://vilros.com/products/raspberry-pi-4-model-b-1",
+    "reason": "Selected variant states 3GB Raspberry Pi 4; requires hardware confirmation"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6902459170910",
+    "name": "Vilros Quickstart Guide For Raspberry Pi 4th Edition",
+    "source_url": "https://vilros.com/products/vilros-quickstart-guide-for-raspberry-pi-4th-edition",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6823943471198",
+    "name": "The Official Raspberry Pi Beginner's Guide 5th Edition",
+    "source_url": "https://vilros.com/products/the-official-raspberry-pi-beginners-guide-5th-edition-updated-for-pi-5",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6744267522142",
+    "name": "Raspberry Pi Engraved Stainless Steel Pen",
+    "source_url": "https://vilros.com/products/raspberry-pi-engraved-stainless-steel-pen",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6744267456606",
+    "name": "Raspberry Pi Black Design Ceramic Mug",
+    "source_url": "https://vilros.com/products/raspberry-pi-black-design-ceramic-mug",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6744267292766",
+    "name": "Raspberry Pi Laser Engraved Travel Mug",
+    "source_url": "https://vilros.com/products/raspberry-pi-laser-engraved-travel-mug",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6697181675614",
+    "name": "Raspberry Pi Laser Engraved Drinks Bottle",
+    "source_url": "https://vilros.com/products/raspberry-pi-laser-engraved-drinks-bottle",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6692063117406",
+    "name": "8BitDo Pro 2 Bluetooth Controller for Switch/Switch OLED, PC, macOS, Android, Steam & Raspberry Pi",
+    "source_url": "https://vilros.com/products/8bitdo-pro-2-bluetooth-controller",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "6643344048222",
+    "name": "Vilros Quickstart Guide for Raspberry Pi Zero",
+    "source_url": "https://vilros.com/products/vilros-quickstart-guide-for-raspberry-pi-zero",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4807922253918",
+    "name": "Vilros Deluxe Accessory Bundle For Official Raspberry Pi 400 Kit",
+    "source_url": "https://vilros.com/products/vilros-deluxe-accessory-bundle-for-official-raspberry-pi-400-kit",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4792348934238",
+    "name": "Vilros Complete Accessory Bundle For Raspberry Pi 400",
+    "source_url": "https://vilros.com/products/vilros-basic-accessory-bundle-for-raspberry-pi-401",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4792316035166",
+    "name": "Vilros Basic Accessory Bundle For Raspberry Pi 400",
+    "source_url": "https://vilros.com/products/vilros-basic-accessory-bundle-for-raspberry-pi-400",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4792269799518",
+    "name": "Vilros Case and Protector Bundle For Raspberry Pi 400",
+    "source_url": "https://vilros.com/products/vilros-case-and-protector-bundle-for-raspberry-pi-400",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4792200200286",
+    "name": "Vilros Accessory Bundle For Official Raspberry Pi 400 Kit",
+    "source_url": "https://vilros.com/products/viros-accessory-bundle-for-official-raspberry-pi-400-kit",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4787711901790",
+    "name": "Neoprene Case/Sleeve For Raspberry Pi 400/500 With Accessory storage pocket",
+    "source_url": "https://vilros.com/products/vilp121",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "vilros",
+    "source_id": "4617929195614",
+    "name": "Vilros Raspberry Pi HQ Camera Compatible--3/8 Mini Ball Head Tripod",
+    "source_url": "https://vilros.com/products/vilros-3-8-mini-ball-head-tripod-for-raspberry-pi-hq-camera-compatible-with",
+    "reason": "Outside marketplace equipment scope or decorative/accessory-only merchandise"
+  },
+  {
+    "vendor": "sbcomponents",
+    "source_id": "6792674375",
+    "name": "Raspberry Pi 2, 3, 3B+ Blox Case - Yellow",
+    "source_url": "https://shop.sb-components.co.uk/products/raspberry-pi-3-blox-case-yellow",
+    "reason": "Cosmetic color duplicate"
+  },
+  {
+    "vendor": "sbcomponents",
+    "source_id": "6792648327",
+    "name": "Raspberry Pi 2, 3, 3B+ Blox Case - Red",
+    "source_url": "https://shop.sb-components.co.uk/products/raspberry-pi-3-red-blox-case",
+    "reason": "Cosmetic color duplicate"
+  },
+  {
+    "vendor": "sbcomponents",
+    "source_id": "6792612871",
+    "name": "Raspberry Pi 2, 3, 3B+ Blox Case - Blue",
+    "source_url": "https://shop.sb-components.co.uk/products/raspberry-pi-3-blue-blox-case",
+    "reason": "Cosmetic color duplicate"
+  },
+  {
+    "vendor": "sbcomponents",
+    "source_id": "6792513607",
+    "name": "Raspberry Pi 2, 3, 3B+ Blox Case - White",
+    "source_url": "https://shop.sb-components.co.uk/products/raspberry-pi-3-white-blox-case",
+    "reason": "Cosmetic color duplicate"
+  }
+]

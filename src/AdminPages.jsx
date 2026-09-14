@@ -452,7 +452,7 @@ export function AdminPages({
                         name="currency"
                         defaultValue={editOffer?.currency || "USD"}
                       >
-                        {["USD", "EUR", "GBP", "CAD", "AUD"].map((c) => (
+                        {["USD", "EUR", "GBP", "MXN", "CAD", "AUD"].map((c) => (
                           <option key={c}>{c}</option>
                         ))}
                       </select>
@@ -686,7 +686,7 @@ export function AdminPages({
                             <label>
                               Currency
                               <select name="currency">
-                                {["USD", "EUR", "GBP", "CAD", "AUD"].map(
+                                {["USD", "EUR", "GBP", "MXN", "CAD", "AUD"].map(
                                   (c) => (
                                     <option key={c}>{c}</option>
                                   ),

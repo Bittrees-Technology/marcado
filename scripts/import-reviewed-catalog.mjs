@@ -18,7 +18,7 @@ for (let i = 0; i < items.length; i += 20) {
     .slice(i, i + 20)
     .map(
       (p) =>
-        sql`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,hashrate,specifications,supplier_status,supplier_region,tax_note,configuration_note,active) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.hashrate || ""},${p.specifications},${p.supplier_status},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.active}) ON CONFLICT(id) DO NOTHING RETURNING id`,
+        sql`INSERT INTO marcada.items(id,product_id,name,description,price,currency,price_kind,price_checked,source_url,source_name,image_url,image_credit,hashrate,model_group,specifications,supplier_status,supplier_region,tax_note,configuration_note,active) VALUES(${p.id},${p.product_id},${p.name},${p.description},${p.price},${p.currency},${p.price_kind},${p.price_checked},${p.source_url},${p.source_name},${p.image_url},${p.image_credit},${p.hashrate || ""},${p.model_group || ""},${p.specifications},${p.supplier_status},${p.supplier_region},${p.tax_note},${p.configuration_note},${p.active}) ON CONFLICT(id) DO NOTHING RETURNING id`,
     );
   const results = await sql.transaction(queries);
   inserted += results.reduce((n, r) => n + r.length, 0);

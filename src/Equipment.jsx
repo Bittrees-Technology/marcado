@@ -1,4 +1,9 @@
 import { CsvImport } from "./CsvImport.jsx";
+import {
+  comparisonKey,
+  groupCatalog,
+  sortVendorOffers,
+} from "../lib/group-catalog.mjs";
 import { filterCatalog } from "../lib/filter-catalog.mjs";
 import React, { useState } from "react";
 import {
@@ -62,6 +67,7 @@ function Source({ item }) {
           US: "US supplier market",
           EU: "EU supplier market",
           UK: "UK supplier market",
+          MX: "Mexico supplier market",
           CA: "Canada supplier",
           CN: "China supplier",
         }[item.supplier_region] || "Supplier market unverified"}
@@ -129,8 +135,20 @@ export function EquipmentPage({
         </a>
       </section>
     );
-  const collectionItems = items.filter((i) => i.product_id === domain.id);
+  const ownItems = items.filter((i) => i.product_id === domain.id);
+  const ownGroups = new Set(
+    ownItems.filter((i) => i.model_group).map(comparisonKey),
+  );
+  const collectionItems = items.filter(
+    (i) =>
+      i.product_id === domain.id ||
+      (i.model_group && ownGroups.has(comparisonKey(i))),
+  );
   const list = filterCatalog(collectionItems, filters);
+  const groups = groupCatalog(list);
+  const alternatives = selected
+    ? items.filter((i) => comparisonKey(i) === comparisonKey(selected))
+    : [];
   return (
     <section className="equipment-page">
       <div className="breadcrumbs">
@@ -155,7 +173,9 @@ export function EquipmentPage({
           <p>{selected ? selected.description : domain.description}</p>
         </div>
         <span className="pill">
-          {selected ? selected.currency : list.length + " products"}
+          {selected
+            ? selected.currency
+            : groups.length + (groups.length === 1 ? " product · " : " products · ") + list.length + " offers"}
         </span>
       </div>
       {!selected && (
@@ -192,6 +212,7 @@ export function EquipmentPage({
               <option value="US">United States</option>
               <option value="EU">European Union</option>
               <option value="UK">United Kingdom</option>
+              <option value="MX">Mexico</option>
               <option value="CA">Canada</option>
               <option value="CN">China</option>
               <option value="Unverified">Unverified</option>
@@ -268,17 +289,23 @@ export function EquipmentPage({
           </label>
           <div className="filter-summary">
             <span>
-              {list.length} of {collectionItems.length} products
+              {list.length} of {collectionItems.length} offers
             </span>
             <button onClick={() => setFilters(defaults)}>Reset filters</button>
           </div>
         </section>
       )}
       <p className="price-note">
-        Supplier prices are dated references, not confirmed hub stock. Nevada
-        coordinates US sourcing; Portugal coordinates EU sourcing. Final
+        Supplier prices are dated references, not confirmed hub stock. Nevada and Portugal coordinate sourcing. Final
         configuration, taxes and delivery are confirmed in your quote.
       </p>
+      {!selected && (
+        <p className="comparison-note">
+          Matching models are grouped by configuration and condition. Vendor
+          prices run from lowest to highest within each currency; delivery and
+          taxes are confirmed by quote.
+        </p>
+      )}
       {selected ? (
         <div className="item-detail">
           <div className="real-photo">
@@ -296,6 +323,14 @@ export function EquipmentPage({
               selected.configuration_note !== selected.specifications && (
                 <p>{selected.configuration_note}</p>
               )}
+            {alternatives.length > 1 && (
+              <VendorOffers
+                items={alternatives}
+                domain={domain.id}
+                referral={referral}
+                selectedId={selected.id}
+              />
+            )}
             <h3>About this configuration</h3>
             <p>{selected.specifications}</p>
             <label>
@@ -336,49 +371,62 @@ export function EquipmentPage({
         </div>
       ) : (
         <div className="product-grid real-products">
-          {list.slice(0, visible).map((item) => (
-            <article key={item.id} className="real-product">
-              <a
-                className="real-photo"
-                href={equipmentLink(domain.id, referral, item.id)}
-              >
-                <ProductImage key={item.image_url} item={item} />
-                <span className="art-arrow">
-                  <ArrowUpRight size={19} />
-                </span>
-              </a>
-              <div className="product-title">
-                <a href={equipmentLink(domain.id, referral, item.id)}>
-                  <h3>{item.name}</h3>
-                </a>
-                <button
-                  className="icon"
-                  aria-label={"Share " + item.name}
-                  onClick={() => onShare(domain.id, item.id)}
+          {groups.slice(0, visible).map((group) => {
+            const item = group.items[0];
+            return (
+              <article key={item.id} className="real-product">
+                <a
+                  className="real-photo"
+                  href={equipmentLink(item.product_id, referral, item.id)}
                 >
-                  <Copy size={15} />
-                </button>
-              </div>
-              <p>{item.description}</p>
-              <Hashrate item={item} />
-              <Price item={item} />
-              <Source item={item} />
-              <small className="image-credit">
-                Photo: {item.image_credit || item.source_name}
-              </small>
-              <a
-                className="text-link"
-                href={equipmentLink(domain.id, referral, item.id)}
-              >
-                View product <ArrowRight size={14} />
-              </a>
-            </article>
-          ))}
+                  <ProductImage key={item.image_url} item={item} />
+                  <span className="art-arrow">
+                    <ArrowUpRight size={19} />
+                  </span>
+                </a>
+                <div className="product-title">
+                  <a href={equipmentLink(item.product_id, referral, item.id)}>
+                    <h3>{group.name}</h3>
+                  </a>
+                  <button
+                    className="icon"
+                    aria-label={"Share " + item.name}
+                    onClick={() => onShare(item.product_id, item.id)}
+                  >
+                    <Copy size={15} />
+                  </button>
+                </div>
+                <p>{item.description}</p>
+                <Hashrate item={item} />
+                {group.items.length > 1 ? (
+                  <VendorOffers
+                    items={group.items}
+                    domain={domain.id}
+                    referral={referral}
+                  />
+                ) : (
+                  <>
+                    <Price item={item} />
+                    <Source item={item} />
+                  </>
+                )}
+                <small className="image-credit">
+                  Photo: {item.image_credit || item.source_name}
+                </small>
+                <a
+                  className="text-link"
+                  href={equipmentLink(item.product_id, referral, item.id)}
+                >
+                  View product <ArrowRight size={14} />
+                </a>
+              </article>
+            );
+          })}
         </div>
       )}
-      {!selected && list.length > visible && (
+      {!selected && groups.length > visible && (
         <button className="secondary" onClick={() => setVisible((n) => n + 24)}>
-          Show more products ({visible} of {list.length})
+          Show more products ({visible} of {groups.length})
         </button>
       )}
       {!selected && !list.length && (
@@ -577,7 +625,7 @@ export function ProductManager({
           <label>
             Currency
             <select name="currency" defaultValue={p.currency}>
-              {["USD", "EUR", "GBP", "CAD", "AUD"].map((c) => (
+              {["USD", "EUR", "GBP", "MXN", "CAD", "AUD"].map((c) => (
                 <option key={c}>{c}</option>
               ))}
             </select>
@@ -665,6 +713,19 @@ export function ProductManager({
             />
           </label>
           <label className="span2">
+            Comparison group
+            <input
+              name="model_group"
+              defaultValue={p.model_group || ""}
+              maxLength={160}
+              placeholder="Raspberry Pi 5 — 8 GB board"
+            />
+            <small>
+              Use the same group only for matching models, configurations and
+              conditions. Leave blank to keep this offer separate.
+            </small>
+          </label>
+          <label className="span2">
             Hash rate (miners)
             <input
               name="hashrate"
@@ -696,6 +757,7 @@ export function ProductManager({
               <option value="US">United States</option>
               <option value="EU">European Union</option>
               <option value="UK">United Kingdom</option>
+              <option value="MX">Mexico</option>
               <option value="CA">Canada</option>
             </select>
           </label>
@@ -765,5 +827,74 @@ function Hashrate({ item }) {
       <strong>Hash rate</strong>
       <span>{item.hashrate || "Confirm with supplier"}</span>
     </p>
+  );
+}
+
+function VendorOffers({ items, domain, referral, selectedId }) {
+  const sorted = sortVendorOffers(items);
+  const [expanded, setExpanded] = useState(false);
+  const shown = expanded ? sorted : sorted.slice(0, 4);
+  return (
+    <section className="vendor-comparison" aria-label="Compare vendor offers">
+      <h4>{items.length} vendor offers</h4>
+      <ul>
+        {shown.map((item, index) => (
+          <li key={item.id}>
+            {(index === 0 || shown[index - 1].currency !== item.currency) && (
+              <div className="offer-currency">
+                {item.currency} · lowest price first
+              </div>
+            )}
+            <a
+              className="vendor-offer"
+              aria-current={selectedId === item.id ? "page" : undefined}
+              href={equipmentLink(item.product_id, referral, item.id)}
+            >
+              <span>
+                <b>{item.source_name}</b>
+                <small>
+                  {{
+                    US: "United States",
+                    MX: "Mexico",
+                    EU: "EU",
+                    UK: "UK",
+                    CA: "Canada",
+                    CN: "China",
+                  }[item.supplier_region] || "Market unverified"}{" "}
+                  ·{" "}
+                  {item.supplier_status === "OutOfStock"
+                    ? "Source out of stock"
+                    : "Confirm stock"}
+                </small>
+              </span>
+              <span className="vendor-offer-price">
+                <strong>
+                  {new Intl.NumberFormat("en", {
+                    style: "currency",
+                    currency: item.currency,
+                  }).format(item.price)}
+                </strong>
+                <small>Checked {String(item.price_checked).slice(0, 10)}</small>
+                <small>View offer →</small>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {sorted.length > 4 && (
+        <button
+          type="button"
+          className="text-link"
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded
+            ? "Show fewer offers"
+            : "Show all " + sorted.length + " offers"}
+        </button>
+      )}
+      <small>
+        Supplier reference prices. Confirm configuration and delivered cost.
+      </small>
+    </section>
   );
 }

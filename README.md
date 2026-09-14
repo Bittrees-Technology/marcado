@@ -7,6 +7,7 @@ Marketplace infrastructure for product discovery, dealer offers, referral attrib
 ## Capabilities
 
 - Product collections, pricing, source metadata, editable images and catalog filters.
+- Reviewed model groups with vendor offers ranked by price within each currency.
 - Public dealer offers and private deals with explicit access controls.
 - Member referral codes and shareable links, attributed to customer quote requests.
 - Optional operations email for referred quotes, with tracked delivery attempts and restricted retries.
@@ -69,3 +70,5 @@ Deploy to Vercel with `APP_ORIGIN` set to the canonical HTTPS domain and a verif
 The existing deployment retains the internal `marcada` database schema and analytics identifier to preserve records and reporting history. Public branding, links and authentication use Mercado. Previous storefront domains redirect to the canonical domain while preserving product paths and referral parameters.
 
 See [initial sourcing research](SOURCING-RESEARCH.md) and the [300-listing expansion](SOURCING-ROUND2.md) and the [DTV Electronics additions](SOURCING-DTV.md) for catalog evidence. Products, supplier relationships and commercial terms are deployment data, independent of the marketplace infrastructure.
+
+Regional sourcing evidence and comparison-group administration are documented in [US, Mexico and Western Europe sourcing](SOURCING-US-MEXICO-EUROPE.md).

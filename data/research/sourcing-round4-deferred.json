@@ -1,0 +1,37 @@
+[
+  {
+    "vendor": "21energy",
+    "source_id": "10156158157134",
+    "name": "Bitmain Antminer S21++",
+    "source_url": "https://21energy.com/products/bitmain-antminer-s21",
+    "reason": "S21++ model naming remains unresolved across supplier sources"
+  },
+  {
+    "vendor": "unix",
+    "source_id": "23fe0a2e32ae",
+    "name": "8GB SAS HGST 6Gbps 3.5\" Enterprise Server Drive",
+    "source_url": "https://unixsurplus.com/8gb-sas-hgst-6gbps-3-5-server-drive/",
+    "reason": "Enterprise drive title says 8GB; capacity needs confirmation"
+  },
+  {
+    "vendor": "unix",
+    "source_id": "9b27c2a10990",
+    "name": "Supermicro 10GB RJ45 Quad Port PCIe x8 Intel 82580 Server NIC",
+    "source_url": "https://unixsurplus.com/supermicro-10gb-rj45-nic/",
+    "reason": "NIC bandwidth/model combination requires confirmation"
+  },
+  {
+    "vendor": "unix",
+    "source_id": "24f3e79245c5",
+    "name": "Apple Mac Pro 2013 8 Core Xeon E5 CPU D700 6GB 128GB DDR3",
+    "source_url": "https://unixsurplus.com/apple-mac-pro-2013-8-core-xeon-e5-cpu-d700-6gb-128gb-ddr3/",
+    "reason": "Legacy consumer workstation outside this focused infrastructure pass"
+  },
+  {
+    "vendor": "unix",
+    "source_id": "663d5a6c68b8",
+    "name": "Variation TRUNAS AND PLEX Home Server 4.5Ghz Xeon DDR4 4x 4 12TB HD",
+    "source_url": "https://unixsurplus.com/variation-trunas-and-plex-home-server-4-5ghz-xeon-ddr4-4x-4-12tb-hd/",
+    "reason": "Ambiguous drive configuration and starting price"
+  }
+]

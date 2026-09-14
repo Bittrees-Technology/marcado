@@ -52,10 +52,14 @@ CREATE TABLE IF NOT EXISTS marcada.quote_proposals(quote_id uuid NOT NULL REFERE
 ALTER TABLE marcada.quotes ADD COLUMN IF NOT EXISTS accepted_proposal_version integer NOT NULL DEFAULT 0;
 CREATE TABLE IF NOT EXISTS marcada.notification_settings(id text PRIMARY KEY CHECK(id='operations'),recipient text NOT NULL,enabled boolean NOT NULL DEFAULT false,updated_at timestamptz NOT NULL DEFAULT now());
 ALTER TABLE marcada.items DROP CONSTRAINT IF EXISTS items_supplier_region_check;
-ALTER TABLE marcada.items ADD CONSTRAINT items_supplier_region_check CHECK(supplier_region IN ('US','EU','UK','CA','CN','Unverified'));
+ALTER TABLE marcada.items ADD CONSTRAINT items_supplier_region_check CHECK(supplier_region IN ('US','EU','UK','MX','CA','CN','Unverified'));
 
 ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS hashrate text NOT NULL DEFAULT '';
 
 CREATE TABLE IF NOT EXISTS marcada.referral_codes(code text PRIMARY KEY CHECK(code ~ '^[a-f0-9]{16}$'),identity text NOT NULL REFERENCES marcada.users(identity) ON DELETE CASCADE,created_at timestamptz NOT NULL DEFAULT now());
 CREATE INDEX IF NOT EXISTS referral_codes_identity_idx ON marcada.referral_codes(identity);
 INSERT INTO marcada.referral_codes(code,identity) SELECT referral,identity FROM marcada.users ON CONFLICT(code) DO NOTHING;
+
+ALTER TABLE marcada.items ADD COLUMN IF NOT EXISTS model_group text NOT NULL DEFAULT '';
+ALTER TABLE marcada.items DROP CONSTRAINT IF EXISTS items_currency_check;
+ALTER TABLE marcada.items ADD CONSTRAINT items_currency_check CHECK(currency IN ('USD','EUR','GBP','MXN','CAD','AUD'));

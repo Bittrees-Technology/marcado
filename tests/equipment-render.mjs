@@ -19,7 +19,15 @@ try {
     ...JSON.parse(await readFile("data/dtv-electronics.json", "utf8")),
     ...JSON.parse(await readFile("data/home-mining-gadgets.json", "utf8")),
     ...JSON.parse(await readFile("data/sourcing-round3.json", "utf8")),
+    ...JSON.parse(await readFile("data/sourcing-round4.json", "utf8")),
   ];
+  const groupAssignments = new Map(
+    JSON.parse(await readFile("data/comparison-groups.json", "utf8")).map(
+      (x) => [x.id, x.model_group],
+    ),
+  );
+  for (const item of items)
+    item.model_group = groupAssignments.get(item.id) || item.model_group || "";
   const collections = [...new Set(items.map((i) => i.product_id))].map(
     (id) => ({ id, name: id, description: "Collection" }),
   );

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "ameriDroid",
+    "region": "US",
+    "location": "California",
+    "qualification_source": "https://ameridroid.com/pages/privacy-policy",
+    "contact_url": "https://ameridroid.com/pages/contact",
+    "email": "orders@ameridroid.com",
+    "offer_count": 156,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "Vilros",
+    "region": "US",
+    "location": "New Jersey",
+    "qualification_source": "https://vilros.com/pages/contact-us",
+    "contact_url": "https://vilros.com/pages/contact-us",
+    "email": "support@vilros.com",
+    "offer_count": 138,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "Microbot México",
+    "region": "MX",
+    "location": "Morelos",
+    "qualification_source": "https://microbot.com.mx/pages/contacto-1",
+    "contact_url": "https://microbot.com.mx/pages/contacto-1",
+    "email": "ventas@microbot.com.mx",
+    "offer_count": 85,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "21energy",
+    "region": "EU",
+    "location": "Austria",
+    "qualification_source": "https://21energy.com/policies/legal-notice",
+    "contact_url": "https://21energy.com/policies/legal-notice",
+    "email": "office@21energy.com",
+    "offer_count": 29,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "Bitronics",
+    "region": "EU",
+    "location": "Spain",
+    "qualification_source": "https://bitronics.store/pages/contacto",
+    "contact_url": "https://bitronics.store/pages/contact-form",
+    "email": "support@bitronics.store",
+    "offer_count": 26,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "SB Components",
+    "region": "UK",
+    "location": "United Kingdom",
+    "qualification_source": "https://shop.sb-components.co.uk/pages/contact-us",
+    "contact_url": "https://shop.sb-components.co.uk/pages/contact-us",
+    "email": "",
+    "offer_count": 28,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "UNIXSurplus",
+    "region": "US",
+    "location": "California",
+    "qualification_source": "https://unixsurplus.com/",
+    "contact_url": "https://unixsurplus.com/",
+    "email": "websales@unixsurplus.com",
+    "offer_count": 62,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  },
+  {
+    "name": "TechMikeNY",
+    "region": "US",
+    "location": "New York / Iowa",
+    "qualification_source": "https://techmikeny.com/about-us",
+    "contact_url": "https://techmikeny.com/about-us",
+    "email": "",
+    "offer_count": 17,
+    "checked_date": "2026-09-14",
+    "commercial_status": "Public sourcing lead; no reseller agreement established"
+  }
+]

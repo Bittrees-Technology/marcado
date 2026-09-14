@@ -1,0 +1,54 @@
+[
+  {
+    "file": "21energy-all.json",
+    "records": 69,
+    "sha256": "417ad7730e346dd80d15d0afc5c622d8d61d4f05859f7e1648d442c19afe4d61",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "sbcomponents-all.json",
+    "records": 1000,
+    "sha256": "b9f43c8ae4bec1f65568a7c045be50977eb49e60b2981eadce86304bd627c46a",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "chicago-all.json",
+    "records": 1500,
+    "sha256": "35907bf594791a342285c53b484995fe2dfe9dac532e3420ea0975d724d3ca3f",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "microbot-all.json",
+    "records": 193,
+    "sha256": "6920f83c21b9f4172ef20b96d65aa538b9b2fb2dd59151c358af6213c80b914e",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "vilros-all.json",
+    "records": 637,
+    "sha256": "c5676880e1c5b81b3cd804d5345c9eb08e7e25cf38f7e25e9f9a7f6df716e457",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "ameridroid-all.json",
+    "records": 1080,
+    "sha256": "4f6a2bd96ffc3a1a6b1218c4daf16f910551aea9f8e052c8f539833f5e051a7c",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "bitronics-all.json",
+    "records": 54,
+    "sha256": "6c6f8458c8f55ab276cf5682ae5b239f5c77dd5faf2a118d84c441690312b893",
+    "source_type": "Public Shopify product feed; bounded pagination"
+  },
+  {
+    "file": "unix-sitemap.xml",
+    "sha256": "e4507b62384efc08b88608d3ea44d800905b6ba458720b7df9b005e0a1571737",
+    "source_type": "Public product sitemap; selected pages checked individually"
+  },
+  {
+    "file": "tmny-sitemap.xml",
+    "sha256": "57ac6c9334fc3124ffc2d7e3225cdb34a0e51e25d83f884cc011f58f38aa5899",
+    "source_type": "Public product sitemap; selected pages checked individually"
+  }
+]
